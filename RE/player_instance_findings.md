@@ -107,26 +107,44 @@ uPlayerNero adds ~41 KB on top; uPlayerDante adds ~73 KB.
 
 ## Consumer Surface — Who Reads mpPlayer
 
-685+ unique functions access `sMediator::mpPlayer` (+0x24) (scan captures accesses within 6
-instructions of the mpInstance load; indirect or late-dereference patterns may add ~46 more to
-reach the previously observed 731).
+**Re-verified 2026-06-28 against the live DB.** Direct `sMediator::mpInstance` → `+0x24`
+deref pairs, grouped by containing function:
+
+| Scan window | Unique functions | Sites |
+|-------------|------------------|-------|
+| 6 instructions | **707** | 942 |
+| 10 instructions | 745 | 1011 |
+| 20 instructions | 778 | 1082 |
+
+Total raw xrefs to `sMediator::mpInstance` = **2721** (most are other-field accesses, not `+0x24`).
+
+This supersedes the earlier "685+ unique functions / previously observed 731" figure — the
+6-instruction-window count is now **707 functions / 942 sites** (more code has been defined since
+the original scan). The named-function subset (47 functions) is unchanged in membership; some
+per-class *site* counts have dropped because the original table folded in indirect
+`getPlayerPos`/`getPlayerMat` reads and cached-member accesses that the strict 6-insn scan does
+not count (see the corrected table below).
 
 ---
 
 ### Named subsystems (47 functions)
 
-| Class | Fns | Sites | Role |
-|-------|-----|-------|------|
-| `cCameraPlayer` | 11 | 17 | Camera — tracks player for orientation, mode, throw/buster checks |
-| `uEm000Base` | 9 | 28 | Enemy base — grab/near targeting against player |
-| `uEnemy` | 3 | 4 | Enemy base — setup, per-frame move, target-pos query |
+**Site counts re-verified 2026-06-28** (strict 6-insn direct-deref scan). Where the live count
+differs from the original, the live value is shown and the original in parentheses. Drops are
+because the original counts bundled indirect `getPlayerPos`/`getPlayerMat` and cached-member reads.
+
+| Class | Fns | Sites (live / orig) | Role |
+|-------|-----|---------------------|------|
+| `cCameraPlayer` | 11 | 14 (17) | Camera — tracks player for orientation, mode, throw/buster checks |
+| `uEm000Base` | 9 | 14 (28) | Enemy base — grab/near targeting against player |
+| `uEnemy` | 3 | 3 (4) | Enemy base — setup, per-frame move, target-pos query |
 | `uEm010` | 3 | 6 | Enemy type 010 — grab/throw chains |
-| `uCameraCtrl` | 2 | 6 | Camera control sync and box-check |
-| `uDamage` | 2 | 5 | Damage calc — player-to-enemy correction and final calc |
+| `uCameraCtrl` | 2 | 2 (6) | Camera control sync and box-check |
+| `uDamage` | 2 | 2 (5) | Damage calc — player-to-enemy correction and final calc |
 | `uActor` | 2 | 2 | Actor base — homing angle, SE routing |
-| `uCockpit` / `uCockpitDante` / `uCockpitNero` | 3 | 4 | HUD — null-pointer guard before rendering |
-| `aRoom` | 3 | 6 | Room lifecycle — cleanRoom, pause checks, event pause |
-| `sGameState::player_spawn_state` | 1 | 75 | Spawner/game-state machine — most single-function site count |
+| `uCockpit` / `uCockpitDante` / `uCockpitNero` | 3 | 3 (4) | HUD — null-pointer guard before rendering |
+| `aRoom` | 3 | 3 (6) | Room lifecycle — cleanRoom, pause checks, event pause |
+| `sGameState::player_spawn_state` | 1 | 12 (75) | Spawner/game-state machine; orig 75 folded in all mpPlayer-derived accesses |
 | `sMediator::savePlayerParam` | 1 | 1 | Save/restore player params to sSave |
 | `sStylishCount::main` | 1 | 2 | Style rank tracking |
 | `uDevilCamera::checkPlayerJumpPoint` | 1 | 1 | Devil-trigger camera — jump-point check |
@@ -268,10 +286,15 @@ These also confirm two uPlayer field offsets:
 
 ### Call site summary
 
-| Method | Call sites | Unique callers |
-|--------|-----------|----------------|
-| `sMediator::getPlayerPos` | 60 | 54 |
-| `sMediator::getPlayerMat` | 46 | 42 |
+Re-verified 2026-06-28 (live = code `call`/`jmp` refs inside defined functions):
+
+| Method | Call sites (live / orig) | Unique callers (live / orig) |
+|--------|--------------------------|------------------------------|
+| `sMediator::getPlayerPos` | 59 (60) | 35 (54) |
+| `sMediator::getPlayerMat` | 45 (46) | 24 (42) |
+
+Site counts are stable (±1). The unique-caller drop reflects a stricter caller-counting method
+here (defined-function `call`/`jmp` only); the **site** count is the load-bearing metric and holds.
 
 ### Caller breakdown — `getPlayerPos`
 
@@ -310,6 +333,137 @@ indirection already exists — only the signature changes.
 
 ---
 
+## Camera Subsystem — Player-Reference Deep Dive (session 2026-06-28)
+
+The camera surface is the cleanest per-player cluster: **15 unique functions** across three
+classes touch the player. All are camera-owner-keyed (each player needs its own camera), and two
+carry Nero-exclusive branches. The three classes form one object hierarchy: `cCameraPlayer` holds
+the per-player follow/lock-on logic; `uCameraCtrl`/`uDevilCamera` are the concrete camera unit
+(`uCameraCtrl::sync` is typed `uDevilCamera*` and tail-calls `uDevilCamera::sync`).
+
+Confirmed this session: **`mPlayerID` 0 = Dante, 1 = Nero** (from `moveRightStickAxisY` selecting
+`sSave::mNero.mBtn` when `mPlayerID==1`, else `sSave::mDante.mBtn`). This pins down the
+Nero-exclusive `mPlayerID==1` gate in `checkThrow`.
+
+### Direct mpPlayer reads (14 functions / 17 sites)
+
+| Function | Addr | What it reads from the player | MP class |
+|----------|------|-------------------------------|----------|
+| `cCameraPlayer::initialize` | `0x417390` | `mPos` (seed camera pos/target at spawn) | per-player |
+| `cCameraPlayer::initialize_0` | `0x417690` | (init variant) | per-player |
+| `cCameraPlayer::checkThrow` | `0x418770` | `mDamage.type` (BLITZ_ELECTRIGGER), **`mPlayerID==1` (NERO)**, `mActionNo`, `mAtckId` | **Nero-exclusive branch** |
+| `cCameraPlayer::checkMode` | `0x4188E0` | `mPos`, `mLockOn.mLockOnMode`, vtbl[170] (lock-on target) | per-player |
+| `cCameraPlayer::checkBusterType` | `0x419110` | vtbl[134] (polymorphic buster query) | per-player |
+| `cCameraPlayer::main00` | `0x419130` | `mPos`, `mActionNo==12`, `mRotY`, vtbl[152] | per-player |
+| `cCameraPlayer::main01` | `0x419840` | `mPos` (×4), `mActStat & 2` — drives mEndTar/mEndPos/angle-hosei | per-player (hot) |
+| `cCameraPlayer::correctPlOver` | `0x41F120` | `mPos` (camera occlusion/over-player correction) | per-player |
+| `cCameraPlayer::moveRightStickAxisY` | `0x4223B0` | **`mPlayerID`** → `sSave.mNero`/`mDante` keybinds, `mRotY` | **per-player + per-character input** |
+| `cCameraPlayer::moveRightStickAxisY_SixAxis` | `0x422AC0` | (SixAxis variant of above) | **per-player + per-character input** |
+| `cCameraPlayer::cameraAngleYHosei` | `0x4255B0` | `mPos` (x/z) for Y-angle height correction | per-player |
+| `uCameraCtrl::check_box` | `0x4F7C50` | `mPos` — point-in-polygon vs camera area boxes | per-player |
+| `uCameraCtrl::sync` | `0x4F90B0` | `mpInstance->mSnatchJumpCamera` (**NERO**), `mpPlayer` null-guard, `mMissionNo==80`, `getPlayerPos` | **per-player + Nero branch** |
+| `uDevilCamera::checkPlayerJumpPoint` | `0x532430` | `mActStat & 2` (air), `mPos` — cache jump-off point | per-player |
+
+### Indirect reads via accessors (2 functions)
+
+| Function | Addr | Accessor |
+|----------|------|----------|
+| `uCameraCtrl::sync` | `0x4F90B0` | `getPlayerPos` (also in direct list above) |
+| `uCameraCtrl::getInitNowArea` | `0x4F9D50` | `getPlayerPos` + `mpInstance->mSnatchJumpCamera` (**NERO**) |
+
+### Camera multiplayer refactor notes
+
+- **All 15 are per-player.** A camera belongs to exactly one player; the singleton read must
+  become "this camera's owning player." The right fix is to give each `cCameraPlayer`/`uDevilCamera`
+  a `mPlayerIndex` (set when the camera is bound to its player) and resolve `getPlayer(mPlayerIndex)`
+  instead of `mpInstance->mpPlayer`.
+- **Nero-exclusive hazards (3 sites):** `checkThrow` (`mPlayerID==1` Devil-Bringer throw cam),
+  `uCameraCtrl::sync` and `getInitNowArea` (both read `mSnatchJumpCamera`). Per the CLAUDE.md Nero
+  caveat, these need an explicit `uPlayerNero*` (index + downcast) with a null guard when the owning
+  player is Dante — a generic `uPlayer*` resolution is insufficient for the snatch/throw paths.
+  Note `mSnatchJumpCamera` currently lives on the **singleton** (`sMediator+`), so it is also a
+  per-player field that must be decoupled, not just read per-index.
+- **Input is per-character, not just per-player:** `moveRightStickAxisY*` reads the player's own
+  `mPlayerID` to pick that player's `sSave` keybinding block (`mNero` vs `mDante`). Two players
+  sharing one save's keybinds would cross-wire camera input — each player's camera must read its
+  own pad + its own keybind slot.
+
+All 14 sites above carry an inline `[MP/camera] …` comment in the IDB as of this session.
+
+---
+
+## Enemy Grab-Interaction Tables → mpPlayer / uPlayerNero (session 2026-06-28)
+
+Beyond direct reads and cached members, enemy classes reach the player through **two kinds of
+function-pointer tables** holding grab-interaction (Devil Bringer / Snatch) handlers. Every handler
+that resolves the player does so against `mpInstance->mpPlayer`, and the Nero-specific ones perform
+a **runtime `strcmp(getDTI()->name, "uPlayerNero")` downcast** rather than caching a pointer.
+
+### A. The `uEm000Base` grab-callback table (48 slots, replicated per enemy class)
+
+The same logical table is embedded into multiple enemy-class data blocks. Four copies were found
+(at `0xBCA110`, `0xBCA620`, `0xBCAD08`, `0xBCB2D8`); slots 0–38 and 41–47 are byte-identical across
+all four — they differ **only at slots 39–40**, the per-class hook
+(`sub_558B80` / `nullsub_2` / `sub_55F5E0` / `sub_5602A0`). So this is one shared
+grab-behavior dispatch vector with a small per-class patch.
+
+**12 of 48 slots read the player** (all confirmed against the live scan):
+
+| Slot | Function | Player access |
+|------|----------|---------------|
+| 4 | `uEm000Base::setGrabBlown` (`0x552B40`) | mpPlayer |
+| 7 | `uEm000Base::setGrabNear` (`0x552F00`) | mpPlayer + getPlayerMat |
+| 8 | `uEm000Base::grabNear` (`0x5532F0`) | mpPlayer + getPlayerMat (reads `mPos`, `mQuat`) |
+| 9 | `uEm000Base::setGrabNearDevil` (`0x553A70`) | mpPlayer + getPlayerMat |
+| 10 | `uEm000Base::grabNearDevil` (`0x553DF0`) | mpPlayer + getPlayerMat |
+| 11 | `uEm000Base::setGrabNear003` (`0x554780`) | mpPlayer + getPlayerMat |
+| 12 | `uEm000Base::grabNear003` (`0x554B00`) | mpPlayer + getPlayerMat |
+| 13 | `uEm000Base::setGrabNear003Air` (`0x555630`) | mpPlayer + getPlayerMat |
+| 14 | `uEm000Base::grabNear003Air` (`0x5559B0`) | mpPlayer + getPlayerMat |
+| 37 | `sub_556AB0` (`0x556AB0`) | mpPlayer + getPlayerPos |
+| 38 | `sub_557530` (`0x557530`) | mpPlayer |
+| 46 | `sub_55E250` (`0x55E250`) | mpPlayer + getPlayerMat |
+
+These orient/position the grabbed enemy relative to the player's world matrix; they are **not
+Nero-gated** (any player can be grabbed-onto), so a per-index `getPlayer()`/`getPlayerMat(index)`
+resolution is sufficient — the index must be the player that initiated/owns the grab.
+
+### B. Enemy grab-MESSAGE vtables — Nero-exclusive handlers (the `strcmp "uPlayerNero"` set)
+
+Two enemy-class **message-dispatch vtables** (the `0xBD0518` and `0xBD0C38` classes the cached-member
+survey already flagged) contain grab-message handlers at fixed slots that do the Nero downcast:
+
+| Handler | Table slot | Class vtable | Behavior |
+|---------|-----------|--------------|----------|
+| `sub_603950` | `0xBD052C` (slot 8) | `0xBD0518` | grab message (case 21): `strcmp "uPlayerNero"` + `vtbl[134]==1` → grab Devil-Bringer joint |
+| `sub_6037D0` | `0xBD05A4` (slot 38) | `0xBD0518` | reads `mActStat&2` (air) then `uPlayerNero` downcast → Nero vs non-Nero action |
+| `sub_614EE0` | `0xBD0C4C` | `0xBD0C38` | commander-class grab handler, `uPlayerNero` downcast |
+| `sub_614DF0` | `0xBD0CC4` | `0xBD0C38` | commander-class grab handler, `uPlayerNero` downcast |
+
+### C. Directly-called Nero grab handlers (non-table) in other enemy classes
+
+The full set of functions referencing the `"uPlayerNero"` string (`0xBCF654`, excluding
+`uPlayerNero::DTI::init` which merely registers the name) is **10 handlers**. The 4 above are
+table-dispatched; the remaining **6 are reached by direct `call`** in their owning enemy class:
+
+`sub_5E9080`, `sub_640540`, `sub_640F00`, `sub_678D00`, `sub_720DA0`, `sub_72EA50`
+(spanning enemy ranges 0x5E, 0x64, 0x67, 0x72xxxx).
+
+### Multiplayer implication
+
+All handlers in B and C are **Nero-exclusive**: they read `mpInstance->mpPlayer`, confirm it is a
+`uPlayerNero` by runtime DTI-name compare, then read Nero-only grab state. In a multiplayer refactor
+each must obtain an explicit `uPlayerNero*` via **player index + downcast**, with a null guard for
+when the relevant player is Dante (the `strcmp` already encodes "skip if not Nero" — the refactor
+replaces the singleton read with the indexed player but keeps the type guard). The table-A handlers
+are player-type-agnostic and only need an indexed `getPlayerMat`/`getPlayerPos`.
+
+All 10 Nero handlers carry an inline `[MP/grab][Nero] …` comment in the IDB as of this session.
+This extends the cached-`mpPlayer` survey's two confirmed Nero-exclusive entries (`0x603950`,
+`0x88FB40`) — the grab-table route surfaces **8 additional** Nero-exclusive player-resolution sites.
+
+---
+
 ## Key Addresses
 
 | Symbol | Address |
@@ -330,6 +484,11 @@ indirection already exists — only the signature changes.
 | `uPlayer::MtDTI` | `0xE5A360` |
 | `MtDTI_uPlayerNero` | `0xE5A4A0` |
 | `MtDTI_uPlayerDante` | `0xE5A3E0` |
+| `cCameraPlayer::main01` (lock-on cam, hot) | `0x419840` |
+| `cCameraPlayer::checkThrow` (Nero throw cam) | `0x418770` |
+| `cCameraPlayer::moveRightStickAxisY` (per-char input) | `0x4223B0` |
+| `uCameraCtrl::sync` (master cam-area sync) | `0x4F90B0` |
+| `uDevilCamera::checkPlayerJumpPoint` | `0x532430` |
 
 ---
 

@@ -4,6 +4,12 @@
 selection, per-player table) is TBD; this document defines *how* to redirect existing sites to it
 once it exists.
 
+> **Scope carve-out:** the **damage/collision cluster does NOT go through the dispatcher.** Those
+> handlers already receive the damage message (attacker + defender are call args / message fields),
+> so the correct player is the *message sender/participant*, resolved locally. See
+> [§ Damage / Collision — excluded from dispatcher](#damage--collision--excluded-from-dispatcher).
+> Subtract these from every dispatcher site count below.
+
 ## The problem we're patching
 
 Every player-resolution site ultimately executes the idiom:
@@ -74,6 +80,49 @@ read-site patches**.
 updates per-consumer, or relocate the singleton so `+0x24` lands on an intercepted address. Heavy;
 only if 3a's global-active-player model is insufficient and we still want to avoid read-site edits.
 
+## Damage / Collision — excluded from dispatcher
+
+Damage handling is **sender-aware by construction**, so it needs no global player lookup and no
+dispatcher. The dispatcher answers "who is *the* player right now" — the wrong question for damage,
+where the answer is "the player *in this exchange*."
+
+**Why the message already carries the sender:** `uDamage::calc` (`0x51BE10`) is
+`calc(this, param_1 = attacker, param_2 = defender)` — both combatants are explicit arguments. It is
+called from **~46 `damageMessage` handlers** (one per enemy class: `uEm000Base`…`uEm035`,
+`uPlayer::damageMessage`), each of which receives the damage message and forwards the participants.
+**39 of those 46 handlers never read `mpPlayer` at all** — they are already correct. Only the
+handlers that reach back to the global to *identify the attacking player* (e.g. to pick a Nero-vs-
+Dante reaction animation, or spawn a hit-effect on the attacker) need changing, and the fix is local:
+read the attacker from the message/`param_1` instead of `mpInstance->mpPlayer`.
+
+### The 15 damage/collision functions that read the player
+
+| Function | Addr | Player read is… | Fix |
+|----------|------|-----------------|-----|
+| `uDamage::calc` | `0x51BE10` | `mDevilTrg` gauge + `vtbl[134]` buster on attacker | use `param_1` (attacker) |
+| `uDamage::calcEmPlCorrect` | `0x51BAB0` | `mPlayerID` + Nero `vtbl[182-184]` correction | use damage-ctx participant |
+| `uEnemy::damageMessage4` | `0x7345B0` | `mPlayerID` → reaction anim | sender from message |
+| `uEnemy::damageMessage5` | `0x7346B0` | `mPlayerID` → reaction anim | sender from message |
+| `uEm011::damageMessage` | `0x5CBF50` | reads player + calls `calc` | sender from message |
+| `uEm012::damageMessage3` | `0x5D90B0` | hit-effect on player + `vtbl[88]` | sender from message |
+| `uEm025::damageMessage` | `0x6E4390` | reads player + calls `calc` | sender from message |
+| `uEm036::damageMessage7` | `0x726B00` | reads player | sender from message |
+| `sub_6B5AE0` | `0x6B5AE0` | reads player + calls `calc` | sender from message (verify) |
+| `sub_864AF0` | `0x864AF0` | reads player + calls `calc` (stage obj) | sender from message (verify) |
+| `sub_8701F0` | `0x8701F0` | reads player + calls `calc` (stage obj) | sender from message (verify) |
+| `sub_886A90` | `0x886A90` | reads player + calls `calc` (stage obj) | sender from message (verify) |
+| `sub_891B40` | `0x891B40` | reads player + calls `calc` (stage obj) | sender from message (verify) |
+| `uCollisionMgr::move` | `0x50CC40` | `getPlayerMat` for lock-on push dir | **review-aggro**: use collision owner's lock-on target |
+| `uEnemy::damageMessage7` | `0x735FB0` | player pos + caches as aggro target | **review-aggro**: attacker vs nearest player |
+
+**Two are not pure sender reads** (`uCollisionMgr::move`, `uEnemy::damageMessage7`, tagged
+`[MP/damage][review-aggro]`): they read the player as a **lock-on / aggro target**, not as the
+damage participant. Those resolve from the unit's existing lock-on target, still not the dispatcher —
+but confirm per-unit before patching.
+
+All 15 carry an inline `[MP/damage]…` comment in the IDB as of this session. Excluding this cluster,
+the dispatcher's job shrinks to the camera/HUD/state/enemy-targeting sites.
+
 ## Recommended layered plan (build order)
 
 1. **Accessors first (Option 1).** Patch `getPlayerPos`/`getPlayerMat` prologues to
@@ -116,6 +165,28 @@ This means the **bulk** (account for >900 sites) is handled by 2+2 patches (step
 - Steps are independent and each is testable in isolation (1 → accessors, 2 → active-player swap,
   3 → per-view divergence). Do not proceed to a later step until the prior one is verified in-game.
 - `idb_save` after each step; keep the patch list in this file updated with applied/not-applied.
+
+## Authoritative call-site list (per-instruction)
+
+`RE/mpplayer_call_sites.json` holds **every call site by precise instruction address** — the machine
+input for patching. Generated from the live DB (`scratchpad/emit_sites.py`); regenerate after any
+DB change. Each entry:
+
+```json
+{ "ea": "0x4043C9",        // site address: the mpInstance load (inline) or the call (accessor)
+  "deref_ea": "0x4043DE",  // the [reg+24h] deref instruction (inline only; null for accessor)
+  "fn": "0x4041E0", "fn_name": "sub_4041E0",
+  "category": "uncategorized",          // camera-per-player | nero-grab | damage-message-derivable
+  "kind": "inline",                     //   | damage-review-aggro | uncategorized ; or accessor:getPlayer{Pos,Mat}
+  "load_insn": "mov edx, sMediator__mpInstance",
+  "deref_insn": "mov edx, [eax+24h]" }
+```
+
+Totals: **1046 sites** = 942 inline + 104 accessor. Categorized: camera 19, damage-derivable 17,
+nero-grab 14, damage-review-aggro 5; the remaining **991 are `uncategorized`** (bulk enemy/state/HUD
+that the writer-redirect step covers without per-site edits). Category is per **function**; a
+function may own several sites (e.g. `cCameraPlayer::main01` = 4 inline sites), all listed
+individually with their own `ea`.
 
 ## Site inventories (already enumerated this session)
 

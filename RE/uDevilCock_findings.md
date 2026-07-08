@@ -3,13 +3,30 @@
 ## Class Hierarchy
 
 ```
-MtObject → cUnit → uSprLayout → uDevilCock → uTitleA / uTitleB / uTitleC
-                                            → uListSelect → uTitlePc → uTitle
+MtObject (0x4) → cUnit (0x18) → uSprLayout (0x28) → uDevilCock (0x34)
+                                                     → uAreaName, uBMSub, uBPResultBack, uBPResultSuji
+                                                     → uBossCock, uButton, uCapLogo, uCinemaScope
+                                                     → uCockpit, uCockSuji, uCockpitSub, uDemoButton
+                                                     → uDemoSpr, uGameOverBg, uGameOverSuji, uCockSuji02
+                                                     → uHddInstall, uLbryModelTitle, uLbryMovieTitle
+                                                     → uLbrySelectIcon, uLicence, uLicencePc
+                                                     → uListSelect, uLoadMessage, uLockOnDante
+                                                     → uMapData, uMapMgr, uMinimap, uResultBack
+                                                     → uResultSuji, uMStartSuji, uMStartString1/2
+                                                     → uModeClear, uNowLoading, uNowLoadingTex
+                                                     → uKiri, uOption, uParaAnm, uPcBenchCock
+                                                     → uPowerUpBg, uPowerUpMgr, uScreenBreak
+                                                     → uSecretClear, uSecretFailed, uSkillListMgr
+                                                     → uStaffRoll, uTgsDemoComing
+                                                     → uTitleA, uTitleB, uTitleC, uTitlePc → uTitle
+                                                     → uTRResultSuji, uTutorial, uTutorialGame
+                                                     → uUseItemBg, uViolence, …
 ```
 
-`uDevilCock` is the base sprite-layout widget class for all title-screen UI components.
-It owns the resource handle, sprite-map array, sprite animator, and font-layout array.
-Subclasses (`uTitleA/B/C`, `uListSelect`, etc.) extend the vtable and add their own state.
+`uDevilCock` is the **universal base class for all HUD/UI cockpit widgets** in DMC4 DX9 —
+every 2D sprite-based UI element (HUD cockpit, menus, result screens, titles, tutorials)
+inherits from it. `uSprLayout` is its direct parent and holds the move-line/scheduling layer.
+`uDevilCock` adds the resource handle, sprite-map, sprite animator, and font-layout arrays.
 
 **Note:** `uDevil4Cock` does not exist as a registered DTI class in the DX9 binary. No string match found — this name was DX9-only noise or a misread.
 
@@ -17,20 +34,69 @@ Subclasses (`uTitleA/B/C`, `uListSelect`, etc.) extend the vtable and add their 
 
 ## DTI Registration
 
+### `uDevilCock`
+
 | Field       | Value |
 |-------------|-------|
 | Class name  | `"uDevilCock"` @ `0xBC8CAC` |
-| Size        | 52 bytes (0x34) — SE has 80 bytes (0x50); +28B engine delta |
-| Parent DTI  | `uSprLayout::DTI` @ `dword_E5B610` (arg = 1 in `sub_8B69B0`) |
-| DTI global  | `uDevilCock::DTI` @ `0xE58898` (`esi` in the registration fn) |
+| Size        | 52 bytes (`0x34`) |
+| Parent DTI  | `uSprLayout::DTI` @ `0xE5B610` |
+| DTI global  | `uDevilCock::DTI` @ `0xE58898` |
 | Vtable      | `uDevilCock::vftable` @ `0xBF0810` |
-| DTI reg fn  | `uDevilCock::DTI::init` @ `0xB71770` |
+| DTI init fn | `uDevilCock::DTI::init` @ `0xB71770` |
 
-**Note:** Slot 4 contains `uSprLayout::getDTI` (`0x85F680`) — `uDevilCock` does not override `getDTI`, so it inherits `uSprLayout`'s stub, which returns `&uSprLayout::DTI`. This does **not** mean the vtable belongs to `uSprLayout`; it means `uDevilCock` has no DTI override. `uDevilCock::DTI` at `0xE58898` is the `esi`-loaded value in `uDevilCock::DTI::init`.
+**Note:** Slot 4 contains `uSprLayout::getDTI` (`0x85F680`) — `uDevilCock` does not override `getDTI`, so it inherits `uSprLayout`'s stub. This is a normal pattern; `uDevilCock::DTI` at `0xE58898` is confirmed as its own DTI.
+
+### `uSprLayout`
+
+| Field       | Value |
+|-------------|-------|
+| Class name  | `"uSprLayout"` @ `0xBF07DC` |
+| Size        | 40 bytes (`0x28`) |
+| Parent DTI  | `cUnit::DTI` @ `0xEAD540` |
+| DTI global  | `uSprLayout::DTI` @ `0xE5B610` |
+| getDTI stub | `uSprLayout::getDTI` @ `0x85F680` |
+| DTI init fn | `uSprLayout::DTI::init` @ `0xB78AE0` |
+| No own vtable | `uSprLayout` has no distinct vftable in .rdata — `uDevilCock`'s vtable contains `uSprLayout::getDTI` at slot 4 because `uDevilCock` inherits it without override |
+
+### `rSprLayout` (resource type)
+
+| Field | Value |
+|-------|-------|
+| Class name | `"rSprLayout"` @ `0xB9D308` |
+| Size | 120 bytes (`0x78`) |
+| Parent | `cResource` @ `0xEAD4C0` (size 0x60) |
+| Vtable | `rSprLayout::vftable` @ `0xB9D378` |
+| DTI global | `rSprLayout::DTI` @ `0xE57D38` |
 
 ---
 
-## Layout (52 bytes, verified from DX9 constructor `uDevilCock::uDevilCock` @ `0x85F6C0`)
+## Layouts
+
+### `uSprLayout` (40 bytes, `cUnit` subclass)
+
+`uSprLayout` adds 40 − 24 = **16 bytes** beyond `cUnit` (which is 0x18 = 24 bytes).
+Its own constructor was not separately found — it may be inlined into `uDevilCock::uDevilCock`.
+The `createProperty` registered for `uSprLayout` (via `sub_8E57F0`, the shared base createProperty)
+covers the `cUnit`-inherited fields:
+
+| Property | Offset | MtProp type | Flags | Notes |
+|----------|--------|-------------|-------|-------|
+| `Unit`   | `this` | 0x19 (GROUP) | 6 | group header |
+| `Name`   | — | 0x0E (STRING) | 0x83 | get = `sub_8E5B30`, set = no-op |
+| `mMoveLine` | — | 6 (U32) | 0x81 | get = `sub_4FB640`, set = `sub_8E57C0` |
+| `mRno`   | `this+0x14` | 6 (U32) | 1 | |
+| `Move`   | `this` | 3 (BOOL) | 0x80 | get = `sub_450730`, set = `loc_4090F0` |
+| `Trans`  | `this` | 3 (BOOL) | 0x80 | get = `sub_5347E0`, set = `sub_44A380` |
+| (unnamed) | `this` | 3 (BOOL) | 0x80 | get = `sub_42BAE0`, set = `sub_402C10` |
+| `mTransView` | — | 6 (U32) | 0x80 | get = `loc_43AF90`, set = `sub_8E57B0` |
+| `mTransMode` | — | 6 (U32) | 0x80 | get = `sub_57ED40`, set = `sub_7A5690` |
+| `mDeltaTime` | `this+0x10` | 0x0C (F32) | 1 | |
+| `Default` | `this` | 0x1F (GROUP_END) | 2 | |
+
+These are the `cUnit`/`cTrans` scheduling properties (move-line, name, enable-flags, delta time).
+
+### `uDevilCock` (52 bytes, verified from DX9 constructor `uDevilCock::uDevilCock` @ `0x85F6C0`)
 
 | Offset | Size | Type    | Name           | Notes |
 |--------|------|---------|----------------|-------|
@@ -50,7 +116,27 @@ Subclasses (`uTitleA/B/C`, `uListSelect`, etc.) extend the vtable and add their 
 | +0x2C  | 4    | int     | `_pad2c`       | |
 | +0x30  | 4    | int     | `_pad30`       | |
 
+**cTrans note:** `uDevilCock::dtor` restores `*this = &cTrans::vftable_0` before freeing, indicating `cTrans` is embedded in (or is the base of) `uSprLayout`/`uDevilCock`. This is consistent with the cUnit scheduling properties exposed in `createProperty` — `cTrans` sits inside `cUnit` at offset 0x00 (the vtable slot, `cTrans::vftable_0` shared with `uDevilCock`'s own `vftable` as the base).
+
 SE field names confirmed via PDB: `mStatus`, `mpNextPtr`, `mpDispSprMap`, `mpResource`, `mpData`, `mpFontData`, `mpSprAnm`. DX9 offsets derived from ctor and `createProperty` disasm — SE offsets are +28B larger throughout, not usable as ground truth.
+
+### `loadResource_impl` internal array element sizes
+
+Two heap arrays are allocated inside `uDevilCock::loadResource_impl` (`0x85FA70`):
+
+| Array field | Element size | Count source | Element vtable |
+|-------------|-------------|--------------|----------------|
+| `mpDispSprMap` (`this+7`) | 72 bytes | `*(mpResource+104)` | `sub_479CB0` ctor |
+| `mpFontData` (`this+9`) | 48 bytes | `*(mpResource+108)` | `rSprLayout::vftable` @ `0xB9D378` |
+
+Each `mpFontData` entry (48 bytes, vtable `rSprLayout::vftable`) has these known fields:
+- `+0x00`: vtable ptr
+- `+0x04`: byte (display/active flag, copied from resource)
+- `+0x06`: WORD (field 6, copied)
+- `+0x08`: WORD (field 8, copied)
+- `+0x0C`: DWORD (copied)
+- `+0x10–+0x2C`: DWORDs (copied from resource template)
+- `+0x18`/`+0x1C`: "live" copy fields (set = template after load, updated per-frame)
 
 ### MtProperty-registered fields (from `uDevilCock::createProperty` @ `0x85F770`)
 
@@ -129,21 +215,39 @@ for each sprite entry, if `isDisp` byte == 1, increments `pos` field by `vel` fi
 
 ## Key Addresses Summary
 
+### `uDevilCock`
+
 | Symbol | Address |
 |--------|---------|
 | `uDevilCock::vftable` | `0xBF0810` |
 | `uDevilCock::DTI` global | `0xE58898` |
-| `uSprLayout::DTI` global | `dword_E5B610` (returned by `getDTI`, not this class's own) |
 | `uDevilCock::DTI::init` | `0xB71770` |
 | `uDevilCock::uDevilCock` (ctor) | `0x85F6C0` |
 | `uDevilCock::dtor` | `0x85F740` |
-| `uSprLayout::getDTI` (slot 4, inherited) | `0x85F680` |
 | `uDevilCock::createProperty` | `0x85F770` |
 | `uDevilCock::move` | `0x85F930` |
 | `uDevilCock::transMain` | `0x85F9B0` |
 | `uDevilCock::loadResource` | `0x85FA60` |
+| `uDevilCock::loadResource_impl` | `0x85FA70` |
 | `uDevilCock::transBefore` | `0x85F960` |
 | `uDevilCock::delData` | `0x85FE40` |
+
+### `uSprLayout`
+
+| Symbol | Address |
+|--------|---------|
+| `uSprLayout::DTI` global | `0xE5B610` |
+| `uSprLayout::DTI::init` | `0xB78AE0` |
+| `uSprLayout::getDTI` | `0x85F680` |
+| `sub_85F690` (near getDTI — possibly `uSprLayout::someMethod`) | `0x85F690` |
+| `sub_8E57F0` (shared `createProperty` base — cUnit/cTrans props) | `0x8E57F0` |
+
+### `rSprLayout`
+
+| Symbol | Address |
+|--------|---------|
+| `rSprLayout::vftable` | `0xB9D378` |
+| `rSprLayout::DTI` global | `0xE57D38` |
 
 ---
 

@@ -144,6 +144,14 @@ This means the **bulk** (account for >900 sites) is handled by 2+2 patches (step
 - **x86, 32-bit, imagebase 0x400000.** A near `jmp rel32` / `call rel32` is 5 bytes
   (E9/E8 + rel32). The dispatcher must live where rel32 from each patch site can reach it (the whole
   .text fits in ±2GB, so any code-cave or appended section works).
+- **Site instruction widths (from `ea_len`):** the site instruction (the `mov reg,[mpInstance]`
+  load) is **5 bytes** for `mov eax/ecx,…` (622 sites — the `A1` / `8B 0D` encodings) and **6 bytes**
+  for `mov edx/ebx/esi/edi/ebp,…` (424 sites — `8B /r` with a modrm byte), plus the 1 lone `cmp`
+  (7 bytes). All ≥5, so a `jmp rel32` always fits; the 6-byte sites leave 1 trailing byte to `nop`.
+  The **deref** (`deref_len`) is 3 bytes for a plain `mov reg,[reg+24h]` (841 sites), 4 for the
+  `cmp [reg+24h],0` null-checks (94), 5 for `movss xmm,[reg+24h]` (5), 7 for the 2 teardown writes.
+  A per-site trampoline that rewrites the *load* must preserve `load_dst` (the register the original
+  `mov` targeted) so the following deref still finds the pointer in the expected register.
 - **Accessor patch (step 1):** overwrite byte 0 of `getPlayerPos`/`getPlayerMat`. `getPlayerPos`
   starts at `0x493240` with `mov ecx,[ecx+24h]` (3 bytes) — write `E9 <rel32>` (5 bytes), which
   spills 2 bytes into `test ecx,ecx`; fine, we never return into it. Dispatcher replicates the
@@ -176,17 +184,33 @@ DB change. Each entry:
 { "ea": "0x4043C9",        // site address: the mpInstance load (inline) or the call (accessor)
   "deref_ea": "0x4043DE",  // the [reg+24h] deref instruction (inline only; null for accessor)
   "fn": "0x4041E0", "fn_name": "sub_4041E0",
+  "class": "uEnemy", "class_src": "vtable",  // owning class (by name or vtable membership); null if unresolved
+  "this_reg": "ecx", "cc": "thiscall", "arg0": "this",  // register holding `this` at this fn; 'stack' or null
   "category": "uncategorized",          // camera-per-player | nero-grab | damage-message-derivable
   "kind": "inline",                     //   | damage-review-aggro | uncategorized ; or accessor:getPlayer{Pos,Mat}
   "load_insn": "mov edx, sMediator__mpInstance",
   "deref_insn": "mov edx, [eax+24h]" }
 ```
 
-Totals: **1046 sites** = 942 inline + 104 accessor. Categorized: camera 19, damage-derivable 17,
-nero-grab 14, damage-review-aggro 5; the remaining **991 are `uncategorized`** (bulk enemy/state/HUD
-that the writer-redirect step covers without per-site edits). Category is per **function**; a
-function may own several sites (e.g. `cCameraPlayer::main01` = 4 inline sites), all listed
-individually with their own `ea`.
+Totals: **1047 sites** = 943 inline + 104 accessor. Categorized: camera 19, damage-derivable 17,
+nero-grab 14, damage-review-aggro 5; the remaining **992 are `uncategorized`** (bulk enemy/state/HUD
+that the writer-redirect step covers without per-site edits). Category, class, and `this_reg` are per
+**function**; a function may own several sites (e.g. `cCameraPlayer::main01` = 4 inline sites), all
+listed individually with their own `ea`. Regenerate with `RE/scripts/build_mpplayer_sites.py`
+(via ida-pro-mcp `py_exec_file`) after any DB change — addresses/prototypes are live.
+
+**Owning class** (`class`/`class_src`): 223/724 functions resolved — 68 by `Class::method` name, 155
+by vtable membership (`vtable` = single owner, `vtable-multi` = function shared across several class
+vtables, `|`-joined). The rest are `sub_` helpers not in a named vftable.
+
+**`this` register** (`this_reg`/`cc`): resolved from each function's prototype, falling back to a
+Hex-Rays decompile. **This is NOT uniformly ecx** — the distribution across the 1047 sites is
+`ecx` 358, `stack` 268, `eax` 214, `esi` 114, `edi` 64, `edx` 13, `ebx` 3, `null` 13 (13 genuinely
+untyped). A trampoline that assumes `this` in `ecx` would corrupt the ~66% of sites where it isn't
+(`__usercall`/`__stdcall`/`__userpurge` functions pass `this` in eax/esi/edi/edx or on the stack).
+`stack` means `this` is a stack argument (`[esp+N]`), not a register — those need the offset read
+from the frame, not a register copy. `cc` records the convention so the trampoline can pick the
+right retrieval per site. The 13 `null` sites need manual typing before patching.
 
 ## Site inventories (already enumerated this session)
 

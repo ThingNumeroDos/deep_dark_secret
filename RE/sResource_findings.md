@@ -92,6 +92,10 @@ Priority tier `n4` is written to `cResource::mState` bits 16–18 (`n4 << 16`, m
 
 ---
 
+> **Worked example of the `vtable+32` load call:** `rTexture::load` (`0x906760`) is
+> the slot-8 (`+0x20`) implementation for `.tex` files — see [rTexture.md](rTexture.md)
+> for the full TEX header format and the D3D9 creation path it drives.
+
 ## `sub_8DF980` — file-load path
 
 Allocates a new `cResource` via vtable+4 (factory/alloc method), populates:

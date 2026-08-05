@@ -4,6 +4,9 @@ MT Framework **standard surface material** for the DX9 build (`DevilMayCry4_DX9.
 Equivalent to `nDraw::MaterialStd` in the Special Edition / newer-engine build, but the
 DX9 layout is its own thing — see [SE cross-reference](#se-cross-reference).
 
+Companion docs: [rTexture.md](rTexture.md) (the texture resource the slots point at)
+and [texture_binding.md](texture_binding.md) (how those slots reach a D3D9 sampler).
+
 ## Identity
 
 | Item | Value |
@@ -147,7 +150,7 @@ the dtor releases, the `duplicate` addRefs, and the texture-property registrar h
 | 0xB0 | `mUVOffset0` X/Y (vec2) | prop "UVOffset0" |
 | 0xC0 | `mUVOffset1` X/Y (vec2) | prop "UVOffset1" |
 | 0xC8 | `mUVOffset2` X/Y (vec2) | prop "UVOffset2" |
-| 0xD0–0xF4 | **texture-resource block** | 10× `cResource*` |
+| 0xD0–0xF4 | **texture-resource block** | 10× `rTexture*` (9 live + 1 dead) |
 | 0xF8, 0xFC | `dwordF8`, `dwordFC` | untouched by any analyzed function; padding to 256 |
 
 > Earlier the IDB typed 0xB0 and 0xC0 as `MtMath::MtVector4`; the accessors prove they
@@ -155,12 +158,47 @@ the dtor releases, the `duplicate` addRefs, and the texture-property registrar h
 
 ### Texture-resource block (0xD0–0xF4)
 
-10 `cResource*` slots. Released individually in the dtor and `addRef`'d in `duplicate`.
-The property registrars bind texture maps here, but a single editor property spans
-multiple handler offsets, so a strict per-map naming was **not** asserted. Confirmed:
+10 pointer slots, released individually in the dtor and `addRef`'d in `duplicate`.
 
-- 0xE8 = **Environment map** (only single-offset texture handler).
-- The other 9 slots are Bump/normal, Specular, and Lighting/light-map variants.
+> **Corrected 2026-08-05.** This section previously read *"10 `cResource*` slots […]
+> a strict per-map naming was **not** asserted. Confirmed: 0xE8 = Environment map
+> (only single-offset texture handler). The other 9 slots are Bump/normal, Specular,
+> and Lighting/light-map variants."* Three things were wrong or incomplete: the
+> pointer type, the "10 slots" count, and the un-asserted naming. All are now
+> resolved from `beginDraw`'s bind sites — see below and
+> [texture_binding.md](texture_binding.md).
+
+**Type.** The slots hold **`rTexture*`**, not `cResource*`. Every bind dereferences
+`+0xCC` (`rTexture::mpTexture` → `cTrans::Texture*`), e.g. `mov eax,[edi+0D0h]`
+(`0xA631FB`) → `mov eax,[eax+0CCh]` (`0xA6320B`). Since `cResource` is only 96 bytes,
+the old typing made `+0xCC` decompile as out-of-bounds arithmetic at ~12 sites.
+`cMaterial::mpBaseTex` (+0x1C) is the same and has been retyped too.
+
+**Per-map naming is now asserted**, read from the engine's own shader-parameter name
+strings rather than inferred from registration order:
+
+| Off | Shader parameter | Semantic |
+|-----|------------------|----------|
+| `cMaterial+0x1C` | `XfSamplerAlbedoMap` | albedo / base |
+| 0xD0 | `XfSamplerNormalMap` | normal |
+| 0xD4 | `XfSamplerMaskMap` | mask |
+| 0xD8 | `XfSamplerShadowMap` | shadow |
+| 0xDC | `XfSamplerLightMap` | lightmap |
+| 0xE0 | `XfSamplerGlossMap` | gloss / specular |
+| **0xE4** | — | **dead slot — never read, never written** |
+| 0xE8 | `XfSamplerEnvironmentMap` | environment cube *(matches the earlier finding)* |
+| 0xEC | `XfSamplerDetailMap` | detail |
+| 0xF0 | `XfSamplerAmbientOccMap` | ambient occlusion |
+| 0xF4 | `XfSamplerAdditionalMap` **and** `XfSamplerScreenMap` | bound **twice** |
+
+**Count.** There are **9 live slots**, not 10. An instruction scan of the whole of
+`beginDraw` (`0xA62C30`–`0xA63890`) finds loads of `D0/D4/D8/DC/E0/E8/EC/F0/F4` but
+**no `[edi+0E4h]`**, and `uModel::setMaterials` (`0x9E7410`) writes only `+0xE0`,
+never `+0xE4`. `xrefs_to_field` on the slot returns nothing.
+
+**Double bind.** `+0xF4` is loaded twice — `0xA6364E` → AdditionalMap and `0xA6368D`
+→ ScreenMap. Two separate instructions, not a decompiler artifact. Net:
+**11 texture bindings from 9 distinct slots**, plus the base texture = 12.
 
 ## decodeStateKey / sub_A61DD0 (0xA61DD0)
 
@@ -202,8 +240,16 @@ writes each material parameter into the shader constant register table
 changed, then sets dirty bit `0x20000000` in `param_2[2729]`. Uploads include the color
 vec4s, specular/fresnel/parallax scalars, a fog-enable flag (writes 1.0f when
 `sCamera` viewport fog alpha > 0 and material flag bit set), UV-scroll matrices (when
-type byte +0x55 == 6, e.g. a special pass), and the 10 texture handles. Honors
-`sShader::mpInstance` global enable toggles at +26829/+26830.
+type byte +0x55 == 6, e.g. a special pass), and the texture handles — **11 binds from
+9 live slots** plus the base texture (corrected 2026-08-05; this line previously read
+"the 10 texture handles"). Honors `sShader::mpInstance` global enable toggles at
++26829/+26830.
+
+The type-byte-6 path is **screen-space refraction**: it forces
+`mpContext->mBlendState = 0x2A20625` and binds `mpContext->mpSceneTexture` into
+`XfSamplerScreenMap`. Each texture bind is an inlined copy of `cTrans::setTexture`
+(`0xA58240`) and performs **no D3D9 call** — see
+[texture_binding.md](texture_binding.md) for the deferred CMD-replay path.
 
 ## Defaults set by constructor (0xA628C0)
 

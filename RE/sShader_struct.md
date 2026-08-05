@@ -47,7 +47,7 @@ The singleton flows into accessors only as a stack arg; these were retyped so fi
 | 0x0838 | mParameterDesc[512] | ParameterDesc[512] | init loop stride 20; base confirmed by accessor |
 | 0x3038 | mTechniqueDesc[512] | TechniqueDesc[512] | init loop stride 12; base confirmed by accessor |
 | 0x4838 | mpTechnique[512] | void*[512] | getTechniqueFromName write base |
-| 0x5038 | mSamplerState[256] | u8[4096] (16B×256) | boundary chains from arrays above |
+| 0x5038 | mSamplerState[256] | `sShader::SamplerState[256]` (16B×256) | boundary chains from arrays above; **record decoded** — see below |
 | 0x6038 | mParameterNum | u32 | getParameterFromName counter |
 | 0x603C | mTechniqueNum | u32 | getTechniqueFromName counter |
 | 0x6040 | mSamplerStateNum | u32 | PS3 order |
@@ -60,7 +60,7 @@ The singleton flows into accessors only as a stack arg; these were retyped so fi
 | 0x605C | mEnvelope[512] | u32[512] | ctor memset 0x800 |
 | 0x685C | mpEnvelopeBase | u8* | PS3 name |
 | 0x6860 | mEnvelopePitch | u32 | PS3 name |
-| 0x6868 | mpSysTexture[6] | void*[6] | ctor: NullWhite/NullBlack/NullNormal/DefaultCube/font/XfPCFNoise |
+| 0x6868 | mpSysTexture[6] | `rTexture*[6]` | fallback textures — [0] `NullWhite` `0x8FCBFA` · [1] `NullBlack` `0x8FCC16` · [2] `NullNormal_NM` `0x8FCC32` · [3] `DefaultCube_CM` `0x8FCC4E` · [4] `font` `0x8FCC6A` · [5] `XfPCFNoise` `0x8FCC7F` (all under `system\texture\`) |
 | 0x6880 | mpVertexDecl[17] | void*[17] | ctor: 17 `cTrans::VertexDecl::create` results (PS3 had 12) |
 | 0x68C6..0x68CB | mDisableBaseMap..mDisableEnvMap | bool×6 | PS3 names |
 | 0x68CD | mNormalMapping | bool | property reg "NormalMapping" type 3 (BOOL) |
@@ -84,6 +84,27 @@ Property registrations also create app enum items (callbacks): "TextureFilter", 
 `sShader::ParameterDesc` (20B): `mtObjectVftable, mName(char*), mID(u32), mType(u8), mRegCount(u8),
 mStateHandle(u8), mReserved(u8), mDefault(u32)`.
 `sShader::TechniqueDesc` (12B): `mtObjectVftable, mName(char*), mID(u32)`.
+
+### `sShader::SamplerState` (16 B) — decoded 2026-08-05
+
+`mSamplerState` (+0x5038) was previously modelled as an opaque `u8[4096]`. It is
+256 × 16-byte packed-bitfield records, indexed by `ParameterDesc.mStateHandle`
+(so record address = `sShader + 0x5038 + 16*handle`).
+
+**dword +0x00** — bits 0–3 `mAddressU` · 4–7 `mAddressV` · 8–11 `mAddressW` ·
+12–15 `mMaxMipLevel` · 16–19 `mMinMipLevel` · 20–23 `mMaxAnisotropy` (**stored N−1**) ·
+24–26 `mMagFilter` · 27–29 `mMinFilter`
+**dword +0x04** — bits 0–2 `mMipFilter` · bits 10–25 `mMipLodBias` (`float × 2048`, `>>6`)
+**+0x08** `mBorderColor`
+
+Proven by `sRender::applySamplerState` (`0x8F4000`), which unpacks one record into 10
+`IDirect3DDevice9::SetSamplerState` calls (device vtable `+0x114`), and independently
+corroborated by `uLeafAnim::newInstance` (`0x75BAB0`) writing the same bit positions.
+Filter values are passed to D3D9 **untranslated**, so the 3-bit filter enum *is*
+`D3DTEXF_*` (0 NONE / 1 POINT / 2 LINEAR / 3 ANISOTROPIC). `mMinMipLevel` is stored
+and has accessors but is **never emitted** to D3D9.
+
+Full detail, defaults, and the quality-override path: [texture_binding.md](texture_binding.md).
 
 See [`sShader_name_hash.md`](sShader_name_hash.md) + [`sShader_hash_ids.json`](sShader_hash_ids.json)
 for the `mID` (XFUNIQUE) values of all 487 parameter/technique names.

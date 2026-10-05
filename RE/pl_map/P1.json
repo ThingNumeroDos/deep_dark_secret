@@ -1,0 +1,3620 @@
+{
+ "group": "P1",
+ "range": [
+  "0x79F000",
+  "0x7B0000"
+ ],
+ "classes": {
+  "uPlayer": {
+   "dx9": {
+    "dti": "0xE5A360",
+    "vtable": "0xBE30E0",
+    "vtable_slots": 181,
+    "ctor": "0x7A5B30",
+    "dtor": "0x7A66F0",
+    "vector_deleting_dtor": "0x7A6640",
+    "size": "0x3270",
+    "parent": "uActor (DTI 0xE58158)",
+    "dti_registration": "0xB752B0"
+   },
+   "se": {
+    "vtable": "0x118b468",
+    "vtable_slots": 287,
+    "ctor": "0x9ac610"
+   },
+   "slot_shift": "PIECEWISE, not constant: SE n -> DX9 n-k with k = 0 (slots 0-5), 2-3 (move..draw), 8-9 (getBoundary..kill), 11, 20, 21, 23 (DX9 30-50), 25, 26, 27, 30, 37, 39, 40, 44, 45, 51, 67 (DX9 106-119), 68, 71, 73, 74-77, 80, 91, 93 (DX9 176-180). See slot_map_dx9_to_se.",
+   "slot_map_dx9_to_se": [
+    [
+     "0-5",
+     "0-5",
+     "dtor/createUI/isEnable/createProperty/getDTI/setup (k=0)"
+    ],
+    [
+     "6,7,8,9",
+     "8,9,11,12",
+     "move, moveEx, sync, draw"
+    ],
+    [
+     "10,11",
+     "18,19",
+     "getBoundary, getName (k=8)"
+    ],
+    [
+     "12",
+     "21",
+     "kill (k=9)"
+    ],
+    [
+     "13-16",
+     "24-27",
+     "uModel matrix/setModel (k=11)"
+    ],
+    [
+     "24-28",
+     "44-48",
+     "uDevil4Model camera transparency (k=20)"
+    ],
+    [
+     "29",
+     "50",
+     "updateMaterial (k=21)"
+    ],
+    [
+     "30,31",
+     "53,54",
+     "main, updatePtr (k=23)"
+    ],
+    [
+     "32-50",
+     "55-73",
+     "k=23: 36 damageMessage=59, 37 hitMessage=60, 38 hitMessageAtAvoided=61, 45 guard=68, 46 reverse=69, 47 die=70, 48 injure=71, 49 interrupt=72, 50 blown=73"
+    ],
+    [
+     "51-53",
+     "76-78",
+     "hitStopMessage, setHitStop, clearHitStop (k=25)"
+    ],
+    [
+     "56,57,60,63,71",
+     "82,83,86,89,97",
+     "push, custom, IK, stylish, SEMessage (k=26)"
+    ],
+    [
+     "73-75",
+     "100-102",
+     "setHomingAngleXY, isMotionEnd, isMotionEndAll (k=27)"
+    ],
+    [
+     "76",
+     "106",
+     "getEffectElementMessage (k=30)"
+    ],
+    [
+     "77,78",
+     "114,115",
+     "reset, updateMatrix (k=37); SE 116/117 beginDemo/endDemo absent in DX9"
+    ],
+    [
+     "79,80",
+     "118,119",
+     "setAtckBit, clearAtckBit (k=39); SE 120 checkAtckBit non-virtual in DX9 (0x7ACE10)"
+    ],
+    [
+     "81,82",
+     "121,122",
+     "setSaveDataShortWeapon/LongWeapon (k=40)"
+    ],
+    [
+     "86,87,89,90",
+     "126,127,130,131",
+     "getUpperBdyVibJoint, canBeGrabbed, isEffectiveEnemyAtck, afterPowerUp (k=40/41)"
+    ],
+    [
+     "93,94",
+     "137,138",
+     "setGameSystem (was registerWithMediator), setInterface (k=44)"
+    ],
+    [
+     "101-103",
+     "146-148",
+     "setAction, setActionUpperBdy, setActionLowerBdy (k=45)"
+    ],
+    [
+     "105",
+     "156",
+     "setActionDead (k=51); SE 152 setActionLand, 155 setPoseWeapon, 157-172 are non-virtual or absent in DX9"
+    ],
+    [
+     "106-115",
+     "173-182",
+     "getBattleFootworkMotionNo, getPoseMoveSpd(0x427460 shared), checkAtckEtcSub, initJumpBegin, checkAtckSub, checkAtckWeapon, createCmnShl000, initFreezeEfct, requestFreezeEfct, eraseFreezeEfct (k=67)"
+    ],
+    [
+     "119",
+     "186",
+     "isWeaponChange (k=67); SE 187 setVibJointCnst non-virtual in DX9 (0x7AF480)"
+    ],
+    [
+     "120-122",
+     "188-190",
+     "getCommonSaveData, setJointVib(int), updateActorStatus (k=68)"
+    ],
+    [
+     "123",
+     "52 (moved)",
+     "setDrawMode candidate (medium): overridden by Dante 0x7B6A20 / Nero 0x7E3C80"
+    ],
+    [
+     "124-130",
+     "195-201",
+     "isDevilTriggerFix, getUpperBdyVibJoint x6 (k=71)"
+    ],
+    [
+     "133",
+     "204",
+     "isSeparatelySetAtckGun (k=71)"
+    ],
+    [
+     "136,137",
+     "209,210",
+     "checkEmGrabDmgCancelDT, getDevilTrgDownVal (k=73)"
+    ],
+    [
+     "142,144,145,147,148,151",
+     "216,220,222,224,225,228",
+     "per P5: checkWJumpBegin, checkDevilTrigger, checkFlipCancel, checkBeforeAction, checkAction, checkHolyAction (k=74..77)"
+    ],
+    [
+     "153-155",
+     "233-235",
+     "moveActionLower, moveActionUpper, moveActProvoke (k=80) - existing names, P6 to verify"
+    ],
+    [
+     "170,173-175",
+     "261,264-266",
+     "getLockOnTarget, setLockOnTargetAngle, initLockOn, updateLockOn (k=91) - alignment only, P6 to verify"
+    ],
+    [
+     "176,177",
+     "267,268",
+     "changeAutoAtckIdShort/Long (one ICF body 0x7A4C40) (k=91)"
+    ],
+    [
+     "178-180",
+     "271-273",
+     "isResetAutoCombo, getAutoAtckDefTbl, convertAutoAtckId (k=93); SE 269/270 non-virtual in DX9"
+    ]
+   ],
+   "vtable_label_fixed": false,
+   "notes": "0xBE30E0 verified from the ctor write at 0x7A5B40 and getDTI stub 0x7A5580 -> 0xE5A360 (registration: size 0x3270, parent uActor, page 1). 0xBE66EC is uPlayer::cMotCancel::vftable (P5 relabelled), not uPlayer."
+  },
+  "uPlacement": {
+   "dx9": {
+    "dti": "0xE5A280",
+    "vtable": "0xBE28AC",
+    "ctor": "0x7A46B0 (bool form), 0x7A4750 (char const*)",
+    "size": "0x20",
+    "parent": "cUnit"
+   },
+   "se": {
+    "vtable": "0x118a700"
+   },
+   "slot_shift": "SE 5->5 setup, 8->6 move, 11->8 sync (same cUnit base shift as uPlayer)",
+   "vtable_label_fixed": false
+  },
+  "uPlayer::cInterface": {
+   "dx9": {
+    "dti": "0xE5A3A0",
+    "vtable": "0xBE33B4",
+    "size": "0x4C",
+    "parent": "MtObject"
+   },
+   "se": {
+    "vtable": "0x118ab7c"
+   },
+   "slot_shift": "0 (5-slot vtable, identical layout)",
+   "vtable_label_fixed": false,
+   "embedded_at": "+0x1408"
+  },
+  "uPlayer::cSECtrl": {
+   "dx9": {
+    "dti": "0xE5A2A0",
+    "vtable": "0xBE33D0",
+    "size": "0x17C",
+    "parent": "MtObject"
+   },
+   "se": {
+    "vtable": "0x111aec0"
+   },
+   "slot_shift": "0 (5-slot vtable, identical layout)",
+   "vtable_label_fixed": true,
+   "notes": "label was cSECtrl::vftable; renamed uPlayer::cSECtrl::vftable"
+  },
+  "uPlayer::cProcSpdCtrl": {
+   "dx9": {
+    "dti": "0xE5A3C0",
+    "vtable": "0xBE33EC",
+    "size": "0x30",
+    "parent": "MtObject"
+   },
+   "se": {
+    "vtable": "0x118aba4"
+   },
+   "slot_shift": "0 (5-slot vtable, identical layout)",
+   "vtable_label_fixed": true,
+   "notes": "label was cProcSpdCtrl::vftable"
+  },
+  "uPlayer::cPeripheral": {
+   "dx9": {
+    "dti": "0xE5A340",
+    "vtable": "0xBE3408",
+    "size": "0x98",
+    "parent": "MtObject"
+   },
+   "se": {
+    "vtable": "0x118ab68"
+   },
+   "slot_shift": "0 (5-slot vtable, identical layout)",
+   "vtable_label_fixed": false,
+   "embedded_at": "+0x1370"
+  },
+  "uPlayer::cParamTblCtrl": {
+   "dx9": {
+    "dti": "0xE5A320",
+    "vtable": "0xBE3424",
+    "size": "0xC",
+    "parent": "MtObject"
+   },
+   "se": {
+    "vtable": "0x118b3a4"
+   },
+   "slot_shift": "0 (5-slot vtable, identical layout)",
+   "vtable_label_fixed": false
+  },
+  "uPlayer::cWeaponCtrl": {
+   "dx9": {
+    "dti": "0xE5A380",
+    "vtable": "0xBE3440",
+    "size": "0x44",
+    "parent": "MtObject"
+   },
+   "se": {
+    "vtable": "0x111af5c"
+   },
+   "slot_shift": "0 (5-slot vtable, identical layout)",
+   "vtable_label_fixed": true,
+   "embedded_at": "+0x1D88",
+   "notes": "label was cWeaponCtrl::vftable"
+  },
+  "uPlayer::cLegIkCtrl": {
+   "dx9": {
+    "dti": "0xE5A300",
+    "vtable": "0xBE345C",
+    "size": "0x210",
+    "parent": "MtObject"
+   },
+   "se": {
+    "vtable": "0x118ab90"
+   },
+   "slot_shift": "0 (5-slot vtable, identical layout)",
+   "vtable_label_fixed": false
+  },
+  "uPlayer::cHitSlowCtrl": {
+   "dx9": {
+    "dti": "0xE5A2E0",
+    "vtable": "0xBE3478",
+    "size": "0x10",
+    "parent": "MtObject"
+   },
+   "se": {
+    "vtable": "0x118b454"
+   },
+   "slot_shift": "0 (5-slot vtable, identical layout)",
+   "vtable_label_fixed": true,
+   "embedded_at": "+0x1484",
+   "notes": "label was cHitSlowCtrl::vftable"
+  },
+  "uPlayer::cMotCancel": {
+   "dx9": {
+    "dti": "0xE5A2C0",
+    "vtable": "0xBE66EC",
+    "size": "0x2C",
+    "parent": "MtObject"
+   },
+   "se": {
+    "vtable": "0x118fb38"
+   },
+   "slot_shift": "0 (5-slot vtable, identical layout)",
+   "vtable_label_fixed": "by P5",
+   "notes": "getDTI 0x8032A0 and createProperty 0x803430 are in P6 range; newInstance 0x7A5AB0 (P1) writes 0xBE66EC"
+  }
+ },
+ "functions": [
+  {
+   "dx9_ea": "0x79f0d0",
+   "old_dx9_name": "sub_79F0D0",
+   "new_dx9_name": null,
+   "se_ea": null,
+   "se_name": null,
+   "confidence": "none",
+   "evidence": [],
+   "action": "none",
+   "notes": "non-uPl: DX9/PC-only UI code (owner band by getDTI stubs: uPauseMenu/uPauseBase helpers); SE dump covers uPl* only"
+  },
+  {
+   "dx9_ea": "0x79f1d0",
+   "old_dx9_name": "sub_79F1D0",
+   "new_dx9_name": null,
+   "se_ea": null,
+   "se_name": null,
+   "confidence": "none",
+   "evidence": [],
+   "action": "none",
+   "notes": "non-uPl: DX9/PC-only UI code (owner band by getDTI stubs: uPauseMenu/uPauseBase helpers); SE dump covers uPl* only"
+  },
+  {
+   "dx9_ea": "0x79f330",
+   "old_dx9_name": "sub_79F330",
+   "new_dx9_name": null,
+   "se_ea": null,
+   "se_name": null,
+   "confidence": "none",
+   "evidence": [],
+   "action": "none",
+   "notes": "non-uPl: DX9/PC-only UI code (owner band by getDTI stubs: uPauseMenu/uPauseBase helpers); SE dump covers uPl* only"
+  },
+  {
+   "dx9_ea": "0x79f3b0",
+   "old_dx9_name": "sub_79F3B0",
+   "new_dx9_name": null,
+   "se_ea": null,
+   "se_name": null,
+   "confidence": "none",
+   "evidence": [],
+   "action": "none",
+   "notes": "non-uPl: DX9/PC-only UI code (owner band by getDTI stubs: uPauseMenu/uPauseBase helpers); SE dump covers uPl* only"
+  },
+  {
+   "dx9_ea": "0x79f4c0",
+   "old_dx9_name": "sub_79F4C0",
+   "new_dx9_name": null,
+   "se_ea": null,
+   "se_name": null,
+   "confidence": "none",
+   "evidence": [],
+   "action": "none",
+   "notes": "non-uPl: DX9/PC-only UI code (owner band by getDTI stubs: uPauseMenu/uPauseBase helpers); SE dump covers uPl* only"
+  },
+  {
+   "dx9_ea": "0x79f5e0",
+   "old_dx9_name": "sub_79F5E0",
+   "new_dx9_name": null,
+   "se_ea": null,
+   "se_name": null,
+   "confidence": "none",
+   "evidence": [],
+   "action": "none",
+   "notes": "non-uPl: DX9/PC-only UI code (owner band by getDTI stubs: uPauseMenu); SE dump covers uPl* only"
+  },
+  {
+   "dx9_ea": "0x79f620",
+   "old_dx9_name": "sub_79F620",
+   "new_dx9_name": null,
+   "se_ea": null,
+   "se_name": null,
+   "confidence": "none",
+   "evidence": [],
+   "action": "none",
+   "notes": "non-uPl: DX9/PC-only UI code (owner band by getDTI stubs: uPauseMenu); SE dump covers uPl* only"
+  },
+  {
+   "dx9_ea": "0x79f710",
+   "old_dx9_name": "sub_79F710",
+   "new_dx9_name": null,
+   "se_ea": null,
+   "se_name": null,
+   "confidence": "none",
+   "evidence": [],
+   "action": "none",
+   "notes": "non-uPl: DX9/PC-only UI code (owner band by getDTI stubs: uPauseMenu); SE dump covers uPl* only"
+  },
+  {
+   "dx9_ea": "0x79f7a0",
+   "old_dx9_name": "sub_79F7A0",
+   "new_dx9_name": null,
+   "se_ea": null,
+   "se_name": null,
+   "confidence": "none",
+   "evidence": [],
+   "action": "none",
+   "notes": "non-uPl: DX9/PC-only UI code (owner band by getDTI stubs: uPauseMenu); SE dump covers uPl* only"
+  },
+  {
+   "dx9_ea": "0x79f830",
+   "old_dx9_name": "sub_79F830",
+   "new_dx9_name": null,
+   "se_ea": null,
+   "se_name": null,
+   "confidence": "none",
+   "evidence": [],
+   "action": "none",
+   "notes": "non-uPl: DX9/PC-only UI code (owner band by getDTI stubs: uPauseMenu); SE dump covers uPl* only"
+  },
+  {
+   "dx9_ea": "0x79f870",
+   "old_dx9_name": "sub_79F870",
+   "new_dx9_name": null,
+   "se_ea": null,
+   "se_name": null,
+   "confidence": "none",
+   "evidence": [],
+   "action": "none",
+   "notes": "non-uPl: DX9/PC-only UI code (owner band by getDTI stubs: uPauseMenu); SE dump covers uPl* only"
+  },
+  {
+   "dx9_ea": "0x79f8b0",
+   "old_dx9_name": "sub_79F8B0",
+   "new_dx9_name": null,
+   "se_ea": null,
+   "se_name": null,
+   "confidence": "none",
+   "evidence": [],
+   "action": "none",
+   "notes": "non-uPl: DX9/PC-only UI code (owner band by getDTI stubs: uPauseMenu); SE dump covers uPl* only"
+  },
+  {
+   "dx9_ea": "0x79f9a0",
+   "old_dx9_name": "sub_79F9A0",
+   "new_dx9_name": null,
+   "se_ea": null,
+   "se_name": null,
+   "confidence": "none",
+   "evidence": [],
+   "action": "none",
+   "notes": "non-uPl: DX9/PC-only UI code (owner band by getDTI stubs: uPauseMenu); SE dump covers uPl* only"
+  },
+  {
+   "dx9_ea": "0x79f9e0",
+   "old_dx9_name": "sub_79F9E0",
+   "new_dx9_name": null,
+   "se_ea": null,
+   "se_name": null,
+   "confidence": "none",
+   "evidence": [],
+   "action": "none",
+   "notes": "non-uPl: DX9/PC-only UI code (owner band by getDTI stubs: uPauseMenu); SE dump covers uPl* only"
+  },
+  {
+   "dx9_ea": "0x79fb20",
+   "old_dx9_name": "sub_79FB20",
+   "new_dx9_name": null,
+   "se_ea": null,
+   "se_name": null,
+   "confidence": "none",
+   "evidence": [],
+   "action": "none",
+   "notes": "non-uPl: DX9/PC-only UI code (owner band by getDTI stubs: uPauseMenu); SE dump covers uPl* only"
+  },
+  {
+   "dx9_ea": "0x79fdd0",
+   "old_dx9_name": "sub_79FDD0",
+   "new_dx9_name": null,
+   "se_ea": null,
+   "se_name": null,
+   "confidence": "none",
+   "evidence": [],
+   "action": "none",
+   "notes": "non-uPl: DX9/PC-only UI code (owner band by getDTI stubs: uPauseMenu); SE dump covers uPl* only"
+  },
+  {
+   "dx9_ea": "0x79fe30",
+   "old_dx9_name": "sub_79FE30",
+   "new_dx9_name": null,
+   "se_ea": null,
+   "se_name": null,
+   "confidence": "none",
+   "evidence": [],
+   "action": "none",
+   "notes": "non-uPl: DX9/PC-only UI code (owner band by getDTI stubs: uPauseMenu); SE dump covers uPl* only"
+  },
+  {
+   "dx9_ea": "0x7a0630",
+   "old_dx9_name": "sub_7A0630",
+   "new_dx9_name": null,
+   "se_ea": null,
+   "se_name": null,
+   "confidence": "none",
+   "evidence": [],
+   "action": "none",
+   "notes": "non-uPl: DX9/PC-only UI code (owner band by getDTI stubs: uPauseMenu); SE dump covers uPl* only"
+  },
+  {
+   "dx9_ea": "0x7a0640",
+   "old_dx9_name": "sub_7A0640",
+   "new_dx9_name": null,
+   "se_ea": null,
+   "se_name": null,
+   "confidence": "none",
+   "evidence": [],
+   "action": "none",
+   "notes": "non-uPl: DX9/PC-only UI code (owner band by getDTI stubs: uPauseMenu); SE dump covers uPl* only"
+  },
+  {
+   "dx9_ea": "0x7a0670",
+   "old_dx9_name": "sub_7A0670",
+   "new_dx9_name": null,
+   "se_ea": null,
+   "se_name": null,
+   "confidence": "none",
+   "evidence": [],
+   "action": "none",
+   "notes": "non-uPl: DX9/PC-only UI code (owner band by getDTI stubs: uPauseMenu); SE dump covers uPl* only"
+  },
+  {
+   "dx9_ea": "0x7a06d0",
+   "old_dx9_name": "sub_7A06D0",
+   "new_dx9_name": null,
+   "se_ea": null,
+   "se_name": null,
+   "confidence": "none",
+   "evidence": [],
+   "action": "none",
+   "notes": "non-uPl: DX9/PC-only UI code (owner band by getDTI stubs: uPausePractice); SE dump covers uPl* only"
+  },
+  {
+   "dx9_ea": "0x7a06e0",
+   "old_dx9_name": "sub_7A06E0",
+   "new_dx9_name": null,
+   "se_ea": null,
+   "se_name": null,
+   "confidence": "none",
+   "evidence": [],
+   "action": "none",
+   "notes": "non-uPl: DX9/PC-only UI code (owner band by getDTI stubs: uPausePractice); SE dump covers uPl* only"
+  },
+  {
+   "dx9_ea": "0x7a0740",
+   "old_dx9_name": "sub_7A0740",
+   "new_dx9_name": null,
+   "se_ea": null,
+   "se_name": null,
+   "confidence": "none",
+   "evidence": [],
+   "action": "none",
+   "notes": "non-uPl: DX9/PC-only UI code (owner band by getDTI stubs: uPausePractice); SE dump covers uPl* only"
+  },
+  {
+   "dx9_ea": "0x7a0770",
+   "old_dx9_name": "sub_7A0770",
+   "new_dx9_name": null,
+   "se_ea": null,
+   "se_name": null,
+   "confidence": "none",
+   "evidence": [],
+   "action": "none",
+   "notes": "non-uPl: DX9/PC-only UI code (owner band by getDTI stubs: uPausePractice); SE dump covers uPl* only"
+  },
+  {
+   "dx9_ea": "0x7a0790",
+   "old_dx9_name": "sub_7A0790",
+   "new_dx9_name": null,
+   "se_ea": null,
+   "se_name": null,
+   "confidence": "none",
+   "evidence": [],
+   "action": "none",
+   "notes": "non-uPl: DX9/PC-only UI code (owner band by getDTI stubs: uPausePractice); SE dump covers uPl* only"
+  },
+  {
+   "dx9_ea": "0x7a07d0",
+   "old_dx9_name": "sub_7A07D0",
+   "new_dx9_name": null,
+   "se_ea": null,
+   "se_name": null,
+   "confidence": "none",
+   "evidence": [],
+   "action": "none",
+   "notes": "non-uPl: DX9/PC-only UI code (owner band by getDTI stubs: uPausePractice); SE dump covers uPl* only"
+  },
+  {
+   "dx9_ea": "0x7a0840",
+   "old_dx9_name": "sub_7A0840",
+   "new_dx9_name": null,
+   "se_ea": null,
+   "se_name": null,
+   "confidence": "none",
+   "evidence": [],
+   "action": "none",
+   "notes": "non-uPl: DX9/PC-only UI code (owner band by getDTI stubs: uPausePractice); SE dump covers uPl* only"
+  },
+  {
+   "dx9_ea": "0x7a0a30",
+   "old_dx9_name": "sub_7A0A30",
+   "new_dx9_name": null,
+   "se_ea": null,
+   "se_name": null,
+   "confidence": "none",
+   "evidence": [],
+   "action": "none",
+   "notes": "non-uPl: DX9/PC-only UI code (owner band by getDTI stubs: uPausePractice); SE dump covers uPl* only"
+  },
+  {
+   "dx9_ea": "0x7a0be0",
+   "old_dx9_name": "sub_7A0BE0",
+   "new_dx9_name": null,
+   "se_ea": null,
+   "se_name": null,
+   "confidence": "none",
+   "evidence": [],
+   "action": "none",
+   "notes": "non-uPl: DX9/PC-only UI code (owner band by getDTI stubs: uPausePractice); SE dump covers uPl* only"
+  },
+  {
+   "dx9_ea": "0x7a0bf0",
+   "old_dx9_name": "sub_7A0BF0",
+   "new_dx9_name": null,
+   "se_ea": null,
+   "se_name": null,
+   "confidence": "none",
+   "evidence": [],
+   "action": "none",
+   "notes": "non-uPl: DX9/PC-only UI code (owner band by getDTI stubs: uPausePractice); SE dump covers uPl* only"
+  },
+  {
+   "dx9_ea": "0x7a0e00",
+   "old_dx9_name": "sub_7A0E00",
+   "new_dx9_name": null,
+   "se_ea": null,
+   "se_name": null,
+   "confidence": "none",
+   "evidence": [],
+   "action": "none",
+   "notes": "non-uPl: DX9/PC-only UI code (owner band by getDTI stubs: uPcBenchCock); SE dump covers uPl* only"
+  },
+  {
+   "dx9_ea": "0x7a0e10",
+   "old_dx9_name": "sub_7A0E10",
+   "new_dx9_name": null,
+   "se_ea": null,
+   "se_name": null,
+   "confidence": "none",
+   "evidence": [],
+   "action": "none",
+   "notes": "non-uPl: DX9/PC-only UI code (owner band by getDTI stubs: uPcBenchCock); SE dump covers uPl* only"
+  },
+  {
+   "dx9_ea": "0x7a0e60",
+   "old_dx9_name": "sub_7A0E60",
+   "new_dx9_name": null,
+   "se_ea": null,
+   "se_name": null,
+   "confidence": "none",
+   "evidence": [],
+   "action": "none",
+   "notes": "non-uPl: DX9/PC-only UI code (owner band by getDTI stubs: uPcBenchCock); SE dump covers uPl* only"
+  },
+  {
+   "dx9_ea": "0x7a0e90",
+   "old_dx9_name": "sub_7A0E90",
+   "new_dx9_name": null,
+   "se_ea": null,
+   "se_name": null,
+   "confidence": "none",
+   "evidence": [],
+   "action": "none",
+   "notes": "non-uPl: DX9/PC-only UI code (owner band by getDTI stubs: uPcBenchCock); SE dump covers uPl* only"
+  },
+  {
+   "dx9_ea": "0x7a0ec0",
+   "old_dx9_name": "sub_7A0EC0",
+   "new_dx9_name": null,
+   "se_ea": null,
+   "se_name": null,
+   "confidence": "none",
+   "evidence": [],
+   "action": "none",
+   "notes": "non-uPl: DX9/PC-only UI code (owner band by getDTI stubs: uPcBenchCock); SE dump covers uPl* only"
+  },
+  {
+   "dx9_ea": "0x7a0f60",
+   "old_dx9_name": "sub_7A0F60",
+   "new_dx9_name": null,
+   "se_ea": null,
+   "se_name": null,
+   "confidence": "none",
+   "evidence": [],
+   "action": "none",
+   "notes": "non-uPl: DX9/PC-only UI code (owner band by getDTI stubs: uPcBenchCock); SE dump covers uPl* only"
+  },
+  {
+   "dx9_ea": "0x7a1000",
+   "old_dx9_name": "sub_7A1000",
+   "new_dx9_name": null,
+   "se_ea": null,
+   "se_name": null,
+   "confidence": "none",
+   "evidence": [],
+   "action": "none",
+   "notes": "non-uPl: DX9/PC-only UI code (owner band by getDTI stubs: uPcBenchCock); SE dump covers uPl* only"
+  },
+  {
+   "dx9_ea": "0x7a11f0",
+   "old_dx9_name": "sub_7A11F0",
+   "new_dx9_name": null,
+   "se_ea": null,
+   "se_name": null,
+   "confidence": "none",
+   "evidence": [],
+   "action": "none",
+   "notes": "non-uPl: DX9/PC-only UI code (owner band by getDTI stubs: uPcBenchCock); SE dump covers uPl* only"
+  },
+  {
+   "dx9_ea": "0x7a1500",
+   "old_dx9_name": "sub_7A1500",
+   "new_dx9_name": null,
+   "se_ea": null,
+   "se_name": null,
+   "confidence": "none",
+   "evidence": [],
+   "action": "none",
+   "notes": "non-uPl: DX9/PC-only UI code (owner band by getDTI stubs: uPcBenchCock); SE dump covers uPl* only"
+  },
+  {
+   "dx9_ea": "0x7a1530",
+   "old_dx9_name": "sub_7A1530",
+   "new_dx9_name": null,
+   "se_ea": null,
+   "se_name": null,
+   "confidence": "none",
+   "evidence": [],
+   "action": "none",
+   "notes": "non-uPl: DX9/PC-only UI code (owner band by getDTI stubs: uPcBenchCock); SE dump covers uPl* only"
+  },
+  {
+   "dx9_ea": "0x7a16c0",
+   "old_dx9_name": "sub_7A16C0",
+   "new_dx9_name": null,
+   "se_ea": null,
+   "se_name": null,
+   "confidence": "none",
+   "evidence": [],
+   "action": "none",
+   "notes": "non-uPl: DX9/PC-only UI code (owner band by getDTI stubs: uPcMessage); SE dump covers uPl* only"
+  },
+  {
+   "dx9_ea": "0x7a1700",
+   "old_dx9_name": "sub_7A1700",
+   "new_dx9_name": null,
+   "se_ea": null,
+   "se_name": null,
+   "confidence": "none",
+   "evidence": [],
+   "action": "none",
+   "notes": "non-uPl: DX9/PC-only UI code (owner band by getDTI stubs: uPcMessage); SE dump covers uPl* only"
+  },
+  {
+   "dx9_ea": "0x7a17c0",
+   "old_dx9_name": "sub_7A17C0",
+   "new_dx9_name": null,
+   "se_ea": null,
+   "se_name": null,
+   "confidence": "none",
+   "evidence": [],
+   "action": "none",
+   "notes": "non-uPl: DX9/PC-only UI code (owner band by getDTI stubs: uPcMessage); SE dump covers uPl* only"
+  },
+  {
+   "dx9_ea": "0x7a1860",
+   "old_dx9_name": "sub_7A1860",
+   "new_dx9_name": null,
+   "se_ea": null,
+   "se_name": null,
+   "confidence": "none",
+   "evidence": [],
+   "action": "none",
+   "notes": "non-uPl: DX9/PC-only UI code (owner band by getDTI stubs: uPcMessage); SE dump covers uPl* only"
+  },
+  {
+   "dx9_ea": "0x7a1af0",
+   "old_dx9_name": "sub_7A1AF0",
+   "new_dx9_name": null,
+   "se_ea": null,
+   "se_name": null,
+   "confidence": "none",
+   "evidence": [],
+   "action": "none",
+   "notes": "non-uPl: DX9/PC-only UI code (owner band by getDTI stubs: uPcMessage); SE dump covers uPl* only"
+  },
+  {
+   "dx9_ea": "0x7a1b20",
+   "old_dx9_name": "sub_7A1B20",
+   "new_dx9_name": null,
+   "se_ea": null,
+   "se_name": null,
+   "confidence": "none",
+   "evidence": [],
+   "action": "none",
+   "notes": "non-uPl: DX9/PC-only UI code (owner band by getDTI stubs: uPcMessage); SE dump covers uPl* only"
+  },
+  {
+   "dx9_ea": "0x7a1b50",
+   "old_dx9_name": "sub_7A1B50",
+   "new_dx9_name": null,
+   "se_ea": null,
+   "se_name": null,
+   "confidence": "none",
+   "evidence": [],
+   "action": "none",
+   "notes": "non-uPl: DX9/PC-only UI code (owner band by getDTI stubs: uPcMessage); SE dump covers uPl* only"
+  },
+  {
+   "dx9_ea": "0x7a1b70",
+   "old_dx9_name": "sub_7A1B70",
+   "new_dx9_name": null,
+   "se_ea": null,
+   "se_name": null,
+   "confidence": "none",
+   "evidence": [],
+   "action": "none",
+   "notes": "non-uPl: DX9/PC-only UI code (owner band by getDTI stubs: uPcMessage); SE dump covers uPl* only"
+  },
+  {
+   "dx9_ea": "0x7a1dc0",
+   "old_dx9_name": "sub_7A1DC0",
+   "new_dx9_name": null,
+   "se_ea": null,
+   "se_name": null,
+   "confidence": "none",
+   "evidence": [],
+   "action": "none",
+   "notes": "non-uPl: DX9/PC-only UI code (owner band by getDTI stubs: uPcMessage); SE dump covers uPl* only"
+  },
+  {
+   "dx9_ea": "0x7a1fc0",
+   "old_dx9_name": "sub_7A1FC0",
+   "new_dx9_name": null,
+   "se_ea": null,
+   "se_name": null,
+   "confidence": "none",
+   "evidence": [],
+   "action": "none",
+   "notes": "non-uPl: DX9/PC-only UI code (owner band by getDTI stubs: uPcMessage); SE dump covers uPl* only"
+  },
+  {
+   "dx9_ea": "0x7a1fd0",
+   "old_dx9_name": "sub_7A1FD0",
+   "new_dx9_name": null,
+   "se_ea": null,
+   "se_name": null,
+   "confidence": "none",
+   "evidence": [],
+   "action": "none",
+   "notes": "non-uPl: DX9/PC-only UI code (owner band by getDTI stubs: uPcMessage); SE dump covers uPl* only"
+  },
+  {
+   "dx9_ea": "0x7a2100",
+   "old_dx9_name": "sub_7A2100",
+   "new_dx9_name": null,
+   "se_ea": null,
+   "se_name": null,
+   "confidence": "none",
+   "evidence": [],
+   "action": "none",
+   "notes": "non-uPl: DX9/PC-only UI code (owner band by getDTI stubs: uPcMessage); SE dump covers uPl* only"
+  },
+  {
+   "dx9_ea": "0x7a2140",
+   "old_dx9_name": "sub_7A2140",
+   "new_dx9_name": null,
+   "se_ea": null,
+   "se_name": null,
+   "confidence": "none",
+   "evidence": [],
+   "action": "none",
+   "notes": "non-uPl: DX9/PC-only UI code (owner band by getDTI stubs: uPcSettings); SE dump covers uPl* only"
+  },
+  {
+   "dx9_ea": "0x7a2150",
+   "old_dx9_name": "sub_7A2150",
+   "new_dx9_name": null,
+   "se_ea": null,
+   "se_name": null,
+   "confidence": "none",
+   "evidence": [],
+   "action": "none",
+   "notes": "non-uPl: DX9/PC-only UI code (owner band by getDTI stubs: uPcSettings); SE dump covers uPl* only"
+  },
+  {
+   "dx9_ea": "0x7a2170",
+   "old_dx9_name": "sub_7A2170",
+   "new_dx9_name": null,
+   "se_ea": null,
+   "se_name": null,
+   "confidence": "none",
+   "evidence": [],
+   "action": "none",
+   "notes": "non-uPl: DX9/PC-only UI code (owner band by getDTI stubs: uPcSettings); SE dump covers uPl* only"
+  },
+  {
+   "dx9_ea": "0x7a21c0",
+   "old_dx9_name": "sub_7A21C0",
+   "new_dx9_name": null,
+   "se_ea": null,
+   "se_name": null,
+   "confidence": "none",
+   "evidence": [],
+   "action": "none",
+   "notes": "non-uPl: DX9/PC-only UI code (owner band by getDTI stubs: uPcSettings); SE dump covers uPl* only"
+  },
+  {
+   "dx9_ea": "0x7a2380",
+   "old_dx9_name": "sub_7A2380",
+   "new_dx9_name": null,
+   "se_ea": null,
+   "se_name": null,
+   "confidence": "none",
+   "evidence": [],
+   "action": "none",
+   "notes": "non-uPl: DX9/PC-only UI code (owner band by getDTI stubs: uPcSettings); SE dump covers uPl* only"
+  },
+  {
+   "dx9_ea": "0x7a2430",
+   "old_dx9_name": "sub_7A2430",
+   "new_dx9_name": null,
+   "se_ea": null,
+   "se_name": null,
+   "confidence": "none",
+   "evidence": [],
+   "action": "none",
+   "notes": "non-uPl: DX9/PC-only UI code (owner band by getDTI stubs: uPcSettings); SE dump covers uPl* only"
+  },
+  {
+   "dx9_ea": "0x7a24a0",
+   "old_dx9_name": "sub_7A24A0",
+   "new_dx9_name": null,
+   "se_ea": null,
+   "se_name": null,
+   "confidence": "none",
+   "evidence": [],
+   "action": "none",
+   "notes": "non-uPl: DX9/PC-only UI code (owner band by getDTI stubs: uPcSettings); SE dump covers uPl* only"
+  },
+  {
+   "dx9_ea": "0x7a2670",
+   "old_dx9_name": "sub_7A2670",
+   "new_dx9_name": null,
+   "se_ea": null,
+   "se_name": null,
+   "confidence": "none",
+   "evidence": [],
+   "action": "none",
+   "notes": "non-uPl: DX9/PC-only UI code (owner band by getDTI stubs: uPcSettings); SE dump covers uPl* only"
+  },
+  {
+   "dx9_ea": "0x7a26e0",
+   "old_dx9_name": "sub_7A26E0",
+   "new_dx9_name": null,
+   "se_ea": null,
+   "se_name": null,
+   "confidence": "none",
+   "evidence": [],
+   "action": "none",
+   "notes": "non-uPl: DX9/PC-only UI code (owner band by getDTI stubs: uPcSettings); SE dump covers uPl* only"
+  },
+  {
+   "dx9_ea": "0x7a27c0",
+   "old_dx9_name": "sub_7A27C0",
+   "new_dx9_name": null,
+   "se_ea": null,
+   "se_name": null,
+   "confidence": "none",
+   "evidence": [],
+   "action": "none",
+   "notes": "non-uPl: DX9/PC-only UI code (owner band by getDTI stubs: uPcSettings); SE dump covers uPl* only"
+  },
+  {
+   "dx9_ea": "0x7a2800",
+   "old_dx9_name": "sub_7A2800",
+   "new_dx9_name": null,
+   "se_ea": null,
+   "se_name": null,
+   "confidence": "none",
+   "evidence": [],
+   "action": "none",
+   "notes": "non-uPl: DX9/PC-only UI code (owner band by getDTI stubs: uPcSettings); SE dump covers uPl* only"
+  },
+  {
+   "dx9_ea": "0x7a2b10",
+   "old_dx9_name": "sub_7A2B10",
+   "new_dx9_name": null,
+   "se_ea": null,
+   "se_name": null,
+   "confidence": "none",
+   "evidence": [],
+   "action": "none",
+   "notes": "non-uPl: DX9/PC-only UI code (owner band by getDTI stubs: uPcSettings); SE dump covers uPl* only"
+  },
+  {
+   "dx9_ea": "0x7a2b40",
+   "old_dx9_name": "sub_7A2B40",
+   "new_dx9_name": null,
+   "se_ea": null,
+   "se_name": null,
+   "confidence": "none",
+   "evidence": [],
+   "action": "none",
+   "notes": "non-uPl: DX9/PC-only UI code (owner band by getDTI stubs: uPcSettings); SE dump covers uPl* only"
+  },
+  {
+   "dx9_ea": "0x7a2b80",
+   "old_dx9_name": "sub_7A2B80",
+   "new_dx9_name": null,
+   "se_ea": null,
+   "se_name": null,
+   "confidence": "none",
+   "evidence": [],
+   "action": "none",
+   "notes": "non-uPl: DX9/PC-only UI code (owner band by getDTI stubs: uPcSettings); SE dump covers uPl* only"
+  },
+  {
+   "dx9_ea": "0x7a33e0",
+   "old_dx9_name": "sub_7A33E0",
+   "new_dx9_name": null,
+   "se_ea": null,
+   "se_name": null,
+   "confidence": "none",
+   "evidence": [],
+   "action": "none",
+   "notes": "non-uPl: DX9/PC-only UI code (owner band by getDTI stubs: uPcSettings); SE dump covers uPl* only"
+  },
+  {
+   "dx9_ea": "0x7a3440",
+   "old_dx9_name": "sub_7A3440",
+   "new_dx9_name": null,
+   "se_ea": null,
+   "se_name": null,
+   "confidence": "none",
+   "evidence": [],
+   "action": "none",
+   "notes": "non-uPl: DX9/PC-only UI code (owner band by getDTI stubs: uPcSettings); SE dump covers uPl* only"
+  },
+  {
+   "dx9_ea": "0x7a4030",
+   "old_dx9_name": "sub_7A4030",
+   "new_dx9_name": null,
+   "se_ea": null,
+   "se_name": null,
+   "confidence": "none",
+   "evidence": [],
+   "action": "none",
+   "notes": "non-uPl: DX9/PC-only UI code (owner band by getDTI stubs: uPcSettings); SE dump covers uPl* only"
+  },
+  {
+   "dx9_ea": "0x7a4060",
+   "old_dx9_name": "sub_7A4060",
+   "new_dx9_name": null,
+   "se_ea": null,
+   "se_name": null,
+   "confidence": "none",
+   "evidence": [],
+   "action": "none",
+   "notes": "non-uPl: DX9/PC-only UI code (owner band by getDTI stubs: uPcSettings); SE dump covers uPl* only"
+  },
+  {
+   "dx9_ea": "0x7a4400",
+   "old_dx9_name": "sub_7A4400",
+   "new_dx9_name": null,
+   "se_ea": null,
+   "se_name": null,
+   "confidence": "none",
+   "evidence": [],
+   "action": "none",
+   "notes": "non-uPl: DX9/PC-only UI code (owner band by getDTI stubs: uPcSettings); SE dump covers uPl* only"
+  },
+  {
+   "dx9_ea": "0x7a4490",
+   "old_dx9_name": "sub_7A4490",
+   "new_dx9_name": null,
+   "se_ea": null,
+   "se_name": null,
+   "confidence": "none",
+   "evidence": [],
+   "action": "none",
+   "notes": "non-uPl: DX9/PC-only UI code (owner band by getDTI stubs: uPcSettings); SE dump covers uPl* only"
+  },
+  {
+   "dx9_ea": "0x7a4640",
+   "old_dx9_name": "sub_7A4640",
+   "new_dx9_name": "uPlacement::getDTI",
+   "se_ea": "0x99d910",
+   "se_name": "uPlacement::getDTI(void)",
+   "confidence": "high",
+   "evidence": [
+    "vtable",
+    "decompile"
+   ],
+   "action": "renamed",
+   "notes": "getDTI stub returns uPlacement::DTI (0xE5A280)"
+  },
+  {
+   "dx9_ea": "0x7a4650",
+   "old_dx9_name": "loc_7A4650",
+   "new_dx9_name": "uPlacement::MyDTI::newInstance",
+   "se_ea": "0x99d540",
+   "se_name": "uPlacement::MyDTI::newInstance(void)",
+   "confidence": "high",
+   "evidence": [
+    "decompile",
+    "consts"
+   ],
+   "action": "renamed",
+   "notes": "newly defined: alloc 0x20, writes uPlacement vtable; ref from MyDTI vtable 0xBE28E4"
+  },
+  {
+   "dx9_ea": "0x7a46b0",
+   "old_dx9_name": "sub_7A46B0",
+   "new_dx9_name": "uPlacement::uPlacement",
+   "se_ea": "0x99d390",
+   "se_name": "uPlacement::uPlacement(bool)",
+   "confidence": "high",
+   "evidence": [
+    "decompile",
+    "order"
+   ],
+   "action": "renamed",
+   "notes": "ctor (bool) form: cUnit fields inlined + vtable write, no init()"
+  },
+  {
+   "dx9_ea": "0x7a4700",
+   "old_dx9_name": "loc_7A4700",
+   "new_dx9_name": "??_GuPlacement@@UAEPAXI@Z",
+   "se_ea": "0x99d920",
+   "se_name": "uPlacement::`scalar deleting destructor'(uint)",
+   "confidence": "high",
+   "evidence": [
+    "vtable",
+    "decompile"
+   ],
+   "action": "renamed",
+   "notes": "newly defined; vtable slot 0; releases mpPlacement then frees via UnitAllocator"
+  },
+  {
+   "dx9_ea": "0x7a4750",
+   "old_dx9_name": "sub_7A4750",
+   "new_dx9_name": "uPlacement::uPlacement_2",
+   "se_ea": "0x99d880",
+   "se_name": "uPlacement::uPlacement(char const *)",
+   "confidence": "high",
+   "evidence": [
+    "decompile",
+    "callees"
+   ],
+   "action": "renamed",
+   "notes": "ctor(char const*): inits fields then calls init()"
+  },
+  {
+   "dx9_ea": "0x7a47a0",
+   "old_dx9_name": "sub_7A47A0",
+   "new_dx9_name": "uPlacement::init",
+   "se_ea": "0x99d590",
+   "se_name": "uPlacement::init(char const *)",
+   "confidence": "high",
+   "evidence": [
+    "decompile",
+    "callees"
+   ],
+   "action": "renamed",
+   "notes": "creates rPlacement resource from path; DX9 lacks the SE strstr scr-path check"
+  },
+  {
+   "dx9_ea": "0x7a4810",
+   "old_dx9_name": "sub_7A4810",
+   "new_dx9_name": "uPlacement::setup",
+   "se_ea": "0x99d8b0",
+   "se_name": "uPlacement::setup(void)",
+   "confidence": "high",
+   "evidence": [
+    "vtable",
+    "decompile"
+   ],
+   "action": "renamed",
+   "notes": "slot 5"
+  },
+  {
+   "dx9_ea": "0x7a4840",
+   "old_dx9_name": "sub_7A4840",
+   "new_dx9_name": "uPlacement::move",
+   "se_ea": "0x99d8d0",
+   "se_name": "uPlacement::move(void)",
+   "confidence": "high",
+   "evidence": [
+    "vtable",
+    "decompile"
+   ],
+   "action": "renamed",
+   "notes": "slot 6 (SE slot 8)"
+  },
+  {
+   "dx9_ea": "0x7a4870",
+   "old_dx9_name": "sub_7A4870",
+   "new_dx9_name": "uPlacement::sync",
+   "se_ea": "0x99d8f0",
+   "se_name": "uPlacement::sync(void)",
+   "confidence": "high",
+   "evidence": [
+    "vtable",
+    "decompile"
+   ],
+   "action": "renamed",
+   "notes": "slot 8 (SE slot 11)"
+  },
+  {
+   "dx9_ea": "0x7a48a0",
+   "old_dx9_name": "sub_7A48A0",
+   "new_dx9_name": "uPlacement::createProperty",
+   "se_ea": "0x99d610",
+   "se_name": "uPlacement::createProperty(MtPropertyList &)",
+   "confidence": "high",
+   "evidence": [
+    "vtable",
+    "strings"
+   ],
+   "action": "renamed",
+   "notes": "registers mpPlacement"
+  },
+  {
+   "dx9_ea": "0x7a48f0",
+   "old_dx9_name": "sub_7A48F0",
+   "new_dx9_name": "uPlacement::setNativeData",
+   "se_ea": "0x99d3f0",
+   "se_name": "uPlacement::setNativeData(rPlacement *)",
+   "confidence": "high",
+   "evidence": [
+    "decompile",
+    "callees"
+   ],
+   "action": "renamed",
+   "notes": "setter passed to createProperty for mpPlacement; DX9 lacks the SE strstr check"
+  },
+  {
+   "dx9_ea": "0x7a4930",
+   "old_dx9_name": "sub_7A4930",
+   "new_dx9_name": "uPlacement::createUnitFromNative",
+   "se_ea": "0x99d660",
+   "se_name": "uPlacement::createUnitFromNative(void)",
+   "confidence": "high",
+   "evidence": [
+    "callees",
+    "decompile",
+    "size"
+   ],
+   "action": "renamed",
+   "notes": "called by setup/move/sync"
+  },
+  {
+   "dx9_ea": "0x7a4b10",
+   "old_dx9_name": "sub_7A4B10",
+   "new_dx9_name": "uPlacement::apply",
+   "se_ea": "0x99d450",
+   "se_name": "uPlacement::apply(rPlacement::TRACK *,MtProperty *,MtObject * *)",
+   "confidence": "high",
+   "evidence": [
+    "callees",
+    "decompile"
+   ],
+   "action": "renamed",
+   "notes": "property setter switch, called from createUnitFromNative"
+  },
+  {
+   "dx9_ea": "0x7a4c00",
+   "old_dx9_name": "uPlayer::cWeaponCtrl::getWeapon",
+   "new_dx9_name": "uPlayer::cWeaponCtrl::getLongWeapon",
+   "se_ea": "0x4af240",
+   "se_name": "uPlayer::cWeaponCtrl::getLongWeapon(void)",
+   "confidence": "high",
+   "evidence": [
+    "decompile",
+    "callees"
+   ],
+   "action": "replaced_existing",
+   "notes": "reads mLongId, scans mpWeapon[7]; SE getLongWeapon->getWeapon(ID) inlined"
+  },
+  {
+   "dx9_ea": "0x7a4c40",
+   "old_dx9_name": "sub_7A4C40",
+   "new_dx9_name": "uPlayer::changeAutoAtckIdShort",
+   "se_ea": "0x99d9a0",
+   "se_name": "uPlayer::changeAutoAtckIdShort(uPlayer::kAtckDefTbl *)",
+   "confidence": "high",
+   "evidence": [
+    "vtable",
+    "decompile"
+   ],
+   "action": "renamed",
+   "notes": "slots 176+177; ICF-folded: one DX9 body for 2 SE methods: uPlayer::changeAutoAtckIdShort(uPlayer::kAtckDefTbl *) @ 0x99d9a0, uPlayer::changeAutoAtckIdLong(uPlayer::kAtckDefTbl *) @ 0x99d9d0"
+  },
+  {
+   "dx9_ea": "0x7a4c80",
+   "old_dx9_name": "uPlayerNero::setGunShotMotion_0",
+   "new_dx9_name": "uPlayer::initShotAutoRepeat",
+   "se_ea": "0x99da00",
+   "se_name": "uPlayer::initShotAutoRepeat(float,int)",
+   "confidence": "high",
+   "evidence": [
+    "decompile",
+    "consts"
+   ],
+   "action": "replaced_existing",
+   "notes": "writes mShotRepeatParam {int,interval,shotCnt,repeatCnt=3}"
+  },
+  {
+   "dx9_ea": "0x7a4cd0",
+   "old_dx9_name": "uPlayerNero::checkGunAutoShot",
+   "new_dx9_name": "uPlayer::checkShotAutoRepeat",
+   "se_ea": "0x99da70",
+   "se_name": "uPlayer::checkShotAutoRepeat(void)",
+   "confidence": "high",
+   "evidence": [
+    "decompile",
+    "callees"
+   ],
+   "action": "replaced_existing",
+   "notes": "uses mShotRepeatParam, getLongWeapon, setActionAtckGun"
+  },
+  {
+   "dx9_ea": "0x7a4d80",
+   "old_dx9_name": "sub_7A4D80",
+   "new_dx9_name": "uPlayer::getShotAutoChargeApproveLevel",
+   "se_ea": "0x99dc20",
+   "se_name": "uPlayer::getShotAutoChargeApproveLevel(void)",
+   "confidence": "high",
+   "evidence": [
+    "decompile",
+    "size"
+   ],
+   "action": "renamed",
+   "notes": "loops 3 mShotChargeParam levels; virtual in SE (slot 269), non-virtual in DX9"
+  },
+  {
+   "dx9_ea": "0x7a4dc0",
+   "old_dx9_name": "uPlayer::updateShotAutoCharge",
+   "new_dx9_name": "uPlayer::updateShotAutoCharge",
+   "se_ea": "0x99dc70",
+   "se_name": "uPlayer::updateShotAutoCharge(void)",
+   "confidence": "high",
+   "evidence": [
+    "decompile",
+    "callees",
+    "size"
+   ],
+   "action": "confirmed",
+   "notes": ""
+  },
+  {
+   "dx9_ea": "0x7a4e60",
+   "old_dx9_name": "sub_7A4E60",
+   "new_dx9_name": "uPlayer::initAutomaticCombo",
+   "se_ea": "0x99e1c0",
+   "se_name": "uPlayer::initAutomaticCombo(void)",
+   "confidence": "high",
+   "evidence": [
+    "decompile"
+   ],
+   "action": "renamed",
+   "notes": "clears mAutoCombo/mIsAutoCombo/mIsEnableAtckForceCancel; same code inlined in traceAutoComboTbl; SE virtual slot 270, non-virtual in DX9"
+  },
+  {
+   "dx9_ea": "0x7a4e90",
+   "old_dx9_name": "sub_7A4E90",
+   "new_dx9_name": "uPlayer::getAutoComboAreaType",
+   "se_ea": "0x99e1f0",
+   "se_name": "uPlayer::getAutoComboAreaType(float,float)",
+   "confidence": "high",
+   "evidence": [
+    "decompile",
+    "callees"
+   ],
+   "action": "renamed",
+   "notes": "called by isResetAutoCombo with two floats; uses getLockOnTarget"
+  },
+  {
+   "dx9_ea": "0x7a4fe0",
+   "old_dx9_name": "sub_7A4FE0",
+   "new_dx9_name": "uPlayer::traceAutoComboTbl",
+   "se_ea": "0x99e320",
+   "se_name": "uPlayer::traceAutoComboTbl(uPlayer::kAtckDefTbl *,uPlayer::kAtMeleeHead *,bool)",
+   "confidence": "high",
+   "evidence": [
+    "decompile"
+   ],
+   "action": "renamed",
+   "notes": "calls isResetAutoCombo (vslot 178) then walks auto-combo table"
+  },
+  {
+   "dx9_ea": "0x7a52c0",
+   "old_dx9_name": "sub_7A52C0",
+   "new_dx9_name": "uPlayer::isResetAutoCombo",
+   "se_ea": "0x99e5d0",
+   "se_name": "uPlayer::isResetAutoCombo(uPlayer::kAtMeleeHead *,bool)",
+   "confidence": "high",
+   "evidence": [
+    "vtable",
+    "decompile"
+   ],
+   "action": "renamed",
+   "notes": "slot 178 (SE 271)"
+  },
+  {
+   "dx9_ea": "0x7a5340",
+   "old_dx9_name": "sub_7A5340",
+   "new_dx9_name": "uPlayer::getAutoAtckDefTbl",
+   "se_ea": "0x99dd20",
+   "se_name": "uPlayer::getAutoAtckDefTbl(int)",
+   "confidence": "high",
+   "evidence": [
+    "vtable",
+    "decompile",
+    "size"
+   ],
+   "action": "renamed",
+   "notes": "slot 179 (SE 272)"
+  },
+  {
+   "dx9_ea": "0x7a5370",
+   "old_dx9_name": "sub_7A5370",
+   "new_dx9_name": "uPlayer::convertAutoAtckId",
+   "se_ea": "0x99dd50",
+   "se_name": "uPlayer::convertAutoAtckId(int)",
+   "confidence": "high",
+   "evidence": [
+    "vtable",
+    "size"
+   ],
+   "action": "renamed",
+   "notes": "slot 180 (SE 273), returns arg"
+  },
+  {
+   "dx9_ea": "0x7a5380",
+   "old_dx9_name": "sub_7A5380",
+   "new_dx9_name": "uPlayer::checkAutomaticBattle",
+   "se_ea": "0x99dd60",
+   "se_name": "uPlayer::checkAutomaticBattle(MtVector3 &)",
+   "confidence": "high",
+   "evidence": [
+    "decompile",
+    "callees",
+    "consts"
+   ],
+   "action": "renamed",
+   "notes": "line-cast to lock-on target (filter 0x40400, type 127)"
+  },
+  {
+   "dx9_ea": "0x7a5520",
+   "old_dx9_name": "uPlayer::updateAutomaticBattleMode",
+   "new_dx9_name": "uPlayer::updateAutomaticBattleMode",
+   "se_ea": "0x99dec0",
+   "se_name": "uPlayer::updateAutomaticBattleMode(void)",
+   "confidence": "high",
+   "evidence": [
+    "decompile",
+    "callees"
+   ],
+   "action": "confirmed",
+   "notes": ""
+  },
+  {
+   "dx9_ea": "0x7a5580",
+   "old_dx9_name": "uPlayer::getDTI",
+   "new_dx9_name": "uPlayer::getDTI",
+   "se_ea": "0x9b0100",
+   "se_name": "uPlayer::getDTI(void)",
+   "confidence": "high",
+   "evidence": [
+    "vtable",
+    "decompile"
+   ],
+   "action": "confirmed",
+   "notes": ""
+  },
+  {
+   "dx9_ea": "0x7a5590",
+   "old_dx9_name": "sub_7A5590",
+   "new_dx9_name": "uPlayer::cInterface::getDTI",
+   "se_ea": "0x9aff80",
+   "se_name": "uPlayer::cInterface::getDTI(void)",
+   "confidence": "high",
+   "evidence": [
+    "vtable",
+    "decompile"
+   ],
+   "action": "renamed",
+   "notes": "returns uPlayer::cInterface::DTI 0xE5A3A0"
+  },
+  {
+   "dx9_ea": "0x7a55a0",
+   "old_dx9_name": "sub_7A55A0",
+   "new_dx9_name": "uPlayer::cSECtrl::getDTI",
+   "se_ea": "0x4f9180",
+   "se_name": "uPlayer::cSECtrl::getDTI(void)",
+   "confidence": "high",
+   "evidence": [
+    "vtable",
+    "decompile"
+   ],
+   "action": "renamed",
+   "notes": "returns uPlayer::cSECtrl::DTI 0xE5A2A0"
+  },
+  {
+   "dx9_ea": "0x7a55b0",
+   "old_dx9_name": "sub_7A55B0",
+   "new_dx9_name": "uPlayer::cProcSpdCtrl::getDTI",
+   "se_ea": "0x9affa0",
+   "se_name": "uPlayer::cProcSpdCtrl::getDTI(void)",
+   "confidence": "high",
+   "evidence": [
+    "vtable",
+    "decompile"
+   ],
+   "action": "renamed",
+   "notes": "returns uPlayer::cProcSpdCtrl::DTI 0xE5A3C0"
+  },
+  {
+   "dx9_ea": "0x7a55c0",
+   "old_dx9_name": "sub_7A55C0",
+   "new_dx9_name": "uPlayer::cPeripheral::getDTI",
+   "se_ea": "0x9aff70",
+   "se_name": "uPlayer::cPeripheral::getDTI(void)",
+   "confidence": "high",
+   "evidence": [
+    "vtable",
+    "decompile"
+   ],
+   "action": "renamed",
+   "notes": "returns 0xE5A340"
+  },
+  {
+   "dx9_ea": "0x7a55d0",
+   "old_dx9_name": "sub_7A55D0",
+   "new_dx9_name": "uPlayer::cParamTblCtrl::getDTI",
+   "se_ea": "0x9b0050",
+   "se_name": "uPlayer::cParamTblCtrl::getDTI(void)",
+   "confidence": "high",
+   "evidence": [
+    "vtable",
+    "decompile"
+   ],
+   "action": "renamed",
+   "notes": "returns 0xE5A320"
+  },
+  {
+   "dx9_ea": "0x7a55e0",
+   "old_dx9_name": "sub_7A55E0",
+   "new_dx9_name": "uPlayer::cWeaponCtrl::getDTI",
+   "se_ea": "0x4f9cd0",
+   "se_name": "uPlayer::cWeaponCtrl::getDTI(void)",
+   "confidence": "high",
+   "evidence": [
+    "vtable",
+    "decompile"
+   ],
+   "action": "renamed",
+   "notes": "returns 0xE5A380"
+  },
+  {
+   "dx9_ea": "0x7a55f0",
+   "old_dx9_name": "sub_7A55F0",
+   "new_dx9_name": "uPlayer::cWeaponCtrl::setLongEnable",
+   "se_ea": "0x4f9ce0",
+   "se_name": "uPlayer::cWeaponCtrl::setLongEnable(void)",
+   "confidence": "high",
+   "evidence": [
+    "decompile",
+    "size"
+   ],
+   "action": "renamed",
+   "notes": "mEnableLongId = mLongId, enables weapon"
+  },
+  {
+   "dx9_ea": "0x7a5630",
+   "old_dx9_name": "sub_7A5630",
+   "new_dx9_name": "uPlayer::cWeaponCtrl::setShortEnable",
+   "se_ea": "0x4f9d20",
+   "se_name": "uPlayer::cWeaponCtrl::setShortEnable(void)",
+   "confidence": "high",
+   "evidence": [
+    "decompile",
+    "size"
+   ],
+   "action": "renamed",
+   "notes": "mEnableShortId = mShortId"
+  },
+  {
+   "dx9_ea": "0x7a5670",
+   "old_dx9_name": "sub_7A5670",
+   "new_dx9_name": "uPlayer::cLegIkCtrl::getDTI",
+   "se_ea": "0x9aff90",
+   "se_name": "uPlayer::cLegIkCtrl::getDTI(void)",
+   "confidence": "high",
+   "evidence": [
+    "vtable",
+    "decompile"
+   ],
+   "action": "renamed",
+   "notes": "returns 0xE5A300"
+  },
+  {
+   "dx9_ea": "0x7a5680",
+   "old_dx9_name": "sub_7A5680",
+   "new_dx9_name": "uPlayer::cHitSlowCtrl::getDTI",
+   "se_ea": "0x9b00c0",
+   "se_name": "uPlayer::cHitSlowCtrl::getDTI(void)",
+   "confidence": "high",
+   "evidence": [
+    "vtable",
+    "decompile"
+   ],
+   "action": "renamed",
+   "notes": "returns 0xE5A2E0"
+  },
+  {
+   "dx9_ea": "0x7a5690",
+   "old_dx9_name": "sub_7A5690",
+   "new_dx9_name": null,
+   "se_ea": "0x4bc340",
+   "se_name": "uPlayer::setDrawMode(uint)",
+   "confidence": "medium",
+   "evidence": [
+    "vtable",
+    "decompile"
+   ],
+   "action": "commented",
+   "notes": "slot 123, overridden by Dante (0x7B6A20) and Nero (0x7E3C80) as SE overrides setDrawMode; called with 11 by requestFreezeEfct and 15 by eraseFreezeEfct"
+  },
+  {
+   "dx9_ea": "0x7a56a0",
+   "old_dx9_name": "sub_7A56A0",
+   "new_dx9_name": "uPlayer::isDevilTriggerFix",
+   "se_ea": "0x4c05d0",
+   "se_name": "uPlayer::isDevilTriggerFix(void)",
+   "confidence": "high",
+   "evidence": [
+    "vtable",
+    "size"
+   ],
+   "action": "renamed",
+   "notes": "slot 124 (SE 195); Dante inherits, Nero overrides (0x7E19F0, sz35 = SE Nero override sz35)"
+  },
+  {
+   "dx9_ea": "0x7a56b0",
+   "old_dx9_name": "sub_7A56B0",
+   "new_dx9_name": "uPlayer::getUpperBdyVibJoint",
+   "se_ea": "0x4c05e0",
+   "se_name": "uPlayer::getUpperBdyVibJoint(void)",
+   "confidence": "high",
+   "evidence": [
+    "vtable",
+    "decompile"
+   ],
+   "action": "renamed",
+   "notes": "returns -1; slots 86,125-130 (SE 126,196-201 all getUpperBdyVibJoint)"
+  },
+  {
+   "dx9_ea": "0x7a56c0",
+   "old_dx9_name": "sub_7A56C0",
+   "new_dx9_name": "uPlayer::isSeparatelySetAtckGun",
+   "se_ea": "0x4c05f0",
+   "se_name": "uPlayer::isSeparatelySetAtckGun(int)",
+   "confidence": "high",
+   "evidence": [
+    "vtable",
+    "size"
+   ],
+   "action": "renamed",
+   "notes": "slot 133 (SE 204), sz15 both"
+  },
+  {
+   "dx9_ea": "0x7a56d0",
+   "old_dx9_name": "sub_7A56D0",
+   "new_dx9_name": "uPlayer::checkEmGrabDmgCancelDT",
+   "se_ea": "0x4c0600",
+   "se_name": "uPlayer::checkEmGrabDmgCancelDT(void)",
+   "confidence": "high",
+   "evidence": [
+    "vtable",
+    "size"
+   ],
+   "action": "renamed",
+   "notes": "slot 136 (SE 209), sz27 bb4 both"
+  },
+  {
+   "dx9_ea": "0x7a56f0",
+   "old_dx9_name": "uPlayer::setCollisionInitPos",
+   "new_dx9_name": "uPlayer::setCollisionInitPos",
+   "se_ea": "0x9afea0",
+   "se_name": "uPlayer::setCollisionInitPos(void)",
+   "confidence": "high",
+   "evidence": [
+    "decompile",
+    "size"
+   ],
+   "action": "confirmed",
+   "notes": ""
+  },
+  {
+   "dx9_ea": "0x7a57b0",
+   "old_dx9_name": "sub_7A57B0",
+   "new_dx9_name": "uPlayer::getDevilTrgDownVal",
+   "se_ea": "0x4c0620",
+   "se_name": "uPlayer::getDevilTrgDownVal(void)",
+   "confidence": "high",
+   "evidence": [
+    "vtable",
+    "consts"
+   ],
+   "action": "renamed",
+   "notes": "slot 137 (SE 210); returns 7.5f = SE real@40f00000"
+  },
+  {
+   "dx9_ea": "0x7a57c0",
+   "old_dx9_name": "sub_7A57C0",
+   "new_dx9_name": null,
+   "se_ea": null,
+   "se_name": null,
+   "confidence": "none",
+   "evidence": [
+    "decompile"
+   ],
+   "action": "commented",
+   "notes": "non-uPl helper: sSave per-character short-weapon setter under CRITICAL_SECTION (inlined in SE setSaveDataShortWeapon)"
+  },
+  {
+   "dx9_ea": "0x7a5820",
+   "old_dx9_name": "sub_7A5820",
+   "new_dx9_name": null,
+   "se_ea": null,
+   "se_name": null,
+   "confidence": "none",
+   "evidence": [
+    "decompile"
+   ],
+   "action": "commented",
+   "notes": "non-uPl helper: sSave per-character long-weapon setter under CRITICAL_SECTION (inlined in SE setSaveDataLongWeapon)"
+  },
+  {
+   "dx9_ea": "0x7a5880",
+   "old_dx9_name": "sub_7A5880",
+   "new_dx9_name": null,
+   "se_ea": null,
+   "se_name": null,
+   "confidence": "none",
+   "evidence": [
+    "decompile"
+   ],
+   "action": "commented",
+   "notes": "non-uPl helper: sMediator player-common short-weapon setter under CRITICAL_SECTION (SE GetMediatorPlayerCommonData path)"
+  },
+  {
+   "dx9_ea": "0x7a58d0",
+   "old_dx9_name": "sub_7A58D0",
+   "new_dx9_name": null,
+   "se_ea": null,
+   "se_name": null,
+   "confidence": "none",
+   "evidence": [
+    "decompile"
+   ],
+   "action": "commented",
+   "notes": "non-uPl helper: sMediator player-common long-weapon setter under CRITICAL_SECTION"
+  },
+  {
+   "dx9_ea": "0x7a5920",
+   "old_dx9_name": "loc_7A5920",
+   "new_dx9_name": "uPlayer::cPeripheral::MyDTI::newInstance",
+   "se_ea": "0x9a3e90",
+   "se_name": "uPlayer::cPeripheral::MyDTI::newInstance(void)",
+   "confidence": "high",
+   "evidence": [
+    "decompile",
+    "consts"
+   ],
+   "action": "renamed",
+   "notes": "newly defined; alloc 0x98, cPeripheral vtable"
+  },
+  {
+   "dx9_ea": "0x7a5950",
+   "old_dx9_name": "sub_7A5950",
+   "new_dx9_name": "uPlayer::cInterface::MyDTI::newInstance",
+   "se_ea": "0x9a3ed0",
+   "se_name": "uPlayer::cInterface::MyDTI::newInstance(void)",
+   "confidence": "high",
+   "evidence": [
+    "decompile",
+    "consts"
+   ],
+   "action": "renamed",
+   "notes": "alloc 76"
+  },
+  {
+   "dx9_ea": "0x7a59b0",
+   "old_dx9_name": "loc_7A59B0",
+   "new_dx9_name": "uPlayer::cLegIkCtrl::MyDTI::newInstance",
+   "se_ea": "0x9ac550",
+   "se_name": "uPlayer::cLegIkCtrl::MyDTI::newInstance(void)",
+   "confidence": "high",
+   "evidence": [
+    "decompile"
+   ],
+   "action": "renamed",
+   "notes": "newly defined; cLegIkCtrl vtable"
+  },
+  {
+   "dx9_ea": "0x7a5a00",
+   "old_dx9_name": "loc_7A5A00",
+   "new_dx9_name": "uPlayer::cWeaponCtrl::MyDTI::newInstance",
+   "se_ea": "0x4f97b0",
+   "se_name": "uPlayer::cWeaponCtrl::MyDTI::newInstance(void)",
+   "confidence": "high",
+   "evidence": [
+    "decompile",
+    "consts"
+   ],
+   "action": "renamed",
+   "notes": "newly defined; alloc 0x44 (= DTI size), cWeaponCtrl vtable"
+  },
+  {
+   "dx9_ea": "0x7a5a50",
+   "old_dx9_name": "loc_7A5A50",
+   "new_dx9_name": "uPlayer::cParamTblCtrl::MyDTI::newInstance",
+   "se_ea": "0x9ac590",
+   "se_name": "uPlayer::cParamTblCtrl::MyDTI::newInstance(void)",
+   "confidence": "high",
+   "evidence": [
+    "decompile",
+    "consts"
+   ],
+   "action": "renamed",
+   "notes": "newly defined; alloc 0xC"
+  },
+  {
+   "dx9_ea": "0x7a5a80",
+   "old_dx9_name": "loc_7A5A80",
+   "new_dx9_name": "uPlayer::cSECtrl::MyDTI::newInstance",
+   "se_ea": "0x4f8d20",
+   "se_name": "uPlayer::cSECtrl::MyDTI::newInstance(void)",
+   "confidence": "high",
+   "evidence": [
+    "decompile",
+    "consts"
+   ],
+   "action": "renamed",
+   "notes": "newly defined; alloc 0x17C (= cSECtrl DTI size)"
+  },
+  {
+   "dx9_ea": "0x7a5ab0",
+   "old_dx9_name": "loc_7A5AB0",
+   "new_dx9_name": "uPlayer::cMotCancel::MyDTI::newInstance",
+   "se_ea": "0x9a3f30",
+   "se_name": "uPlayer::cMotCancel::MyDTI::newInstance(void)",
+   "confidence": "high",
+   "evidence": [
+    "decompile",
+    "consts"
+   ],
+   "action": "renamed",
+   "notes": "newly defined; alloc 0x2C, writes vtable 0xBE66EC (real cMotCancel vtable)"
+  },
+  {
+   "dx9_ea": "0x7a5ae0",
+   "old_dx9_name": "loc_7A5AE0",
+   "new_dx9_name": "uPlayer::cProcSpdCtrl::MyDTI::newInstance",
+   "se_ea": "0x9a3f60",
+   "se_name": "uPlayer::cProcSpdCtrl::MyDTI::newInstance(void)",
+   "confidence": "high",
+   "evidence": [
+    "decompile",
+    "consts"
+   ],
+   "action": "renamed",
+   "notes": "newly defined; alloc 0x30"
+  },
+  {
+   "dx9_ea": "0x7a5b00",
+   "old_dx9_name": "sub_7A5B00",
+   "new_dx9_name": "uPlayer::cHitSlowCtrl::MyDTI::newInstance",
+   "se_ea": "0x9ac5d0",
+   "se_name": "uPlayer::cHitSlowCtrl::MyDTI::newInstance(void)",
+   "confidence": "high",
+   "evidence": [
+    "decompile",
+    "consts"
+   ],
+   "action": "renamed",
+   "notes": "alloc 16"
+  },
+  {
+   "dx9_ea": "0x7a5b30",
+   "old_dx9_name": "uPlayer::uPlayer",
+   "new_dx9_name": "uPlayer::uPlayer",
+   "se_ea": "0x9ac610",
+   "se_name": "uPlayer::uPlayer(void)",
+   "confidence": "high",
+   "evidence": [
+    "decompile",
+    "callees"
+   ],
+   "action": "confirmed",
+   "notes": "writes uPlayer::vftable 0xBE30E0 + all nested vtables"
+  },
+  {
+   "dx9_ea": "0x7a6640",
+   "old_dx9_name": "loc_7A6640",
+   "new_dx9_name": "??_EuPlayer@@UAEPAXI@Z",
+   "se_ea": "0x9b0130",
+   "se_name": "uPlayer::`vector deleting destructor'(uint)",
+   "confidence": "high",
+   "evidence": [
+    "vtable",
+    "decompile"
+   ],
+   "action": "renamed",
+   "notes": "newly defined; slot 0 vector deleting dtor"
+  },
+  {
+   "dx9_ea": "0x7a6670",
+   "old_dx9_name": "kDamageParam::kDamageParam",
+   "new_dx9_name": null,
+   "se_ea": null,
+   "se_name": null,
+   "confidence": "none",
+   "evidence": [
+    "decompile"
+   ],
+   "action": "commented",
+   "notes": "kDamageParam ctor (uDamage ctor inlined); SE inlines uDamage::uDamage in uPlayer ctor, no SE counterpart"
+  },
+  {
+   "dx9_ea": "0x7a66f0",
+   "old_dx9_name": "sub_7A66F0",
+   "new_dx9_name": "??1uPlayer@@UAE@XZ",
+   "se_ea": "0x9acf60",
+   "se_name": "uPlayer::~uPlayer(void)",
+   "confidence": "high",
+   "evidence": [
+    "decompile",
+    "callees"
+   ],
+   "action": "renamed",
+   "notes": "~uPlayer: restores vtable, releases resources; called by slot 0"
+  },
+  {
+   "dx9_ea": "0x7a68f0",
+   "old_dx9_name": "sub_7A68F0",
+   "new_dx9_name": "uPlayer::createProperty",
+   "se_ea": "0x9a3fe0",
+   "se_name": "uPlayer::createProperty(MtPropertyList &)",
+   "confidence": "high",
+   "evidence": [
+    "vtable"
+   ],
+   "action": "renamed",
+   "notes": "slot 3"
+  },
+  {
+   "dx9_ea": "0x7a7a00",
+   "old_dx9_name": "uPlayer::setup",
+   "new_dx9_name": "uPlayer::setup",
+   "se_ea": "0x9ae580",
+   "se_name": "uPlayer::setup(void)",
+   "confidence": "high",
+   "evidence": [
+    "vtable",
+    "callees"
+   ],
+   "action": "confirmed",
+   "notes": "slot 5"
+  },
+  {
+   "dx9_ea": "0x7a7c20",
+   "old_dx9_name": "uPlayer::updatePtr",
+   "new_dx9_name": "uPlayer::updatePtr",
+   "se_ea": "0x9a7210",
+   "se_name": "uPlayer::updatePtr(void)",
+   "confidence": "high",
+   "evidence": [
+    "vtable"
+   ],
+   "action": "confirmed",
+   "notes": "slot 31 (SE 54)"
+  },
+  {
+   "dx9_ea": "0x7a7dc0",
+   "old_dx9_name": "uPlayer::main",
+   "new_dx9_name": "uPlayer::main",
+   "se_ea": "0x9ae830",
+   "se_name": "uPlayer::main(void)",
+   "confidence": "high",
+   "evidence": [
+    "vtable",
+    "callees"
+   ],
+   "action": "confirmed",
+   "notes": "slot 30 (SE 53)"
+  },
+  {
+   "dx9_ea": "0x7a8860",
+   "old_dx9_name": "uPlayer::moveEx",
+   "new_dx9_name": "uPlayer::moveEx",
+   "se_ea": "0x9ad150",
+   "se_name": "uPlayer::moveEx(void)",
+   "confidence": "high",
+   "evidence": [
+    "vtable",
+    "callees"
+   ],
+   "action": "confirmed",
+   "notes": "slot 7 (SE 9)"
+  },
+  {
+   "dx9_ea": "0x7a8a00",
+   "old_dx9_name": "uPlayer::kill",
+   "new_dx9_name": "uPlayer::kill",
+   "se_ea": "0x9a7370",
+   "se_name": "uPlayer::kill(void)",
+   "confidence": "high",
+   "evidence": [
+    "vtable",
+    "callees"
+   ],
+   "action": "confirmed",
+   "notes": "slot 12 (SE 21)"
+  },
+  {
+   "dx9_ea": "0x7a8a60",
+   "old_dx9_name": "uPlayer::updateSctClsnInfo",
+   "new_dx9_name": "uPlayer::updateSctClsnInfo",
+   "se_ea": "0x99ee80",
+   "se_name": "uPlayer::updateSctClsnInfo(void)",
+   "confidence": "high",
+   "evidence": [
+    "callees",
+    "consts"
+   ],
+   "action": "confirmed",
+   "notes": ""
+  },
+  {
+   "dx9_ea": "0x7a8b80",
+   "old_dx9_name": "uPlayer::updateCollision",
+   "new_dx9_name": "uPlayer::updateCollision",
+   "se_ea": "0x99ef40",
+   "se_name": "uPlayer::updateCollision(void)",
+   "confidence": "high",
+   "evidence": [
+    "size",
+    "decompile"
+   ],
+   "action": "confirmed",
+   "notes": ""
+  },
+  {
+   "dx9_ea": "0x7a8be0",
+   "old_dx9_name": "uPlayer::updateCollisionCorrectScr",
+   "new_dx9_name": "uPlayer::updateCollisionCorrectScr",
+   "se_ea": "0x99efa0",
+   "se_name": "uPlayer::updateCollisionCorrectScr(void)",
+   "confidence": "high",
+   "evidence": [
+    "callees",
+    "order"
+   ],
+   "action": "confirmed",
+   "notes": "called by moveEx as in SE"
+  },
+  {
+   "dx9_ea": "0x7a8d40",
+   "old_dx9_name": "uPlayer::updateMatrix",
+   "new_dx9_name": "uPlayer::updateMatrix",
+   "se_ea": "0x99f090",
+   "se_name": "uPlayer::updateMatrix(void)",
+   "confidence": "high",
+   "evidence": [
+    "vtable",
+    "size"
+   ],
+   "action": "confirmed",
+   "notes": "slot 78 (SE 115)"
+  },
+  {
+   "dx9_ea": "0x7a8d60",
+   "old_dx9_name": "uPlayer::updateMaterial",
+   "new_dx9_name": "uPlayer::updateMaterial",
+   "se_ea": "0x99f160",
+   "se_name": "uPlayer::updateMaterial(void)",
+   "confidence": "high",
+   "evidence": [
+    "vtable",
+    "size"
+   ],
+   "action": "confirmed",
+   "notes": "slot 29 (SE 50)"
+  },
+  {
+   "dx9_ea": "0x7a8d80",
+   "old_dx9_name": "uPlayer::draw",
+   "new_dx9_name": "uPlayer::draw",
+   "se_ea": "0x99f180",
+   "se_name": "uPlayer::draw(cDraw *)",
+   "confidence": "high",
+   "evidence": [
+    "vtable"
+   ],
+   "action": "confirmed",
+   "notes": "slot 9 (SE 12)"
+  },
+  {
+   "dx9_ea": "0x7a8db0",
+   "old_dx9_name": "uPlayer::reset",
+   "new_dx9_name": "uPlayer::reset",
+   "se_ea": "0x9af370",
+   "se_name": "uPlayer::reset(MtVector3 &,float,bool)",
+   "confidence": "high",
+   "evidence": [
+    "vtable",
+    "callees"
+   ],
+   "action": "confirmed",
+   "notes": "slot 77 (SE 114)"
+  },
+  {
+   "dx9_ea": "0x7a91c0",
+   "old_dx9_name": "uPlayer::registerWithMediator",
+   "new_dx9_name": "uPlayer::setGameSystem",
+   "se_ea": "0x99f1c0",
+   "se_name": "uPlayer::setGameSystem(void)",
+   "confidence": "high",
+   "evidence": [
+    "vtable",
+    "callees"
+   ],
+   "action": "replaced_existing",
+   "notes": "slot 93 (SE 137); sets sMediator::mpPlayer (setPlayer)"
+  },
+  {
+   "dx9_ea": "0x7a91e0",
+   "old_dx9_name": "uPlayer::setInterface",
+   "new_dx9_name": "uPlayer::setInterface",
+   "se_ea": "0x9af700",
+   "se_name": "uPlayer::setInterface(void)",
+   "confidence": "high",
+   "evidence": [
+    "vtable",
+    "callees"
+   ],
+   "action": "confirmed",
+   "notes": "slot 94 (SE 138)"
+  },
+  {
+   "dx9_ea": "0x7a9550",
+   "old_dx9_name": "uPlayer::setInterfaceAnlgInfo",
+   "new_dx9_name": "uPlayer::setInterfaceAnlgInfo",
+   "se_ea": "0x9a73b0",
+   "se_name": "uPlayer::setInterfaceAnlgInfo(void)",
+   "confidence": "high",
+   "evidence": [
+    "callees",
+    "size"
+   ],
+   "action": "confirmed",
+   "notes": ""
+  },
+  {
+   "dx9_ea": "0x7a96d0",
+   "old_dx9_name": "uPlayer::map_pad_btn_to_action",
+   "new_dx9_name": "uPlayer::getInterfaceBtnInfo",
+   "se_ea": "0x99f290",
+   "se_name": "uPlayer::getInterfaceBtnInfo(uint)",
+   "confidence": "high",
+   "evidence": [
+    "decompile",
+    "callees"
+   ],
+   "action": "replaced_existing",
+   "notes": "pad bits -> button info from sSave bindings; called 3x by setInterface as in SE"
+  },
+  {
+   "dx9_ea": "0x7a9870",
+   "old_dx9_name": "uPlayer::setInterfaceInfoKB",
+   "new_dx9_name": "uPlayer::setInterfaceInfoKB",
+   "se_ea": "0x99f530",
+   "se_name": "uPlayer::setInterfaceInfoKB(void)",
+   "confidence": "high",
+   "evidence": [
+    "callees"
+   ],
+   "action": "confirmed",
+   "notes": ""
+  },
+  {
+   "dx9_ea": "0x7aa030",
+   "old_dx9_name": "uPlayer::setAction",
+   "new_dx9_name": "uPlayer::setAction",
+   "se_ea": "0x9a7500",
+   "se_name": "uPlayer::setAction(int)",
+   "confidence": "high",
+   "evidence": [
+    "vtable"
+   ],
+   "action": "confirmed",
+   "notes": "slot 101 (SE 146)"
+  },
+  {
+   "dx9_ea": "0x7aa0b0",
+   "old_dx9_name": "uPlayer::setActionUpperBdy",
+   "new_dx9_name": "uPlayer::setActionUpperBdy",
+   "se_ea": "0x9a75b0",
+   "se_name": "uPlayer::setActionUpperBdy(int)",
+   "confidence": "high",
+   "evidence": [
+    "vtable",
+    "callees"
+   ],
+   "action": "confirmed",
+   "notes": "slot 102 (SE 147)"
+  },
+  {
+   "dx9_ea": "0x7aa2a0",
+   "old_dx9_name": "uPlayer::setActionLowerBdy",
+   "new_dx9_name": "uPlayer::setActionLowerBdy",
+   "se_ea": "0x9a0220",
+   "se_name": "uPlayer::setActionLowerBdy(int)",
+   "confidence": "high",
+   "evidence": [
+    "vtable",
+    "size"
+   ],
+   "action": "confirmed",
+   "notes": "slot 103 (SE 148)"
+  },
+  {
+   "dx9_ea": "0x7aa2c0",
+   "old_dx9_name": "uPlayer::setActionFootwork",
+   "new_dx9_name": "uPlayer::setActionFootwork",
+   "se_ea": "0x9ad390",
+   "se_name": "uPlayer::setActionFootwork(float,bool)",
+   "confidence": "high",
+   "evidence": [
+    "callees",
+    "size"
+   ],
+   "action": "confirmed",
+   "notes": ""
+  },
+  {
+   "dx9_ea": "0x7aa410",
+   "old_dx9_name": "uPlayer::setActionFall",
+   "new_dx9_name": "uPlayer::setActionFall",
+   "se_ea": "0x9a7800",
+   "se_name": "uPlayer::setActionFall(uPlayer::JUMP_TYPE,float,float,float,bool,float,bool)",
+   "confidence": "high",
+   "evidence": [
+    "decompile"
+   ],
+   "action": "confirmed",
+   "notes": ""
+  },
+  {
+   "dx9_ea": "0x7aa6a0",
+   "old_dx9_name": "uPlayer::setActionLand",
+   "new_dx9_name": "uPlayer::setActionLand",
+   "se_ea": "0x9a7b10",
+   "se_name": "uPlayer::setActionLand(void)",
+   "confidence": "high",
+   "evidence": [
+    "decompile"
+   ],
+   "action": "confirmed",
+   "notes": "SE virtual slot 152, non-virtual in DX9"
+  },
+  {
+   "dx9_ea": "0x7aa800",
+   "old_dx9_name": "uPlayer::setActionPose",
+   "new_dx9_name": "uPlayer::setActionPose",
+   "se_ea": "0x9a7c50",
+   "se_name": "uPlayer::setActionPose(float,bool)",
+   "confidence": "high",
+   "evidence": [
+    "decompile",
+    "callees"
+   ],
+   "action": "confirmed",
+   "notes": "setPoseDir + setAction(13)"
+  },
+  {
+   "dx9_ea": "0x7aa860",
+   "old_dx9_name": "uPlayerNero::setGunPoseLower",
+   "new_dx9_name": "uPlayer::setActionPoseUpperBdy",
+   "se_ea": "0x9a7cd0",
+   "se_name": "uPlayer::setActionPoseUpperBdy(void)",
+   "confidence": "high",
+   "evidence": [
+    "decompile",
+    "consts"
+   ],
+   "action": "replaced_existing",
+   "notes": "vslot 102 setActionUpperBdy(13/16), setPoseMotion(UPPER,8.0)"
+  },
+  {
+   "dx9_ea": "0x7aa8c0",
+   "old_dx9_name": "uPlayerNero::setGunPoseHold",
+   "new_dx9_name": "uPlayer::setActionPoseLowerBdy",
+   "se_ea": "0x9a7d40",
+   "se_name": "uPlayer::setActionPoseLowerBdy(void)",
+   "confidence": "high",
+   "evidence": [
+    "decompile",
+    "consts"
+   ],
+   "action": "replaced_existing",
+   "notes": "vslot 103 setActionLowerBdy(13/16), setPoseMotion(LOWER,8.0)"
+  },
+  {
+   "dx9_ea": "0x7aa930",
+   "old_dx9_name": "uPlayer::setActionDamage",
+   "new_dx9_name": "uPlayer::setActionDamage",
+   "se_ea": "0x9ad4e0",
+   "se_name": "uPlayer::setActionDamage(cCollisionGroup *)",
+   "confidence": "high",
+   "evidence": [
+    "callees",
+    "size"
+   ],
+   "action": "confirmed",
+   "notes": ""
+  },
+  {
+   "dx9_ea": "0x7aaa20",
+   "old_dx9_name": "uPlayer::setDamageAngle",
+   "new_dx9_name": "uPlayer::setDamageAngle",
+   "se_ea": "0x9a7db0",
+   "se_name": "uPlayer::setDamageAngle(void)",
+   "confidence": "high",
+   "evidence": [
+    "callees",
+    "size"
+   ],
+   "action": "confirmed",
+   "notes": ""
+  },
+  {
+   "dx9_ea": "0x7aaad0",
+   "old_dx9_name": "uPlayer::getDamageAngle",
+   "new_dx9_name": "uPlayer::getDamageAngle",
+   "se_ea": "0x9a7e80",
+   "se_name": "uPlayer::getDamageAngle(cCollisionGroup *)",
+   "confidence": "high",
+   "evidence": [
+    "callees",
+    "size"
+   ],
+   "action": "confirmed",
+   "notes": ""
+  },
+  {
+   "dx9_ea": "0x7aab80",
+   "old_dx9_name": "uPlayer::setActionDead",
+   "new_dx9_name": "uPlayer::setActionDead",
+   "se_ea": "0x9ad5e0",
+   "se_name": "uPlayer::setActionDead(cCollisionGroup *)",
+   "confidence": "high",
+   "evidence": [
+    "vtable",
+    "consts"
+   ],
+   "action": "confirmed",
+   "notes": "slot 105 (SE 156)"
+  },
+  {
+   "dx9_ea": "0x7aac80",
+   "old_dx9_name": "uPlayer::setAtckAction",
+   "new_dx9_name": "uPlayer::setActionAtck",
+   "se_ea": "0x9a7f60",
+   "se_name": "uPlayer::setActionAtck(int,uPlayer::BODY_ID)",
+   "confidence": "high",
+   "evidence": [
+    "decompile",
+    "consts"
+   ],
+   "action": "replaced_existing",
+   "notes": "setActionUpper/LowerBdy(12), atck counters capped at 100"
+  },
+  {
+   "dx9_ea": "0x7aade0",
+   "old_dx9_name": "uPlayer::setPoseWeapon",
+   "new_dx9_name": "uPlayer::setPoseWeapon",
+   "se_ea": "0x9a0380",
+   "se_name": "uPlayer::setPoseWeapon(void)",
+   "confidence": "high",
+   "evidence": [
+    "size",
+    "callees"
+   ],
+   "action": "confirmed",
+   "notes": "SE virtual slot 155, non-virtual in DX9"
+  },
+  {
+   "dx9_ea": "0x7aae20",
+   "old_dx9_name": "sub_7AAE20",
+   "new_dx9_name": "uPlayer::setActionAtckGun",
+   "se_ea": "0x9a80f0",
+   "se_name": "uPlayer::setActionAtckGun(int)",
+   "confidence": "high",
+   "evidence": [
+    "decompile",
+    "callees"
+   ],
+   "action": "renamed",
+   "notes": "calls setActionAtck x2 and setActionPoseLowerBdy as in SE"
+  },
+  {
+   "dx9_ea": "0x7aaf30",
+   "old_dx9_name": "uPlayer::initActionCancel",
+   "new_dx9_name": "uPlayer::initActionCancel",
+   "se_ea": "0x9a0400",
+   "se_name": "uPlayer::initActionCancel(void)",
+   "confidence": "high",
+   "evidence": [
+    "decompile"
+   ],
+   "action": "confirmed",
+   "notes": "initMotCancel loop inlined"
+  },
+  {
+   "dx9_ea": "0x7aafb0",
+   "old_dx9_name": "sub_7AAFB0",
+   "new_dx9_name": "uPlayer::getBattleFootworkMotionNo",
+   "se_ea": "0x9a0420",
+   "se_name": "uPlayer::getBattleFootworkMotionNo(void)",
+   "confidence": "high",
+   "evidence": [
+    "vtable",
+    "size"
+   ],
+   "action": "renamed",
+   "notes": "slot 106 (SE 173); returns 0xFFFF; Dante/Nero overrides match SE overrides (imm sets)"
+  },
+  {
+   "dx9_ea": "0x7aafc0",
+   "old_dx9_name": "sub_7AAFC0",
+   "new_dx9_name": "uPlayer::getPoseGunAngleOffset",
+   "se_ea": "0x9ad7e0",
+   "se_name": "uPlayer::getPoseGunAngleOffset(int)",
+   "confidence": "high",
+   "evidence": [
+    "decompile",
+    "callees"
+   ],
+   "action": "renamed",
+   "notes": "isBattle + lock-on elevation; called by setPoseMotion as in SE"
+  },
+  {
+   "dx9_ea": "0x7ab090",
+   "old_dx9_name": "uPlayerNero::calcGunAimRate",
+   "new_dx9_name": null,
+   "se_ea": "0x9ad940",
+   "se_name": "uPlayer::getJumpPoseGunAngleOffset(int)",
+   "confidence": "medium",
+   "evidence": [
+    "decompile"
+   ],
+   "action": "commented",
+   "notes": "elevation->blend helper used by air shots; = SE getJumpPoseGunAngleOffset(int) with getPoseGunAngle(int) inlined (alt: getPoseGunAngle @ 0x9ad6e0)"
+  },
+  {
+   "dx9_ea": "0x7ab130",
+   "old_dx9_name": "uPlayer::setPoseMotion",
+   "new_dx9_name": "uPlayer::setPoseMotion",
+   "se_ea": "0x9ad990",
+   "se_name": "uPlayer::setPoseMotion(uPlayer::BODY_ID,float,uint)",
+   "confidence": "high",
+   "evidence": [
+    "callees"
+   ],
+   "action": "confirmed",
+   "notes": "calls getPoseGunAngleOffset"
+  },
+  {
+   "dx9_ea": "0x7ab720",
+   "old_dx9_name": "uPlayer::updateContactInfo",
+   "new_dx9_name": "uPlayer::updateCharTbl",
+   "se_ea": "0x9a81e0",
+   "se_name": "uPlayer::updateCharTbl(void)",
+   "confidence": "high",
+   "evidence": [
+    "decompile",
+    "callees"
+   ],
+   "action": "replaced_existing",
+   "notes": "cCharTblMgr::update x2"
+  },
+  {
+   "dx9_ea": "0x7ab770",
+   "old_dx9_name": "uPlayer::updateContactInfoSub",
+   "new_dx9_name": "uPlayer::updateContactInfoSub",
+   "se_ea": "0x9a8230",
+   "se_name": "uPlayer::updateContactInfoSub(uPlayer::BODY_ID)",
+   "confidence": "high",
+   "evidence": [
+    "callees",
+    "size"
+   ],
+   "action": "confirmed",
+   "notes": ""
+  },
+  {
+   "dx9_ea": "0x7ab920",
+   "old_dx9_name": "uPlayer::updateRotation",
+   "new_dx9_name": "uPlayer::updateRotation",
+   "se_ea": "0x9a04c0",
+   "se_name": "uPlayer::updateRotation(void)",
+   "confidence": "high",
+   "evidence": [
+    "callees",
+    "order"
+   ],
+   "action": "confirmed",
+   "notes": "called by updatePosConst as in SE"
+  },
+  {
+   "dx9_ea": "0x7ab9b0",
+   "old_dx9_name": "uPlayer::updateLegIk",
+   "new_dx9_name": "uPlayer::updateLegIk",
+   "se_ea": "0x9a8400",
+   "se_name": "uPlayer::updateLegIk(void)",
+   "confidence": "high",
+   "evidence": [
+    "callees",
+    "order"
+   ],
+   "action": "confirmed",
+   "notes": "called by moveEx"
+  },
+  {
+   "dx9_ea": "0x7aba20",
+   "old_dx9_name": "sub_7ABA20",
+   "new_dx9_name": "uPlayer::updateLegLandEfct_2",
+   "se_ea": "0x9a84a0",
+   "se_name": "uPlayer::updateLegLandEfct(void)",
+   "confidence": "high",
+   "evidence": [
+    "decompile"
+   ],
+   "action": "renamed",
+   "notes": "mIsSetLandEfct, motseq bits, land effects; _2 suffix only because 0x7B1010 (outside P1 range) is already labelled uPlayer::updateLegLandEfct but is really a cWeaponCtrl per-weapon update loop called from moveEx"
+  },
+  {
+   "dx9_ea": "0x7abcb0",
+   "old_dx9_name": "uPlayer::setCameraAngle",
+   "new_dx9_name": "uPlayer::setCameraAngle",
+   "se_ea": "0x9a86a0",
+   "se_name": "uPlayer::setCameraAngle(void)",
+   "confidence": "high",
+   "evidence": [
+    "callees",
+    "order"
+   ],
+   "action": "confirmed",
+   "notes": "called by main"
+  },
+  {
+   "dx9_ea": "0x7abdf0",
+   "old_dx9_name": "uPlayer::setPoseDir",
+   "new_dx9_name": "uPlayer::setPoseDir",
+   "se_ea": "0x9a0550",
+   "se_name": "uPlayer::setPoseDir(void)",
+   "confidence": "high",
+   "evidence": [
+    "consts",
+    "order"
+   ],
+   "action": "confirmed",
+   "notes": ""
+  },
+  {
+   "dx9_ea": "0x7abf40",
+   "old_dx9_name": "sub_7ABF40",
+   "new_dx9_name": null,
+   "se_ea": "0x9a88f0",
+   "se_name": "uPlayer::setPoseJumpDir(uPlayer::cInterface::kAnlgInfo)",
+   "confidence": "medium",
+   "evidence": [
+    "consts"
+   ],
+   "action": "commented",
+   "notes": "SE setPoseJumpDir overload (void @ 0x9a8770 or kAnlgInfo @ 0x9a88f0); atan2 + 2pi clamp"
+  },
+  {
+   "dx9_ea": "0x7ac130",
+   "old_dx9_name": "uPlayer::setPadVibration",
+   "new_dx9_name": "uPlayer::setPadVibration",
+   "se_ea": "0x9a06d0",
+   "se_name": "uPlayer::setPadVibration(int)",
+   "confidence": "high",
+   "evidence": [
+    "callees",
+    "size"
+   ],
+   "action": "confirmed",
+   "notes": ""
+  },
+  {
+   "dx9_ea": "0x7ac1d0",
+   "old_dx9_name": "sub_7AC1D0",
+   "new_dx9_name": "uPlayer::setFaceModel",
+   "se_ea": "0x9a07c0",
+   "se_name": "uPlayer::setFaceModel(uDevil4Model *)",
+   "confidence": "high",
+   "evidence": [
+    "decompile",
+    "callees"
+   ],
+   "action": "renamed",
+   "notes": "inits mMotionCtrl[3] with mpFaceMdl, setBlendNum"
+  },
+  {
+   "dx9_ea": "0x7ac270",
+   "old_dx9_name": "sub_7AC270",
+   "new_dx9_name": "uPlayer::setCoatModel",
+   "se_ea": "0x9a07f0",
+   "se_name": "uPlayer::setCoatModel(uDevil4Model *)",
+   "confidence": "high",
+   "evidence": [
+    "decompile",
+    "callees"
+   ],
+   "action": "renamed",
+   "notes": "uses mpCoatMdl, setBlendNum x2"
+  },
+  {
+   "dx9_ea": "0x7ac3f0",
+   "old_dx9_name": "sub_7AC3F0",
+   "new_dx9_name": "uPlayer::checkAtckWeapon",
+   "se_ea": "0x9a0890",
+   "se_name": "uPlayer::checkAtckWeapon(int,uPlWeapon::ID)",
+   "confidence": "high",
+   "evidence": [
+    "vtable",
+    "size"
+   ],
+   "action": "renamed",
+   "notes": "slot 111 (SE 178)"
+  },
+  {
+   "dx9_ea": "0x7ac430",
+   "old_dx9_name": "sub_7AC430",
+   "new_dx9_name": "uPlayer::checkAtackActionStatus",
+   "se_ea": "0x9a08d0",
+   "se_name": "uPlayer::checkAtackActionStatus(uPlayer::kAtckDefTbl *)",
+   "confidence": "high",
+   "evidence": [
+    "decompile",
+    "consts"
+   ],
+   "action": "renamed",
+   "notes": ""
+  },
+  {
+   "dx9_ea": "0x7ac4a0",
+   "old_dx9_name": "sub_7AC4A0",
+   "new_dx9_name": "uPlayer::checkAtckCancel",
+   "se_ea": "0x9a0950",
+   "se_name": "uPlayer::checkAtckCancel(uPlayer::kAtckDefTbl *,uchar *)",
+   "confidence": "high",
+   "evidence": [
+    "size",
+    "consts"
+   ],
+   "action": "renamed",
+   "notes": "(kAtckDefTbl*,uchar*) overload"
+  },
+  {
+   "dx9_ea": "0x7ac6d0",
+   "old_dx9_name": "sub_7AC6D0",
+   "new_dx9_name": "uPlayer::checkAtckCancel_2",
+   "se_ea": "0x9a0b60",
+   "se_name": "uPlayer::checkAtckCancel(uPlayer::yCancelInfo)",
+   "confidence": "high",
+   "evidence": [
+    "decompile",
+    "size"
+   ],
+   "action": "renamed",
+   "notes": "(yCancelInfo) overload"
+  },
+  {
+   "dx9_ea": "0x7ac710",
+   "old_dx9_name": "sub_7AC710",
+   "new_dx9_name": "uPlayer::checkAtckSub",
+   "se_ea": "0x9a8b30",
+   "se_name": "uPlayer::checkAtckSub(uPlayer::kAtckDefTbl *,uchar)",
+   "confidence": "high",
+   "evidence": [
+    "vtable",
+    "callees"
+   ],
+   "action": "renamed",
+   "notes": "slot 110 (SE 177)"
+  },
+  {
+   "dx9_ea": "0x7ac930",
+   "old_dx9_name": "sub_7AC930",
+   "new_dx9_name": "uPlayer::checkAtckSubCommand",
+   "se_ea": "0x9a0be0",
+   "se_name": "uPlayer::checkAtckSubCommand(uPlayer::kAtckDefTbl *,bool *)",
+   "confidence": "high",
+   "evidence": [
+    "decompile",
+    "order"
+   ],
+   "action": "renamed",
+   "notes": "cmd-bit test, bool* out; called by checkAtckSub"
+  },
+  {
+   "dx9_ea": "0x7ac990",
+   "old_dx9_name": "sub_7AC990",
+   "new_dx9_name": "uPlayer::checkAtckStyle",
+   "se_ea": "0x9a0c40",
+   "se_name": "uPlayer::checkAtckStyle(uPlayer::kAtckDefTbl *)",
+   "confidence": "high",
+   "evidence": [
+    "decompile"
+   ],
+   "action": "renamed",
+   "notes": "tbl style -1 or == mStyle"
+  },
+  {
+   "dx9_ea": "0x7ac9b0",
+   "old_dx9_name": "sub_7AC9B0",
+   "new_dx9_name": "uPlayer::checkAtckEtc",
+   "se_ea": "0x9a0c60",
+   "se_name": "uPlayer::checkAtckEtc(uPlayer::kAtckDefTbl *)",
+   "confidence": "high",
+   "evidence": [
+    "decompile"
+   ],
+   "action": "renamed",
+   "notes": "calls vslot 108 checkAtckEtcSub"
+  },
+  {
+   "dx9_ea": "0x7ac9d0",
+   "old_dx9_name": "sub_7AC9D0",
+   "new_dx9_name": "uPlayer::checkAtckEtcSub",
+   "se_ea": "0x9a0c80",
+   "se_name": "uPlayer::checkAtckEtcSub(int)",
+   "confidence": "high",
+   "evidence": [
+    "vtable"
+   ],
+   "action": "renamed",
+   "notes": "slot 108 (SE 175); Dante/Nero override"
+  },
+  {
+   "dx9_ea": "0x7ac9e0",
+   "old_dx9_name": "sub_7AC9E0",
+   "new_dx9_name": "uPlayer::initJumpBegin",
+   "se_ea": "0x9a8d30",
+   "se_name": "uPlayer::initJumpBegin(uPlayer::JUMP_INIT_TYPE)",
+   "confidence": "high",
+   "evidence": [
+    "vtable",
+    "consts"
+   ],
+   "action": "renamed",
+   "notes": "slot 109 (SE 176), jump table"
+  },
+  {
+   "dx9_ea": "0x7acab0",
+   "old_dx9_name": "uPlayer::calcSpeedXZ",
+   "new_dx9_name": "uPlayer::calcSpeedXZ",
+   "se_ea": "0x9a0cb0",
+   "se_name": "uPlayer::calcSpeedXZ(float,float)",
+   "confidence": "high",
+   "evidence": [
+    "consts"
+   ],
+   "action": "confirmed",
+   "notes": ""
+  },
+  {
+   "dx9_ea": "0x7acc30",
+   "old_dx9_name": "uPlayer::calcSpeedXZCapped",
+   "new_dx9_name": "uPlayer::calcJumpRateLimit",
+   "se_ea": "0x9a0e20",
+   "se_name": "uPlayer::calcJumpRateLimit(float,float,float)",
+   "confidence": "high",
+   "evidence": [
+    "callees",
+    "decompile"
+   ],
+   "action": "replaced_existing",
+   "notes": "calcSpeedXZ then cap"
+  },
+  {
+   "dx9_ea": "0x7acc70",
+   "old_dx9_name": "uPlayer::setJumpRate",
+   "new_dx9_name": "uPlayer::setJumpRate",
+   "se_ea": "0x9a0eb0",
+   "se_name": "uPlayer::setJumpRate(void)",
+   "confidence": "high",
+   "evidence": [
+    "size"
+   ],
+   "action": "confirmed",
+   "notes": ""
+  },
+  {
+   "dx9_ea": "0x7acce0",
+   "old_dx9_name": "uPlayer::adjustJumpSpeed",
+   "new_dx9_name": "uPlayer::adjustJumpSpeed",
+   "se_ea": "0x9a0f20",
+   "se_name": "uPlayer::adjustJumpSpeed(float)",
+   "confidence": "high",
+   "evidence": [
+    "consts"
+   ],
+   "action": "confirmed",
+   "notes": ""
+  },
+  {
+   "dx9_ea": "0x7acd70",
+   "old_dx9_name": "sub_7ACD70",
+   "new_dx9_name": "uPlayer::setActionStatus",
+   "se_ea": "0x9a0fd0",
+   "se_name": "uPlayer::setActionStatus(void)",
+   "confidence": "high",
+   "evidence": [
+    "decompile",
+    "consts"
+   ],
+   "action": "renamed",
+   "notes": "actStatus from mpActionTbl[no<35?0:1]"
+  },
+  {
+   "dx9_ea": "0x7acdd0",
+   "old_dx9_name": "sub_7ACDD0",
+   "new_dx9_name": "uPlayer::setAtckBit",
+   "se_ea": "0x9a1090",
+   "se_name": "uPlayer::setAtckBit(int)",
+   "confidence": "high",
+   "evidence": [
+    "vtable",
+    "order"
+   ],
+   "action": "renamed",
+   "notes": "slot 79 (SE 118)"
+  },
+  {
+   "dx9_ea": "0x7acdf0",
+   "old_dx9_name": "sub_7ACDF0",
+   "new_dx9_name": "uPlayer::clearAtckBit",
+   "se_ea": "0x9a1110",
+   "se_name": "uPlayer::clearAtckBit(int)",
+   "confidence": "high",
+   "evidence": [
+    "vtable",
+    "callees"
+   ],
+   "action": "renamed",
+   "notes": "slot 80 (SE 119)"
+  },
+  {
+   "dx9_ea": "0x7ace10",
+   "old_dx9_name": "uPlayer::checkAtckFlag",
+   "new_dx9_name": "uPlayer::checkAtckBit",
+   "se_ea": "0x9a1130",
+   "se_name": "uPlayer::checkAtckBit(int)",
+   "confidence": "high",
+   "evidence": [
+    "decompile",
+    "order"
+   ],
+   "action": "replaced_existing",
+   "notes": "bit test on getCommonSaveData() bits; SE virtual 120, non-virtual in DX9"
+  },
+  {
+   "dx9_ea": "0x7ace60",
+   "old_dx9_name": "sub_7ACE60",
+   "new_dx9_name": "uPlayer::setSaveDataShortWeapon",
+   "se_ea": "0x9a11a0",
+   "se_name": "uPlayer::setSaveDataShortWeapon(uPlWeapon::ID)",
+   "confidence": "high",
+   "evidence": [
+    "vtable",
+    "decompile"
+   ],
+   "action": "renamed",
+   "notes": "slot 81 (SE 121)"
+  },
+  {
+   "dx9_ea": "0x7acea0",
+   "old_dx9_name": "sub_7ACEA0",
+   "new_dx9_name": "uPlayer::setSaveDataLongWeapon",
+   "se_ea": "0x9a1260",
+   "se_name": "uPlayer::setSaveDataLongWeapon(uPlWeapon::ID)",
+   "confidence": "high",
+   "evidence": [
+    "vtable",
+    "decompile"
+   ],
+   "action": "renamed",
+   "notes": "slot 82 (SE 122)"
+  },
+  {
+   "dx9_ea": "0x7acee0",
+   "old_dx9_name": "sub_7ACEE0",
+   "new_dx9_name": "uPlayer::calcPosition",
+   "se_ea": "0x9a1380",
+   "se_name": "uPlayer::calcPosition(void)",
+   "confidence": "high",
+   "evidence": [
+    "size",
+    "consts"
+   ],
+   "action": "renamed",
+   "notes": ""
+  },
+  {
+   "dx9_ea": "0x7ad530",
+   "old_dx9_name": "uPlayer::clearSpd",
+   "new_dx9_name": "uPlayer::clearSpd",
+   "se_ea": "0x9a19b0",
+   "se_name": "uPlayer::clearSpd(void)",
+   "confidence": "high",
+   "evidence": [
+    "size"
+   ],
+   "action": "confirmed",
+   "notes": ""
+  },
+  {
+   "dx9_ea": "0x7ad570",
+   "old_dx9_name": "uPlayer::getTargetAngle",
+   "new_dx9_name": "uPlayer::getTargetAngle",
+   "se_ea": "0x9a19f0",
+   "se_name": "uPlayer::getTargetAngle(MtVector3 *)",
+   "confidence": "high",
+   "evidence": [
+    "callees",
+    "size"
+   ],
+   "action": "confirmed",
+   "notes": ""
+  },
+  {
+   "dx9_ea": "0x7ad5e0",
+   "old_dx9_name": "uPlayer::calcTargetElevationAngle",
+   "new_dx9_name": null,
+   "se_ea": "0x9a8df0",
+   "se_name": "uPlayer::getTargetAngleXY(MtVector3 *)",
+   "confidence": "medium",
+   "evidence": [
+    "decompile"
+   ],
+   "action": "commented",
+   "notes": "SE candidate getTargetAngleXY(MtVector3*) (takes target pos, atan2 elevation)"
+  },
+  {
+   "dx9_ea": "0x7ad670",
+   "old_dx9_name": "sub_7AD670",
+   "new_dx9_name": "uPlayer::getLeverDirection",
+   "se_ea": "0x9a1a60",
+   "se_name": "uPlayer::getLeverDirection(void)",
+   "confidence": "high",
+   "evidence": [
+    "decompile",
+    "consts"
+   ],
+   "action": "renamed",
+   "notes": "+-pi/8, 5pi/8 sectors"
+  },
+  {
+   "dx9_ea": "0x7ad760",
+   "old_dx9_name": "sub_7AD760",
+   "new_dx9_name": "uPlayer::updateActorStatus",
+   "se_ea": "0x9a1c10",
+   "se_name": "uPlayer::updateActorStatus(void)",
+   "confidence": "high",
+   "evidence": [
+    "vtable",
+    "consts"
+   ],
+   "action": "renamed",
+   "notes": "slot 122 (SE 190); identical imm set"
+  },
+  {
+   "dx9_ea": "0x7ad7f0",
+   "old_dx9_name": "sub_7AD7F0",
+   "new_dx9_name": "uPlayer::setJointVib",
+   "se_ea": "0x9a8e70",
+   "se_name": "uPlayer::setJointVib(int)",
+   "confidence": "high",
+   "evidence": [
+    "vtable",
+    "size"
+   ],
+   "action": "renamed",
+   "notes": "slot 121 (SE 189), (int) overload"
+  },
+  {
+   "dx9_ea": "0x7ad8c0",
+   "old_dx9_name": "sub_7AD8C0",
+   "new_dx9_name": null,
+   "se_ea": "0x9a1ca0",
+   "se_name": "uPlayer::setJointVib(float,float,float)",
+   "confidence": "medium",
+   "evidence": [
+    "decompile",
+    "consts"
+   ],
+   "action": "commented",
+   "notes": "SE candidate setJointVib(float,float,float)"
+  },
+  {
+   "dx9_ea": "0x7ad930",
+   "old_dx9_name": "uPlayer::clearHitStop",
+   "new_dx9_name": "uPlayer::clearHitStop",
+   "se_ea": "0x9a1d20",
+   "se_name": "uPlayer::clearHitStop(void)",
+   "confidence": "high",
+   "evidence": [
+    "vtable",
+    "size"
+   ],
+   "action": "confirmed",
+   "notes": "slot 53 (SE 78)"
+  },
+  {
+   "dx9_ea": "0x7ad950",
+   "old_dx9_name": "uPlayer::damageMessage",
+   "new_dx9_name": "uPlayer::damageMessage",
+   "se_ea": "0x9afb20",
+   "se_name": "uPlayer::damageMessage(cCollisionGroup *,cCollisionGroup *)",
+   "confidence": "high",
+   "evidence": [
+    "vtable",
+    "callees"
+   ],
+   "action": "confirmed",
+   "notes": "slot 36 (SE 59)"
+  },
+  {
+   "dx9_ea": "0x7adcb0",
+   "old_dx9_name": "uPlayer::checkPressureDamage",
+   "new_dx9_name": "uPlayer::checkPressureDamage",
+   "se_ea": "0x9adc00",
+   "se_name": "uPlayer::checkPressureDamage(int,cCollisionGroup *)",
+   "confidence": "high",
+   "evidence": [
+    "callees",
+    "size"
+   ],
+   "action": "confirmed",
+   "notes": ""
+  },
+  {
+   "dx9_ea": "0x7adf10",
+   "old_dx9_name": "uPlayer::injureMessage",
+   "new_dx9_name": "uPlayer::injureMessage",
+   "se_ea": "0x9a1dc0",
+   "se_name": "uPlayer::injureMessage(cCollisionGroup *,cCollisionGroup *)",
+   "confidence": "high",
+   "evidence": [
+    "vtable"
+   ],
+   "action": "confirmed",
+   "notes": "slot 48 (SE 71)"
+  },
+  {
+   "dx9_ea": "0x7adf50",
+   "old_dx9_name": "uPlayer::interruptMessage",
+   "new_dx9_name": "uPlayer::interruptMessage",
+   "se_ea": "0x9a1df0",
+   "se_name": "uPlayer::interruptMessage(cCollisionGroup *,cCollisionGroup *)",
+   "confidence": "high",
+   "evidence": [
+    "vtable"
+   ],
+   "action": "confirmed",
+   "notes": "slot 49 (SE 72)"
+  },
+  {
+   "dx9_ea": "0x7adfb0",
+   "old_dx9_name": "uPlayer::blownMessage",
+   "new_dx9_name": "uPlayer::blownMessage",
+   "se_ea": "0x9a1e80",
+   "se_name": "uPlayer::blownMessage(cCollisionGroup *,cCollisionGroup *)",
+   "confidence": "high",
+   "evidence": [
+    "vtable"
+   ],
+   "action": "confirmed",
+   "notes": "slot 50 (SE 73)"
+  },
+  {
+   "dx9_ea": "0x7ae010",
+   "old_dx9_name": "uPlayer::dieMessage",
+   "new_dx9_name": "uPlayer::dieMessage",
+   "se_ea": "0x9ade00",
+   "se_name": "uPlayer::dieMessage(cCollisionGroup *,cCollisionGroup *)",
+   "confidence": "high",
+   "evidence": [
+    "vtable",
+    "callees"
+   ],
+   "action": "confirmed",
+   "notes": "slot 47 (SE 70)"
+  },
+  {
+   "dx9_ea": "0x7ae060",
+   "old_dx9_name": "uPlayer::reverseMessage",
+   "new_dx9_name": "uPlayer::reverseMessage",
+   "se_ea": "0x9a8f40",
+   "se_name": "uPlayer::reverseMessage(GUARD_TYPE,cCollisionGroup *,cCollisionGroup *)",
+   "confidence": "high",
+   "evidence": [
+    "vtable",
+    "callees"
+   ],
+   "action": "confirmed",
+   "notes": "slot 46 (SE 69)"
+  },
+  {
+   "dx9_ea": "0x7ae190",
+   "old_dx9_name": "uPlayer::pushMessage",
+   "new_dx9_name": "uPlayer::pushMessage",
+   "se_ea": "0x9a9080",
+   "se_name": "uPlayer::pushMessage(cCollisionGroup *,cCollisionGroup *)",
+   "confidence": "high",
+   "evidence": [
+    "vtable"
+   ],
+   "action": "confirmed",
+   "notes": "slot 56 (SE 82)"
+  },
+  {
+   "dx9_ea": "0x7ae350",
+   "old_dx9_name": "uPlayer::hitStopMessage",
+   "new_dx9_name": "uPlayer::hitStopMessage",
+   "se_ea": "0x9a1f20",
+   "se_name": "uPlayer::hitStopMessage(cCollisionGroup *,cCollisionGroup *)",
+   "confidence": "high",
+   "evidence": [
+    "vtable"
+   ],
+   "action": "confirmed",
+   "notes": "slot 51 (SE 76)"
+  },
+  {
+   "dx9_ea": "0x7ae370",
+   "old_dx9_name": "uPlayer::customMessage",
+   "new_dx9_name": "uPlayer::customMessage",
+   "se_ea": "0x9a1f60",
+   "se_name": "uPlayer::customMessage(uint,uint,MtObject *,cCollisionGroup *,cCollisionGroup *)",
+   "confidence": "high",
+   "evidence": [
+    "vtable"
+   ],
+   "action": "confirmed",
+   "notes": "slot 57 (SE 83)"
+  },
+  {
+   "dx9_ea": "0x7ae420",
+   "old_dx9_name": "uPlayer::setHitStop",
+   "new_dx9_name": "uPlayer::setHitStop",
+   "se_ea": "0x9a2010",
+   "se_name": "uPlayer::setHitStop(float)",
+   "confidence": "high",
+   "evidence": [
+    "vtable",
+    "size"
+   ],
+   "action": "confirmed",
+   "notes": "slot 52 (SE 77)"
+  },
+  {
+   "dx9_ea": "0x7ae440",
+   "old_dx9_name": "uPlayer::changeCameraDirectionMessage",
+   "new_dx9_name": "uPlayer::changeCameraDirectionMessage",
+   "se_ea": "0x9a2050",
+   "se_name": "uPlayer::changeCameraDirectionMessage(void)",
+   "confidence": "high",
+   "evidence": [
+    "size"
+   ],
+   "action": "confirmed",
+   "notes": ""
+  },
+  {
+   "dx9_ea": "0x7ae490",
+   "old_dx9_name": "uPlayer::stylishMessage",
+   "new_dx9_name": "uPlayer::stylishMessage",
+   "se_ea": "0x9a20a0",
+   "se_name": "uPlayer::stylishMessage(kAttackStatus *,float,float,float,bool)",
+   "confidence": "high",
+   "evidence": [
+    "vtable",
+    "callees"
+   ],
+   "action": "confirmed",
+   "notes": "slot 63 (SE 89)"
+  },
+  {
+   "dx9_ea": "0x7ae4d0",
+   "old_dx9_name": "uPlayer::IKMessage",
+   "new_dx9_name": "uPlayer::IKMessage",
+   "se_ea": "0x9ade50",
+   "se_name": "uPlayer::IKMessage(cCnsIK *,uModel::Joint *)",
+   "confidence": "high",
+   "evidence": [
+    "vtable",
+    "consts"
+   ],
+   "action": "confirmed",
+   "notes": "slot 60 (SE 86)"
+  },
+  {
+   "dx9_ea": "0x7ae540",
+   "old_dx9_name": "uPlayer::hitMessageAtAvoided",
+   "new_dx9_name": "uPlayer::hitMessageAtAvoided",
+   "se_ea": "0x9a9260",
+   "se_name": "uPlayer::hitMessageAtAvoided(cCollisionGroup *,cCollisionGroup *)",
+   "confidence": "high",
+   "evidence": [
+    "vtable",
+    "size"
+   ],
+   "action": "confirmed",
+   "notes": "slot 38 (SE 61)"
+  },
+  {
+   "dx9_ea": "0x7ae590",
+   "old_dx9_name": "uPlayer::setMeleeDamageEfct",
+   "new_dx9_name": "uPlayer::setMeleeDamageEfct",
+   "se_ea": "0x9a92b0",
+   "se_name": "uPlayer::setMeleeDamageEfct(cCollisionGroup *,cCollisionGroup *,int)",
+   "confidence": "high",
+   "evidence": [
+    "callees",
+    "consts"
+   ],
+   "action": "confirmed",
+   "notes": ""
+  },
+  {
+   "dx9_ea": "0x7ae770",
+   "old_dx9_name": "uPlayer::setRangeDamageEfct",
+   "new_dx9_name": "uPlayer::setRangeDamageEfct",
+   "se_ea": "0x9a9470",
+   "se_name": "uPlayer::setRangeDamageEfct(cCollisionGroup *,cCollisionGroup *,int)",
+   "confidence": "high",
+   "evidence": [
+    "callees",
+    "consts"
+   ],
+   "action": "confirmed",
+   "notes": ""
+  },
+  {
+   "dx9_ea": "0x7ae980",
+   "old_dx9_name": "sub_7AE980",
+   "new_dx9_name": "uPlayer::canMoveStage",
+   "se_ea": "0x9a9650",
+   "se_name": "uPlayer::canMoveStage(void)",
+   "confidence": "high",
+   "evidence": [
+    "size",
+    "consts"
+   ],
+   "action": "renamed",
+   "notes": ""
+  },
+  {
+   "dx9_ea": "0x7ae9c0",
+   "old_dx9_name": "sub_7AE9C0",
+   "new_dx9_name": "uPlayer::checkDeadAction",
+   "se_ea": "0x9a2100",
+   "se_name": "uPlayer::checkDeadAction(void)",
+   "confidence": "high",
+   "evidence": [
+    "size",
+    "consts"
+   ],
+   "action": "renamed",
+   "notes": ""
+  },
+  {
+   "dx9_ea": "0x7ae9f0",
+   "old_dx9_name": "uPlayer::setProvoke",
+   "new_dx9_name": "uPlayer::setProvoke",
+   "se_ea": "0x9a2130",
+   "se_name": "uPlayer::setProvoke(void)",
+   "confidence": "high",
+   "evidence": [
+    "callees",
+    "consts"
+   ],
+   "action": "confirmed",
+   "notes": ""
+  },
+  {
+   "dx9_ea": "0x7aea60",
+   "old_dx9_name": "uPlayer::moveGround",
+   "new_dx9_name": "uPlayer::moveGround",
+   "se_ea": "0x9a9690",
+   "se_name": "uPlayer::moveGround(float)",
+   "confidence": "high",
+   "evidence": [
+    "callees"
+   ],
+   "action": "confirmed",
+   "notes": ""
+  },
+  {
+   "dx9_ea": "0x7aee80",
+   "old_dx9_name": "uPlayer::getEventLockOnTarget",
+   "new_dx9_name": "uPlayer::getEventLockOnTarget",
+   "se_ea": "0x9a2290",
+   "se_name": "uPlayer::getEventLockOnTarget(void)",
+   "confidence": "high",
+   "evidence": [
+    "size"
+   ],
+   "action": "confirmed",
+   "notes": ""
+  },
+  {
+   "dx9_ea": "0x7aeed0",
+   "old_dx9_name": "sub_7AEED0",
+   "new_dx9_name": "uPlayer::setStingerJumpParam",
+   "se_ea": "0x9a22e0",
+   "se_name": "uPlayer::setStingerJumpParam(float,float,float,float,bool,MtVector3 *)",
+   "confidence": "high",
+   "evidence": [
+    "decompile"
+   ],
+   "action": "renamed",
+   "notes": "fills mSJumpParam (4 floats, bool, optional MtVector3*)"
+  },
+  {
+   "dx9_ea": "0x7aef60",
+   "old_dx9_name": "uPlayer::canBeGrabbed",
+   "new_dx9_name": "uPlayer::canBeGrabbed",
+   "se_ea": "0x9a2380",
+   "se_name": "uPlayer::canBeGrabbed(cCollisionGroup *,cCollisionGroup *)",
+   "confidence": "high",
+   "evidence": [
+    "vtable"
+   ],
+   "action": "confirmed",
+   "notes": "slot 87 (SE 127)"
+  },
+  {
+   "dx9_ea": "0x7aefb0",
+   "old_dx9_name": "uPlCmnShl000::ctor_w",
+   "new_dx9_name": "uPlayer::createCmnShl000",
+   "se_ea": "0x9a23c0",
+   "se_name": "uPlayer::createCmnShl000(void)",
+   "confidence": "high",
+   "evidence": [
+    "vtable",
+    "callees"
+   ],
+   "action": "replaced_existing",
+   "notes": "slot 112 (SE 179); calls uPlCmnShl000 ctor"
+  },
+  {
+   "dx9_ea": "0x7aefc0",
+   "old_dx9_name": "uPlayerDante::addODGauge",
+   "new_dx9_name": "uPlayer::addDevilTrgGuage",
+   "se_ea": "0x9a23d0",
+   "se_name": "uPlayer::addDevilTrgGuage(float,bool)",
+   "confidence": "high",
+   "evidence": [
+    "decompile",
+    "size"
+   ],
+   "action": "replaced_existing",
+   "notes": "adds to mDevilTrg gauge, clamps [0,max]; base uPlayer, not Dante-specific"
+  },
+  {
+   "dx9_ea": "0x7af040",
+   "old_dx9_name": "sub_7AF040",
+   "new_dx9_name": "uPlayer::setFreezeParam",
+   "se_ea": "0x9a24b0",
+   "se_name": "uPlayer::setFreezeParam(uDevil4Model *)",
+   "confidence": "high",
+   "evidence": [
+    "strings",
+    "order"
+   ],
+   "action": "renamed",
+   "notes": "ice_BM-01 texture set; called by initFreezeEfct"
+  },
+  {
+   "dx9_ea": "0x7af140",
+   "old_dx9_name": "sub_7AF140",
+   "new_dx9_name": "uPlayer::initFreezeEfct",
+   "se_ea": "0x9a2540",
+   "se_name": "uPlayer::initFreezeEfct(void)",
+   "confidence": "high",
+   "evidence": [
+    "vtable",
+    "callees"
+   ],
+   "action": "renamed",
+   "notes": "slot 113 (SE 180)"
+  },
+  {
+   "dx9_ea": "0x7af150",
+   "old_dx9_name": "sub_7AF150",
+   "new_dx9_name": "uPlayer::requestFreezeEfct",
+   "se_ea": "0x9a2550",
+   "se_name": "uPlayer::requestFreezeEfct(float)",
+   "confidence": "high",
+   "evidence": [
+    "vtable"
+   ],
+   "action": "renamed",
+   "notes": "slot 114 (SE 181)"
+  },
+  {
+   "dx9_ea": "0x7af1c0",
+   "old_dx9_name": "sub_7AF1C0",
+   "new_dx9_name": "uPlayer::eraseFreezeEfct",
+   "se_ea": "0x9a25a0",
+   "se_name": "uPlayer::eraseFreezeEfct(void)",
+   "confidence": "high",
+   "evidence": [
+    "vtable"
+   ],
+   "action": "renamed",
+   "notes": "slot 115 (SE 182)"
+  },
+  {
+   "dx9_ea": "0x7af1f0",
+   "old_dx9_name": "uPlayer::updatePosConst",
+   "new_dx9_name": "uPlayer::updatePosConst",
+   "se_ea": "0x9a9a60",
+   "se_name": "uPlayer::updatePosConst(void)",
+   "confidence": "high",
+   "evidence": [
+    "callees",
+    "consts"
+   ],
+   "action": "confirmed",
+   "notes": ""
+  },
+  {
+   "dx9_ea": "0x7af460",
+   "old_dx9_name": "sub_7AF460",
+   "new_dx9_name": "uPlayer::isEffectiveEnemyAtck",
+   "se_ea": "0x9a26c0",
+   "se_name": "uPlayer::isEffectiveEnemyAtck(float,cCollisionGroup *,cCollisionGroup *)",
+   "confidence": "high",
+   "evidence": [
+    "vtable",
+    "size"
+   ],
+   "action": "renamed",
+   "notes": "slot 89 (SE 130); 3 args, returns 1"
+  },
+  {
+   "dx9_ea": "0x7af470",
+   "old_dx9_name": "sub_7AF470",
+   "new_dx9_name": "uPlayer::isWeaponChange",
+   "se_ea": "0x9a26d0",
+   "se_name": "uPlayer::isWeaponChange(void)",
+   "confidence": "high",
+   "evidence": [
+    "vtable",
+    "size"
+   ],
+   "action": "renamed",
+   "notes": "slot 119 (SE 186)"
+  },
+  {
+   "dx9_ea": "0x7af480",
+   "old_dx9_name": "sub_7AF480",
+   "new_dx9_name": "uPlayer::setVibJointCnst",
+   "se_ea": "0x9a9ce0",
+   "se_name": "uPlayer::setVibJointCnst(void)",
+   "confidence": "high",
+   "evidence": [
+    "decompile"
+   ],
+   "action": "renamed",
+   "notes": "uses vslots 125/126 getUpperBdyVibJoint, sets constraint joints; called by setup"
+  },
+  {
+   "dx9_ea": "0x7af510",
+   "old_dx9_name": "sub_7AF510",
+   "new_dx9_name": "uPlayer::afterPowerUp",
+   "se_ea": "0x9a26e0",
+   "se_name": "uPlayer::afterPowerUp(void)",
+   "confidence": "high",
+   "evidence": [
+    "vtable"
+   ],
+   "action": "renamed",
+   "notes": "slot 90 (SE 131); also inlines resetShotAutoCharge (180.0f)"
+  },
+  {
+   "dx9_ea": "0x7af540",
+   "old_dx9_name": "sub_7AF540",
+   "new_dx9_name": "uPlayer::getCommonSaveData",
+   "se_ea": "0x9a26f0",
+   "se_name": "uPlayer::getCommonSaveData(void)",
+   "confidence": "high",
+   "evidence": [
+    "vtable",
+    "size"
+   ],
+   "action": "renamed",
+   "notes": "slot 120 (SE 188); copies dfltData"
+  },
+  {
+   "dx9_ea": "0x7af560",
+   "old_dx9_name": "uPlayer::addComboGauge",
+   "new_dx9_name": "uPlayer::addComboGauge",
+   "se_ea": "0x9a2710",
+   "se_name": "uPlayer::addComboGauge(int,float,float,float,int)",
+   "confidence": "high",
+   "evidence": [
+    "callees",
+    "size"
+   ],
+   "action": "confirmed",
+   "notes": ""
+  },
+  {
+   "dx9_ea": "0x7af630",
+   "old_dx9_name": "sub_7AF630",
+   "new_dx9_name": null,
+   "se_ea": null,
+   "se_name": null,
+   "confidence": "none",
+   "evidence": [
+    "decompile"
+   ],
+   "action": "commented",
+   "notes": "adds to a capped gauge at +0x15CC (min 1.0) unless holy/revive timers or mIsInvincible; caller 0x884760 (stage); no SE uPlayer counterpart"
+  },
+  {
+   "dx9_ea": "0x7af6c0",
+   "old_dx9_name": "sub_7AF6C0",
+   "new_dx9_name": "uPlayer::cPeripheral::createProperty",
+   "se_ea": "0x9a9d70",
+   "se_name": "uPlayer::cPeripheral::createProperty(MtPropertyList &)",
+   "confidence": "high",
+   "evidence": [
+    "vtable"
+   ],
+   "action": "renamed",
+   "notes": "cPeripheral vtable slot 3"
+  },
+  {
+   "dx9_ea": "0x7afd10",
+   "old_dx9_name": "cPeripheral::update",
+   "new_dx9_name": "uPlayer::cPeripheral::update",
+   "se_ea": "0x9adec0",
+   "se_name": "uPlayer::cPeripheral::update(float)",
+   "confidence": "high",
+   "evidence": [
+    "callees",
+    "size"
+   ],
+   "action": "replaced_existing",
+   "notes": ""
+  }
+ ],
+ "notes": "0x79F000-0x7A4640 is PC-only UI code (uPauseMenu, uPausePractice, uPcBenchCock, uPcMessage, uPcSettings): no uPl SE identity, left unnamed. The DX9 uPlayer TU starts with uPlacement (0x7A4640) and then the SE TU-head automatic-battle code (0x7A4C00-0x7A5520), as at SE 0x99d9a0. Newly defined functions: 0x7A4650, 0x7A4700, 0x7A5920, 0x7A59B0, 0x7A5A00, 0x7A5A50, 0x7A5A80, 0x7A5AB0, 0x7A5AE0, 0x7A6640 (MyDTI::newInstance stubs and deleting dtors). Wrong existing names fixed (old kept as was:): registerWithMediator->setGameSystem, map_pad_btn_to_action->getInterfaceBtnInfo, uPlayerNero::setGunPoseLower/Hold->uPlayer::setActionPoseUpperBdy/LowerBdy (base uPlayer code, not Nero), uPlayerNero::setGunShotMotion_0/checkGunAutoShot->uPlayer::initShotAutoRepeat/checkShotAutoRepeat, uPlayerDante::addODGauge->uPlayer::addDevilTrgGuage, updateContactInfo->updateCharTbl, calcSpeedXZCapped->calcJumpRateLimit, checkAtckFlag->checkAtckBit, setAtckAction->setActionAtck, cWeaponCtrl::getWeapon->getLongWeapon, uPlCmnShl000::ctor_w (0x7AEFB0)->uPlayer::createCmnShl000. For P2/P6: 0x7B1010 (outside P1) is labelled uPlayer::updateLegLandEfct but is a cWeaponCtrl per-weapon update loop called from moveEx (likely uPlayer::cWeaponCtrl::updateEx); the real updateLegLandEfct is 0x7ABA20, named uPlayer::updateLegLandEfct_2 because of the collision. The callee of slot-90 afterPowerUp (0x7AF510) that is currently labelled uPlayer::afterPowerUp is not afterPowerUp: SE afterPowerUp calls initCommandCheck. Several SE virtuals are non-virtual in DX9 (setActionLand, setPoseWeapon, setPoseMotion, updateContactInfoSub, checkAtckBit, setVibJointCnst, getShotAutoChargeApproveLevel, initAutomaticCombo). SE beginDemo/endDemo/dispDebug* have no DX9 counterpart. Getter 0x7A56B0 (return -1) fills 7 uPlayer slots (86,125-130) = SE getUpperBdyVibJoint in all corresponding slots."
+}

@@ -7,6 +7,8 @@ nested-function name lookups fail.
 
 | Script | Purpose | Output |
 |--------|---------|--------|
+| `uem_features.py` | Dump per-function matching features (strings, callees, constants, vtable slots) for a class family from either IDB; config `features_cfg.json` in the scratchpad (`prefix`, `tag`, optional DX9 `span`). Used for the SE→DX9 name passes. | `se_<tag>_features.json`, `dx9_<tag>_features.json` |
+| `uem_merge.py` / `pl_merge.py` | Merge the per-group SE→DX9 mapping JSONs and check coverage and duplicate claims. Plain Python (`python RE/scripts/...`), not IDA. | `RE/uem_map/uem_se_dx9_map.json`, `RE/pl_map/pl_dx9_se_map.json` |
 | `build_mpplayer_sites.py` | Enumerate every `sMediator::mpPlayer` (mpInstance+0x24) reference — inline reads + `getPlayerPos`/`getPlayerMat` call sites — and enrich each with owning class, `this`-register/CC, category, and instruction lengths. | `RE/mpplayer_call_sites.json` |
 
 ## Regenerating the call-site inventory
@@ -19,9 +21,11 @@ Regenerate after **any** database change that defines, renames, or retypes funct
 keyed to live instruction addresses and function prototypes and goes stale otherwise. The script is
 idempotent and overwrites the JSON in place.
 
-Expected output (baseline, DB as of 2026-07-09): **1047 sites** = 943 inline + 104 accessor;
-categories camera 19 / damage-derivable 17 / nero-grab 14 / damage-review-aggro 5 / uncategorized 992;
-`this_reg` = ecx 358, stack 268, eax 214, esi 114, edi 64, edx 13, ebx 3, null 13.
+Expected output (baseline, DB as of 2026-10-05, after the uEm + player SE-name passes): **1048 sites** = 944 inline + 104 accessor;
+categories camera 19 / damage-derivable 17 / nero-grab 14 / damage-review-aggro 5 / uncategorized 993;
+`this_reg` = ecx 366, stack 247, eax 223, esi 115, edi 67, edx 13, ebx 3, null 14.
+Sites with no owning class: 245 (was 716 before the SE-name passes). Previous baseline (2026-07-09): 1047 sites; the +1 is
+`uPlayerDanteBoss::checkPlayerDeadThink` (0x7C6470), formerly undefined code.
 
 If the counts drift, that's real signal (new functions defined, or a category function was
 re-typed) — reconcile against `RE/mpplayer_dispatcher_patch_plan.md` before trusting the delta.

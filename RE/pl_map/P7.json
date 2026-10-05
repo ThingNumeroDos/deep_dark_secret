@@ -1,0 +1,3581 @@
+{
+ "group": "P7",
+ "range": [
+  "0x830000",
+  "0x840000"
+ ],
+ "classes": {
+  "uPlShl": {
+   "dx9": {
+    "dti": "0xe5ab70",
+    "vtable": "0xbe95c0",
+    "ctor": null,
+    "size": "0x17c0",
+    "parent": "uShell"
+   },
+   "se": {
+    "vtable": "0x11942a8"
+   },
+   "slot_shift": "as weapons up to slot 69; tail 114-118 -> 77-81 (k=37, no gap)",
+   "vtable_label_fixed": false,
+   "note": "ctor, createProperty (0x82FF20), getDTI (0x82FE20) and dtor are below 0x830000 (other group)."
+  },
+  "uPlSwordBlur": {
+   "dx9": {
+    "dti": "0xe5ab90",
+    "vtable": "0xbe9760",
+    "ctor": "0x8310f0 (default) / 0x831160 (uModel*,kParam*,uActor*)",
+    "size": "0x7c",
+    "parent": "cUnit"
+   },
+   "se": {
+    "vtable": "0x1194510"
+   },
+   "slot_shift": "slots 0-5 identical; move 8->6, kill 21->12",
+   "vtable_label_fixed": false
+  },
+  "uPlWeapon": {
+   "dx9": {
+    "dti": "0xe5abb0",
+    "vtable": "0xbe97b0",
+    "ctor": "0x831b50",
+    "size": "0x13a0",
+    "parent": "uActor"
+   },
+   "se": {
+    "vtable": "0x1194610"
+   },
+   "slot_shift": "SE 0-5 -> same; 8->6 (k=2); 11,12->8,9 (k=3); 21->12 (k=9); 50->29 (k=21); 53,54,60,69->30,31,37,46 (k=23); 80,83->54,57 (k=26); 114,115->77,78 (k=37); 117-124->79-86 (k=38; SE slot 116 has no DX9 counterpart)",
+   "vtable_label_fixed": false
+  },
+  "uPlWpBlueRose": {
+   "dx9": {
+    "dti": "0xe5abd0",
+    "vtable": "0xbe9958",
+    "ctor": "inlined in MyDTI::newInstance 0x831d50",
+    "size": "0x13a0",
+    "parent": "uPlWeapon"
+   },
+   "se": {
+    "vtable": "0x1194848"
+   },
+   "slot_shift": "SE 0-5 -> same; 8->6 (k=2); 11,12->8,9 (k=3); 21->12 (k=9); 50->29 (k=21); 53,54,60,69->30,31,37,46 (k=23); 80,83->54,57 (k=26); 114,115->77,78 (k=37); 117-124->79-86 (k=38; SE slot 116 has no DX9 counterpart)",
+   "vtable_label_fixed": false
+  },
+  "uPlWpCoyoteAce": {
+   "dx9": {
+    "dti": "0xe5abf0",
+    "vtable": "0xbe9b08",
+    "ctor": "inlined in MyDTI::newInstance 0x831ff0",
+    "size": "0x13b0",
+    "parent": "uPlWeapon"
+   },
+   "se": {
+    "vtable": "0x1194ab0"
+   },
+   "slot_shift": "SE 0-5 -> same; 8->6 (k=2); 11,12->8,9 (k=3); 21->12 (k=9); 50->29 (k=21); 53,54,60,69->30,31,37,46 (k=23); 80,83->54,57 (k=26); 114,115->77,78 (k=37); 117-124->79-86 (k=38; SE slot 116 has no DX9 counterpart)",
+   "vtable_label_fixed": false
+  },
+  "uPlWpEbonyIvory": {
+   "dx9": {
+    "dti": "0xe5ac10",
+    "vtable": "0xbe9cf0",
+    "ctor": "0x832390",
+    "size": "0x13b0",
+    "parent": "uPlWeapon"
+   },
+   "se": {
+    "vtable": "0x1194d18"
+   },
+   "slot_shift": "SE 0-5 -> same; 8->6 (k=2); 11,12->8,9 (k=3); 21->12 (k=9); 50->29 (k=21); 53,54,60,69->30,31,37,46 (k=23); 80,83->54,57 (k=26); 114,115->77,78 (k=37); 117-124->79-86 (k=38; SE slot 116 has no DX9 counterpart)",
+   "vtable_label_fixed": false
+  },
+  "uPlWpGilgamesh": {
+   "dx9": {
+    "dti": "0xe5ac30",
+    "vtable": "0xbe9ef0",
+    "ctor": "0x832d30",
+    "size": "0x1650",
+    "parent": "uPlWeapon"
+   },
+   "se": {
+    "vtable": "0x1194fc0"
+   },
+   "slot_shift": "SE 0-5 -> same; 8->6 (k=2); 11,12->8,9 (k=3); 21->12 (k=9); 50->29 (k=21); 53,54,60,69->30,31,37,46 (k=23); 80,83->54,57 (k=26); 114,115->77,78 (k=37); 117-124->79-86 (k=38; SE slot 116 has no DX9 counterpart)",
+   "vtable_label_fixed": false
+  },
+  "uPlWpLucifer": {
+   "dx9": {
+    "dti": "0xe5ac50",
+    "vtable": "0xbea128",
+    "ctor": "0x833a30",
+    "size": "0x2e00",
+    "parent": "uPlWeapon"
+   },
+   "se": {
+    "vtable": "0x1195270"
+   },
+   "slot_shift": "SE 0-5 -> same; 8->6 (k=2); 11,12->8,9 (k=3); 21->12 (k=9); 50->29 (k=21); 53,54,60,69->30,31,37,46 (k=23); 80,83->54,57 (k=26); 114,115->77,78 (k=37); 117-124->79-86 (k=38; SE slot 116 has no DX9 counterpart)",
+   "vtable_label_fixed": false
+  },
+  "uPlWpPandora": {
+   "dx9": {
+    "dti": "0xe5ac70",
+    "vtable": "0xbea508",
+    "ctor": "0x836300",
+    "size": "0x1840",
+    "parent": "uPlWeapon"
+   },
+   "se": {
+    "vtable": "0x1195500"
+   },
+   "slot_shift": "SE 0-5 -> same; 8->6 (k=2); 11,12->8,9 (k=3); 21->12 (k=9); 50->29 (k=21); 53,54,60,69->30,31,37,46 (k=23); 80,83->54,57 (k=26); 114,115->77,78 (k=37); 117-124->79-86 (k=38; SE slot 116 has no DX9 counterpart)",
+   "vtable_label_fixed": false
+  },
+  "uPlWpRedQueen": {
+   "dx9": {
+    "dti": "0xe5ac90",
+    "vtable": "0xbea6c8",
+    "ctor": "inlined in MyDTI::newInstance 0x8387c0",
+    "size": "0x13b0",
+    "parent": "uPlWeapon"
+   },
+   "se": {
+    "vtable": "0x1195858"
+   },
+   "slot_shift": "SE 0-5 -> same; 8->6 (k=2); 11,12->8,9 (k=3); 21->12 (k=9); 50->29 (k=21); 53,54,60,69->30,31,37,46 (k=23); 80,83->54,57 (k=26); 114,115->77,78 (k=37); 117-124->79-86 (k=38; SE slot 116 has no DX9 counterpart)",
+   "vtable_label_fixed": false
+  },
+  "uPlWpCaliburn": {
+   "dx9": {
+    "dti": "0xe5acb0",
+    "vtable": "0xbe6548",
+    "ctor": "inlined in MyDTI::newInstance 0x838810",
+    "size": "0x13b0",
+    "parent": "uPlWpRedQueen"
+   },
+   "se": {
+    "vtable": "0x118f2a0"
+   },
+   "slot_shift": "SE 0-5 -> same; 8->6 (k=2); 11,12->8,9 (k=3); 21->12 (k=9); 50->29 (k=21); 53,54,60,69->30,31,37,46 (k=23); 80,83->54,57 (k=26); 114,115->77,78 (k=37); 117-124->79-86 (k=38; SE slot 116 has no DX9 counterpart)",
+   "vtable_label_fixed": false,
+   "note": "vtable 0xBE6548 sits among uPlayerNero vtables and getDTI stub 0x802260 is outside this range, but both verified (getDTI returns uPlWpCaliburn::DTI; newInstance 0x838810 writes it). Parent is uPlWpRedQueen."
+  },
+  "uPlWpRevellion": {
+   "dx9": {
+    "dti": "0xe5acd0",
+    "vtable": "0xbea898",
+    "ctor": "0x838ea0",
+    "size": "0x17e0",
+    "parent": "uPlWeapon"
+   },
+   "se": {
+    "vtable": "0x1195b08"
+   },
+   "slot_shift": "SE 0-5 -> same; 8->6 (k=2); 11,12->8,9 (k=3); 21->12 (k=9); 50->29 (k=21); 53,54,60,69->30,31,37,46 (k=23); 80,83->54,57 (k=26); 114,115->77,78 (k=37); 117-124->79-86 (k=38; SE slot 116 has no DX9 counterpart)",
+   "vtable_label_fixed": false
+  },
+  "uPlWpRightHand": {
+   "dx9": {
+    "dti": "0xe5ad30",
+    "vtable": "0xbeab48",
+    "ctor": "0x83b0e0",
+    "size": "0x3560",
+    "parent": "uPlWeapon"
+   },
+   "se": {
+    "vtable": "0x1195fa8"
+   },
+   "slot_shift": "SE 0-5 -> same; 8->6 (k=2); 11,12->8,9 (k=3); 21->12 (k=9); 50->29 (k=21); 53,54,60,69->30,31,37,46 (k=23); 80,83->54,57 (k=26); 114,115->77,78 (k=37); 117-124->79-86 (k=38; SE slot 116 has no DX9 counterpart)",
+   "vtable_label_fixed": false
+  },
+  "uPlWpRightHand::uEffectCtrl": {
+   "dx9": {
+    "dti": "0xe5ad10",
+    "vtable": "0xbeaca4",
+    "ctor": "inlined in MyDTI::newInstance 0x83b090",
+    "size": "0xc",
+    "parent": "MtObject"
+   },
+   "se": {
+    "vtable": "0x1195db8"
+   },
+   "slot_shift": "slots 0-5 identical",
+   "vtable_label_fixed": false,
+   "note": "slot 0 dtor 0x455B10 is a shared generic (out of range)."
+  },
+  "uPlWpRightHand::uCollisionCtrl": {
+   "dx9": {
+    "dti": "0xe5acf0",
+    "vtable": "0xbeacc0",
+    "ctor": "0x83d580",
+    "size": "0x1b80",
+    "parent": "uActor"
+   },
+   "se": {
+    "vtable": "0x1195dd0"
+   },
+   "slot_shift": "SE n -> DX9 n for slots 0-5; grabHitMessage SE 80 -> DX9 54 (uCollisionCtrl)",
+   "vtable_label_fixed": true,
+   "note": "vtable 0xBEACC0 was labelled uCollisionCtrl::vftable (no outer class); renamed. 77 slots."
+  },
+  "uPlWpYamato": {
+   "dx9": {
+    "dti": "0xe5ad50",
+    "vtable": "0xbeae30",
+    "ctor": "inlined in MyDTI::newInstance 0x83e610",
+    "size": "0x13b0",
+    "parent": "uPlWeapon"
+   },
+   "se": {
+    "vtable": "0x11962e8"
+   },
+   "slot_shift": "SE 0-5 -> same; 8->6 (k=2); 11,12->8,9 (k=3); 21->12 (k=9); 50->29 (k=21); 53,54,60,69->30,31,37,46 (k=23); 80,83->54,57 (k=26); 114,115->77,78 (k=37); 117-124->79-86 (k=38; SE slot 116 has no DX9 counterpart)",
+   "vtable_label_fixed": false
+  },
+  "uPlWpYamatoDante": {
+   "dx9": {
+    "dti": "0xe5ad70",
+    "vtable": "0xbeafe0",
+    "ctor": "0x83e850",
+    "size": "0x2270",
+    "parent": "uPlWeapon"
+   },
+   "se": {
+    "vtable": "0x1196538"
+   },
+   "slot_shift": "SE 0-5 -> same; 8->6 (k=2); 11,12->8,9 (k=3); 21->12 (k=9); 50->29 (k=21); 53,54,60,69->30,31,37,46 (k=23); 80,83->54,57 (k=26); 114,115->77,78 (k=37); 117-124->79-86 (k=38; SE slot 116 has no DX9 counterpart)",
+   "vtable_label_fixed": false
+  }
+ },
+ "functions": [
+  {
+   "dx9_ea": "0x830490",
+   "old_dx9_name": "sub_830490",
+   "new_dx9_name": "uPlShl::setup",
+   "se_ea": "0xa369f0",
+   "se_name": "uPlShl::setup(void)",
+   "confidence": "high",
+   "evidence": [
+    "vtable",
+    "order",
+    "strings"
+   ],
+   "action": "renamed",
+   "notes": ""
+  },
+  {
+   "dx9_ea": "0x8304e0",
+   "old_dx9_name": "sub_8304E0",
+   "new_dx9_name": "uPlShl::updatePtr",
+   "se_ea": "0xa37460",
+   "se_name": "uPlShl::updatePtr(void)",
+   "confidence": "high",
+   "evidence": [
+    "vtable",
+    "order"
+   ],
+   "action": "renamed",
+   "notes": ""
+  },
+  {
+   "dx9_ea": "0x8305c0",
+   "old_dx9_name": "sub_8305C0",
+   "new_dx9_name": "uPlShl::main",
+   "se_ea": "0xa36a50",
+   "se_name": "uPlShl::main(void)",
+   "confidence": "high",
+   "evidence": [
+    "vtable",
+    "order"
+   ],
+   "action": "renamed",
+   "notes": ""
+  },
+  {
+   "dx9_ea": "0x830640",
+   "old_dx9_name": "sub_830640",
+   "new_dx9_name": "uPlShl::update",
+   "se_ea": "0xa36ac0",
+   "se_name": "uPlShl::update(void)",
+   "confidence": "high",
+   "evidence": [
+    "vtable",
+    "order"
+   ],
+   "action": "renamed",
+   "notes": ""
+  },
+  {
+   "dx9_ea": "0x830650",
+   "old_dx9_name": "sub_830650",
+   "new_dx9_name": "uPlShl::updatePos",
+   "se_ea": "0xa37550",
+   "se_name": "uPlShl::updatePos(bool)",
+   "confidence": "high",
+   "evidence": [
+    "vtable",
+    "order"
+   ],
+   "action": "renamed",
+   "notes": ""
+  },
+  {
+   "dx9_ea": "0x830bb0",
+   "old_dx9_name": "sub_830BB0",
+   "new_dx9_name": "uPlShl::setEfct",
+   "se_ea": "0xa36ad0",
+   "se_name": "uPlShl::setEfct(void)",
+   "confidence": "high",
+   "evidence": [
+    "vtable",
+    "order"
+   ],
+   "action": "renamed",
+   "notes": ""
+  },
+  {
+   "dx9_ea": "0x830bd0",
+   "old_dx9_name": "sub_830BD0",
+   "new_dx9_name": "uPlShl::kill",
+   "se_ea": "0xa37b80",
+   "se_name": "uPlShl::kill(void)",
+   "confidence": "high",
+   "evidence": [
+    "vtable",
+    "order"
+   ],
+   "action": "renamed",
+   "notes": ""
+  },
+  {
+   "dx9_ea": "0x830c10",
+   "old_dx9_name": "sub_830C10",
+   "new_dx9_name": "uPlShl::hitMessage",
+   "se_ea": "0xa36b30",
+   "se_name": "uPlShl::hitMessage(cCollisionGroup *,cCollisionGroup *)",
+   "confidence": "high",
+   "evidence": [
+    "vtable",
+    "order"
+   ],
+   "action": "renamed",
+   "notes": ""
+  },
+  {
+   "dx9_ea": "0x830c20",
+   "old_dx9_name": "sub_830C20",
+   "new_dx9_name": "uPlShl::setEffectCnst",
+   "se_ea": "0xa36b70",
+   "se_name": "uPlShl::setEffectCnst(uDevil4Effect *,int)",
+   "confidence": "high",
+   "evidence": [
+    "order",
+    "decompile"
+   ],
+   "action": "renamed",
+   "notes": "stores (effect,int) into 4-entry mEfcCtr array at +0x1380; 2-arg signature rules out setEffect(uDevil4Effect*)"
+  },
+  {
+   "dx9_ea": "0x830c50",
+   "old_dx9_name": "sub_830C50",
+   "new_dx9_name": "uPlShl::killEffect",
+   "se_ea": "0xa36bc0",
+   "se_name": "uPlShl::killEffect(void)",
+   "confidence": "high",
+   "evidence": [
+    "propagation",
+    "consts",
+    "order"
+   ],
+   "action": "renamed",
+   "notes": "only callee of uPlShl::kill (vtable) as in SE"
+  },
+  {
+   "dx9_ea": "0x830c90",
+   "old_dx9_name": "sub_830C90",
+   "new_dx9_name": "uPlShl::killEffect_2",
+   "se_ea": "0xa36c00",
+   "se_name": "uPlShl::killEffect(int)",
+   "confidence": "high",
+   "evidence": [
+    "order",
+    "consts"
+   ],
+   "action": "renamed",
+   "notes": "overload suffix _2"
+  },
+  {
+   "dx9_ea": "0x830cd0",
+   "old_dx9_name": "sub_830CD0",
+   "new_dx9_name": "uPlShl::setTransEffect",
+   "se_ea": "0xa36c90",
+   "se_name": "uPlShl::setTransEffect(bool)",
+   "confidence": "high",
+   "evidence": [
+    "order",
+    "consts"
+   ],
+   "action": "renamed",
+   "notes": "imm 0x800 as SE"
+  },
+  {
+   "dx9_ea": "0x830d40",
+   "old_dx9_name": "sub_830D40",
+   "new_dx9_name": "uPlShl::getEffectNum",
+   "se_ea": "0xa36d20",
+   "se_name": "uPlShl::getEffectNum(int)",
+   "confidence": "high",
+   "evidence": [
+    "order",
+    "callees"
+   ],
+   "action": "renamed",
+   "notes": "size 85=85; caller is DanteShl013 setBurst as in SE"
+  },
+  {
+   "dx9_ea": "0x830da0",
+   "old_dx9_name": "sub_830DA0",
+   "new_dx9_name": "uPlShl::getStartRndPos",
+   "se_ea": "0xa37bb0",
+   "se_name": "uPlShl::getStartRndPos(MtMatrix *)",
+   "confidence": "high",
+   "evidence": [
+    "order",
+    "callees"
+   ],
+   "action": "renamed",
+   "notes": "MtRandom callee; Shl setup callers"
+  },
+  {
+   "dx9_ea": "0x830ea0",
+   "old_dx9_name": "sub_830EA0",
+   "new_dx9_name": "uPlShl::checkStartWall",
+   "se_ea": "0xa37cc0",
+   "se_name": "uPlShl::checkStartWall(float)",
+   "confidence": "high",
+   "evidence": [
+    "order",
+    "callees"
+   ],
+   "action": "renamed",
+   "notes": "collision callees as SE"
+  },
+  {
+   "dx9_ea": "0x8310a0",
+   "old_dx9_name": "sub_8310A0",
+   "new_dx9_name": "uPlSwordBlur::getDTI",
+   "se_ea": "0xa38db0",
+   "se_name": "uPlSwordBlur::getDTI(void)",
+   "confidence": "high",
+   "evidence": [
+    "vtable",
+    "order"
+   ],
+   "action": "renamed",
+   "notes": ""
+  },
+  {
+   "dx9_ea": "0x8310b0",
+   "old_dx9_name": "sub_8310B0",
+   "new_dx9_name": null,
+   "se_ea": null,
+   "se_name": null,
+   "confidence": "none",
+   "evidence": [],
+   "action": "commented",
+   "notes": "property getter thunk: returns *(this+0x70) (mBlurType); referenced as data from uPlSwordBlur::createProperty and two other createProperty bodies (ICF-shared)"
+  },
+  {
+   "dx9_ea": "0x8310c0",
+   "old_dx9_name": "sub_8310C0",
+   "new_dx9_name": "uPlSwordBlur::MyDTI::newInstance",
+   "se_ea": "0xa38d70",
+   "se_name": "uPlSwordBlur::MyDTI::newInstance(void)",
+   "confidence": "high",
+   "evidence": [
+    "decompile",
+    "order"
+   ],
+   "action": "renamed",
+   "notes": "allocates 124 (=DTI size) and runs default ctor"
+  },
+  {
+   "dx9_ea": "0x8310f0",
+   "old_dx9_name": "sub_8310F0",
+   "new_dx9_name": "uPlSwordBlur::uPlSwordBlur_2",
+   "se_ea": "0xa38510",
+   "se_name": "uPlSwordBlur::uPlSwordBlur(void)",
+   "confidence": "high",
+   "evidence": [
+    "decompile",
+    "callees"
+   ],
+   "action": "renamed",
+   "notes": "default ctor (cUnit ctor inlined, memset 0x40, writes uPlSwordBlur::vftable); _2 = overload suffix"
+  },
+  {
+   "dx9_ea": "0x831160",
+   "old_dx9_name": "uPlSwordBlur::uPlSwordBlur",
+   "new_dx9_name": "uPlSwordBlur::uPlSwordBlur",
+   "se_ea": "0xa38590",
+   "se_name": "uPlSwordBlur::uPlSwordBlur(uModel *,uPlSwordBlur::kParam *,uActor *)",
+   "confidence": "high",
+   "evidence": [
+    "callees",
+    "order"
+   ],
+   "action": "confirmed",
+   "notes": "3-arg ctor called from weapon setups"
+  },
+  {
+   "dx9_ea": "0x831240",
+   "old_dx9_name": "sub_831240",
+   "new_dx9_name": "uPlSwordBlur::kill",
+   "se_ea": "0xa38660",
+   "se_name": "uPlSwordBlur::kill(void)",
+   "confidence": "high",
+   "evidence": [
+    "vtable",
+    "order"
+   ],
+   "action": "renamed",
+   "notes": ""
+  },
+  {
+   "dx9_ea": "0x831280",
+   "old_dx9_name": "sub_831280",
+   "new_dx9_name": "uPlSwordBlur::setup",
+   "se_ea": "0xa38690",
+   "se_name": "uPlSwordBlur::setup(void)",
+   "confidence": "high",
+   "evidence": [
+    "vtable",
+    "order",
+    "strings"
+   ],
+   "action": "renamed",
+   "notes": ""
+  },
+  {
+   "dx9_ea": "0x831390",
+   "old_dx9_name": "sub_831390",
+   "new_dx9_name": "uPlSwordBlur::move",
+   "se_ea": "0xa387a0",
+   "se_name": "uPlSwordBlur::move(void)",
+   "confidence": "high",
+   "evidence": [
+    "vtable",
+    "order"
+   ],
+   "action": "renamed",
+   "notes": ""
+  },
+  {
+   "dx9_ea": "0x8314a0",
+   "old_dx9_name": "sub_8314A0",
+   "new_dx9_name": "uPlSwordBlur::createProperty",
+   "se_ea": "0xa388e0",
+   "se_name": "uPlSwordBlur::createProperty(MtPropertyList &)",
+   "confidence": "high",
+   "evidence": [
+    "vtable",
+    "order",
+    "strings"
+   ],
+   "action": "renamed",
+   "notes": ""
+  },
+  {
+   "dx9_ea": "0x8317b0",
+   "old_dx9_name": "sub_8317B0",
+   "new_dx9_name": "uPlSwordBlur::setHide",
+   "se_ea": "0xa38090",
+   "se_name": "uPlSwordBlur::setHide(void)",
+   "confidence": "high",
+   "evidence": [
+    "propagation",
+    "callees"
+   ],
+   "action": "renamed",
+   "notes": "callers uPlNeroDevil::main, RedQueen/Revellion update, Revellion setEnable match SE setHide callers"
+  },
+  {
+   "dx9_ea": "0x831800",
+   "old_dx9_name": "sub_831800",
+   "new_dx9_name": null,
+   "se_ea": "0xa380c0",
+   "se_name": "uPlSwordBlur::setPause(bool)",
+   "confidence": "medium",
+   "evidence": [
+    "propagation",
+    "decompile"
+   ],
+   "action": "commented",
+   "notes": "SE candidate setPause(bool) or setBlur(bool) @ 0xa38d00: called from uPlSwordBlur::move with a pause condition (SE move inlines doPause) and saves/restores handler state, but is also called where SE calls setBlur (RedQueen/Revellion update, Revellion::setThrow)"
+  },
+  {
+   "dx9_ea": "0x831890",
+   "old_dx9_name": "sub_831890",
+   "new_dx9_name": "uPlSwordBlur::initParam",
+   "se_ea": "0xa38160",
+   "se_name": "uPlSwordBlur::initParam(uEfctBlurHandler *,uint)",
+   "confidence": "high",
+   "evidence": [
+    "propagation",
+    "order"
+   ],
+   "action": "renamed",
+   "notes": "only in-class callee of setup, as SE"
+  },
+  {
+   "dx9_ea": "0x831a30",
+   "old_dx9_name": "sub_831A30",
+   "new_dx9_name": "uPlSwordBlur::setBlurType",
+   "se_ea": "0xa38330",
+   "se_name": "uPlSwordBlur::setBlurType(uint)",
+   "confidence": "high",
+   "evidence": [
+    "decompile",
+    "callees"
+   ],
+   "action": "renamed",
+   "notes": "compares/stores type at +0x70, switch calls uEfctBlur::setGeneratorNo (0x537EA0) as SE; inlined into weapon update functions in DX9"
+  },
+  {
+   "dx9_ea": "0x831ad0",
+   "old_dx9_name": "sub_831AD0",
+   "new_dx9_name": "uPlSwordBlur::setSleepMode",
+   "se_ea": "0xa38460",
+   "se_name": "uPlSwordBlur::setSleepMode(bool)",
+   "confidence": "high",
+   "evidence": [
+    "propagation",
+    "order"
+   ],
+   "action": "renamed",
+   "notes": "callers RedQueen/Revellion setEffectSleepMode as SE"
+  },
+  {
+   "dx9_ea": "0x831b00",
+   "old_dx9_name": "sub_831B00",
+   "new_dx9_name": "uPlSwordBlur::killHandler",
+   "se_ea": "0xa384d0",
+   "se_name": "uPlSwordBlur::killHandler(void)",
+   "confidence": "high",
+   "evidence": [
+    "propagation",
+    "order"
+   ],
+   "action": "renamed",
+   "notes": "only callee of kill as SE"
+  },
+  {
+   "dx9_ea": "0x831b40",
+   "old_dx9_name": "sub_831B40",
+   "new_dx9_name": "uPlWeapon::getDTI",
+   "se_ea": "0xa392a0",
+   "se_name": "uPlWeapon::getDTI(void)",
+   "confidence": "high",
+   "evidence": [
+    "vtable",
+    "order"
+   ],
+   "action": "renamed",
+   "notes": ""
+  },
+  {
+   "dx9_ea": "0x831b50",
+   "old_dx9_name": "uPlWeapon::uPlWeapon",
+   "new_dx9_name": "uPlWeapon::uPlWeapon",
+   "se_ea": "0xa38ff0",
+   "se_name": "uPlWeapon::uPlWeapon(void)",
+   "confidence": "high",
+   "evidence": [
+    "callees",
+    "order"
+   ],
+   "action": "confirmed",
+   "notes": ""
+  },
+  {
+   "dx9_ea": "0x831bf0",
+   "old_dx9_name": "sub_831BF0",
+   "new_dx9_name": "uPlWeapon::createProperty",
+   "se_ea": "0xa390a0",
+   "se_name": "uPlWeapon::createProperty(MtPropertyList &)",
+   "confidence": "high",
+   "evidence": [
+    "vtable",
+    "order",
+    "strings"
+   ],
+   "action": "renamed",
+   "notes": ""
+  },
+  {
+   "dx9_ea": "0x831cf0",
+   "old_dx9_name": "sub_831CF0",
+   "new_dx9_name": "uPlWeapon::isEnable",
+   "se_ea": "0xa38f90",
+   "se_name": "uPlWeapon::isEnable(void)",
+   "confidence": "high",
+   "evidence": [
+    "vtable",
+    "order"
+   ],
+   "action": "renamed",
+   "notes": ""
+  },
+  {
+   "dx9_ea": "0x831d00",
+   "old_dx9_name": "sub_831D00",
+   "new_dx9_name": "uPlWeapon::setEnable",
+   "se_ea": "0xa38fa0",
+   "se_name": "uPlWeapon::setEnable(bool)",
+   "confidence": "high",
+   "evidence": [
+    "vtable",
+    "order"
+   ],
+   "action": "renamed",
+   "notes": ""
+  },
+  {
+   "dx9_ea": "0x831d10",
+   "old_dx9_name": "sub_831D10",
+   "new_dx9_name": "uPlWeapon::setBaseMapFactor",
+   "se_ea": "0xa38fb0",
+   "se_name": "uPlWeapon::setBaseMapFactor(MtVector3 const &)",
+   "confidence": "high",
+   "evidence": [
+    "vtable",
+    "order"
+   ],
+   "action": "renamed",
+   "notes": ""
+  },
+  {
+   "dx9_ea": "0x831d40",
+   "old_dx9_name": "sub_831D40",
+   "new_dx9_name": "uPlWpBlueRose::getDTI",
+   "se_ea": "0xa39790",
+   "se_name": "uPlWpBlueRose::getDTI(void)",
+   "confidence": "high",
+   "evidence": [
+    "vtable",
+    "order"
+   ],
+   "action": "renamed",
+   "notes": ""
+  },
+  {
+   "dx9_ea": "0x831d50",
+   "old_dx9_name": "loc_831D50",
+   "new_dx9_name": "uPlWpBlueRose::MyDTI::newInstance",
+   "se_ea": "0xa39600",
+   "se_name": "uPlWpBlueRose::MyDTI::newInstance(void)",
+   "confidence": "high",
+   "evidence": [
+    "decompile",
+    "consts"
+   ],
+   "action": "renamed",
+   "notes": "defined as function (was undefined code). previously undefined code; allocates the DTI size and constructs / writes own vftable"
+  },
+  {
+   "dx9_ea": "0x831da0",
+   "old_dx9_name": "sub_831DA0",
+   "new_dx9_name": "uPlWpBlueRose::createProperty",
+   "se_ea": "0xa39660",
+   "se_name": "uPlWpBlueRose::createProperty(MtPropertyList &)",
+   "confidence": "high",
+   "evidence": [
+    "vtable",
+    "order",
+    "strings"
+   ],
+   "action": "renamed",
+   "notes": ""
+  },
+  {
+   "dx9_ea": "0x831e40",
+   "old_dx9_name": "sub_831E40",
+   "new_dx9_name": "uPlWpBlueRose::setup",
+   "se_ea": "0xa39450",
+   "se_name": "uPlWpBlueRose::setup(void)",
+   "confidence": "high",
+   "evidence": [
+    "vtable",
+    "order",
+    "strings"
+   ],
+   "action": "renamed",
+   "notes": ""
+  },
+  {
+   "dx9_ea": "0x831f50",
+   "old_dx9_name": "sub_831F50",
+   "new_dx9_name": "uPlWpBlueRose::update",
+   "se_ea": "0xa39540",
+   "se_name": "uPlWpBlueRose::update(void)",
+   "confidence": "high",
+   "evidence": [
+    "vtable",
+    "order"
+   ],
+   "action": "renamed",
+   "notes": ""
+  },
+  {
+   "dx9_ea": "0x831fb0",
+   "old_dx9_name": "uPlWpBlueRose::setShot",
+   "new_dx9_name": "uPlWpBlueRose::setShot",
+   "se_ea": "0xa395d0",
+   "se_name": "uPlWpBlueRose::setShot(void)",
+   "confidence": "high",
+   "evidence": [
+    "callees",
+    "order"
+   ],
+   "action": "confirmed",
+   "notes": "callers uPlayerNero::moveAtckBlueRoseShot* as SE"
+  },
+  {
+   "dx9_ea": "0x831fe0",
+   "old_dx9_name": "sub_831FE0",
+   "new_dx9_name": "uPlWpCoyoteAce::getDTI",
+   "se_ea": "0xa39d50",
+   "se_name": "uPlWpCoyoteAce::getDTI(void)",
+   "confidence": "high",
+   "evidence": [
+    "vtable",
+    "order"
+   ],
+   "action": "renamed",
+   "notes": ""
+  },
+  {
+   "dx9_ea": "0x831ff0",
+   "old_dx9_name": "loc_831FF0",
+   "new_dx9_name": "uPlWpCoyoteAce::MyDTI::newInstance",
+   "se_ea": "0xa39bb0",
+   "se_name": "uPlWpCoyoteAce::MyDTI::newInstance(void)",
+   "confidence": "high",
+   "evidence": [
+    "decompile",
+    "consts"
+   ],
+   "action": "renamed",
+   "notes": "defined as function (was undefined code). previously undefined code; allocates the DTI size and constructs / writes own vftable"
+  },
+  {
+   "dx9_ea": "0x832050",
+   "old_dx9_name": "sub_832050",
+   "new_dx9_name": "uPlWpCoyoteAce::createProperty",
+   "se_ea": "0xa39c20",
+   "se_name": "uPlWpCoyoteAce::createProperty(MtPropertyList &)",
+   "confidence": "high",
+   "evidence": [
+    "vtable",
+    "order",
+    "strings"
+   ],
+   "action": "renamed",
+   "notes": ""
+  },
+  {
+   "dx9_ea": "0x8320f0",
+   "old_dx9_name": "sub_8320F0",
+   "new_dx9_name": "uPlWpCoyoteAce::setup",
+   "se_ea": "0xa39950",
+   "se_name": "uPlWpCoyoteAce::setup(void)",
+   "confidence": "high",
+   "evidence": [
+    "vtable",
+    "order",
+    "strings"
+   ],
+   "action": "renamed",
+   "notes": ""
+  },
+  {
+   "dx9_ea": "0x832200",
+   "old_dx9_name": "sub_832200",
+   "new_dx9_name": "uPlWpCoyoteAce::main",
+   "se_ea": "0xa39a50",
+   "se_name": "uPlWpCoyoteAce::main(void)",
+   "confidence": "high",
+   "evidence": [
+    "vtable",
+    "order"
+   ],
+   "action": "renamed",
+   "notes": ""
+  },
+  {
+   "dx9_ea": "0x8322d0",
+   "old_dx9_name": "sub_8322D0",
+   "new_dx9_name": "uPlWpCoyoteAce::update",
+   "se_ea": "0xa39b20",
+   "se_name": "uPlWpCoyoteAce::update(void)",
+   "confidence": "high",
+   "evidence": [
+    "vtable",
+    "order"
+   ],
+   "action": "renamed",
+   "notes": ""
+  },
+  {
+   "dx9_ea": "0x832300",
+   "old_dx9_name": "sub_832300",
+   "new_dx9_name": "uPlWpCoyoteAce::draw",
+   "se_ea": "0xa39b70",
+   "se_name": "uPlWpCoyoteAce::draw(cDraw *)",
+   "confidence": "high",
+   "evidence": [
+    "vtable",
+    "order"
+   ],
+   "action": "renamed",
+   "notes": "ICF-folded with: uPlWpBlueRose::draw(cDraw *)"
+  },
+  {
+   "dx9_ea": "0x832350",
+   "old_dx9_name": "sub_832350",
+   "new_dx9_name": "uPlWpEbonyIvory::getDTI",
+   "se_ea": "0xa3a830",
+   "se_name": "uPlWpEbonyIvory::getDTI(void)",
+   "confidence": "high",
+   "evidence": [
+    "vtable",
+    "order"
+   ],
+   "action": "renamed",
+   "notes": ""
+  },
+  {
+   "dx9_ea": "0x832360",
+   "old_dx9_name": "loc_832360",
+   "new_dx9_name": "uPlWpEbonyIvory::MyDTI::newInstance",
+   "se_ea": "0xa3a400",
+   "se_name": "uPlWpEbonyIvory::MyDTI::newInstance(void)",
+   "confidence": "high",
+   "evidence": [
+    "decompile",
+    "consts"
+   ],
+   "action": "renamed",
+   "notes": "defined as function (was undefined code). previously undefined code; allocates the DTI size and constructs / writes own vftable"
+  },
+  {
+   "dx9_ea": "0x832390",
+   "old_dx9_name": "sub_832390",
+   "new_dx9_name": "uPlWpEbonyIvory::uPlWpEbonyIvory",
+   "se_ea": "0xa39ec0",
+   "se_name": "uPlWpEbonyIvory::uPlWpEbonyIvory(void)",
+   "confidence": "high",
+   "evidence": [
+    "callees",
+    "order"
+   ],
+   "action": "renamed",
+   "notes": "called by EbonyIvory newInstance"
+  },
+  {
+   "dx9_ea": "0x8323e0",
+   "old_dx9_name": "loc_8323E0",
+   "new_dx9_name": "??_EuPlWpEbonyIvory@@UAEPAXI@Z",
+   "se_ea": "0xa3a840",
+   "se_name": "uPlWpEbonyIvory::`vector deleting destructor'(uint)",
+   "confidence": "high",
+   "evidence": [
+    "vtable",
+    "order"
+   ],
+   "action": "renamed",
+   "notes": "defined as function (was undefined code)."
+  },
+  {
+   "dx9_ea": "0x832410",
+   "old_dx9_name": "sub_832410",
+   "new_dx9_name": "??1uPlWpEbonyIvory@@UAE@XZ",
+   "se_ea": "0xa39f10",
+   "se_name": "uPlWpEbonyIvory::~uPlWpEbonyIvory(void)",
+   "confidence": "high",
+   "evidence": [
+    "decompile",
+    "order"
+   ],
+   "action": "renamed",
+   "notes": "called by vector deleting dtor 0x8323E0"
+  },
+  {
+   "dx9_ea": "0x832490",
+   "old_dx9_name": "sub_832490",
+   "new_dx9_name": "uPlWpEbonyIvory::createProperty",
+   "se_ea": "0xa3a480",
+   "se_name": "uPlWpEbonyIvory::createProperty(MtPropertyList &)",
+   "confidence": "high",
+   "evidence": [
+    "vtable",
+    "order",
+    "strings"
+   ],
+   "action": "renamed",
+   "notes": ""
+  },
+  {
+   "dx9_ea": "0x832640",
+   "old_dx9_name": "sub_832640",
+   "new_dx9_name": "uPlWpEbonyIvory::setup",
+   "se_ea": "0xa39f50",
+   "se_name": "uPlWpEbonyIvory::setup(void)",
+   "confidence": "high",
+   "evidence": [
+    "vtable",
+    "order",
+    "strings"
+   ],
+   "action": "renamed",
+   "notes": ""
+  },
+  {
+   "dx9_ea": "0x832920",
+   "old_dx9_name": "sub_832920",
+   "new_dx9_name": "uPlWpEbonyIvory::kill",
+   "se_ea": "0xa3a1d0",
+   "se_name": "uPlWpEbonyIvory::kill(void)",
+   "confidence": "high",
+   "evidence": [
+    "vtable",
+    "order"
+   ],
+   "action": "renamed",
+   "notes": ""
+  },
+  {
+   "dx9_ea": "0x832970",
+   "old_dx9_name": "sub_832970",
+   "new_dx9_name": "uPlWpEbonyIvory::update",
+   "se_ea": "0xa3a7d0",
+   "se_name": "uPlWpEbonyIvory::update(void)",
+   "confidence": "high",
+   "evidence": [
+    "vtable",
+    "order"
+   ],
+   "action": "renamed",
+   "notes": ""
+  },
+  {
+   "dx9_ea": "0x8329f0",
+   "old_dx9_name": "sub_8329F0",
+   "new_dx9_name": "uPlWpEbonyIvory::updateMatrix",
+   "se_ea": "0xa3a200",
+   "se_name": "uPlWpEbonyIvory::updateMatrix(void)",
+   "confidence": "high",
+   "evidence": [
+    "vtable",
+    "order"
+   ],
+   "action": "renamed",
+   "notes": ""
+  },
+  {
+   "dx9_ea": "0x832a30",
+   "old_dx9_name": "sub_832A30",
+   "new_dx9_name": "uPlWpEbonyIvory::updateMaterial",
+   "se_ea": "0xa3a230",
+   "se_name": "uPlWpEbonyIvory::updateMaterial(void)",
+   "confidence": "high",
+   "evidence": [
+    "vtable",
+    "order"
+   ],
+   "action": "renamed",
+   "notes": ""
+  },
+  {
+   "dx9_ea": "0x832a50",
+   "old_dx9_name": "sub_832A50",
+   "new_dx9_name": "uPlWpEbonyIvory::draw",
+   "se_ea": "0xa3a260",
+   "se_name": "uPlWpEbonyIvory::draw(cDraw *)",
+   "confidence": "high",
+   "evidence": [
+    "vtable",
+    "order"
+   ],
+   "action": "renamed",
+   "notes": ""
+  },
+  {
+   "dx9_ea": "0x832ac0",
+   "old_dx9_name": "sub_832AC0",
+   "new_dx9_name": "uPlWpEbonyIvory::updateMotion",
+   "se_ea": "0xa3a660",
+   "se_name": "uPlWpEbonyIvory::updateMotion(void)",
+   "confidence": "high",
+   "evidence": [
+    "propagation",
+    "consts"
+   ],
+   "action": "renamed",
+   "notes": "only callee of update; imm 69"
+  },
+  {
+   "dx9_ea": "0x832c20",
+   "old_dx9_name": "sub_832C20",
+   "new_dx9_name": "uPlWpEbonyIvory::setLockOnOffMotion",
+   "se_ea": "0xa3a2a0",
+   "se_name": "uPlWpEbonyIvory::setLockOnOffMotion(int)",
+   "confidence": "high",
+   "evidence": [
+    "propagation",
+    "order"
+   ],
+   "action": "renamed",
+   "notes": "only in-class callee of updateMotion"
+  },
+  {
+   "dx9_ea": "0x832ca0",
+   "old_dx9_name": "sub_832CA0",
+   "new_dx9_name": "uPlWpEbonyIvory::setBaseMapFactor",
+   "se_ea": "0xa3a3b0",
+   "se_name": "uPlWpEbonyIvory::setBaseMapFactor(MtVector3 const &)",
+   "confidence": "high",
+   "evidence": [
+    "vtable",
+    "order"
+   ],
+   "action": "renamed",
+   "notes": ""
+  },
+  {
+   "dx9_ea": "0x832cf0",
+   "old_dx9_name": "sub_832CF0",
+   "new_dx9_name": "uPlWpGilgamesh::getDTI",
+   "se_ea": "0xa3b6f0",
+   "se_name": "uPlWpGilgamesh::getDTI(void)",
+   "confidence": "high",
+   "evidence": [
+    "vtable",
+    "order"
+   ],
+   "action": "renamed",
+   "notes": ""
+  },
+  {
+   "dx9_ea": "0x832d00",
+   "old_dx9_name": "loc_832D00",
+   "new_dx9_name": "uPlWpGilgamesh::MyDTI::newInstance",
+   "se_ea": "0xa3b620",
+   "se_name": "uPlWpGilgamesh::MyDTI::newInstance(void)",
+   "confidence": "high",
+   "evidence": [
+    "decompile",
+    "consts"
+   ],
+   "action": "renamed",
+   "notes": "defined as function (was undefined code). previously undefined code; allocates the DTI size and constructs / writes own vftable"
+  },
+  {
+   "dx9_ea": "0x832d30",
+   "old_dx9_name": "sub_832D30",
+   "new_dx9_name": "uPlWpGilgamesh::uPlWpGilgamesh",
+   "se_ea": "0xa3ac50",
+   "se_name": "uPlWpGilgamesh::uPlWpGilgamesh(void)",
+   "confidence": "high",
+   "evidence": [
+    "callees",
+    "consts"
+   ],
+   "action": "renamed",
+   "notes": "called from Gilgamesh newInstance and cWeaponCtrl setup; constraint init inlined"
+  },
+  {
+   "dx9_ea": "0x832ee0",
+   "old_dx9_name": "loc_832EE0",
+   "new_dx9_name": "??_GuPlWpGilgamesh@@UAEPAXI@Z",
+   "se_ea": "0xa3b700",
+   "se_name": "uPlWpGilgamesh::`scalar deleting destructor'(uint)",
+   "confidence": "high",
+   "evidence": [
+    "vtable",
+    "order"
+   ],
+   "action": "renamed",
+   "notes": "defined as function (was undefined code)."
+  },
+  {
+   "dx9_ea": "0x832f30",
+   "old_dx9_name": "sub_832F30",
+   "new_dx9_name": "uPlWpGilgamesh::createProperty",
+   "se_ea": "0xa3ad10",
+   "se_name": "uPlWpGilgamesh::createProperty(MtPropertyList &)",
+   "confidence": "high",
+   "evidence": [
+    "vtable",
+    "order",
+    "strings"
+   ],
+   "action": "renamed",
+   "notes": ""
+  },
+  {
+   "dx9_ea": "0x833170",
+   "old_dx9_name": "sub_833170",
+   "new_dx9_name": "uPlWpGilgamesh::setup",
+   "se_ea": "0xa3a9c0",
+   "se_name": "uPlWpGilgamesh::setup(void)",
+   "confidence": "high",
+   "evidence": [
+    "vtable",
+    "order",
+    "strings"
+   ],
+   "action": "renamed",
+   "notes": ""
+  },
+  {
+   "dx9_ea": "0x8333c0",
+   "old_dx9_name": "sub_8333C0",
+   "new_dx9_name": "uPlWpGilgamesh::main",
+   "se_ea": "0xa3b170",
+   "se_name": "uPlWpGilgamesh::main(void)",
+   "confidence": "high",
+   "evidence": [
+    "vtable",
+    "order"
+   ],
+   "action": "renamed",
+   "notes": ""
+  },
+  {
+   "dx9_ea": "0x833630",
+   "old_dx9_name": "sub_833630",
+   "new_dx9_name": "uPlWpGilgamesh::update",
+   "se_ea": "0xa3b690",
+   "se_name": "uPlWpGilgamesh::update(void)",
+   "confidence": "high",
+   "evidence": [
+    "vtable",
+    "order"
+   ],
+   "action": "renamed",
+   "notes": ""
+  },
+  {
+   "dx9_ea": "0x833740",
+   "old_dx9_name": "sub_833740",
+   "new_dx9_name": "uPlWpGilgamesh::updateMatrix",
+   "se_ea": "0xa3ab70",
+   "se_name": "uPlWpGilgamesh::updateMatrix(void)",
+   "confidence": "high",
+   "evidence": [
+    "vtable",
+    "order"
+   ],
+   "action": "renamed",
+   "notes": "ICF-folded with: uPlWpBlueRose::updateMatrix(void); uPlWpCoyoteAce::updateMatrix(void); uPlWpPandora::updateMatrix(void); uPlWpRedQueen::updateMatrix(void); uPlWpRevellion::updateMatrix(void); uPlWpYamato::updateMatrix(void)"
+  },
+  {
+   "dx9_ea": "0x833760",
+   "old_dx9_name": "sub_833760",
+   "new_dx9_name": "uPlWpGilgamesh::setCnstJoint",
+   "se_ea": "0xa3b3f0",
+   "se_name": "uPlWpGilgamesh::setCnstJoint(void)",
+   "confidence": "high",
+   "evidence": [
+    "propagation",
+    "callees"
+   ],
+   "action": "renamed",
+   "notes": "callers setupDanteModel/setupMajinModel/update as SE"
+  },
+  {
+   "dx9_ea": "0x833970",
+   "old_dx9_name": "sub_833970",
+   "new_dx9_name": "uPlWpGilgamesh::setEnable",
+   "se_ea": "0xa3abb0",
+   "se_name": "uPlWpGilgamesh::setEnable(bool)",
+   "confidence": "high",
+   "evidence": [
+    "vtable",
+    "order"
+   ],
+   "action": "renamed",
+   "notes": ""
+  },
+  {
+   "dx9_ea": "0x8339a0",
+   "old_dx9_name": "sub_8339A0",
+   "new_dx9_name": "uPlWpGilgamesh::requestFreezeEfct",
+   "se_ea": "0xa3ac20",
+   "se_name": "uPlWpGilgamesh::requestFreezeEfct(float)",
+   "confidence": "high",
+   "evidence": [
+    "vtable",
+    "order"
+   ],
+   "action": "renamed",
+   "notes": "ICF-folded with: uPlWpRedQueen::requestFreezeEfct(float); uPlWpRevellion::requestFreezeEfct(float)"
+  },
+  {
+   "dx9_ea": "0x8339f0",
+   "old_dx9_name": "sub_8339F0",
+   "new_dx9_name": "uPlWpLucifer::getDTI",
+   "se_ea": "0xa3e140",
+   "se_name": "uPlWpLucifer::getDTI(void)",
+   "confidence": "high",
+   "evidence": [
+    "vtable",
+    "order"
+   ],
+   "action": "renamed",
+   "notes": ""
+  },
+  {
+   "dx9_ea": "0x833a00",
+   "old_dx9_name": "sub_833A00",
+   "new_dx9_name": "uPlWpLucifer::MyDTI::newInstance",
+   "se_ea": "0xa3da70",
+   "se_name": "uPlWpLucifer::MyDTI::newInstance(void)",
+   "confidence": "high",
+   "evidence": [
+    "consts",
+    "callees"
+   ],
+   "action": "renamed",
+   "notes": "alloc 11776 = DTI size"
+  },
+  {
+   "dx9_ea": "0x833a30",
+   "old_dx9_name": "uPlWpLucifer::uPlWpLucifer",
+   "new_dx9_name": "uPlWpLucifer::uPlWpLucifer",
+   "se_ea": "0xa3bd90",
+   "se_name": "uPlWpLucifer::uPlWpLucifer(void)",
+   "confidence": "high",
+   "evidence": [
+    "callees",
+    "order"
+   ],
+   "action": "confirmed",
+   "notes": ""
+  },
+  {
+   "dx9_ea": "0x833db0",
+   "old_dx9_name": "loc_833DB0",
+   "new_dx9_name": "??_GuPlWpLucifer@@UAEPAXI@Z",
+   "se_ea": "0xa3e150",
+   "se_name": "uPlWpLucifer::`scalar deleting destructor'(uint)",
+   "confidence": "high",
+   "evidence": [
+    "vtable",
+    "order"
+   ],
+   "action": "renamed",
+   "notes": "defined as function (was undefined code)."
+  },
+  {
+   "dx9_ea": "0x833de0",
+   "old_dx9_name": "sub_833DE0",
+   "new_dx9_name": "??1uPlWpLucifer@@UAE@XZ",
+   "se_ea": "0xa3bed0",
+   "se_name": "uPlWpLucifer::~uPlWpLucifer(void)",
+   "confidence": "high",
+   "evidence": [
+    "callees",
+    "consts"
+   ],
+   "action": "renamed",
+   "notes": "called by scalar deleting dtor 0x833DB0"
+  },
+  {
+   "dx9_ea": "0x833e50",
+   "old_dx9_name": "sub_833E50",
+   "new_dx9_name": "uPlWpLucifer::createProperty",
+   "se_ea": "0xa3bf30",
+   "se_name": "uPlWpLucifer::createProperty(MtPropertyList &)",
+   "confidence": "high",
+   "evidence": [
+    "vtable",
+    "order",
+    "strings"
+   ],
+   "action": "renamed",
+   "notes": ""
+  },
+  {
+   "dx9_ea": "0x8341b0",
+   "old_dx9_name": "sub_8341B0",
+   "new_dx9_name": "uPlWpLucifer::setup",
+   "se_ea": "0xa3b870",
+   "se_name": "uPlWpLucifer::setup(void)",
+   "confidence": "high",
+   "evidence": [
+    "vtable",
+    "order",
+    "strings"
+   ],
+   "action": "renamed",
+   "notes": ""
+  },
+  {
+   "dx9_ea": "0x8343b0",
+   "old_dx9_name": "sub_8343B0",
+   "new_dx9_name": "uPlWpLucifer::init",
+   "se_ea": "0xa3dab0",
+   "se_name": "uPlWpLucifer::init(void)",
+   "confidence": "high",
+   "evidence": [
+    "propagation",
+    "callees",
+    "consts"
+   ],
+   "action": "renamed",
+   "notes": "calls setCnstJoint + uCollisionMgr::init, imm 1024"
+  },
+  {
+   "dx9_ea": "0x834430",
+   "old_dx9_name": "sub_834430",
+   "new_dx9_name": "uPlWpLucifer::main",
+   "se_ea": "0xa3db30",
+   "se_name": "uPlWpLucifer::main(void)",
+   "confidence": "high",
+   "evidence": [
+    "vtable",
+    "order"
+   ],
+   "action": "renamed",
+   "notes": ""
+  },
+  {
+   "dx9_ea": "0x834920",
+   "old_dx9_name": "sub_834920",
+   "new_dx9_name": "uPlWpLucifer::update",
+   "se_ea": "0xa3e0e0",
+   "se_name": "uPlWpLucifer::update(void)",
+   "confidence": "high",
+   "evidence": [
+    "vtable",
+    "order"
+   ],
+   "action": "renamed",
+   "notes": ""
+  },
+  {
+   "dx9_ea": "0x834ab0",
+   "old_dx9_name": "sub_834AB0",
+   "new_dx9_name": "uPlWpLucifer::updateMatrix",
+   "se_ea": "0xa3ba40",
+   "se_name": "uPlWpLucifer::updateMatrix(void)",
+   "confidence": "high",
+   "evidence": [
+    "vtable",
+    "order"
+   ],
+   "action": "renamed",
+   "notes": ""
+  },
+  {
+   "dx9_ea": "0x834ae0",
+   "old_dx9_name": "sub_834AE0",
+   "new_dx9_name": "uPlWpLucifer::updateMaterial",
+   "se_ea": "0xa3ba80",
+   "se_name": "uPlWpLucifer::updateMaterial(void)",
+   "confidence": "high",
+   "evidence": [
+    "vtable",
+    "order"
+   ],
+   "action": "renamed",
+   "notes": ""
+  },
+  {
+   "dx9_ea": "0x834b00",
+   "old_dx9_name": "sub_834B00",
+   "new_dx9_name": "uPlWpLucifer::draw",
+   "se_ea": "0xa3baa0",
+   "se_name": "uPlWpLucifer::draw(cDraw *)",
+   "confidence": "high",
+   "evidence": [
+    "vtable",
+    "order"
+   ],
+   "action": "renamed",
+   "notes": ""
+  },
+  {
+   "dx9_ea": "0x834b30",
+   "old_dx9_name": "sub_834B30",
+   "new_dx9_name": "uPlWpLucifer::moveUvScr",
+   "se_ea": "0xa3c5d0",
+   "se_name": "uPlWpLucifer::moveUvScr(void)",
+   "confidence": "high",
+   "evidence": [
+    "propagation",
+    "order"
+   ],
+   "action": "renamed",
+   "notes": "callee of main in SE position"
+  },
+  {
+   "dx9_ea": "0x834c60",
+   "old_dx9_name": "sub_834C60",
+   "new_dx9_name": "uPlWpLucifer::moveRoseFall",
+   "se_ea": "0xa3c6e0",
+   "se_name": "uPlWpLucifer::moveRoseFall(void)",
+   "confidence": "high",
+   "evidence": [
+    "propagation",
+    "callees"
+   ],
+   "action": "renamed",
+   "notes": "4494 vs 4372 bytes, sin/cos/collision"
+  },
+  {
+   "dx9_ea": "0x835e10",
+   "old_dx9_name": "sub_835E10",
+   "new_dx9_name": "uPlWpLucifer::setCnstJoint",
+   "se_ea": "0xa3d800",
+   "se_name": "uPlWpLucifer::setCnstJoint(void)",
+   "confidence": "high",
+   "evidence": [
+    "propagation",
+    "callees"
+   ],
+   "action": "renamed",
+   "notes": "callers setupDanteModel/setupMajinModel/init as SE"
+  },
+  {
+   "dx9_ea": "0x835f90",
+   "old_dx9_name": "sub_835F90",
+   "new_dx9_name": "uPlWpLucifer::setEnable",
+   "se_ea": "0xa3d990",
+   "se_name": "uPlWpLucifer::setEnable(bool)",
+   "confidence": "high",
+   "evidence": [
+    "vtable",
+    "order"
+   ],
+   "action": "renamed",
+   "notes": ""
+  },
+  {
+   "dx9_ea": "0x836060",
+   "old_dx9_name": "sub_836060",
+   "new_dx9_name": "uPlWpLucifer::setBaseMapFactor",
+   "se_ea": "0xa3bb10",
+   "se_name": "uPlWpLucifer::setBaseMapFactor(MtVector3 const &)",
+   "confidence": "high",
+   "evidence": [
+    "vtable",
+    "order"
+   ],
+   "action": "renamed",
+   "notes": ""
+  },
+  {
+   "dx9_ea": "0x8360a0",
+   "old_dx9_name": "sub_8360A0",
+   "new_dx9_name": "uPlWpLucifer::requestFreezeEfct",
+   "se_ea": "0xa3bb60",
+   "se_name": "uPlWpLucifer::requestFreezeEfct(float)",
+   "confidence": "high",
+   "evidence": [
+    "vtable",
+    "order"
+   ],
+   "action": "renamed",
+   "notes": ""
+  },
+  {
+   "dx9_ea": "0x836120",
+   "old_dx9_name": "sub_836120",
+   "new_dx9_name": "uPlWpLucifer::eraseFreezeEfct",
+   "se_ea": "0xa3bba0",
+   "se_name": "uPlWpLucifer::eraseFreezeEfct(void)",
+   "confidence": "high",
+   "evidence": [
+    "vtable",
+    "order"
+   ],
+   "action": "renamed",
+   "notes": ""
+  },
+  {
+   "dx9_ea": "0x836130",
+   "old_dx9_name": "sub_836130",
+   "new_dx9_name": "uPlWpLucifer::hitMessage",
+   "se_ea": "0xa3bbc0",
+   "se_name": "uPlWpLucifer::hitMessage(cCollisionGroup *,cCollisionGroup *)",
+   "confidence": "high",
+   "evidence": [
+    "vtable",
+    "order"
+   ],
+   "action": "renamed",
+   "notes": ""
+  },
+  {
+   "dx9_ea": "0x836170",
+   "old_dx9_name": "sub_836170",
+   "new_dx9_name": "uPlWpLucifer::reset",
+   "se_ea": "0xa3bc00",
+   "se_name": "uPlWpLucifer::reset(void)",
+   "confidence": "high",
+   "evidence": [
+    "vtable",
+    "order"
+   ],
+   "action": "renamed",
+   "notes": ""
+  },
+  {
+   "dx9_ea": "0x836190",
+   "old_dx9_name": "sub_836190",
+   "new_dx9_name": "uPlWpLucifer::initRose",
+   "se_ea": "0xa3bc20",
+   "se_name": "uPlWpLucifer::initRose(void)",
+   "confidence": "high",
+   "evidence": [
+    "propagation",
+    "callees"
+   ],
+   "action": "renamed",
+   "notes": "called by setEnable as SE"
+  },
+  {
+   "dx9_ea": "0x8362c0",
+   "old_dx9_name": "sub_8362C0",
+   "new_dx9_name": "uPlWpPandora::getDTI",
+   "se_ea": "0xa40cf0",
+   "se_name": "uPlWpPandora::getDTI(void)",
+   "confidence": "high",
+   "evidence": [
+    "vtable",
+    "order"
+   ],
+   "action": "renamed",
+   "notes": ""
+  },
+  {
+   "dx9_ea": "0x8362d0",
+   "old_dx9_name": "sub_8362D0",
+   "new_dx9_name": "uPlWpPandora::MyDTI::newInstance",
+   "se_ea": "0xa3eb20",
+   "se_name": "uPlWpPandora::MyDTI::newInstance(void)",
+   "confidence": "high",
+   "evidence": [
+    "consts",
+    "callees"
+   ],
+   "action": "renamed",
+   "notes": "alloc 6208 = DTI size"
+  },
+  {
+   "dx9_ea": "0x836300",
+   "old_dx9_name": "sub_836300",
+   "new_dx9_name": "uPlWpPandora::uPlWpPandora",
+   "se_ea": "0xa3e2a0",
+   "se_name": "uPlWpPandora::uPlWpPandora(void)",
+   "confidence": "high",
+   "evidence": [
+    "callees",
+    "order"
+   ],
+   "action": "renamed",
+   "notes": ""
+  },
+  {
+   "dx9_ea": "0x8364b0",
+   "old_dx9_name": "loc_8364B0",
+   "new_dx9_name": "??_EuPlWpPandora@@UAEPAXI@Z",
+   "se_ea": "0xa40d00",
+   "se_name": "uPlWpPandora::`vector deleting destructor'(uint)",
+   "confidence": "high",
+   "evidence": [
+    "vtable",
+    "order"
+   ],
+   "action": "renamed",
+   "notes": "defined as function (was undefined code)."
+  },
+  {
+   "dx9_ea": "0x8364e0",
+   "old_dx9_name": "sub_8364E0",
+   "new_dx9_name": "??1uPlWpPandora@@UAE@XZ",
+   "se_ea": "0xa3eb60",
+   "se_name": "uPlWpPandora::~uPlWpPandora(void)",
+   "confidence": "high",
+   "evidence": [
+    "callees",
+    "order"
+   ],
+   "action": "renamed",
+   "notes": "called by vector deleting dtor 0x8364B0"
+  },
+  {
+   "dx9_ea": "0x8365b0",
+   "old_dx9_name": "sub_8365B0",
+   "new_dx9_name": "uPlWpPandora::createProperty",
+   "se_ea": "0xa3ebf0",
+   "se_name": "uPlWpPandora::createProperty(MtPropertyList &)",
+   "confidence": "high",
+   "evidence": [
+    "vtable",
+    "order",
+    "strings"
+   ],
+   "action": "renamed",
+   "notes": ""
+  },
+  {
+   "dx9_ea": "0x836cd0",
+   "old_dx9_name": "sub_836CD0",
+   "new_dx9_name": "uPlWpPandora::setup",
+   "se_ea": "0xa3e450",
+   "se_name": "uPlWpPandora::setup(void)",
+   "confidence": "high",
+   "evidence": [
+    "vtable",
+    "order",
+    "strings"
+   ],
+   "action": "renamed",
+   "notes": ""
+  },
+  {
+   "dx9_ea": "0x836ec0",
+   "old_dx9_name": "sub_836EC0",
+   "new_dx9_name": "uPlWpPandora::init",
+   "se_ea": "0xa3e5e0",
+   "se_name": "uPlWpPandora::init(void)",
+   "confidence": "high",
+   "evidence": [
+    "propagation",
+    "callees"
+   ],
+   "action": "renamed",
+   "notes": ""
+  },
+  {
+   "dx9_ea": "0x836f00",
+   "old_dx9_name": "sub_836F00",
+   "new_dx9_name": "uPlWpPandora::main",
+   "se_ea": "0xa3fa10",
+   "se_name": "uPlWpPandora::main(void)",
+   "confidence": "high",
+   "evidence": [
+    "vtable",
+    "order"
+   ],
+   "action": "renamed",
+   "notes": ""
+  },
+  {
+   "dx9_ea": "0x836f90",
+   "old_dx9_name": "sub_836F90",
+   "new_dx9_name": "uPlWpPandora::updateBoomerang",
+   "se_ea": "0xa3fac0",
+   "se_name": "uPlWpPandora::updateBoomerang(void)",
+   "confidence": "high",
+   "evidence": [
+    "propagation",
+    "callees"
+   ],
+   "action": "renamed",
+   "notes": ""
+  },
+  {
+   "dx9_ea": "0x837bb0",
+   "old_dx9_name": "sub_837BB0",
+   "new_dx9_name": "uPlWpPandora::update",
+   "se_ea": "0xa40570",
+   "se_name": "uPlWpPandora::update(void)",
+   "confidence": "high",
+   "evidence": [
+    "vtable",
+    "order"
+   ],
+   "action": "renamed",
+   "notes": ""
+  },
+  {
+   "dx9_ea": "0x837c80",
+   "old_dx9_name": "sub_837C80",
+   "new_dx9_name": "uPlWpPandora::draw",
+   "se_ea": "0xa3e640",
+   "se_name": "uPlWpPandora::draw(cDraw *)",
+   "confidence": "high",
+   "evidence": [
+    "vtable",
+    "order"
+   ],
+   "action": "renamed",
+   "notes": ""
+  },
+  {
+   "dx9_ea": "0x837ce0",
+   "old_dx9_name": "uPlayerDante::setPandoraProjectileState",
+   "new_dx9_name": "uPlWpPandora::setMotion",
+   "se_ea": "0xa3e6b0",
+   "se_name": "uPlWpPandora::setMotion(int,bool)",
+   "confidence": "high",
+   "evidence": [
+    "decompile",
+    "propagation"
+   ],
+   "action": "replaced_existing",
+   "notes": "this=uPlWpPandora (writes +0x17B8.. block), 2 args; called by updateData and Dante moveAtckPandoraLauncher* as SE"
+  },
+  {
+   "dx9_ea": "0x837d20",
+   "old_dx9_name": "sub_837D20",
+   "new_dx9_name": "uPlWpPandora::moveUvScr",
+   "se_ea": "0xa3e7a0",
+   "se_name": "uPlWpPandora::moveUvScr(void)",
+   "confidence": "high",
+   "evidence": [
+    "propagation",
+    "decompile"
+   ],
+   "action": "renamed",
+   "notes": "UV-scroll loop over cMaterialStandard (uActor::moveUVScroll inlined); called from main and update where SE calls moveUVScroll"
+  },
+  {
+   "dx9_ea": "0x837e50",
+   "old_dx9_name": "sub_837E50",
+   "new_dx9_name": "uPlWpPandora::updateData",
+   "se_ea": "0xa3e7d0",
+   "se_name": "uPlWpPandora::updateData(void)",
+   "confidence": "high",
+   "evidence": [
+    "propagation",
+    "consts"
+   ],
+   "action": "renamed",
+   "notes": "imm 0x700"
+  },
+  {
+   "dx9_ea": "0x837fc0",
+   "old_dx9_name": "sub_837FC0",
+   "new_dx9_name": "uPlWpPandora::updateDataMeteor",
+   "se_ea": "0xa3e970",
+   "se_name": "uPlWpPandora::updateDataMeteor(void)",
+   "confidence": "high",
+   "evidence": [
+    "propagation",
+    "consts"
+   ],
+   "action": "renamed",
+   "notes": "imms 1538-1540"
+  },
+  {
+   "dx9_ea": "0x838100",
+   "old_dx9_name": "uPlDantePandora::initProjectile",
+   "new_dx9_name": "uPlWpPandora::setBoomerang",
+   "se_ea": "0xa40660",
+   "se_name": "uPlWpPandora::setBoomerang(void)",
+   "confidence": "high",
+   "evidence": [
+    "callees",
+    "order"
+   ],
+   "action": "replaced_existing",
+   "notes": "1396 vs 1404 bytes; caller moveAtckStylePandoraBoomerang; collision + sin/cos"
+  },
+  {
+   "dx9_ea": "0x838680",
+   "old_dx9_name": "sub_838680",
+   "new_dx9_name": "uPlWpPandora::updatePtr",
+   "se_ea": "0xa40be0",
+   "se_name": "uPlWpPandora::updatePtr(void)",
+   "confidence": "high",
+   "evidence": [
+    "vtable",
+    "order"
+   ],
+   "action": "renamed",
+   "notes": ""
+  },
+  {
+   "dx9_ea": "0x8386b0",
+   "old_dx9_name": "sub_8386B0",
+   "new_dx9_name": "uPlWpPandora::isEnable",
+   "se_ea": "0xa3eb10",
+   "se_name": "uPlWpPandora::isEnable(void)",
+   "confidence": "high",
+   "evidence": [
+    "vtable",
+    "order"
+   ],
+   "action": "renamed",
+   "notes": ""
+  },
+  {
+   "dx9_ea": "0x8386d0",
+   "old_dx9_name": "sub_8386D0",
+   "new_dx9_name": "uPlWpPandora::reset",
+   "se_ea": "0xa40c10",
+   "se_name": "uPlWpPandora::reset(void)",
+   "confidence": "high",
+   "evidence": [
+    "vtable",
+    "order"
+   ],
+   "action": "renamed",
+   "notes": ""
+  },
+  {
+   "dx9_ea": "0x8387b0",
+   "old_dx9_name": "sub_8387B0",
+   "new_dx9_name": "uPlWpRedQueen::getDTI",
+   "se_ea": "0xa414f0",
+   "se_name": "uPlWpRedQueen::getDTI(void)",
+   "confidence": "high",
+   "evidence": [
+    "vtable",
+    "order"
+   ],
+   "action": "renamed",
+   "notes": ""
+  },
+  {
+   "dx9_ea": "0x8387c0",
+   "old_dx9_name": "loc_8387C0",
+   "new_dx9_name": "uPlWpRedQueen::MyDTI::newInstance",
+   "se_ea": "0xa41300",
+   "se_name": "uPlWpRedQueen::MyDTI::newInstance(void)",
+   "confidence": "high",
+   "evidence": [
+    "decompile",
+    "consts"
+   ],
+   "action": "renamed",
+   "notes": "defined as function (was undefined code). previously undefined code; allocates the DTI size and constructs / writes own vftable"
+  },
+  {
+   "dx9_ea": "0x838810",
+   "old_dx9_name": "loc_838810",
+   "new_dx9_name": "uPlWpCaliburn::MyDTI::newInstance",
+   "se_ea": "0xa41360",
+   "se_name": "uPlWpCaliburn::MyDTI::newInstance(void)",
+   "confidence": "high",
+   "evidence": [
+    "decompile",
+    "consts"
+   ],
+   "action": "renamed",
+   "notes": "defined as function (was undefined code). previously undefined code; allocates the DTI size and constructs / writes own vftable"
+  },
+  {
+   "dx9_ea": "0x838860",
+   "old_dx9_name": "loc_838860",
+   "new_dx9_name": "??_GuPlWpRedQueen@@UAEPAXI@Z",
+   "se_ea": "0xa41500",
+   "se_name": "uPlWpRedQueen::`scalar deleting destructor'(uint)",
+   "confidence": "high",
+   "evidence": [
+    "vtable",
+    "order"
+   ],
+   "action": "renamed",
+   "notes": "defined as function (was undefined code). ICF-folded with: uPlWeapon::`vector deleting destructor'(uint); uPlWpBlueRose::`scalar deleting destructor'(uint); uPlWpCaliburn::`vector deleting destructor'(uint); uPlWpCoyoteAce::`scalar deleting destructor'(uint). slot 0 shared by uPlWeapon/BlueRose/CoyoteAce/RedQueen/Caliburn vtables"
+  },
+  {
+   "dx9_ea": "0x838890",
+   "old_dx9_name": "sub_838890",
+   "new_dx9_name": "uPlWpRedQueen::createProperty",
+   "se_ea": "0xa413c0",
+   "se_name": "uPlWpRedQueen::createProperty(MtPropertyList &)",
+   "confidence": "high",
+   "evidence": [
+    "vtable",
+    "order",
+    "strings"
+   ],
+   "action": "renamed",
+   "notes": ""
+  },
+  {
+   "dx9_ea": "0x838930",
+   "old_dx9_name": "sub_838930",
+   "new_dx9_name": "uPlWpRedQueen::setup",
+   "se_ea": "0xa40f80",
+   "se_name": "uPlWpRedQueen::setup(void)",
+   "confidence": "high",
+   "evidence": [
+    "vtable",
+    "order",
+    "strings"
+   ],
+   "action": "renamed",
+   "notes": ""
+  },
+  {
+   "dx9_ea": "0x838a50",
+   "old_dx9_name": "sub_838A50",
+   "new_dx9_name": "uPlWpRedQueen::update",
+   "se_ea": "0xa41080",
+   "se_name": "uPlWpRedQueen::update(void)",
+   "confidence": "high",
+   "evidence": [
+    "vtable",
+    "order"
+   ],
+   "action": "renamed",
+   "notes": ""
+  },
+  {
+   "dx9_ea": "0x838d10",
+   "old_dx9_name": "sub_838D10",
+   "new_dx9_name": "uPlWpRedQueen::kill",
+   "se_ea": "0xa41180",
+   "se_name": "uPlWpRedQueen::kill(void)",
+   "confidence": "high",
+   "evidence": [
+    "vtable",
+    "order"
+   ],
+   "action": "renamed",
+   "notes": ""
+  },
+  {
+   "dx9_ea": "0x838d50",
+   "old_dx9_name": "sub_838D50",
+   "new_dx9_name": "uPlWpRedQueen::setEffectSleepMode",
+   "se_ea": "0xa411c0",
+   "se_name": "uPlWpRedQueen::setEffectSleepMode(bool)",
+   "confidence": "high",
+   "evidence": [
+    "vtable",
+    "order"
+   ],
+   "action": "renamed",
+   "notes": ""
+  },
+  {
+   "dx9_ea": "0x838d70",
+   "old_dx9_name": "sub_838D70",
+   "new_dx9_name": "uPlWpCaliburn::setup",
+   "se_ea": "0xa41210",
+   "se_name": "uPlWpCaliburn::setup(void)",
+   "confidence": "high",
+   "evidence": [
+    "vtable",
+    "order",
+    "strings"
+   ],
+   "action": "renamed",
+   "notes": ""
+  },
+  {
+   "dx9_ea": "0x838e60",
+   "old_dx9_name": "sub_838E60",
+   "new_dx9_name": "uPlWpRevellion::getDTI",
+   "se_ea": "0xa437c0",
+   "se_name": "uPlWpRevellion::getDTI(void)",
+   "confidence": "high",
+   "evidence": [
+    "vtable",
+    "order"
+   ],
+   "action": "renamed",
+   "notes": ""
+  },
+  {
+   "dx9_ea": "0x838e70",
+   "old_dx9_name": "loc_838E70",
+   "new_dx9_name": "uPlWpRevellion::MyDTI::newInstance",
+   "se_ea": "0xa41a40",
+   "se_name": "uPlWpRevellion::MyDTI::newInstance(void)",
+   "confidence": "high",
+   "evidence": [
+    "decompile",
+    "consts"
+   ],
+   "action": "renamed",
+   "notes": "defined as function (was undefined code). previously undefined code; allocates the DTI size and constructs / writes own vftable"
+  },
+  {
+   "dx9_ea": "0x838ea0",
+   "old_dx9_name": "sub_838EA0",
+   "new_dx9_name": "uPlWpRevellion::uPlWpRevellion",
+   "se_ea": "0xa41660",
+   "se_name": "uPlWpRevellion::uPlWpRevellion(void)",
+   "confidence": "high",
+   "evidence": [
+    "callees",
+    "order"
+   ],
+   "action": "renamed",
+   "notes": ""
+  },
+  {
+   "dx9_ea": "0x838f80",
+   "old_dx9_name": "loc_838F80",
+   "new_dx9_name": "??_GuPlWpRevellion@@UAEPAXI@Z",
+   "se_ea": "0xa437d0",
+   "se_name": "uPlWpRevellion::`scalar deleting destructor'(uint)",
+   "confidence": "high",
+   "evidence": [
+    "vtable",
+    "order"
+   ],
+   "action": "renamed",
+   "notes": "defined as function (was undefined code)."
+  },
+  {
+   "dx9_ea": "0x838fd0",
+   "old_dx9_name": "sub_838FD0",
+   "new_dx9_name": "uPlWpRevellion::createProperty",
+   "se_ea": "0xa41a80",
+   "se_name": "uPlWpRevellion::createProperty(MtPropertyList &)",
+   "confidence": "high",
+   "evidence": [
+    "vtable",
+    "order",
+    "strings"
+   ],
+   "action": "renamed",
+   "notes": ""
+  },
+  {
+   "dx9_ea": "0x839220",
+   "old_dx9_name": "sub_839220",
+   "new_dx9_name": "uPlWpRevellion::setup",
+   "se_ea": "0xa41770",
+   "se_name": "uPlWpRevellion::setup(void)",
+   "confidence": "high",
+   "evidence": [
+    "vtable",
+    "order",
+    "strings"
+   ],
+   "action": "renamed",
+   "notes": ""
+  },
+  {
+   "dx9_ea": "0x839340",
+   "old_dx9_name": "sub_839340",
+   "new_dx9_name": "uPlWpRevellion::update",
+   "se_ea": "0xa42b60",
+   "se_name": "uPlWpRevellion::update(void)",
+   "confidence": "high",
+   "evidence": [
+    "vtable",
+    "order"
+   ],
+   "action": "renamed",
+   "notes": ""
+  },
+  {
+   "dx9_ea": "0x83a110",
+   "old_dx9_name": "sub_83A110",
+   "new_dx9_name": "uPlWpRevellion::kill",
+   "se_ea": "0xa41f80",
+   "se_name": "uPlWpRevellion::kill(void)",
+   "confidence": "high",
+   "evidence": [
+    "vtable",
+    "order"
+   ],
+   "action": "renamed",
+   "notes": ""
+  },
+  {
+   "dx9_ea": "0x83a150",
+   "old_dx9_name": "uPlDanteRevellion::updateRoundTripFlight",
+   "new_dx9_name": "uPlWpRevellion::setThrow",
+   "se_ea": "0xa41fc0",
+   "se_name": "uPlWpRevellion::setThrow(void)",
+   "confidence": "high",
+   "evidence": [
+    "callees",
+    "order"
+   ],
+   "action": "replaced_existing",
+   "notes": "1103 vs 1071 bytes; caller moveAtckRevellionRoundTrip; setCollision callee"
+  },
+  {
+   "dx9_ea": "0x83a5a0",
+   "old_dx9_name": "uPlWpRevellion::setReturn",
+   "new_dx9_name": "uPlWpRevellion::setReturn",
+   "se_ea": "0xa423f0",
+   "se_name": "uPlWpRevellion::setReturn(void)",
+   "confidence": "high",
+   "evidence": [
+    "callees",
+    "propagation"
+   ],
+   "action": "confirmed",
+   "notes": ""
+  },
+  {
+   "dx9_ea": "0x83a7a0",
+   "old_dx9_name": "sub_83A7A0",
+   "new_dx9_name": "uPlWpRevellion::moveTarget",
+   "se_ea": "0xa42580",
+   "se_name": "uPlWpRevellion::moveTarget(MtVector3 *,float,int)",
+   "confidence": "high",
+   "evidence": [
+    "propagation",
+    "callees"
+   ],
+   "action": "renamed",
+   "notes": "atan2/sin/cos"
+  },
+  {
+   "dx9_ea": "0x83ad50",
+   "old_dx9_name": "sub_83AD50",
+   "new_dx9_name": "uPlWpRevellion::isEndTargetMove",
+   "se_ea": "0xa41920",
+   "se_name": "uPlWpRevellion::isEndTargetMove(void)",
+   "confidence": "high",
+   "evidence": [
+    "propagation",
+    "consts"
+   ],
+   "action": "renamed",
+   "notes": "42=42 bytes, imm 128"
+  },
+  {
+   "dx9_ea": "0x83ad80",
+   "old_dx9_name": "sub_83AD80",
+   "new_dx9_name": "uPlWpRevellion::isEnable",
+   "se_ea": "0xa41950",
+   "se_name": "uPlWpRevellion::isEnable(void)",
+   "confidence": "high",
+   "evidence": [
+    "vtable",
+    "order"
+   ],
+   "action": "renamed",
+   "notes": ""
+  },
+  {
+   "dx9_ea": "0x83ada0",
+   "old_dx9_name": "sub_83ADA0",
+   "new_dx9_name": "uPlWpRevellion::hitMessage",
+   "se_ea": "0xa41960",
+   "se_name": "uPlWpRevellion::hitMessage(cCollisionGroup *,cCollisionGroup *)",
+   "confidence": "high",
+   "evidence": [
+    "vtable",
+    "order"
+   ],
+   "action": "renamed",
+   "notes": ""
+  },
+  {
+   "dx9_ea": "0x83ade0",
+   "old_dx9_name": "sub_83ADE0",
+   "new_dx9_name": "uPlWpRevellion::reverseMessage",
+   "se_ea": "0xa419a0",
+   "se_name": "uPlWpRevellion::reverseMessage(GUARD_TYPE,cCollisionGroup *,cCollisionGroup *)",
+   "confidence": "high",
+   "evidence": [
+    "vtable",
+    "order"
+   ],
+   "action": "renamed",
+   "notes": ""
+  },
+  {
+   "dx9_ea": "0x83ae00",
+   "old_dx9_name": "sub_83AE00",
+   "new_dx9_name": "uPlWpRevellion::setEffectSleepMode",
+   "se_ea": "0xa419c0",
+   "se_name": "uPlWpRevellion::setEffectSleepMode(bool)",
+   "confidence": "high",
+   "evidence": [
+    "vtable",
+    "order"
+   ],
+   "action": "renamed",
+   "notes": ""
+  },
+  {
+   "dx9_ea": "0x83ae20",
+   "old_dx9_name": "sub_83AE20",
+   "new_dx9_name": "uPlWpRevellion::setEnable",
+   "se_ea": "0xa419e0",
+   "se_name": "uPlWpRevellion::setEnable(bool)",
+   "confidence": "high",
+   "evidence": [
+    "vtable",
+    "order"
+   ],
+   "action": "renamed",
+   "notes": ""
+  },
+  {
+   "dx9_ea": "0x83ae40",
+   "old_dx9_name": "sub_83AE40",
+   "new_dx9_name": "uPlWpRevellion::updatePtr",
+   "se_ea": "0xa42a10",
+   "se_name": "uPlWpRevellion::updatePtr(void)",
+   "confidence": "high",
+   "evidence": [
+    "vtable",
+    "order"
+   ],
+   "action": "renamed",
+   "notes": ""
+  },
+  {
+   "dx9_ea": "0x83aea0",
+   "old_dx9_name": "sub_83AEA0",
+   "new_dx9_name": "uPlWpRevellion::eraseFreezeEfct",
+   "se_ea": "0xa41a30",
+   "se_name": "uPlWpRevellion::eraseFreezeEfct(void)",
+   "confidence": "high",
+   "evidence": [
+    "vtable",
+    "order"
+   ],
+   "action": "renamed",
+   "notes": "ICF-folded with: uPlWpGilgamesh::eraseFreezeEfct(void); uPlWpRedQueen::eraseFreezeEfct(void)"
+  },
+  {
+   "dx9_ea": "0x83aeb0",
+   "old_dx9_name": "sub_83AEB0",
+   "new_dx9_name": "uPlWpRevellion::reset",
+   "se_ea": "0xa42a70",
+   "se_name": "uPlWpRevellion::reset(void)",
+   "confidence": "high",
+   "evidence": [
+    "vtable",
+    "order"
+   ],
+   "action": "renamed",
+   "notes": ""
+  },
+  {
+   "dx9_ea": "0x83aff0",
+   "old_dx9_name": "sub_83AFF0",
+   "new_dx9_name": "uPlWpRightHand::uEffectCtrl::getDTI",
+   "se_ea": "0xa47470",
+   "se_name": "uPlWpRightHand::uEffectCtrl::getDTI(void)",
+   "confidence": "high",
+   "evidence": [
+    "vtable",
+    "order"
+   ],
+   "action": "renamed",
+   "notes": ""
+  },
+  {
+   "dx9_ea": "0x83b000",
+   "old_dx9_name": "sub_83B000",
+   "new_dx9_name": "uPlWpRightHand::uCollisionCtrl::getDTI",
+   "se_ea": "0xa47480",
+   "se_name": "uPlWpRightHand::uCollisionCtrl::getDTI(void)",
+   "confidence": "high",
+   "evidence": [
+    "vtable",
+    "decompile"
+   ],
+   "action": "renamed",
+   "notes": "returns uPlWpRightHand::uCollisionCtrl::DTI; slot 4 of 0xBEACC0"
+  },
+  {
+   "dx9_ea": "0x83b010",
+   "old_dx9_name": "sub_83B010",
+   "new_dx9_name": "uPlWpRightHand::getDTI",
+   "se_ea": "0xa474e0",
+   "se_name": "uPlWpRightHand::getDTI(void)",
+   "confidence": "high",
+   "evidence": [
+    "vtable",
+    "order"
+   ],
+   "action": "renamed",
+   "notes": ""
+  },
+  {
+   "dx9_ea": "0x83b020",
+   "old_dx9_name": "uPlayerNero::setGrabHitInfo",
+   "new_dx9_name": "uPlayerNero::setGrabHitInfo",
+   "se_ea": "0xa47490",
+   "se_name": "uPlayerNero::setGrabHitInfo(uPlayerNero::cGrabHitInfo &)",
+   "confidence": "high",
+   "evidence": [
+    "callees",
+    "order"
+   ],
+   "action": "confirmed",
+   "notes": "uPlayerNero method compiled in the RightHand TU (same in SE)"
+  },
+  {
+   "dx9_ea": "0x83b060",
+   "old_dx9_name": "uPlWpRightHand::newInstance",
+   "new_dx9_name": "uPlWpRightHand::MyDTI::newInstance",
+   "se_ea": "0xa468e0",
+   "se_name": "uPlWpRightHand::MyDTI::newInstance(void)",
+   "confidence": "high",
+   "evidence": [
+    "consts",
+    "callees"
+   ],
+   "action": "replaced_existing",
+   "notes": "alloc 13664 = DTI size"
+  },
+  {
+   "dx9_ea": "0x83b090",
+   "old_dx9_name": "loc_83B090",
+   "new_dx9_name": "uPlWpRightHand::uEffectCtrl::MyDTI::newInstance",
+   "se_ea": "0xa445d0",
+   "se_name": "uPlWpRightHand::uEffectCtrl::MyDTI::newInstance(void)",
+   "confidence": "high",
+   "evidence": [
+    "decompile",
+    "consts"
+   ],
+   "action": "renamed",
+   "notes": "defined as function (was undefined code). previously undefined code; allocates the DTI size and constructs / writes own vftable"
+  },
+  {
+   "dx9_ea": "0x83b0c0",
+   "old_dx9_name": "loc_83B0C0",
+   "new_dx9_name": "uPlWpRightHand::uCollisionCtrl::MyDTI::newInstance",
+   "se_ea": "0xa44610",
+   "se_name": "uPlWpRightHand::uCollisionCtrl::MyDTI::newInstance(void)",
+   "confidence": "high",
+   "evidence": [
+    "decompile",
+    "consts"
+   ],
+   "action": "renamed",
+   "notes": "defined as function (was undefined code). previously undefined code; allocates the DTI size and constructs / writes own vftable"
+  },
+  {
+   "dx9_ea": "0x83b0e0",
+   "old_dx9_name": "uPlWpRightHand::uPlWpRightHand",
+   "new_dx9_name": "uPlWpRightHand::uPlWpRightHand",
+   "se_ea": "0xa44650",
+   "se_name": "uPlWpRightHand::uPlWpRightHand(void)",
+   "confidence": "high",
+   "evidence": [
+    "callees",
+    "order"
+   ],
+   "action": "confirmed",
+   "notes": ""
+  },
+  {
+   "dx9_ea": "0x83b230",
+   "old_dx9_name": "loc_83B230",
+   "new_dx9_name": "??_EuPlWpRightHand@@UAEPAXI@Z",
+   "se_ea": "0xa47570",
+   "se_name": "uPlWpRightHand::`vector deleting destructor'(uint)",
+   "confidence": "high",
+   "evidence": [
+    "vtable",
+    "order"
+   ],
+   "action": "renamed",
+   "notes": "defined as function (was undefined code)."
+  },
+  {
+   "dx9_ea": "0x83b260",
+   "old_dx9_name": "sub_83B260",
+   "new_dx9_name": "??1uPlWpRightHand@@UAE@XZ",
+   "se_ea": "0xa44770",
+   "se_name": "uPlWpRightHand::~uPlWpRightHand(void)",
+   "confidence": "high",
+   "evidence": [
+    "callees",
+    "order"
+   ],
+   "action": "renamed",
+   "notes": "called by vector deleting dtor 0x83B230"
+  },
+  {
+   "dx9_ea": "0x83b2f0",
+   "old_dx9_name": "sub_83B2F0",
+   "new_dx9_name": "uPlWpRightHand::createProperty",
+   "se_ea": "0xa447f0",
+   "se_name": "uPlWpRightHand::createProperty(MtPropertyList &)",
+   "confidence": "high",
+   "evidence": [
+    "vtable",
+    "order",
+    "strings"
+   ],
+   "action": "renamed",
+   "notes": ""
+  },
+  {
+   "dx9_ea": "0x83b4b0",
+   "old_dx9_name": "sub_83B4B0",
+   "new_dx9_name": "uPlWpRightHand::updatePtr",
+   "se_ea": "0xa44b50",
+   "se_name": "uPlWpRightHand::updatePtr(void)",
+   "confidence": "high",
+   "evidence": [
+    "vtable",
+    "order"
+   ],
+   "action": "renamed",
+   "notes": ""
+  },
+  {
+   "dx9_ea": "0x83b4e0",
+   "old_dx9_name": "uPlWpRightHand::setup",
+   "new_dx9_name": "uPlWpRightHand::setup",
+   "se_ea": "0xa44b80",
+   "se_name": "uPlWpRightHand::setup(void)",
+   "confidence": "high",
+   "evidence": [
+    "vtable",
+    "order",
+    "strings"
+   ],
+   "action": "confirmed",
+   "notes": ""
+  },
+  {
+   "dx9_ea": "0x83b910",
+   "old_dx9_name": "uPlWpRightHand::update",
+   "new_dx9_name": "uPlWpRightHand::update",
+   "se_ea": "0xa46920",
+   "se_name": "uPlWpRightHand::update(void)",
+   "confidence": "high",
+   "evidence": [
+    "vtable",
+    "order"
+   ],
+   "action": "confirmed",
+   "notes": ""
+  },
+  {
+   "dx9_ea": "0x83ba20",
+   "old_dx9_name": "uPlWpRightHand::updateEx",
+   "new_dx9_name": "uPlWpRightHand::updateEx",
+   "se_ea": "0xa46a20",
+   "se_name": "uPlWpRightHand::updateEx(void)",
+   "confidence": "high",
+   "evidence": [
+    "vtable",
+    "order"
+   ],
+   "action": "confirmed",
+   "notes": ""
+  },
+  {
+   "dx9_ea": "0x83bdd0",
+   "old_dx9_name": "uPlWpRightHand::updateMatrix",
+   "new_dx9_name": "uPlWpRightHand::updateMatrix",
+   "se_ea": "0xa43b20",
+   "se_name": "uPlWpRightHand::updateMatrix(void)",
+   "confidence": "high",
+   "evidence": [
+    "vtable",
+    "order"
+   ],
+   "action": "confirmed",
+   "notes": ""
+  },
+  {
+   "dx9_ea": "0x83be00",
+   "old_dx9_name": "sub_83BE00",
+   "new_dx9_name": "uPlWpRightHand::draw",
+   "se_ea": "0xa43c20",
+   "se_name": "uPlWpRightHand::draw(cDraw *)",
+   "confidence": "high",
+   "evidence": [
+    "vtable",
+    "order"
+   ],
+   "action": "renamed",
+   "notes": ""
+  },
+  {
+   "dx9_ea": "0x83be30",
+   "old_dx9_name": "sub_83BE30",
+   "new_dx9_name": "uPlWpRightHand::reset",
+   "se_ea": "0xa44e90",
+   "se_name": "uPlWpRightHand::reset(void)",
+   "confidence": "high",
+   "evidence": [
+    "vtable",
+    "order"
+   ],
+   "action": "renamed",
+   "notes": ""
+  },
+  {
+   "dx9_ea": "0x83beb0",
+   "old_dx9_name": "uPlWpRightHand::sync",
+   "new_dx9_name": "uPlWpRightHand::sync",
+   "se_ea": "0xa43c80",
+   "se_name": "uPlWpRightHand::sync(void)",
+   "confidence": "high",
+   "evidence": [
+    "vtable",
+    "order"
+   ],
+   "action": "confirmed",
+   "notes": ""
+  },
+  {
+   "dx9_ea": "0x83bf00",
+   "old_dx9_name": "uPlWpRightHand::moveActSnatch",
+   "new_dx9_name": "uPlWpRightHand::moveActSnatch",
+   "se_ea": "0xa44ef0",
+   "se_name": "uPlWpRightHand::moveActSnatch(void)",
+   "confidence": "high",
+   "evidence": [
+    "propagation",
+    "callees"
+   ],
+   "action": "confirmed",
+   "notes": ""
+  },
+  {
+   "dx9_ea": "0x83c500",
+   "old_dx9_name": "uPlWpRightHand::moveActBuster",
+   "new_dx9_name": "uPlWpRightHand::moveActBuster",
+   "se_ea": "0xa454c0",
+   "se_name": "uPlWpRightHand::moveActBuster(void)",
+   "confidence": "high",
+   "evidence": [
+    "propagation",
+    "callees"
+   ],
+   "action": "confirmed",
+   "notes": ""
+  },
+  {
+   "dx9_ea": "0x83c640",
+   "old_dx9_name": "uPlWpRightHand::moveActYamato",
+   "new_dx9_name": "uPlWpRightHand::moveActYamato",
+   "se_ea": "0xa45700",
+   "se_name": "uPlWpRightHand::moveActYamato(void)",
+   "confidence": "high",
+   "evidence": [
+    "propagation",
+    "order"
+   ],
+   "action": "confirmed",
+   "notes": ""
+  },
+  {
+   "dx9_ea": "0x83c680",
+   "old_dx9_name": "uPlWpRightHand::moveActEnemyBlock",
+   "new_dx9_name": "uPlWpRightHand::moveActEnemyBlock",
+   "se_ea": "0xa45740",
+   "se_name": "uPlWpRightHand::moveActEnemyBlock(void)",
+   "confidence": "high",
+   "evidence": [
+    "propagation",
+    "order"
+   ],
+   "action": "confirmed",
+   "notes": ""
+  },
+  {
+   "dx9_ea": "0x83c6d0",
+   "old_dx9_name": "uPlWpRightHand::setSnatchParam",
+   "new_dx9_name": "uPlWpRightHand::setSnatchParam",
+   "se_ea": "0xa45790",
+   "se_name": "uPlWpRightHand::setSnatchParam(cLockOnTarget *,bool)",
+   "confidence": "high",
+   "evidence": [
+    "callees",
+    "decompile"
+   ],
+   "action": "confirmed",
+   "notes": "sets target +0x3410, bool +0x3419, phase +0x33AC=1; SE setBusterParam has no separate DX9 body (inlined)"
+  },
+  {
+   "dx9_ea": "0x83c750",
+   "old_dx9_name": "uPlWpRightHand::setSnatchReturnPos",
+   "new_dx9_name": "uPlWpRightHand::setSnatchReturnPos",
+   "se_ea": "0xa45850",
+   "se_name": "uPlWpRightHand::setSnatchReturnPos(void)",
+   "confidence": "high",
+   "evidence": [
+    "propagation",
+    "callees"
+   ],
+   "action": "confirmed",
+   "notes": ""
+  },
+  {
+   "dx9_ea": "0x83d050",
+   "old_dx9_name": "uCollisionCtrl::setGrabHit",
+   "new_dx9_name": "uPlWpRightHand::setGrabHit",
+   "se_ea": "0xa46d60",
+   "se_name": "uPlWpRightHand::setGrabHit(void)",
+   "confidence": "high",
+   "evidence": [
+    "callees",
+    "decompile"
+   ],
+   "action": "replaced_existing",
+   "notes": "this (edi) uses uPlWpRightHand offsets (+0x3404 phase, +0x2F30 parent); calls getPalmPos/getGrabHitInfo; called from uCollisionCtrl::grabHitMessageNormal as SE"
+  },
+  {
+   "dx9_ea": "0x83d0f0",
+   "old_dx9_name": "uPlWpRightHand::getPalmPos",
+   "new_dx9_name": "uPlWpRightHand::getPalmPos",
+   "se_ea": "0xa46110",
+   "se_name": "uPlWpRightHand::getPalmPos(void)",
+   "confidence": "high",
+   "evidence": [
+    "callees",
+    "order"
+   ],
+   "action": "confirmed",
+   "notes": ""
+  },
+  {
+   "dx9_ea": "0x83d150",
+   "old_dx9_name": "sub_83D150",
+   "new_dx9_name": "uPlWpRightHand::cancelAction",
+   "se_ea": "0xa46160",
+   "se_name": "uPlWpRightHand::cancelAction(bool)",
+   "confidence": "high",
+   "evidence": [
+    "callees",
+    "consts"
+   ],
+   "action": "renamed",
+   "notes": "callers checkDevilTriggerAtck, uPlNeroDevil::moveActAppear/Buster; customMessage+requestSeWPos, imm 46"
+  },
+  {
+   "dx9_ea": "0x83d250",
+   "old_dx9_name": "sub_83D250",
+   "new_dx9_name": "uPlWpRightHand::grabHitMessage",
+   "se_ea": "0xa43ed0",
+   "se_name": "uPlWpRightHand::grabHitMessage(cCollisionGroup *,cCollisionGroup *)",
+   "confidence": "high",
+   "evidence": [
+    "vtable",
+    "order"
+   ],
+   "action": "renamed",
+   "notes": ""
+  },
+  {
+   "dx9_ea": "0x83d270",
+   "old_dx9_name": "sub_83D270",
+   "new_dx9_name": "uPlWpRightHand::customMessage",
+   "se_ea": "0xa43ef0",
+   "se_name": "uPlWpRightHand::customMessage(uint,uint,MtObject *,cCollisionGroup *,cCollisionGroup *)",
+   "confidence": "high",
+   "evidence": [
+    "vtable",
+    "order"
+   ],
+   "action": "renamed",
+   "notes": ""
+  },
+  {
+   "dx9_ea": "0x83d2b0",
+   "old_dx9_name": "uPlWpRightHand::uEffectCtrl::setEfct",
+   "new_dx9_name": "uPlWpRightHand::uEffectCtrl::setEfct",
+   "se_ea": "0xa43fa0",
+   "se_name": "uPlWpRightHand::uEffectCtrl::setEfct(uPlWpRightHand::uEffectCtrl::EFCT_TYPE,cLockOnTarget *)",
+   "confidence": "high",
+   "evidence": [
+    "callees",
+    "consts"
+   ],
+   "action": "confirmed",
+   "notes": ""
+  },
+  {
+   "dx9_ea": "0x83d500",
+   "old_dx9_name": "uPlWpRightHand::uEffectCtrl::killEfct",
+   "new_dx9_name": "uPlWpRightHand::uEffectCtrl::killEfct",
+   "se_ea": "0xa44150",
+   "se_name": "uPlWpRightHand::uEffectCtrl::killEfct(uPlWpRightHand::uEffectCtrl::EFCT_TYPE,bool)",
+   "confidence": "high",
+   "evidence": [
+    "decompile",
+    "consts"
+   ],
+   "action": "confirmed",
+   "notes": "switch over EFCT_TYPE 0-3 -> effect ids 0x11/0x12/0x14/0x15, bool picks kill vs finish; SE uEffectCtrl::reset/reset2 loops are inlined into callers in DX9"
+  },
+  {
+   "dx9_ea": "0x83d580",
+   "old_dx9_name": "uCollisionCtrl::uCollisionCtrl",
+   "new_dx9_name": "uPlWpRightHand::uCollisionCtrl::uCollisionCtrl",
+   "se_ea": "0xa44290",
+   "se_name": "uPlWpRightHand::uCollisionCtrl::uCollisionCtrl(void)",
+   "confidence": "high",
+   "evidence": [
+    "callees",
+    "order"
+   ],
+   "action": "replaced_existing",
+   "notes": "writes vftable 0xBEACC0"
+  },
+  {
+   "dx9_ea": "0x83d5f0",
+   "old_dx9_name": "loc_83D5F0",
+   "new_dx9_name": "??_EuCollisionCtrl@uPlWpRightHand@@UAEPAXI@Z",
+   "se_ea": "0xa47520",
+   "se_name": "uPlWpRightHand::uCollisionCtrl::`vector deleting destructor'(uint)",
+   "confidence": "high",
+   "evidence": [
+    "vtable",
+    "callees"
+   ],
+   "action": "renamed",
+   "notes": "defined as function (was undefined code). slot 0 of 0xBEACC0; previously undefined; ~uCollisionCtrl inlined"
+  },
+  {
+   "dx9_ea": "0x83d640",
+   "old_dx9_name": "sub_83D640",
+   "new_dx9_name": "uPlWpRightHand::uCollisionCtrl::setup",
+   "se_ea": "0xa44320",
+   "se_name": "uPlWpRightHand::uCollisionCtrl::setup(void)",
+   "confidence": "high",
+   "evidence": [
+    "vtable",
+    "callees"
+   ],
+   "action": "renamed",
+   "notes": "slot 5 of 0xBEACC0; calls uCollisionMgr::init"
+  },
+  {
+   "dx9_ea": "0x83d690",
+   "old_dx9_name": "sub_83D690",
+   "new_dx9_name": "uPlWpRightHand::uCollisionCtrl::update",
+   "se_ea": "0xa46e40",
+   "se_name": "uPlWpRightHand::uCollisionCtrl::update(void)",
+   "confidence": "high",
+   "evidence": [
+    "callees",
+    "propagation"
+   ],
+   "action": "renamed",
+   "notes": "caller uPlNeroDevil::moveEx; dispatches to moveLongGrab/D, moveBuster, moveEnemyGuard"
+  },
+  {
+   "dx9_ea": "0x83d770",
+   "old_dx9_name": "sub_83D770",
+   "new_dx9_name": "uPlWpRightHand::uCollisionCtrl::moveLongGrab",
+   "se_ea": "0xa46230",
+   "se_name": "uPlWpRightHand::uCollisionCtrl::moveLongGrab(void)",
+   "confidence": "high",
+   "evidence": [
+    "propagation",
+    "callees"
+   ],
+   "action": "renamed",
+   "notes": ""
+  },
+  {
+   "dx9_ea": "0x83dae0",
+   "old_dx9_name": "sub_83DAE0",
+   "new_dx9_name": "uPlWpRightHand::uCollisionCtrl::moveLongGrabD",
+   "se_ea": "0xa465a0",
+   "se_name": "uPlWpRightHand::uCollisionCtrl::moveLongGrabD(void)",
+   "confidence": "high",
+   "evidence": [
+    "propagation",
+    "order"
+   ],
+   "action": "renamed",
+   "notes": ""
+  },
+  {
+   "dx9_ea": "0x83dc30",
+   "old_dx9_name": "sub_83DC30",
+   "new_dx9_name": "uPlWpRightHand::uCollisionCtrl::moveBuster",
+   "se_ea": "0xa466e0",
+   "se_name": "uPlWpRightHand::uCollisionCtrl::moveBuster(void)",
+   "confidence": "high",
+   "evidence": [
+    "propagation",
+    "order"
+   ],
+   "action": "renamed",
+   "notes": ""
+  },
+  {
+   "dx9_ea": "0x83dcc0",
+   "old_dx9_name": "sub_83DCC0",
+   "new_dx9_name": "uPlWpRightHand::uCollisionCtrl::moveEnemyGuard",
+   "se_ea": "0xa46770",
+   "se_name": "uPlWpRightHand::uCollisionCtrl::moveEnemyGuard(void)",
+   "confidence": "high",
+   "evidence": [
+    "propagation",
+    "order"
+   ],
+   "action": "renamed",
+   "notes": ""
+  },
+  {
+   "dx9_ea": "0x83ddd0",
+   "old_dx9_name": "sub_83DDD0",
+   "new_dx9_name": "uPlWpRightHand::uCollisionCtrl::setLongGrabCollision",
+   "se_ea": "0xa443d0",
+   "se_name": "uPlWpRightHand::uCollisionCtrl::setLongGrabCollision(bool)",
+   "confidence": "high",
+   "evidence": [
+    "propagation",
+    "callees"
+   ],
+   "action": "renamed",
+   "notes": "callers moveLongGrab/moveLongGrabD; setCollision+setAttr"
+  },
+  {
+   "dx9_ea": "0x83dee0",
+   "old_dx9_name": "sub_83DEE0",
+   "new_dx9_name": "uPlWpRightHand::uCollisionCtrl::setEnemyGuardCollision",
+   "se_ea": "0xa44490",
+   "se_name": "uPlWpRightHand::uCollisionCtrl::setEnemyGuardCollision(void)",
+   "confidence": "high",
+   "evidence": [
+    "strings",
+    "propagation"
+   ],
+   "action": "renamed",
+   "notes": "string NeroEnemyGuard"
+  },
+  {
+   "dx9_ea": "0x83dfb0",
+   "old_dx9_name": "uPlWpRightHand::uCollisionCtrl::clear",
+   "new_dx9_name": "uPlWpRightHand::uCollisionCtrl::clear",
+   "se_ea": "0xa44520",
+   "se_name": "uPlWpRightHand::uCollisionCtrl::clear(void)",
+   "confidence": "high",
+   "evidence": [
+    "callees",
+    "propagation"
+   ],
+   "action": "confirmed",
+   "notes": ""
+  },
+  {
+   "dx9_ea": "0x83dfe0",
+   "old_dx9_name": "uCollisionCtrl::grabHitMessage",
+   "new_dx9_name": "uPlWpRightHand::uCollisionCtrl::grabHitMessage",
+   "se_ea": "0xa47280",
+   "se_name": "uPlWpRightHand::uCollisionCtrl::grabHitMessage(cCollisionGroup *,cCollisionGroup *)",
+   "confidence": "high",
+   "evidence": [
+    "vtable",
+    "callees"
+   ],
+   "action": "replaced_existing",
+   "notes": "slot 54 of 0xBEACC0 (SE slot 80)"
+  },
+  {
+   "dx9_ea": "0x83e260",
+   "old_dx9_name": "uCollisionCtrl::grabHitMessageNormal",
+   "new_dx9_name": "uPlWpRightHand::uCollisionCtrl::grabHitMessageNormal",
+   "se_ea": "0xa46f20",
+   "se_name": "uPlWpRightHand::uCollisionCtrl::grabHitMessageNormal(cCollisionGroup *,cCollisionGroup *)",
+   "confidence": "high",
+   "evidence": [
+    "callees",
+    "propagation"
+   ],
+   "action": "replaced_existing",
+   "notes": ""
+  },
+  {
+   "dx9_ea": "0x83e590",
+   "old_dx9_name": "uCollisionCtrl::grabHitMessageDevil",
+   "new_dx9_name": "uPlWpRightHand::uCollisionCtrl::grabHitMessageDevil",
+   "se_ea": "0xa46870",
+   "se_name": "uPlWpRightHand::uCollisionCtrl::grabHitMessageDevil(cCollisionGroup *,cCollisionGroup *)",
+   "confidence": "high",
+   "evidence": [
+    "callees",
+    "propagation"
+   ],
+   "action": "replaced_existing",
+   "notes": ""
+  },
+  {
+   "dx9_ea": "0x83e600",
+   "old_dx9_name": "sub_83E600",
+   "new_dx9_name": "uPlWpYamato::getDTI",
+   "se_ea": "0xa479c0",
+   "se_name": "uPlWpYamato::getDTI(void)",
+   "confidence": "high",
+   "evidence": [
+    "vtable",
+    "order"
+   ],
+   "action": "renamed",
+   "notes": ""
+  },
+  {
+   "dx9_ea": "0x83e610",
+   "old_dx9_name": "loc_83E610",
+   "new_dx9_name": "uPlWpYamato::MyDTI::newInstance",
+   "se_ea": "0xa47820",
+   "se_name": "uPlWpYamato::MyDTI::newInstance(void)",
+   "confidence": "high",
+   "evidence": [
+    "decompile",
+    "consts"
+   ],
+   "action": "renamed",
+   "notes": "defined as function (was undefined code). previously undefined code; allocates the DTI size and constructs / writes own vftable"
+  },
+  {
+   "dx9_ea": "0x83e670",
+   "old_dx9_name": "loc_83E670",
+   "new_dx9_name": "??_EuPlWpYamato@@UAEPAXI@Z",
+   "se_ea": "0xa479d0",
+   "se_name": "uPlWpYamato::`vector deleting destructor'(uint)",
+   "confidence": "high",
+   "evidence": [
+    "vtable",
+    "order"
+   ],
+   "action": "renamed",
+   "notes": "defined as function (was undefined code)."
+  },
+  {
+   "dx9_ea": "0x83e6c0",
+   "old_dx9_name": "sub_83E6C0",
+   "new_dx9_name": "uPlWpYamato::createProperty",
+   "se_ea": "0xa47890",
+   "se_name": "uPlWpYamato::createProperty(MtPropertyList &)",
+   "confidence": "high",
+   "evidence": [
+    "vtable",
+    "order",
+    "strings"
+   ],
+   "action": "renamed",
+   "notes": ""
+  },
+  {
+   "dx9_ea": "0x83e760",
+   "old_dx9_name": "sub_83E760",
+   "new_dx9_name": "uPlWpYamato::setup",
+   "se_ea": "0xa47720",
+   "se_name": "uPlWpYamato::setup(void)",
+   "confidence": "high",
+   "evidence": [
+    "vtable",
+    "order",
+    "strings"
+   ],
+   "action": "renamed",
+   "notes": ""
+  },
+  {
+   "dx9_ea": "0x83e7f0",
+   "old_dx9_name": "sub_83E7F0",
+   "new_dx9_name": "uPlWpYamato::update",
+   "se_ea": "0xa477c0",
+   "se_name": "uPlWpYamato::update(void)",
+   "confidence": "high",
+   "evidence": [
+    "vtable",
+    "order"
+   ],
+   "action": "renamed",
+   "notes": ""
+  },
+  {
+   "dx9_ea": "0x83e810",
+   "old_dx9_name": "sub_83E810",
+   "new_dx9_name": "uPlWpYamatoDante::getDTI",
+   "se_ea": "0xa48210",
+   "se_name": "uPlWpYamatoDante::getDTI(void)",
+   "confidence": "high",
+   "evidence": [
+    "vtable",
+    "order"
+   ],
+   "action": "renamed",
+   "notes": ""
+  },
+  {
+   "dx9_ea": "0x83e820",
+   "old_dx9_name": "loc_83E820",
+   "new_dx9_name": "uPlWpYamatoDante::MyDTI::newInstance",
+   "se_ea": "0xa47f60",
+   "se_name": "uPlWpYamatoDante::MyDTI::newInstance(void)",
+   "confidence": "high",
+   "evidence": [
+    "decompile",
+    "consts"
+   ],
+   "action": "renamed",
+   "notes": "defined as function (was undefined code). previously undefined code; allocates the DTI size and constructs / writes own vftable"
+  },
+  {
+   "dx9_ea": "0x83e850",
+   "old_dx9_name": "sub_83E850",
+   "new_dx9_name": "uPlWpYamatoDante::uPlWpYamatoDante",
+   "se_ea": "0xa47b40",
+   "se_name": "uPlWpYamatoDante::uPlWpYamatoDante(void)",
+   "confidence": "high",
+   "evidence": [
+    "callees",
+    "order"
+   ],
+   "action": "renamed",
+   "notes": ""
+  },
+  {
+   "dx9_ea": "0x83e8b0",
+   "old_dx9_name": "loc_83E8B0",
+   "new_dx9_name": "??_GuPlWpYamatoDante@@UAEPAXI@Z",
+   "se_ea": "0xa48220",
+   "se_name": "uPlWpYamatoDante::`scalar deleting destructor'(uint)",
+   "confidence": "high",
+   "evidence": [
+    "vtable",
+    "order"
+   ],
+   "action": "renamed",
+   "notes": "defined as function (was undefined code)."
+  },
+  {
+   "dx9_ea": "0x83e900",
+   "old_dx9_name": "sub_83E900",
+   "new_dx9_name": "uPlWpYamatoDante::createProperty",
+   "se_ea": "0xa47fa0",
+   "se_name": "uPlWpYamatoDante::createProperty(MtPropertyList &)",
+   "confidence": "high",
+   "evidence": [
+    "vtable",
+    "order",
+    "strings"
+   ],
+   "action": "renamed",
+   "notes": ""
+  },
+  {
+   "dx9_ea": "0x83ea30",
+   "old_dx9_name": "sub_83EA30",
+   "new_dx9_name": "uPlWpYamatoDante::setup",
+   "se_ea": "0xa47bd0",
+   "se_name": "uPlWpYamatoDante::setup(void)",
+   "confidence": "high",
+   "evidence": [
+    "vtable",
+    "order",
+    "strings"
+   ],
+   "action": "renamed",
+   "notes": ""
+  },
+  {
+   "dx9_ea": "0x83eb60",
+   "old_dx9_name": "sub_83EB60",
+   "new_dx9_name": "uPlWpYamatoDante::update",
+   "se_ea": "0xa47cf0",
+   "se_name": "uPlWpYamatoDante::update(void)",
+   "confidence": "high",
+   "evidence": [
+    "vtable",
+    "order"
+   ],
+   "action": "renamed",
+   "notes": ""
+  },
+  {
+   "dx9_ea": "0x83ecf0",
+   "old_dx9_name": "sub_83ECF0",
+   "new_dx9_name": "uPlWpYamatoDante::updateMatrix",
+   "se_ea": "0xa47e60",
+   "se_name": "uPlWpYamatoDante::updateMatrix(void)",
+   "confidence": "high",
+   "evidence": [
+    "vtable",
+    "order"
+   ],
+   "action": "renamed",
+   "notes": ""
+  },
+  {
+   "dx9_ea": "0x83ed40",
+   "old_dx9_name": "sub_83ED40",
+   "new_dx9_name": "uPlWpYamatoDante::kill",
+   "se_ea": "0xa47ec0",
+   "se_name": "uPlWpYamatoDante::kill(void)",
+   "confidence": "high",
+   "evidence": [
+    "vtable",
+    "order"
+   ],
+   "action": "renamed",
+   "notes": "ICF-folded with: uPlWpRightHand::kill(void)"
+  },
+  {
+   "dx9_ea": "0x83ed80",
+   "old_dx9_name": "sub_83ED80",
+   "new_dx9_name": "uPlWpYamatoDante::updateMaterial",
+   "se_ea": "0xa47ee0",
+   "se_name": "uPlWpYamatoDante::updateMaterial(void)",
+   "confidence": "high",
+   "evidence": [
+    "vtable",
+    "order"
+   ],
+   "action": "renamed",
+   "notes": ""
+  },
+  {
+   "dx9_ea": "0x83eda0",
+   "old_dx9_name": "sub_83EDA0",
+   "new_dx9_name": "uPlWpYamatoDante::draw",
+   "se_ea": "0xa47f00",
+   "se_name": "uPlWpYamatoDante::draw(cDraw *)",
+   "confidence": "high",
+   "evidence": [
+    "vtable",
+    "order"
+   ],
+   "action": "renamed",
+   "notes": ""
+  },
+  {
+   "dx9_ea": "0x83edf0",
+   "old_dx9_name": "sub_83EDF0",
+   "new_dx9_name": "uPlWpYamatoDante::updatePtr",
+   "se_ea": "0xa481e0",
+   "se_name": "uPlWpYamatoDante::updatePtr(void)",
+   "confidence": "high",
+   "evidence": [
+    "vtable",
+    "order"
+   ],
+   "action": "renamed",
+   "notes": ""
+  },
+  {
+   "dx9_ea": "0x83ee20",
+   "old_dx9_name": "sub_83EE20",
+   "new_dx9_name": null,
+   "se_ea": null,
+   "se_name": null,
+   "confidence": "none",
+   "evidence": [],
+   "action": "none",
+   "notes": "non-uPl class code (uPopeHitCheck, from DTI/vftable refs); not in SE uPl dump"
+  },
+  {
+   "dx9_ea": "0x83ef20",
+   "old_dx9_name": "sub_83EF20",
+   "new_dx9_name": null,
+   "se_ea": null,
+   "se_name": null,
+   "confidence": "none",
+   "evidence": [],
+   "action": "none",
+   "notes": "non-uPl class code (uPopeHitCheck, from DTI/vftable refs); not in SE uPl dump"
+  },
+  {
+   "dx9_ea": "0x83efb0",
+   "old_dx9_name": "sub_83EFB0",
+   "new_dx9_name": null,
+   "se_ea": null,
+   "se_name": null,
+   "confidence": "none",
+   "evidence": [],
+   "action": "none",
+   "notes": "non-uPl class code (uPopeHitCheck, from DTI/vftable refs); not in SE uPl dump"
+  },
+  {
+   "dx9_ea": "0x83f080",
+   "old_dx9_name": "sub_83F080",
+   "new_dx9_name": null,
+   "se_ea": null,
+   "se_name": null,
+   "confidence": "none",
+   "evidence": [],
+   "action": "none",
+   "notes": "non-uPl class code (uPopeHitCheck, from DTI/vftable refs); not in SE uPl dump"
+  },
+  {
+   "dx9_ea": "0x83f0b0",
+   "old_dx9_name": "sub_83F0B0",
+   "new_dx9_name": null,
+   "se_ea": null,
+   "se_name": null,
+   "confidence": "none",
+   "evidence": [],
+   "action": "none",
+   "notes": "non-uPl class code (uPopeHitCheck, from DTI/vftable refs); not in SE uPl dump"
+  },
+  {
+   "dx9_ea": "0x83f0d0",
+   "old_dx9_name": "sub_83F0D0",
+   "new_dx9_name": null,
+   "se_ea": null,
+   "se_name": null,
+   "confidence": "none",
+   "evidence": [],
+   "action": "none",
+   "notes": "non-uPl class code (uPowerUp/uPowerUpBg/uPowerUpCamera, from DTI/vftable refs); not in SE uPl dump"
+  },
+  {
+   "dx9_ea": "0x83f0e0",
+   "old_dx9_name": "sub_83F0E0",
+   "new_dx9_name": null,
+   "se_ea": null,
+   "se_name": null,
+   "confidence": "none",
+   "evidence": [],
+   "action": "none",
+   "notes": "non-uPl class code (uPowerUp/uPowerUpBg/uPowerUpCamera, from DTI/vftable refs); not in SE uPl dump"
+  },
+  {
+   "dx9_ea": "0x83f0f0",
+   "old_dx9_name": "sub_83F0F0",
+   "new_dx9_name": null,
+   "se_ea": null,
+   "se_name": null,
+   "confidence": "none",
+   "evidence": [],
+   "action": "none",
+   "notes": "non-uPl class code (uPowerUp/uPowerUpBg/uPowerUpCamera, from DTI/vftable refs); not in SE uPl dump"
+  },
+  {
+   "dx9_ea": "0x83f130",
+   "old_dx9_name": "sub_83F130",
+   "new_dx9_name": null,
+   "se_ea": null,
+   "se_name": null,
+   "confidence": "none",
+   "evidence": [],
+   "action": "none",
+   "notes": "non-uPl class code (uPowerUp/uPowerUpBg/uPowerUpCamera, from DTI/vftable refs); not in SE uPl dump"
+  },
+  {
+   "dx9_ea": "0x83f1f0",
+   "old_dx9_name": "sub_83F1F0",
+   "new_dx9_name": null,
+   "se_ea": null,
+   "se_name": null,
+   "confidence": "none",
+   "evidence": [],
+   "action": "none",
+   "notes": "non-uPl class code (uPowerUp/uPowerUpBg/uPowerUpCamera, from DTI/vftable refs); not in SE uPl dump"
+  },
+  {
+   "dx9_ea": "0x83f270",
+   "old_dx9_name": "sub_83F270",
+   "new_dx9_name": null,
+   "se_ea": null,
+   "se_name": null,
+   "confidence": "none",
+   "evidence": [],
+   "action": "none",
+   "notes": "non-uPl class code (uPowerUp/uPowerUpBg/uPowerUpCamera, from DTI/vftable refs); not in SE uPl dump"
+  },
+  {
+   "dx9_ea": "0x83f2d0",
+   "old_dx9_name": "sub_83F2D0",
+   "new_dx9_name": null,
+   "se_ea": null,
+   "se_name": null,
+   "confidence": "none",
+   "evidence": [],
+   "action": "none",
+   "notes": "non-uPl class code (uPowerUp/uPowerUpBg/uPowerUpCamera, from DTI/vftable refs); not in SE uPl dump"
+  },
+  {
+   "dx9_ea": "0x83f2f0",
+   "old_dx9_name": "sub_83F2F0",
+   "new_dx9_name": null,
+   "se_ea": null,
+   "se_name": null,
+   "confidence": "none",
+   "evidence": [],
+   "action": "none",
+   "notes": "non-uPl class code (uPowerUp/uPowerUpBg/uPowerUpCamera, from DTI/vftable refs); not in SE uPl dump"
+  },
+  {
+   "dx9_ea": "0x83f400",
+   "old_dx9_name": "sub_83F400",
+   "new_dx9_name": null,
+   "se_ea": null,
+   "se_name": null,
+   "confidence": "none",
+   "evidence": [],
+   "action": "none",
+   "notes": "non-uPl class code (uPowerUp/uPowerUpBg/uPowerUpCamera, from DTI/vftable refs); not in SE uPl dump"
+  },
+  {
+   "dx9_ea": "0x83f480",
+   "old_dx9_name": "sub_83F480",
+   "new_dx9_name": null,
+   "se_ea": null,
+   "se_name": null,
+   "confidence": "none",
+   "evidence": [],
+   "action": "none",
+   "notes": "non-uPl class code (uPowerUp/uPowerUpBg/uPowerUpCamera, from DTI/vftable refs); not in SE uPl dump"
+  },
+  {
+   "dx9_ea": "0x83f560",
+   "old_dx9_name": "sub_83F560",
+   "new_dx9_name": null,
+   "se_ea": null,
+   "se_name": null,
+   "confidence": "none",
+   "evidence": [],
+   "action": "none",
+   "notes": "non-uPl class code (uPowerUp/uPowerUpBg/uPowerUpCamera, from DTI/vftable refs); not in SE uPl dump"
+  },
+  {
+   "dx9_ea": "0x83f650",
+   "old_dx9_name": "sub_83F650",
+   "new_dx9_name": null,
+   "se_ea": null,
+   "se_name": null,
+   "confidence": "none",
+   "evidence": [],
+   "action": "none",
+   "notes": "non-uPl class code (uPowerUp/uPowerUpBg/uPowerUpCamera, from DTI/vftable refs); not in SE uPl dump"
+  },
+  {
+   "dx9_ea": "0x83f680",
+   "old_dx9_name": "sub_83F680",
+   "new_dx9_name": null,
+   "se_ea": null,
+   "se_name": null,
+   "confidence": "none",
+   "evidence": [],
+   "action": "none",
+   "notes": "non-uPl class code (uPowerUp/uPowerUpBg/uPowerUpCamera, from DTI/vftable refs); not in SE uPl dump"
+  },
+  {
+   "dx9_ea": "0x83f800",
+   "old_dx9_name": "sub_83F800",
+   "new_dx9_name": null,
+   "se_ea": null,
+   "se_name": null,
+   "confidence": "none",
+   "evidence": [],
+   "action": "none",
+   "notes": "non-uPl class code (uPowerUp/uPowerUpBg/uPowerUpCamera, from DTI/vftable refs); not in SE uPl dump"
+  },
+  {
+   "dx9_ea": "0x83f900",
+   "old_dx9_name": "sub_83F900",
+   "new_dx9_name": null,
+   "se_ea": null,
+   "se_name": null,
+   "confidence": "none",
+   "evidence": [],
+   "action": "none",
+   "notes": "non-uPl class code (uPowerUp/uPowerUpBg/uPowerUpCamera, from DTI/vftable refs); not in SE uPl dump"
+  },
+  {
+   "dx9_ea": "0x83f960",
+   "old_dx9_name": "sub_83F960",
+   "new_dx9_name": null,
+   "se_ea": null,
+   "se_name": null,
+   "confidence": "none",
+   "evidence": [],
+   "action": "none",
+   "notes": "non-uPl class code (uPowerUp/uPowerUpBg/uPowerUpCamera, from DTI/vftable refs); not in SE uPl dump"
+  },
+  {
+   "dx9_ea": "0x83fa80",
+   "old_dx9_name": "sub_83FA80",
+   "new_dx9_name": null,
+   "se_ea": null,
+   "se_name": null,
+   "confidence": "none",
+   "evidence": [],
+   "action": "none",
+   "notes": "non-uPl class code (uPowerUp/uPowerUpBg/uPowerUpCamera, from DTI/vftable refs); not in SE uPl dump"
+  },
+  {
+   "dx9_ea": "0x83fba0",
+   "old_dx9_name": "sub_83FBA0",
+   "new_dx9_name": null,
+   "se_ea": null,
+   "se_name": null,
+   "confidence": "none",
+   "evidence": [],
+   "action": "none",
+   "notes": "non-uPl class code (uPowerUp/uPowerUpBg/uPowerUpCamera, from DTI/vftable refs); not in SE uPl dump"
+  },
+  {
+   "dx9_ea": "0x83fdb0",
+   "old_dx9_name": "sub_83FDB0",
+   "new_dx9_name": null,
+   "se_ea": null,
+   "se_name": null,
+   "confidence": "none",
+   "evidence": [],
+   "action": "none",
+   "notes": "non-uPl class code (uPowerUp/uPowerUpBg/uPowerUpCamera, from DTI/vftable refs); not in SE uPl dump"
+  },
+  {
+   "dx9_ea": "0x83fdf0",
+   "old_dx9_name": "sub_83FDF0",
+   "new_dx9_name": null,
+   "se_ea": null,
+   "se_name": null,
+   "confidence": "none",
+   "evidence": [],
+   "action": "none",
+   "notes": "non-uPl class code (uPowerUp/uPowerUpBg/uPowerUpCamera, from DTI/vftable refs); not in SE uPl dump"
+  },
+  {
+   "dx9_ea": "0x83fe00",
+   "old_dx9_name": "sub_83FE00",
+   "new_dx9_name": null,
+   "se_ea": null,
+   "se_name": null,
+   "confidence": "none",
+   "evidence": [],
+   "action": "none",
+   "notes": "non-uPl class code (uPowerUpMgr, from DTI/vftable refs); not in SE uPl dump"
+  },
+  {
+   "dx9_ea": "0x83fe10",
+   "old_dx9_name": "sub_83FE10",
+   "new_dx9_name": null,
+   "se_ea": null,
+   "se_name": null,
+   "confidence": "none",
+   "evidence": [],
+   "action": "none",
+   "notes": "non-uPl class code (uPowerUpMgr, from DTI/vftable refs); not in SE uPl dump"
+  },
+  {
+   "dx9_ea": "0x83fe50",
+   "old_dx9_name": "sub_83FE50",
+   "new_dx9_name": null,
+   "se_ea": null,
+   "se_name": null,
+   "confidence": "none",
+   "evidence": [],
+   "action": "none",
+   "notes": "non-uPl class code (uPowerUpMgr, from DTI/vftable refs); not in SE uPl dump"
+  },
+  {
+   "dx9_ea": "0x83ff10",
+   "old_dx9_name": "sub_83FF10",
+   "new_dx9_name": null,
+   "se_ea": null,
+   "se_name": null,
+   "confidence": "none",
+   "evidence": [],
+   "action": "none",
+   "notes": "non-uPl class code (uPowerUpMgr, from DTI/vftable refs); not in SE uPl dump"
+  }
+ ],
+ "notes": "All 17 vtable labels verified via getDTI stubs; only uPlWpRightHand::uCollisionCtrl vtable (0xBEACC0) relabelled. Weapon slot shift is piecewise (see slot_shift); SE has one extra weapon virtual at slot 116. Existing names uPlDantePandora::initProjectile -> uPlWpPandora::setBoomerang, uPlDanteRevellion::updateRoundTripFlight -> uPlWpRevellion::setThrow, uPlayerDante::setPandoraProjectileState -> uPlWpPandora::setMotion(int,bool) (all are weapon methods, this = weapon). Grab/Devil Bringer: uCollisionCtrl::* names were the nested uPlWpRightHand::uCollisionCtrl (DTI 0xE5ACF0, size 0x1B80, parent uActor); uCollisionCtrl::setGrabHit is really uPlWpRightHand::setGrabHit. All uCollisionCtrl move/set functions (long grab, buster, enemy guard) now named. uPlayerNero::setGrabHitInfo (0x83B020) is a Nero method compiled in the RightHand TU. Inlined in DX9 (no body): BlueRose/Coyote/RedQueen/Caliburn/Yamato ctors, uEffectCtrl::reset/reset2, setBusterParam, uPlWeapon::kill, most small setters/getModel. ICF: one deleting dtor (0x838860) serves uPlWeapon/BlueRose/CoyoteAce/RedQueen/Caliburn; updateMatrix 0x833740 serves 7 weapons; requestFreezeEfct/eraseFreezeEfct shared by Gilgamesh/RedQueen/Revellion; RightHand::kill == YamatoDante::kill. 21 previously undefined code blocks defined (9 deleting dtors, 12 MyDTI::newInstance). 0x83EE20-0x83FF10 (29 funcs) belong to uPopeHitCheck/uPowerUp*/uPowerUpMgr, not uPl; left unnamed."
+}

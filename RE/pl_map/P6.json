@@ -1,0 +1,3913 @@
+{
+ "group": "P6",
+ "range": [
+  "0x81C000",
+  "0x830000"
+ ],
+ "classes": {
+  "uPlDanteShl015": {
+   "dx9": {
+    "dti": "0xe5a9d0",
+    "vtable": "0xbe8100",
+    "ctor": "(outside range; P5)",
+    "size": "0x17F0",
+    "parent": "uPlShl"
+   },
+   "se": {
+    "vtable": "0x1192370"
+   },
+   "slot_shift": "DX9 0-5=SE 0-5; 6->8, 7->9, 8->11, 9->12, 10->18, 11->19, 12->21, 13-17->24-28, 24-28->44-48, 29->50, 30-37->53-60 (k=23), 57->83 (k=26), 71->97, 73-75->100-102, 76->106; shell tail 77-83->114-120 (k=37, no gap)",
+   "vtable_label_fixed": false
+  },
+  "uPlDanteShl016": {
+   "dx9": {
+    "dti": "0xe5a9f0",
+    "vtable": "0xbe82c8",
+    "ctor": "0x81c2d0",
+    "size": "0x1860",
+    "parent": "uPlShl"
+   },
+   "se": {
+    "vtable": "0x11925a0"
+   },
+   "slot_shift": "DX9 0-5=SE 0-5; 6->8, 7->9, 8->11, 9->12, 10->18, 11->19, 12->21, 13-17->24-28, 24-28->44-48, 29->50, 30-37->53-60 (k=23), 57->83 (k=26), 71->97, 73-75->100-102, 76->106; shell tail 77-83->114-120 (k=37, no gap)",
+   "vtable_label_fixed": false
+  },
+  "uPlDanteShl017": {
+   "dx9": {
+    "dti": "0xe5aa10",
+    "vtable": "0xbe8430",
+    "ctor": "0x81e640",
+    "size": "0x17F0",
+    "parent": "uPlShl"
+   },
+   "se": {
+    "vtable": "0x1192820"
+   },
+   "slot_shift": "DX9 0-5=SE 0-5; 6->8, 7->9, 8->11, 9->12, 10->18, 11->19, 12->21, 13-17->24-28, 24-28->44-48, 29->50, 30-37->53-60 (k=23), 57->83 (k=26), 71->97, 73-75->100-102, 76->106; shell tail 77-83->114-120 (k=37, no gap)",
+   "vtable_label_fixed": false
+  },
+  "uPlDanteShl018": {
+   "dx9": {
+    "dti": "0xe5aa30",
+    "vtable": "0xbe8598",
+    "ctor": "inlined in 0x81f1d0 / 0x81f530",
+    "size": "0x1BC0",
+    "parent": "uPlShl"
+   },
+   "se": {
+    "vtable": "0x1192a40"
+   },
+   "slot_shift": "DX9 0-5=SE 0-5; 6->8, 7->9, 8->11, 9->12, 10->18, 11->19, 12->21, 13-17->24-28, 24-28->44-48, 29->50, 30-37->53-60 (k=23), 57->83 (k=26), 71->97, 73-75->100-102, 76->106; shell tail 77-83->114-120 (k=37, no gap)",
+   "vtable_label_fixed": false
+  },
+  "uPlDanteShl019": {
+   "dx9": {
+    "dti": "0xe5aa50",
+    "vtable": "0xbe8710",
+    "ctor": "inlined in 0x81f5c0 / 0x81f970",
+    "size": "0x17C0",
+    "parent": "uPlShl"
+   },
+   "se": {
+    "vtable": "0x1192c60"
+   },
+   "slot_shift": "DX9 0-5=SE 0-5; 6->8, 7->9, 8->11, 9->12, 10->18, 11->19, 12->21, 13-17->24-28, 24-28->44-48, 29->50, 30-37->53-60 (k=23), 57->83 (k=26), 71->97, 73-75->100-102, 76->106; shell tail 77-83->114-120 (k=37, no gap)",
+   "vtable_label_fixed": false
+  },
+  "uPlGrabShortHit": {
+   "dx9": {
+    "dti": "0xe5aa70",
+    "vtable": "0xbe8898",
+    "ctor": "0x8202e0",
+    "size": "0x1860",
+    "parent": "uActor"
+   },
+   "se": {
+    "vtable": "0x1192eb0"
+   },
+   "slot_shift": "DX9 0-5=SE 0-5; 6->8, 7->9, 8->11, 9->12, 10->18, 11->19, 12->21, 13-17->24-28, 24-28->44-48, 29->50, 30-37->53-60 (k=23), 57->83 (k=26), 71->97, 73-75->100-102, 76->106; tail 78->115 (die)",
+   "vtable_label_fixed": false
+  },
+  "uPlNeroDevil": {
+   "dx9": {
+    "dti": "0xe5aa90",
+    "vtable": "0xbe8b70",
+    "ctor": "0x827e50",
+    "size": "0x2460",
+    "parent": "uActor"
+   },
+   "se": {
+    "vtable": "0x1193190"
+   },
+   "slot_shift": "DX9 0-5=SE 0-5; 6->8, 7->9, 8->11, 9->12, 10->18, 11->19, 12->21, 13-17->24-28, 24-28->44-48, 29->50, 30-37->53-60 (k=23), 57->83 (k=26), 71->97, 73-75->100-102, 76->106",
+   "vtable_label_fixed": false
+  },
+  "uPlNeroDevilFlicker": {
+   "dx9": {
+    "dti": "0xe5aab0",
+    "vtable": "0xbe8ce0",
+    "ctor": "inlined in 0x82b920",
+    "size": "0x1380",
+    "parent": "uActor"
+   },
+   "se": {
+    "vtable": "0x1193520"
+   },
+   "slot_shift": "DX9 0-5=SE 0-5; 6->8, 7->9, 8->11, 9->12, 10->18, 11->19, 12->21, 13-17->24-28, 24-28->44-48, 29->50, 30-37->53-60 (k=23), 57->83 (k=26), 71->97, 73-75->100-102, 76->106",
+   "vtable_label_fixed": false
+  },
+  "uPlNeroShl000": {
+   "dx9": {
+    "dti": "0xe5aad0",
+    "vtable": "0xbe8e40",
+    "ctor": "inlined in 0x82bf90 / create 0x82c6a0",
+    "size": "0x1800",
+    "parent": "uPlShl"
+   },
+   "se": {
+    "vtable": "0x1193778"
+   },
+   "slot_shift": "DX9 0-5=SE 0-5; 6->8, 7->9, 8->11, 9->12, 10->18, 11->19, 12->21, 13-17->24-28, 24-28->44-48, 29->50, 30-37->53-60 (k=23), 57->83 (k=26), 71->97, 73-75->100-102, 76->106; shell tail 77-83->114-120 (k=37, no gap)",
+   "vtable_label_fixed": false
+  },
+  "uPlNeroShl001": {
+   "dx9": {
+    "dti": "0xe5aaf0",
+    "vtable": "0xbe8fa8",
+    "ctor": "0x82c7d0",
+    "size": "0x1800",
+    "parent": "uPlShl"
+   },
+   "se": {
+    "vtable": "0x11939e8"
+   },
+   "slot_shift": "DX9 0-5=SE 0-5; 6->8, 7->9, 8->11, 9->12, 10->18, 11->19, 12->21, 13-17->24-28, 24-28->44-48, 29->50, 30-37->53-60 (k=23), 57->83 (k=26), 71->97, 73-75->100-102, 76->106; shell tail 77-83->114-120 (k=37, no gap)",
+   "vtable_label_fixed": false
+  },
+  "uPlNeroShl002": {
+   "dx9": {
+    "dti": "0xe5ab10",
+    "vtable": "0xbe9110",
+    "ctor": "inlined in 0x82d9c0 / create 0x82e430",
+    "size": "0x17E0",
+    "parent": "uPlShl"
+   },
+   "se": {
+    "vtable": "0x1193c08"
+   },
+   "slot_shift": "DX9 0-5=SE 0-5; 6->8, 7->9, 8->11, 9->12, 10->18, 11->19, 12->21, 13-17->24-28, 24-28->44-48, 29->50, 30-37->53-60 (k=23), 57->83 (k=26), 71->97, 73-75->100-102, 76->106; shell tail 77-83->114-120 (k=37, no gap)",
+   "vtable_label_fixed": false
+  },
+  "uPlNeroShl003": {
+   "dx9": {
+    "dti": "0xe5ab30",
+    "vtable": "0xbe92b0",
+    "ctor": "0x82e540",
+    "size": "0x1840",
+    "parent": "uPlShl"
+   },
+   "se": {
+    "vtable": "0x1193e28"
+   },
+   "slot_shift": "DX9 0-5=SE 0-5; 6->8, 7->9, 8->11, 9->12, 10->18, 11->19, 12->21, 13-17->24-28, 24-28->44-48, 29->50, 30-37->53-60 (k=23), 57->83 (k=26), 71->97, 73-75->100-102, 76->106; shell tail 77-83->114-120 (k=37, no gap); NOTE DX9 NeroShl003 slot 6=nullsub, slot 7 (moveEx)=shared uShell::move body",
+   "vtable_label_fixed": false
+  },
+  "uPlOwnHit": {
+   "dx9": {
+    "dti": "0xe5ab50",
+    "vtable": "0xbe9438",
+    "ctor": "0x82f870",
+    "size": "0x1800",
+    "parent": "uActor"
+   },
+   "se": {
+    "vtable": "0x1194080"
+   },
+   "slot_shift": "DX9 0-5=SE 0-5; 6->8, 7->9, 8->11, 9->12, 10->18, 11->19, 12->21, 13-17->24-28, 24-28->44-48, 29->50, 30-37->53-60 (k=23), 57->83 (k=26), 71->97, 73-75->100-102, 76->106",
+   "vtable_label_fixed": false
+  },
+  "uPlShl": {
+   "dx9": {
+    "dti": "0xe5ab70",
+    "vtable": "0xbe95c0",
+    "ctor": "0x82fe30",
+    "size": "0x17C0",
+    "parent": "uShell"
+   },
+   "se": {
+    "vtable": "0x11942a8"
+   },
+   "slot_shift": "DX9 0-5=SE 0-5; 6->8, 7->9, 8->11, 9->12, 10->18, 11->19, 12->21, 13-17->24-28, 24-28->44-48, 29->50, 30-37->53-60 (k=23), 57->83 (k=26), 71->97, 73-75->100-102, 76->106; shell tail 77-83->114-120 (k=37, no gap)",
+   "vtable_label_fixed": false
+  },
+  "uPlayer": {
+   "dx9": {
+    "dti": "(P1)",
+    "vtable": "0xbe30e0",
+    "ctor": "(P1)",
+    "size": "(P1)",
+    "parent": "uActor"
+   },
+   "se": {
+    "vtable": "0x118b468"
+   },
+   "slot_shift": "piecewise: DX9 153-163 -> SE 233-243 (k=80); DX9 170-175 -> SE 261-266 (k=91; SE inserts 11 slots incl. virtual moveActFootwork/Land/PoseL, requestSetMotion x2, updateMotion). Derived only for slots in this range.",
+   "vtable_label_fixed": false
+  }
+ },
+ "functions": [
+  {
+   "dx9_ea": "0x81c090",
+   "old_dx9_name": "sub_81C090",
+   "new_dx9_name": "uPlDanteShl015::main",
+   "se_ea": "0xa1f8e0",
+   "se_name": "uPlDanteShl015::main(void)",
+   "confidence": "high",
+   "evidence": [
+    "vtable",
+    "consts"
+   ],
+   "action": "renamed",
+   "notes": ""
+  },
+  {
+   "dx9_ea": "0x81c0b0",
+   "old_dx9_name": "sub_81C0B0",
+   "new_dx9_name": "uPlDanteShl015::setEfct",
+   "se_ea": "0xa1f940",
+   "se_name": "uPlDanteShl015::setEfct(void)",
+   "confidence": "high",
+   "evidence": [
+    "vtable",
+    "callees"
+   ],
+   "action": "renamed",
+   "notes": "ICF: uPlDanteShl010::setEfct(void)"
+  },
+  {
+   "dx9_ea": "0x81c130",
+   "old_dx9_name": "sub_81C130",
+   "new_dx9_name": "uPlDanteShl015::hitMessage",
+   "se_ea": "0xa20380",
+   "se_name": "uPlDanteShl015::hitMessage(cCollisionGroup *,cCollisionGroup *)",
+   "confidence": "high",
+   "evidence": [
+    "vtable",
+    "order"
+   ],
+   "action": "renamed",
+   "notes": ""
+  },
+  {
+   "dx9_ea": "0x81c290",
+   "old_dx9_name": "sub_81C290",
+   "new_dx9_name": "uPlDanteShl016::getDTI",
+   "se_ea": "0xa22b80",
+   "se_name": "uPlDanteShl016::getDTI(void)",
+   "confidence": "high",
+   "evidence": [
+    "vtable",
+    "decompile"
+   ],
+   "action": "renamed",
+   "notes": ""
+  },
+  {
+   "dx9_ea": "0x81c2a0",
+   "old_dx9_name": "loc_81C2A0",
+   "new_dx9_name": "uPlDanteShl016::MyDTI::newInstance",
+   "se_ea": "0xa22b40",
+   "se_name": "uPlDanteShl016::MyDTI::newInstance(void)",
+   "confidence": "high",
+   "evidence": [
+    "vtable",
+    "decompile"
+   ],
+   "action": "renamed",
+   "notes": "newly defined; MyDTI vtable slot, allocs + calls ctor"
+  },
+  {
+   "dx9_ea": "0x81c2d0",
+   "old_dx9_name": "sub_81C2D0",
+   "new_dx9_name": "uPlDanteShl016::uPlDanteShl016",
+   "se_ea": "0xa208d0",
+   "se_name": "uPlDanteShl016::uPlDanteShl016(int)",
+   "confidence": "high",
+   "evidence": [
+    "decompile",
+    "callees"
+   ],
+   "action": "renamed",
+   "notes": "writes uPlDanteShl016::vftable"
+  },
+  {
+   "dx9_ea": "0x81c390",
+   "old_dx9_name": "sub_81C390",
+   "new_dx9_name": "uPlDanteShl016::createProperty",
+   "se_ea": "0xa209c0",
+   "se_name": "uPlDanteShl016::createProperty(MtPropertyList &)",
+   "confidence": "high",
+   "evidence": [
+    "vtable",
+    "strings"
+   ],
+   "action": "renamed",
+   "notes": ""
+  },
+  {
+   "dx9_ea": "0x81c730",
+   "old_dx9_name": "sub_81C730",
+   "new_dx9_name": "uPlDanteShl016::updatePtr",
+   "se_ea": "0xa210d0",
+   "se_name": "uPlDanteShl016::updatePtr(void)",
+   "confidence": "high",
+   "evidence": [
+    "vtable",
+    "order"
+   ],
+   "action": "renamed",
+   "notes": ""
+  },
+  {
+   "dx9_ea": "0x81c770",
+   "old_dx9_name": "sub_81C770",
+   "new_dx9_name": "uPlDanteShl016::setup",
+   "se_ea": "0xa21110",
+   "se_name": "uPlDanteShl016::setup(void)",
+   "confidence": "high",
+   "evidence": [
+    "vtable",
+    "callees"
+   ],
+   "action": "renamed",
+   "notes": ""
+  },
+  {
+   "dx9_ea": "0x81cb10",
+   "old_dx9_name": "sub_81CB10",
+   "new_dx9_name": "uPlDanteShl016::moveEx",
+   "se_ea": "0xa21490",
+   "se_name": "uPlDanteShl016::moveEx(void)",
+   "confidence": "high",
+   "evidence": [
+    "vtable",
+    "callees"
+   ],
+   "action": "renamed",
+   "notes": ""
+  },
+  {
+   "dx9_ea": "0x81d750",
+   "old_dx9_name": "sub_81D750",
+   "new_dx9_name": "uPlDanteShl016::main",
+   "se_ea": "0xa21f00",
+   "se_name": "uPlDanteShl016::main(void)",
+   "confidence": "high",
+   "evidence": [
+    "vtable",
+    "callees"
+   ],
+   "action": "renamed",
+   "notes": ""
+  },
+  {
+   "dx9_ea": "0x81de70",
+   "old_dx9_name": "sub_81DE70",
+   "new_dx9_name": "uPlDanteShl016::updatePos",
+   "se_ea": "0xa22510",
+   "se_name": "uPlDanteShl016::updatePos(bool)",
+   "confidence": "high",
+   "evidence": [
+    "vtable",
+    "callees"
+   ],
+   "action": "renamed",
+   "notes": ""
+  },
+  {
+   "dx9_ea": "0x81e3c0",
+   "old_dx9_name": "sub_81E3C0",
+   "new_dx9_name": "uPlDanteShl016::draw",
+   "se_ea": "0xa206d0",
+   "se_name": "uPlDanteShl016::draw(cDraw *)",
+   "confidence": "high",
+   "evidence": [
+    "vtable",
+    "order"
+   ],
+   "action": "renamed",
+   "notes": ""
+  },
+  {
+   "dx9_ea": "0x81e3e0",
+   "old_dx9_name": "sub_81E3E0",
+   "new_dx9_name": "uPlDanteShl016::setEfct",
+   "se_ea": "0xa20700",
+   "se_name": "uPlDanteShl016::setEfct(void)",
+   "confidence": "high",
+   "evidence": [
+    "vtable",
+    "callees"
+   ],
+   "action": "renamed",
+   "notes": ""
+  },
+  {
+   "dx9_ea": "0x81e4f0",
+   "old_dx9_name": "sub_81E4F0",
+   "new_dx9_name": "uPlDanteShl016::setWallHit",
+   "se_ea": "0xa207f0",
+   "se_name": "uPlDanteShl016::setWallHit(sCollision::TriangleInfo *)",
+   "confidence": "high",
+   "evidence": [
+    "vtable",
+    "callees"
+   ],
+   "action": "renamed",
+   "notes": ""
+  },
+  {
+   "dx9_ea": "0x81e560",
+   "old_dx9_name": "sub_81E560",
+   "new_dx9_name": "uPlDanteShl016::hitMessage",
+   "se_ea": "0xa20870",
+   "se_name": "uPlDanteShl016::hitMessage(cCollisionGroup *,cCollisionGroup *)",
+   "confidence": "high",
+   "evidence": [
+    "vtable",
+    "consts"
+   ],
+   "action": "renamed",
+   "notes": "ICF: uPlDanteShl018::hitMessage(cCollisionGroup *,cCollisionGroup *)"
+  },
+  {
+   "dx9_ea": "0x81e580",
+   "old_dx9_name": "sub_81E580",
+   "new_dx9_name": null,
+   "se_ea": "0xa20890",
+   "se_name": "uPlDanteShl016::setTarget(cLockOnTarget *)",
+   "confidence": "medium",
+   "evidence": [
+    "decompile",
+    "callers"
+   ],
+   "action": "commented",
+   "notes": "only caller is uPlDanteShl016::main (SE setTarget also called only from main); validates cached lock-on target at +0x1858; DX9 has no explicit target arg"
+  },
+  {
+   "dx9_ea": "0x81e5b0",
+   "old_dx9_name": "sub_81E5B0",
+   "new_dx9_name": "uPlDanteShl016::create",
+   "se_ea": "0xa22ae0",
+   "se_name": "uPlDanteShl016::create(uActor *,int)",
+   "confidence": "high",
+   "evidence": [
+    "decompile",
+    "callees"
+   ],
+   "action": "renamed",
+   "notes": "allocs 0x1860 (DTI size), calls ctor, sUnit::addBottom line 0x12"
+  },
+  {
+   "dx9_ea": "0x81e600",
+   "old_dx9_name": "sub_81E600",
+   "new_dx9_name": "uPlDanteShl017::getDTI",
+   "se_ea": "0xa23af0",
+   "se_name": "uPlDanteShl017::getDTI(void)",
+   "confidence": "high",
+   "evidence": [
+    "vtable",
+    "decompile"
+   ],
+   "action": "renamed",
+   "notes": ""
+  },
+  {
+   "dx9_ea": "0x81e610",
+   "old_dx9_name": "loc_81E610",
+   "new_dx9_name": "uPlDanteShl017::MyDTI::newInstance",
+   "se_ea": "0xa22f80",
+   "se_name": "uPlDanteShl017::MyDTI::newInstance(void)",
+   "confidence": "high",
+   "evidence": [
+    "vtable",
+    "decompile"
+   ],
+   "action": "renamed",
+   "notes": "newly defined; calls ctor 0x81E640"
+  },
+  {
+   "dx9_ea": "0x81e640",
+   "old_dx9_name": "sub_81E640",
+   "new_dx9_name": "uPlDanteShl017::uPlDanteShl017",
+   "se_ea": "0xa22cf0",
+   "se_name": "uPlDanteShl017::uPlDanteShl017(void)",
+   "confidence": "high",
+   "evidence": [
+    "decompile",
+    "callees"
+   ],
+   "action": "renamed",
+   "notes": "writes uPlDanteShl017::vftable"
+  },
+  {
+   "dx9_ea": "0x81e6c0",
+   "old_dx9_name": "sub_81E6C0",
+   "new_dx9_name": "uPlDanteShl017::createProperty",
+   "se_ea": "0xa22fc0",
+   "se_name": "uPlDanteShl017::createProperty(MtPropertyList &)",
+   "confidence": "high",
+   "evidence": [
+    "vtable",
+    "strings"
+   ],
+   "action": "renamed",
+   "notes": ""
+  },
+  {
+   "dx9_ea": "0x81e760",
+   "old_dx9_name": "sub_81E760",
+   "new_dx9_name": "uPlDanteShl017::setup",
+   "se_ea": "0xa230f0",
+   "se_name": "uPlDanteShl017::setup(void)",
+   "confidence": "high",
+   "evidence": [
+    "vtable",
+    "callees"
+   ],
+   "action": "renamed",
+   "notes": ""
+  },
+  {
+   "dx9_ea": "0x81e940",
+   "old_dx9_name": "sub_81E940",
+   "new_dx9_name": "uPlDanteShl017::moveEx",
+   "se_ea": "0xa232b0",
+   "se_name": "uPlDanteShl017::moveEx(void)",
+   "confidence": "high",
+   "evidence": [
+    "vtable",
+    "callees"
+   ],
+   "action": "renamed",
+   "notes": ""
+  },
+  {
+   "dx9_ea": "0x81eb30",
+   "old_dx9_name": "sub_81EB30",
+   "new_dx9_name": "uPlDanteShl017::main",
+   "se_ea": "0xa22db0",
+   "se_name": "uPlDanteShl017::main(void)",
+   "confidence": "high",
+   "evidence": [
+    "vtable",
+    "consts"
+   ],
+   "action": "renamed",
+   "notes": ""
+  },
+  {
+   "dx9_ea": "0x81eb50",
+   "old_dx9_name": "sub_81EB50",
+   "new_dx9_name": "uPlDanteShl017::setEfct",
+   "se_ea": "0xa22e10",
+   "se_name": "uPlDanteShl017::setEfct(void)",
+   "confidence": "high",
+   "evidence": [
+    "vtable",
+    "callees"
+   ],
+   "action": "renamed",
+   "notes": ""
+  },
+  {
+   "dx9_ea": "0x81ebe0",
+   "old_dx9_name": "sub_81EBE0",
+   "new_dx9_name": "uPlDanteShl017::hitMessage",
+   "se_ea": "0xa23490",
+   "se_name": "uPlDanteShl017::hitMessage(cCollisionGroup *,cCollisionGroup *)",
+   "confidence": "high",
+   "evidence": [
+    "vtable",
+    "order"
+   ],
+   "action": "renamed",
+   "notes": ""
+  },
+  {
+   "dx9_ea": "0x81ec70",
+   "old_dx9_name": "j_uPlShl::updatePtr",
+   "new_dx9_name": "uPlDanteShl017::updatePtr",
+   "se_ea": "0xa22f10",
+   "se_name": "uPlDanteShl017::updatePtr(void)",
+   "confidence": "high",
+   "evidence": [
+    "vtable",
+    "consts"
+   ],
+   "action": "replaced_existing",
+   "notes": "ICF: uPlDanteShl011::updatePtr(void); uPlDanteShl014::updatePtr(void)"
+  },
+  {
+   "dx9_ea": "0x81ec80",
+   "old_dx9_name": "uPlDanteShl017::updatePos",
+   "new_dx9_name": "uPlDanteShl017::updatePos",
+   "se_ea": "0xa23540",
+   "se_name": "uPlDanteShl017::updatePos(bool)",
+   "confidence": "high",
+   "evidence": [
+    "vtable",
+    "callees"
+   ],
+   "action": "confirmed",
+   "notes": ""
+  },
+  {
+   "dx9_ea": "0x81f1c0",
+   "old_dx9_name": "sub_81F1C0",
+   "new_dx9_name": "uPlDanteShl018::getDTI",
+   "se_ea": "0xa241c0",
+   "se_name": "uPlDanteShl018::getDTI(void)",
+   "confidence": "high",
+   "evidence": [
+    "vtable",
+    "decompile"
+   ],
+   "action": "renamed",
+   "notes": ""
+  },
+  {
+   "dx9_ea": "0x81f1d0",
+   "old_dx9_name": "loc_81F1D0",
+   "new_dx9_name": "uPlDanteShl018::MyDTI::newInstance",
+   "se_ea": "0xa23db0",
+   "se_name": "uPlDanteShl018::MyDTI::newInstance(void)",
+   "confidence": "high",
+   "evidence": [
+    "vtable",
+    "decompile"
+   ],
+   "action": "renamed",
+   "notes": "newly defined; ctor inlined (uPlShl ctor + vftable write)"
+  },
+  {
+   "dx9_ea": "0x81f210",
+   "old_dx9_name": "loc_81F210",
+   "new_dx9_name": "??_GuPlDanteShl018@@UAEPAXI@Z",
+   "se_ea": "0xa241d0",
+   "se_name": "uPlDanteShl018::`scalar deleting destructor'(uint)",
+   "confidence": "high",
+   "evidence": [
+    "vtable",
+    "decompile"
+   ],
+   "action": "renamed",
+   "notes": "newly defined; vtable slot 0, ~uPlDanteShl018/~uPlShl inlined"
+  },
+  {
+   "dx9_ea": "0x81f270",
+   "old_dx9_name": "sub_81F270",
+   "new_dx9_name": "uPlDanteShl018::setup",
+   "se_ea": "0xa23e10",
+   "se_name": "uPlDanteShl018::setup(void)",
+   "confidence": "high",
+   "evidence": [
+    "vtable",
+    "callees"
+   ],
+   "action": "renamed",
+   "notes": ""
+  },
+  {
+   "dx9_ea": "0x81f3d0",
+   "old_dx9_name": "sub_81F3D0",
+   "new_dx9_name": "uPlDanteShl018::createProperty",
+   "se_ea": "0xa23f80",
+   "se_name": "uPlDanteShl018::createProperty(MtPropertyList &)",
+   "confidence": "high",
+   "evidence": [
+    "vtable",
+    "strings"
+   ],
+   "action": "renamed",
+   "notes": ""
+  },
+  {
+   "dx9_ea": "0x81f4c0",
+   "old_dx9_name": "sub_81F4C0",
+   "new_dx9_name": "uPlDanteShl018::main",
+   "se_ea": "0xa24140",
+   "se_name": "uPlDanteShl018::main(void)",
+   "confidence": "high",
+   "evidence": [
+    "vtable",
+    "callees"
+   ],
+   "action": "renamed",
+   "notes": ""
+  },
+  {
+   "dx9_ea": "0x81f530",
+   "old_dx9_name": "sub_81F530",
+   "new_dx9_name": "uPlDanteShl018::create",
+   "se_ea": "0xa23d30",
+   "se_name": "uPlDanteShl018::create(uActor *)",
+   "confidence": "high",
+   "evidence": [
+    "decompile",
+    "callees"
+   ],
+   "action": "renamed",
+   "notes": "uPlShl ctor + uPlDanteShl018::vftable write inlined, sUnit::addBottom"
+  },
+  {
+   "dx9_ea": "0x81f580",
+   "old_dx9_name": "sub_81F580",
+   "new_dx9_name": "uPlDanteShl019::getDTI",
+   "se_ea": "0xa24850",
+   "se_name": "uPlDanteShl019::getDTI(void)",
+   "confidence": "high",
+   "evidence": [
+    "vtable",
+    "decompile"
+   ],
+   "action": "renamed",
+   "notes": ""
+  },
+  {
+   "dx9_ea": "0x81f590",
+   "old_dx9_name": "sub_81F590",
+   "new_dx9_name": "uPlDanteShl019::getWaitTime",
+   "se_ea": "0xa24820",
+   "se_name": "uPlDanteShl019::getWaitTime(void)",
+   "confidence": "high",
+   "evidence": [
+    "decompile",
+    "order",
+    "consts"
+   ],
+   "action": "renamed",
+   "notes": "static float getter (flt_C3C6EC)"
+  },
+  {
+   "dx9_ea": "0x81f5a0",
+   "old_dx9_name": "sub_81F5A0",
+   "new_dx9_name": "uPlDanteShl019::setWaitTime",
+   "se_ea": "0xa24830",
+   "se_name": "uPlDanteShl019::setWaitTime(float)",
+   "confidence": "high",
+   "evidence": [
+    "decompile",
+    "order",
+    "consts"
+   ],
+   "action": "renamed",
+   "notes": "static float setter (flt_C3C6EC)"
+  },
+  {
+   "dx9_ea": "0x81f5c0",
+   "old_dx9_name": "loc_81F5C0",
+   "new_dx9_name": "uPlDanteShl019::MyDTI::newInstance",
+   "se_ea": "0xa244a0",
+   "se_name": "uPlDanteShl019::MyDTI::newInstance(void)",
+   "confidence": "high",
+   "evidence": [
+    "vtable",
+    "decompile"
+   ],
+   "action": "renamed",
+   "notes": "newly defined"
+  },
+  {
+   "dx9_ea": "0x81f5f0",
+   "old_dx9_name": "loc_81F5F0",
+   "new_dx9_name": "??_GuPlDanteShl019@@UAEPAXI@Z",
+   "se_ea": "0xa24860",
+   "se_name": "uPlDanteShl019::`scalar deleting destructor'(uint)",
+   "confidence": "high",
+   "evidence": [
+    "vtable",
+    "decompile"
+   ],
+   "action": "renamed",
+   "notes": "newly defined; body is the inlined ~uPlShl, shared by 9 vtables (slot 0) | ICF: uPlDanteShl016::`vector deleting destructor'(uint); uPlDanteShl017::`vector deleting destructor'(uint); uPlNeroShl002::`scalar deleting destructor'(uint); uPlNeroShl003::`scalar deleting destructor'(uint); uPlShl::`vector deleting destructor'(uint); uPlCmnShl000 slot0; uPlDanteShl001 slot0; uPlDanteShl012 slot0"
+  },
+  {
+   "dx9_ea": "0x81f640",
+   "old_dx9_name": "sub_81F640",
+   "new_dx9_name": "uPlDanteShl019::setup",
+   "se_ea": "0xa244e0",
+   "se_name": "uPlDanteShl019::setup(void)",
+   "confidence": "high",
+   "evidence": [
+    "vtable",
+    "callees"
+   ],
+   "action": "renamed",
+   "notes": ""
+  },
+  {
+   "dx9_ea": "0x81f7b0",
+   "old_dx9_name": "sub_81F7B0",
+   "new_dx9_name": "uPlDanteShl019::createProperty",
+   "se_ea": "0xa24660",
+   "se_name": "uPlDanteShl019::createProperty(MtPropertyList &)",
+   "confidence": "high",
+   "evidence": [
+    "vtable",
+    "strings"
+   ],
+   "action": "renamed",
+   "notes": ""
+  },
+  {
+   "dx9_ea": "0x81f8a0",
+   "old_dx9_name": "sub_81F8A0",
+   "new_dx9_name": "uPlDanteShl019::update",
+   "se_ea": "0xa24360",
+   "se_name": "uPlDanteShl019::update(void)",
+   "confidence": "high",
+   "evidence": [
+    "vtable",
+    "callees"
+   ],
+   "action": "renamed",
+   "notes": ""
+  },
+  {
+   "dx9_ea": "0x81f970",
+   "old_dx9_name": "sub_81F970",
+   "new_dx9_name": "uPlDanteShl019::create",
+   "se_ea": "0xa24420",
+   "se_name": "uPlDanteShl019::create(uActor *,MtVector3 *)",
+   "confidence": "high",
+   "evidence": [
+    "decompile",
+    "callees"
+   ],
+   "action": "renamed",
+   "notes": "uPlShl ctor + Shl019 vftable inlined; alloc 0x17C0"
+  },
+  {
+   "dx9_ea": "0x81f9d0",
+   "old_dx9_name": "sub_81F9D0",
+   "new_dx9_name": null,
+   "se_ea": null,
+   "se_name": null,
+   "confidence": "none",
+   "evidence": [
+    "decompile"
+   ],
+   "action": "commented",
+   "notes": "non-uPl helper: toggles effect flag 0x80 (clears 0x800) at +0xE0 of a uDevil4Effect-like object; same op setEffectSync does inline; callers sub_965050/sub_AD2FB0 outside player code"
+  },
+  {
+   "dx9_ea": "0x81fa00",
+   "old_dx9_name": "uPlayer::initEfctCtrl",
+   "new_dx9_name": "uPlayer::initEfctCtrl",
+   "se_ea": "0xa248d0",
+   "se_name": "uPlayer::initEfctCtrl(void)",
+   "confidence": "high",
+   "evidence": [
+    "consts",
+    "order"
+   ],
+   "action": "confirmed",
+   "notes": ""
+  },
+  {
+   "dx9_ea": "0x81fa30",
+   "old_dx9_name": "sub_81FA30",
+   "new_dx9_name": "uPlayer::updateEfctCtrlPtr",
+   "se_ea": "0xa24e80",
+   "se_name": "uPlayer::updateEfctCtrlPtr(void)",
+   "confidence": "high",
+   "evidence": [
+    "consts",
+    "decompile"
+   ],
+   "action": "renamed",
+   "notes": "imms 32/48 and table+12 offset pattern match; clears entries whose effect state is not 1/2"
+  },
+  {
+   "dx9_ea": "0x81fab0",
+   "old_dx9_name": "uPlayer::killAllEffect",
+   "new_dx9_name": "uPlayer::killAllEffect",
+   "se_ea": "0xa24900",
+   "se_name": "uPlayer::killAllEffect(bool)",
+   "confidence": "high",
+   "evidence": [
+    "consts",
+    "order"
+   ],
+   "action": "confirmed",
+   "notes": ""
+  },
+  {
+   "dx9_ea": "0x81faf0",
+   "old_dx9_name": "uPlayer::killEffectId",
+   "new_dx9_name": "uPlayer::killEffectId",
+   "se_ea": "0xa24940",
+   "se_name": "uPlayer::killEffectId(int)",
+   "confidence": "high",
+   "evidence": [
+    "consts",
+    "order"
+   ],
+   "action": "confirmed",
+   "notes": ""
+  },
+  {
+   "dx9_ea": "0x81fb30",
+   "old_dx9_name": "uPlayer::killEffectType",
+   "new_dx9_name": "uPlayer::killEffectType",
+   "se_ea": "0xa24980",
+   "se_name": "uPlayer::killEffectType(uPlayer::EFCT_TYPE)",
+   "confidence": "high",
+   "evidence": [
+    "consts",
+    "order"
+   ],
+   "action": "confirmed",
+   "notes": ""
+  },
+  {
+   "dx9_ea": "0x81fb70",
+   "old_dx9_name": "uPlayer::finishEffectId",
+   "new_dx9_name": "uPlayer::finishEffectId",
+   "se_ea": "0xa249c0",
+   "se_name": "uPlayer::finishEffectId(int,bool)",
+   "confidence": "high",
+   "evidence": [
+    "consts",
+    "order"
+   ],
+   "action": "confirmed",
+   "notes": ""
+  },
+  {
+   "dx9_ea": "0x81fbc0",
+   "old_dx9_name": "uPlayer::finishEffectType",
+   "new_dx9_name": "uPlayer::finishEffectType",
+   "se_ea": "0xa24a10",
+   "se_name": "uPlayer::finishEffectType(uPlayer::EFCT_TYPE)",
+   "confidence": "high",
+   "evidence": [
+    "consts",
+    "order"
+   ],
+   "action": "confirmed",
+   "notes": ""
+  },
+  {
+   "dx9_ea": "0x81fc00",
+   "old_dx9_name": "sub_81FC00",
+   "new_dx9_name": "uPlayer::setEffectTransId",
+   "se_ea": "0xa24ad0",
+   "se_name": "uPlayer::setEffectTransId(int,bool)",
+   "confidence": "high",
+   "evidence": [
+    "consts",
+    "decompile",
+    "order"
+   ],
+   "action": "renamed",
+   "notes": "imms 32/48/0x800/~0x800 identical; toggles 0x800 for entries matching id"
+  },
+  {
+   "dx9_ea": "0x81fc90",
+   "old_dx9_name": "sub_81FC90",
+   "new_dx9_name": "uPlayer::setEffectSleep",
+   "se_ea": "0xa24b60",
+   "se_name": "uPlayer::setEffectSleep(bool)",
+   "confidence": "high",
+   "evidence": [
+    "consts",
+    "decompile",
+    "order"
+   ],
+   "action": "renamed",
+   "notes": "loops 128 effect entries + 7 weapons (weapon vfunc +0x148 = cWeaponCtrl::setEffectSleepMode equivalent)"
+  },
+  {
+   "dx9_ea": "0x81fd00",
+   "old_dx9_name": "sub_81FD00",
+   "new_dx9_name": "uPlayer::checkEffectId",
+   "se_ea": "0xa24ba0",
+   "se_name": "uPlayer::checkEffectId(int)",
+   "confidence": "high",
+   "evidence": [
+    "consts",
+    "decompile",
+    "order"
+   ],
+   "action": "renamed",
+   "notes": "counts live entries with id; imm 48 matches"
+  },
+  {
+   "dx9_ea": "0x81fd60",
+   "old_dx9_name": "uPlayer::setEffect",
+   "new_dx9_name": "uPlayer::setEffect",
+   "se_ea": "0xa24f90",
+   "se_name": "uPlayer::setEffect(uDevil4Effect *,uPlayer::EFCT_TYPE,int,bool,bool)",
+   "confidence": "high",
+   "evidence": [
+    "callees",
+    "decompile"
+   ],
+   "action": "confirmed",
+   "notes": "4 stack args; forwards to the CTRL_LV overload (0x81FE00)"
+  },
+  {
+   "dx9_ea": "0x81fda0",
+   "old_dx9_name": "uPlayer::setEffectSync",
+   "new_dx9_name": "uPlayer::setEffectSync",
+   "se_ea": "0xa24fc0",
+   "se_name": "uPlayer::setEffectSync(uDevil4Effect *,uPlayer::EFCT_TYPE,int,bool,bool)",
+   "confidence": "high",
+   "evidence": [
+    "callees",
+    "decompile"
+   ],
+   "action": "confirmed",
+   "notes": ""
+  },
+  {
+   "dx9_ea": "0x81fe00",
+   "old_dx9_name": "uPlayer::addEffectEntry",
+   "new_dx9_name": "uPlayer::setEffect_2",
+   "se_ea": "0xa24f00",
+   "se_name": "uPlayer::setEffect(uDevil4Effect *,uPlayer::EFCT_CTRL_LV,uPlayer::EFCT_TYPE,int,bool,bool)",
+   "confidence": "high",
+   "evidence": [
+    "callees",
+    "consts",
+    "order"
+   ],
+   "action": "replaced_existing",
+   "notes": "callee of both setEffect and setEffectSync on both sides; imm 128; 7 vs 8 callers"
+  },
+  {
+   "dx9_ea": "0x81fe60",
+   "old_dx9_name": "uPlayer::changeEffectType",
+   "new_dx9_name": "uPlayer::changeEffectType",
+   "se_ea": "0xa24c20",
+   "se_name": "uPlayer::changeEffectType(int,uPlayer::EFCT_TYPE)",
+   "confidence": "high",
+   "evidence": [
+    "decompile",
+    "order"
+   ],
+   "action": "confirmed",
+   "notes": ""
+  },
+  {
+   "dx9_ea": "0x81fe90",
+   "old_dx9_name": "uPlayer::setLandEffect",
+   "new_dx9_name": "uPlayer::setLandEffect",
+   "se_ea": "0xa25000",
+   "se_name": "uPlayer::setLandEffect(void)",
+   "confidence": "high",
+   "evidence": [
+    "callees",
+    "consts"
+   ],
+   "action": "confirmed",
+   "notes": ""
+  },
+  {
+   "dx9_ea": "0x820060",
+   "old_dx9_name": "uPlayer::getEfctMtrlFlg",
+   "new_dx9_name": "uPlayer::getEfctMtrlFlg",
+   "se_ea": "0xa24c80",
+   "se_name": "uPlayer::getEfctMtrlFlg(void)",
+   "confidence": "high",
+   "evidence": [
+    "callees",
+    "decompile"
+   ],
+   "action": "confirmed",
+   "notes": "uses this->pos; in SE virtual (uPlayer slot 111), direct-called in DX9"
+  },
+  {
+   "dx9_ea": "0x820190",
+   "old_dx9_name": "sub_820190",
+   "new_dx9_name": "uPlayer::getEfctMtrlFlg_2",
+   "se_ea": "0xa24d80",
+   "se_name": "uPlayer::getEfctMtrlFlg(MtVector3 &,float)",
+   "confidence": "high",
+   "evidence": [
+    "callees",
+    "decompile"
+   ],
+   "action": "renamed",
+   "notes": "takes an explicit position vector; 1 caller on both sides"
+  },
+  {
+   "dx9_ea": "0x8202b0",
+   "old_dx9_name": "sub_8202B0",
+   "new_dx9_name": "uPlGrabShortHit::getDTI",
+   "se_ea": "0xa258e0",
+   "se_name": "uPlGrabShortHit::getDTI(void)",
+   "confidence": "high",
+   "evidence": [
+    "vtable",
+    "decompile"
+   ],
+   "action": "renamed",
+   "notes": ""
+  },
+  {
+   "dx9_ea": "0x8202c0",
+   "old_dx9_name": "loc_8202C0",
+   "new_dx9_name": "uPlGrabShortHit::MyDTI::newInstance",
+   "se_ea": "0xa258a0",
+   "se_name": "uPlGrabShortHit::MyDTI::newInstance(void)",
+   "confidence": "high",
+   "evidence": [
+    "vtable",
+    "decompile"
+   ],
+   "action": "renamed",
+   "notes": "newly defined; calls ctor 0x8202E0"
+  },
+  {
+   "dx9_ea": "0x8202e0",
+   "old_dx9_name": "sub_8202E0",
+   "new_dx9_name": "uPlGrabShortHit::uPlGrabShortHit",
+   "se_ea": "0xa25550",
+   "se_name": "uPlGrabShortHit::uPlGrabShortHit(void)",
+   "confidence": "high",
+   "evidence": [
+    "callees",
+    "decompile"
+   ],
+   "action": "renamed",
+   "notes": "uActor ctor + uCollisionMgr + kAttackStatus, as SE"
+  },
+  {
+   "dx9_ea": "0x820380",
+   "old_dx9_name": "loc_820380",
+   "new_dx9_name": "??_EuPlGrabShortHit@@UAEPAXI@Z",
+   "se_ea": "0xa258f0",
+   "se_name": "uPlGrabShortHit::`vector deleting destructor'(uint)",
+   "confidence": "high",
+   "evidence": [
+    "vtable",
+    "decompile"
+   ],
+   "action": "renamed",
+   "notes": "newly defined; ~uPlGrabShortHit inlined"
+  },
+  {
+   "dx9_ea": "0x8203e0",
+   "old_dx9_name": "sub_8203E0",
+   "new_dx9_name": "uPlGrabShortHit::create",
+   "se_ea": "0xa25690",
+   "se_name": "uPlGrabShortHit::create(PL_GRAB_SHORT_HIT_TYPE,uActor *,uPlWpRightHand *,MtVector3 const &)",
+   "confidence": "high",
+   "evidence": [
+    "callers",
+    "decompile"
+   ],
+   "action": "renamed",
+   "notes": "callers are enemy grab handlers (uEm000Base::grabNear*, uEm005::grabBuster*) as in SE"
+  },
+  {
+   "dx9_ea": "0x820450",
+   "old_dx9_name": "sub_820450",
+   "new_dx9_name": "uPlGrabShortHit::setup",
+   "se_ea": "0xa25720",
+   "se_name": "uPlGrabShortHit::setup(void)",
+   "confidence": "high",
+   "evidence": [
+    "vtable",
+    "callees"
+   ],
+   "action": "renamed",
+   "notes": ""
+  },
+  {
+   "dx9_ea": "0x8205d0",
+   "old_dx9_name": "sub_8205D0",
+   "new_dx9_name": "uPlGrabShortHit::main",
+   "se_ea": "0xa25350",
+   "se_name": "uPlGrabShortHit::main(void)",
+   "confidence": "high",
+   "evidence": [
+    "vtable",
+    "order"
+   ],
+   "action": "renamed",
+   "notes": ""
+  },
+  {
+   "dx9_ea": "0x820700",
+   "old_dx9_name": "sub_820700",
+   "new_dx9_name": "uPlGrabShortHit::die",
+   "se_ea": "0xa25480",
+   "se_name": "uPlGrabShortHit::die(void)",
+   "confidence": "high",
+   "evidence": [
+    "vtable",
+    "consts"
+   ],
+   "action": "renamed",
+   "notes": "7-byte body shared by every shell vtable slot 79 and uPlGrabShortHit slot 78 | ICF: uPlShl::die(void) (all uPl*Shl* slot 79)"
+  },
+  {
+   "dx9_ea": "0x820710",
+   "old_dx9_name": "sub_820710",
+   "new_dx9_name": "uPlGrabShortHit::updatePtr",
+   "se_ea": "0xa25870",
+   "se_name": "uPlGrabShortHit::updatePtr(void)",
+   "confidence": "high",
+   "evidence": [
+    "vtable",
+    "consts"
+   ],
+   "action": "renamed",
+   "notes": ""
+  },
+  {
+   "dx9_ea": "0x820740",
+   "old_dx9_name": "sub_820740",
+   "new_dx9_name": "uPlGrabShortHit::draw",
+   "se_ea": "0xa254b0",
+   "se_name": "uPlGrabShortHit::draw(cDraw *)",
+   "confidence": "high",
+   "evidence": [
+    "vtable",
+    "callees"
+   ],
+   "action": "renamed",
+   "notes": ""
+  },
+  {
+   "dx9_ea": "0x820770",
+   "old_dx9_name": "sub_820770",
+   "new_dx9_name": "uPlGrabShortHit::hitMessage",
+   "se_ea": "0xa254e0",
+   "se_name": "uPlGrabShortHit::hitMessage(cCollisionGroup *,cCollisionGroup *)",
+   "confidence": "high",
+   "evidence": [
+    "vtable",
+    "order"
+   ],
+   "action": "renamed",
+   "notes": ""
+  },
+  {
+   "dx9_ea": "0x8207e0",
+   "old_dx9_name": "uPlayer::initLockOn",
+   "new_dx9_name": "uPlayer::initLockOn",
+   "se_ea": "0xa25980",
+   "se_name": "uPlayer::initLockOn(void)",
+   "confidence": "high",
+   "evidence": [
+    "vtable",
+    "order"
+   ],
+   "action": "confirmed",
+   "notes": ""
+  },
+  {
+   "dx9_ea": "0x820840",
+   "old_dx9_name": "uPlayer::updateLockOn",
+   "new_dx9_name": "uPlayer::updateLockOn",
+   "se_ea": "0xa259e0",
+   "se_name": "uPlayer::updateLockOn(void)",
+   "confidence": "high",
+   "evidence": [
+    "vtable",
+    "callees"
+   ],
+   "action": "confirmed",
+   "notes": ""
+  },
+  {
+   "dx9_ea": "0x820ae0",
+   "old_dx9_name": "sub_820AE0",
+   "new_dx9_name": "uPlayer::getLockOnTarget",
+   "se_ea": "0xa25c90",
+   "se_name": "uPlayer::getLockOnTarget(bool,bool,uActor *)",
+   "confidence": "high",
+   "evidence": [
+    "vtable",
+    "order",
+    "consts"
+   ],
+   "action": "renamed",
+   "notes": "size 68 = 68"
+  },
+  {
+   "dx9_ea": "0x820b30",
+   "old_dx9_name": "sub_820B30",
+   "new_dx9_name": "uPlayer::setLockOnTargetNull",
+   "se_ea": "0xa25ce0",
+   "se_name": "uPlayer::setLockOnTargetNull(bool,bool)",
+   "confidence": "high",
+   "evidence": [
+    "vtable",
+    "order",
+    "consts"
+   ],
+   "action": "renamed",
+   "notes": "size 60 = 60"
+  },
+  {
+   "dx9_ea": "0x820b70",
+   "old_dx9_name": "sub_820B70",
+   "new_dx9_name": "uPlayer::resetLockOnTarget",
+   "se_ea": "0xa25d20",
+   "se_name": "uPlayer::resetLockOnTarget(uActor *)",
+   "confidence": "high",
+   "evidence": [
+    "vtable",
+    "order",
+    "consts"
+   ],
+   "action": "renamed",
+   "notes": "size 89 = 89"
+  },
+  {
+   "dx9_ea": "0x820bd0",
+   "old_dx9_name": "uPlayer::setLockOnTargetAngle",
+   "new_dx9_name": "uPlayer::setLockOnTargetAngle",
+   "se_ea": "0xa25e30",
+   "se_name": "uPlayer::setLockOnTargetAngle(bool,bool,uActor *,bool,float,bool)",
+   "confidence": "high",
+   "evidence": [
+    "vtable",
+    "order"
+   ],
+   "action": "confirmed",
+   "notes": ""
+  },
+  {
+   "dx9_ea": "0x820ce0",
+   "old_dx9_name": "sub_820CE0",
+   "new_dx9_name": "uPlayer::setLockOnTargetAngle_2",
+   "se_ea": "0xa25d80",
+   "se_name": "uPlayer::setLockOnTargetAngle(cLockOnTarget *,bool,float,bool)",
+   "confidence": "high",
+   "evidence": [
+    "decompile",
+    "order"
+   ],
+   "action": "renamed",
+   "notes": "args (target, bool, float, bool); atan2 to target -> cRotateCtrl request"
+  },
+  {
+   "dx9_ea": "0x820da0",
+   "old_dx9_name": "uPlayer::initMotion",
+   "new_dx9_name": "uPlayer::initMotion",
+   "se_ea": "0xa25fd0",
+   "se_name": "uPlayer::initMotion(void)",
+   "confidence": "high",
+   "evidence": [
+    "decompile",
+    "order"
+   ],
+   "action": "confirmed",
+   "notes": "7 cMotionCtrl inits unrolled in DX9"
+  },
+  {
+   "dx9_ea": "0x820f50",
+   "old_dx9_name": "uPlayer::updateMotion",
+   "new_dx9_name": "uPlayer::updateMotion",
+   "se_ea": "0xa26020",
+   "se_name": "uPlayer::updateMotion(void)",
+   "confidence": "high",
+   "evidence": [
+    "decompile",
+    "order"
+   ],
+   "action": "confirmed",
+   "notes": ""
+  },
+  {
+   "dx9_ea": "0x8210e0",
+   "old_dx9_name": "uPlayer::moveMotion",
+   "new_dx9_name": "uPlayer::moveMotion",
+   "se_ea": "0xa26100",
+   "se_name": "uPlayer::moveMotion(void)",
+   "confidence": "high",
+   "evidence": [
+    "decompile",
+    "order"
+   ],
+   "action": "confirmed",
+   "notes": ""
+  },
+  {
+   "dx9_ea": "0x821150",
+   "old_dx9_name": "sub_821150",
+   "new_dx9_name": "uPlayer::loadMotionData",
+   "se_ea": "0xa26290",
+   "se_name": "uPlayer::loadMotionData(uDevil4Model *,uPlayer::kMotLoadParam *)",
+   "confidence": "high",
+   "evidence": [
+    "decompile",
+    "order"
+   ],
+   "action": "renamed",
+   "notes": "walks kMotLoadParam list -> sResource::create(rMotionList) -> uModel::setMotionList"
+  },
+  {
+   "dx9_ea": "0x821210",
+   "old_dx9_name": "uPlayer::requestSetMotion",
+   "new_dx9_name": "uPlayer::requestSetMotion",
+   "se_ea": "0xa262f0",
+   "se_name": "uPlayer::requestSetMotion(int,int,bool,ushort,float,float,float)",
+   "confidence": "high",
+   "evidence": [
+    "decompile",
+    "order"
+   ],
+   "action": "confirmed",
+   "notes": ""
+  },
+  {
+   "dx9_ea": "0x821360",
+   "old_dx9_name": "uPlayer::setMotionBlendWeight",
+   "new_dx9_name": "uPlayer::requestSetMotionBlendRate",
+   "se_ea": "0xa263f0",
+   "se_name": "uPlayer::requestSetMotionBlendRate(int,float)",
+   "confidence": "high",
+   "evidence": [
+    "decompile",
+    "order"
+   ],
+   "action": "replaced_existing",
+   "notes": "writes blend rate + mIsBlendRateSetReq for ctrl[type] (+face/coat)"
+  },
+  {
+   "dx9_ea": "0x8213b0",
+   "old_dx9_name": "uPlayer::requestSetMotionAttribute",
+   "new_dx9_name": "uPlayer::requestSetMotionAttribute",
+   "se_ea": "0xa26470",
+   "se_name": "uPlayer::requestSetMotionAttribute(int,ushort)",
+   "confidence": "high",
+   "evidence": [
+    "decompile",
+    "order"
+   ],
+   "action": "confirmed",
+   "notes": ""
+  },
+  {
+   "dx9_ea": "0x821400",
+   "old_dx9_name": "uPlayer::setActCancelFlag",
+   "new_dx9_name": "uPlayer::requestClearMotionAttribute",
+   "se_ea": "0xa264d0",
+   "se_name": "uPlayer::requestClearMotionAttribute(int,ushort)",
+   "confidence": "high",
+   "evidence": [
+    "decompile",
+    "order"
+   ],
+   "action": "replaced_existing",
+   "notes": "mirror of requestSetMotionAttribute (sets SubAttribute, clears AddAttribute); DX9 copy has type const-propagated to 0"
+  },
+  {
+   "dx9_ea": "0x821450",
+   "old_dx9_name": "uPlayer::requestSetMotion_0",
+   "new_dx9_name": "uPlayer::requestSetMotion_2",
+   "se_ea": "0xa26600",
+   "se_name": "uPlayer::requestSetMotion(int,bool,ushort,float,float,float)",
+   "confidence": "high",
+   "evidence": [
+    "decompile",
+    "order"
+   ],
+   "action": "replaced_existing",
+   "notes": ""
+  },
+  {
+   "dx9_ea": "0x821520",
+   "old_dx9_name": "sub_821520",
+   "new_dx9_name": "uPlayer::moveAction",
+   "se_ea": "0xa26730",
+   "se_name": "uPlayer::moveAction(void)",
+   "confidence": "high",
+   "evidence": [
+    "decompile",
+    "callees",
+    "order"
+   ],
+   "action": "renamed",
+   "notes": "calls moveActionLower + moveActionUpper"
+  },
+  {
+   "dx9_ea": "0x8215e0",
+   "old_dx9_name": "uPlayer::moveActionLower",
+   "new_dx9_name": "uPlayer::moveActionLower",
+   "se_ea": "0xa2cad0",
+   "se_name": "uPlayer::moveActionLower(void)",
+   "confidence": "high",
+   "evidence": [
+    "vtable",
+    "callees"
+   ],
+   "action": "confirmed",
+   "notes": ""
+  },
+  {
+   "dx9_ea": "0x821880",
+   "old_dx9_name": "uPlayer::moveActionUpper",
+   "new_dx9_name": "uPlayer::moveActionUpper",
+   "se_ea": "0xa2a040",
+   "se_name": "uPlayer::moveActionUpper(void)",
+   "confidence": "high",
+   "evidence": [
+    "vtable",
+    "callees"
+   ],
+   "action": "confirmed",
+   "notes": ""
+  },
+  {
+   "dx9_ea": "0x821910",
+   "old_dx9_name": "uPlayer::moveActFootwork",
+   "new_dx9_name": "uPlayer::moveActFootwork",
+   "se_ea": "0xa267f0",
+   "se_name": "uPlayer::moveActFootwork(void)",
+   "confidence": "high",
+   "evidence": [
+    "callees",
+    "consts",
+    "order"
+   ],
+   "action": "confirmed",
+   "notes": ""
+  },
+  {
+   "dx9_ea": "0x821ac0",
+   "old_dx9_name": "uPlayer::moveAct180Turn",
+   "new_dx9_name": "uPlayer::moveAct180Turn",
+   "se_ea": "0xa26a30",
+   "se_name": "uPlayer::moveAct180Turn(void)",
+   "confidence": "high",
+   "evidence": [
+    "callees",
+    "consts",
+    "order"
+   ],
+   "action": "confirmed",
+   "notes": ""
+  },
+  {
+   "dx9_ea": "0x821b80",
+   "old_dx9_name": "uPlayer::moveActRunBegin",
+   "new_dx9_name": "uPlayer::moveActRunBegin",
+   "se_ea": "0xa2a0c0",
+   "se_name": "uPlayer::moveActRunBegin(void)",
+   "confidence": "high",
+   "evidence": [
+    "callees",
+    "consts",
+    "order"
+   ],
+   "action": "confirmed",
+   "notes": ""
+  },
+  {
+   "dx9_ea": "0x821d30",
+   "old_dx9_name": "uPlayer::moveActRun",
+   "new_dx9_name": "uPlayer::moveActRun",
+   "se_ea": "0xa2a2d0",
+   "se_name": "uPlayer::moveActRun(void)",
+   "confidence": "high",
+   "evidence": [
+    "callees",
+    "consts",
+    "order"
+   ],
+   "action": "confirmed",
+   "notes": ""
+  },
+  {
+   "dx9_ea": "0x821ef0",
+   "old_dx9_name": "sub_821EF0",
+   "new_dx9_name": "uPlayer::setDashMotion",
+   "se_ea": "0xa26ad0",
+   "se_name": "uPlayer::setDashMotion(int,float,bool)",
+   "confidence": "high",
+   "evidence": [
+    "order",
+    "decompile"
+   ],
+   "action": "renamed",
+   "notes": "callers moveActRunBegin/moveActRun; float arg"
+  },
+  {
+   "dx9_ea": "0x821fe0",
+   "old_dx9_name": "uPlayer::moveActRunEnd",
+   "new_dx9_name": "uPlayer::moveActRunEnd",
+   "se_ea": "0xa26bf0",
+   "se_name": "uPlayer::moveActRunEnd(void)",
+   "confidence": "high",
+   "evidence": [
+    "callees",
+    "consts",
+    "order"
+   ],
+   "action": "confirmed",
+   "notes": ""
+  },
+  {
+   "dx9_ea": "0x822110",
+   "old_dx9_name": "sub_822110",
+   "new_dx9_name": "uPlayer::setMotionActRun",
+   "se_ea": "0xa26d30",
+   "se_name": "uPlayer::setMotionActRun(uint,float,bool)",
+   "confidence": "high",
+   "evidence": [
+    "order",
+    "decompile"
+   ],
+   "action": "renamed",
+   "notes": "callers moveActRunBegin/moveActRun; motion-no arg checked against motion list"
+  },
+  {
+   "dx9_ea": "0x8221d0",
+   "old_dx9_name": "uPlayer::moveActJumpBegin",
+   "new_dx9_name": "uPlayer::moveActJumpBegin",
+   "se_ea": "0xa26e30",
+   "se_name": "uPlayer::moveActJumpBegin(void)",
+   "confidence": "high",
+   "evidence": [
+    "callees",
+    "consts",
+    "order"
+   ],
+   "action": "confirmed",
+   "notes": ""
+  },
+  {
+   "dx9_ea": "0x8223b0",
+   "old_dx9_name": "uPlayer::moveActJump",
+   "new_dx9_name": "uPlayer::moveActJump",
+   "se_ea": "0xa27020",
+   "se_name": "uPlayer::moveActJump(void)",
+   "confidence": "high",
+   "evidence": [
+    "callees",
+    "consts",
+    "order"
+   ],
+   "action": "confirmed",
+   "notes": ""
+  },
+  {
+   "dx9_ea": "0x8225d0",
+   "old_dx9_name": "uPlayer::moveActWJump",
+   "new_dx9_name": "uPlayer::moveActWJump",
+   "se_ea": "0xa2a540",
+   "se_name": "uPlayer::moveActWJump(void)",
+   "confidence": "high",
+   "evidence": [
+    "callees",
+    "consts",
+    "order"
+   ],
+   "action": "confirmed",
+   "notes": ""
+  },
+  {
+   "dx9_ea": "0x8227e0",
+   "old_dx9_name": "uPlayer::moveActStingerJump",
+   "new_dx9_name": "uPlayer::moveActStingerJump",
+   "se_ea": "0xa27260",
+   "se_name": "uPlayer::moveActStingerJump(void)",
+   "confidence": "high",
+   "evidence": [
+    "callees",
+    "consts",
+    "order"
+   ],
+   "action": "confirmed",
+   "notes": ""
+  },
+  {
+   "dx9_ea": "0x822b40",
+   "old_dx9_name": "uPlayer::moveActLand",
+   "new_dx9_name": "uPlayer::moveActLand",
+   "se_ea": "0xa275b0",
+   "se_name": "uPlayer::moveActLand(void)",
+   "confidence": "high",
+   "evidence": [
+    "callees",
+    "consts",
+    "order"
+   ],
+   "action": "confirmed",
+   "notes": ""
+  },
+  {
+   "dx9_ea": "0x822be0",
+   "old_dx9_name": "uPlayer::moveActFall",
+   "new_dx9_name": "uPlayer::moveActFall",
+   "se_ea": "0xa27640",
+   "se_name": "uPlayer::moveActFall(void)",
+   "confidence": "high",
+   "evidence": [
+    "callees",
+    "consts",
+    "order"
+   ],
+   "action": "confirmed",
+   "notes": ""
+  },
+  {
+   "dx9_ea": "0x822d70",
+   "old_dx9_name": "uPlayer::moveActPoseL",
+   "new_dx9_name": "uPlayer::moveActPoseL",
+   "se_ea": "0xa277f0",
+   "se_name": "uPlayer::moveActPoseL(void)",
+   "confidence": "high",
+   "evidence": [
+    "callees",
+    "consts",
+    "order"
+   ],
+   "action": "confirmed",
+   "notes": ""
+  },
+  {
+   "dx9_ea": "0x822ec0",
+   "old_dx9_name": "sub_822EC0",
+   "new_dx9_name": "uPlayer::moveActPoseU",
+   "se_ea": "0xa278b0",
+   "se_name": "uPlayer::moveActPoseU(void)",
+   "confidence": "high",
+   "evidence": [
+    "order",
+    "decompile"
+   ],
+   "action": "renamed",
+   "notes": "code identical to moveActPoseRunU (0x8232A0) as in SE (both 167 B); called from moveActionUpper"
+  },
+  {
+   "dx9_ea": "0x822fd0",
+   "old_dx9_name": "uPlayer::moveActPoseRunBeginL",
+   "new_dx9_name": "uPlayer::moveActPoseRunBeginL",
+   "se_ea": "0xa27980",
+   "se_name": "uPlayer::moveActPoseRunBeginL(void)",
+   "confidence": "high",
+   "evidence": [
+    "callees",
+    "consts",
+    "order"
+   ],
+   "action": "confirmed",
+   "notes": ""
+  },
+  {
+   "dx9_ea": "0x8230c0",
+   "old_dx9_name": "sub_8230C0",
+   "new_dx9_name": "uPlayer::moveActPoseRunBeginU",
+   "se_ea": "0xa27a60",
+   "se_name": "uPlayer::moveActPoseRunBeginU(void)",
+   "confidence": "high",
+   "evidence": [
+    "order",
+    "decompile",
+    "consts"
+   ],
+   "action": "renamed",
+   "notes": ""
+  },
+  {
+   "dx9_ea": "0x823140",
+   "old_dx9_name": "uPlayer::moveActPoseRunL",
+   "new_dx9_name": "uPlayer::moveActPoseRunL",
+   "se_ea": "0xa27af0",
+   "se_name": "uPlayer::moveActPoseRunL(void)",
+   "confidence": "high",
+   "evidence": [
+    "callees",
+    "consts",
+    "order"
+   ],
+   "action": "confirmed",
+   "notes": ""
+  },
+  {
+   "dx9_ea": "0x8232a0",
+   "old_dx9_name": "sub_8232A0",
+   "new_dx9_name": "uPlayer::moveActPoseRunU",
+   "se_ea": "0xa27bc0",
+   "se_name": "uPlayer::moveActPoseRunU(void)",
+   "confidence": "high",
+   "evidence": [
+    "order",
+    "decompile"
+   ],
+   "action": "renamed",
+   "notes": ""
+  },
+  {
+   "dx9_ea": "0x8233b0",
+   "old_dx9_name": "uPlayer::moveActPoseJumpBegin",
+   "new_dx9_name": "uPlayer::moveActPoseJumpBegin",
+   "se_ea": "0xa27c90",
+   "se_name": "uPlayer::moveActPoseJumpBegin(void)",
+   "confidence": "high",
+   "evidence": [
+    "callees",
+    "consts",
+    "order"
+   ],
+   "action": "confirmed",
+   "notes": ""
+  },
+  {
+   "dx9_ea": "0x823570",
+   "old_dx9_name": "sub_823570",
+   "new_dx9_name": "uPlayer::moveActPoseJump",
+   "se_ea": "0xa27de0",
+   "se_name": "uPlayer::moveActPoseJump(void)",
+   "confidence": "high",
+   "evidence": [
+    "vtable",
+    "order"
+   ],
+   "action": "renamed",
+   "notes": ""
+  },
+  {
+   "dx9_ea": "0x8236b0",
+   "old_dx9_name": "uPlayer::moveActCatapult",
+   "new_dx9_name": "uPlayer::moveActCatapult",
+   "se_ea": "0xa27ec0",
+   "se_name": "uPlayer::moveActCatapult(void)",
+   "confidence": "high",
+   "evidence": [
+    "callees",
+    "consts",
+    "order"
+   ],
+   "action": "confirmed",
+   "notes": ""
+  },
+  {
+   "dx9_ea": "0x8238b0",
+   "old_dx9_name": "uPlayer::moveActDamage",
+   "new_dx9_name": "uPlayer::moveActDamage",
+   "se_ea": "0xa2c970",
+   "se_name": "uPlayer::moveActDamage(void)",
+   "confidence": "high",
+   "evidence": [
+    "callees",
+    "consts",
+    "order"
+   ],
+   "action": "confirmed",
+   "notes": ""
+  },
+  {
+   "dx9_ea": "0x823a40",
+   "old_dx9_name": "uPlayer::run_effelement",
+   "new_dx9_name": "uPlayer::setElementDamageEffect",
+   "se_ea": "0xa280a0",
+   "se_name": "uPlayer::setElementDamageEffect(PL_DMAGE_ELEM_EFF_ID)",
+   "confidence": "high",
+   "evidence": [
+    "callers",
+    "decompile"
+   ],
+   "action": "replaced_existing",
+   "notes": "DX9 caller set {Buttobi,IceButtobi,HiTime,WindPressureMiddle,AirCombo,AgnusAbsorbHighAir} == SE caller set"
+  },
+  {
+   "dx9_ea": "0x823a80",
+   "old_dx9_name": "sub_823A80",
+   "new_dx9_name": "uPlayer::moveDmgHit",
+   "se_ea": "0xa280e0",
+   "se_name": "uPlayer::moveDmgHit(void)",
+   "confidence": "high",
+   "evidence": [
+    "callees",
+    "consts",
+    "order",
+    "callers"
+   ],
+   "action": "renamed",
+   "notes": "called from moveActDamage dispatch; feature/size + source order agree"
+  },
+  {
+   "dx9_ea": "0x823b80",
+   "old_dx9_name": "sub_823B80",
+   "new_dx9_name": "uPlayer::moveDmgZuri",
+   "se_ea": "0xa281d0",
+   "se_name": "uPlayer::moveDmgZuri(void)",
+   "confidence": "high",
+   "evidence": [
+    "callees",
+    "consts",
+    "order",
+    "callers"
+   ],
+   "action": "renamed",
+   "notes": "called from moveActDamage dispatch; feature/size + source order agree"
+  },
+  {
+   "dx9_ea": "0x823bd0",
+   "old_dx9_name": "sub_823BD0",
+   "new_dx9_name": "uPlayer::moveDmgButtobi",
+   "se_ea": "0xa28200",
+   "se_name": "uPlayer::moveDmgButtobi(void)",
+   "confidence": "high",
+   "evidence": [
+    "callees",
+    "consts",
+    "order",
+    "callers"
+   ],
+   "action": "renamed",
+   "notes": "called from moveActDamage dispatch; feature/size + source order agree"
+  },
+  {
+   "dx9_ea": "0x823f30",
+   "old_dx9_name": "sub_823F30",
+   "new_dx9_name": "uPlayer::moveDmgIceButtobi",
+   "se_ea": "0xa2a790",
+   "se_name": "uPlayer::moveDmgIceButtobi(void)",
+   "confidence": "high",
+   "evidence": [
+    "callees",
+    "consts",
+    "order",
+    "callers"
+   ],
+   "action": "renamed",
+   "notes": "called from moveActDamage dispatch; feature/size + source order agree"
+  },
+  {
+   "dx9_ea": "0x824540",
+   "old_dx9_name": "sub_824540",
+   "new_dx9_name": "uPlayer::moveDmgHiTime",
+   "se_ea": "0xa285f0",
+   "se_name": "uPlayer::moveDmgHiTime(void)",
+   "confidence": "high",
+   "evidence": [
+    "callees",
+    "consts",
+    "order",
+    "callers"
+   ],
+   "action": "renamed",
+   "notes": "called from moveActDamage dispatch; feature/size + source order agree"
+  },
+  {
+   "dx9_ea": "0x8247f0",
+   "old_dx9_name": "sub_8247F0",
+   "new_dx9_name": "uPlayer::moveDmgWindPressureSmall",
+   "se_ea": "0xa288a0",
+   "se_name": "uPlayer::moveDmgWindPressureSmall(void)",
+   "confidence": "high",
+   "evidence": [
+    "callees",
+    "consts",
+    "order",
+    "callers"
+   ],
+   "action": "renamed",
+   "notes": "called from moveActDamage dispatch; feature/size + source order agree"
+  },
+  {
+   "dx9_ea": "0x824910",
+   "old_dx9_name": "sub_824910",
+   "new_dx9_name": "uPlayer::moveDmgWindPressureMiddle",
+   "se_ea": "0xa289b0",
+   "se_name": "uPlayer::moveDmgWindPressureMiddle(void)",
+   "confidence": "high",
+   "evidence": [
+    "callees",
+    "consts",
+    "order",
+    "callers"
+   ],
+   "action": "renamed",
+   "notes": "called from moveActDamage dispatch; feature/size + source order agree"
+  },
+  {
+   "dx9_ea": "0x824a90",
+   "old_dx9_name": "sub_824A90",
+   "new_dx9_name": "uPlayer::moveDmgCombo",
+   "se_ea": "0xa28b40",
+   "se_name": "uPlayer::moveDmgCombo(void)",
+   "confidence": "high",
+   "evidence": [
+    "callees",
+    "consts",
+    "order",
+    "callers"
+   ],
+   "action": "renamed",
+   "notes": "called from moveActDamage dispatch; feature/size + source order agree"
+  },
+  {
+   "dx9_ea": "0x824b90",
+   "old_dx9_name": "sub_824B90",
+   "new_dx9_name": "uPlayer::moveDmgAirCombo",
+   "se_ea": "0xa28c30",
+   "se_name": "uPlayer::moveDmgAirCombo(void)",
+   "confidence": "high",
+   "evidence": [
+    "callees",
+    "consts",
+    "order",
+    "callers"
+   ],
+   "action": "renamed",
+   "notes": "called from moveActDamage dispatch; feature/size + source order agree"
+  },
+  {
+   "dx9_ea": "0x824ea0",
+   "old_dx9_name": "sub_824EA0",
+   "new_dx9_name": "uPlayer::moveDmgBlitzElectrigger",
+   "se_ea": "0xa2ad90",
+   "se_name": "uPlayer::moveDmgBlitzElectrigger(void)",
+   "confidence": "high",
+   "evidence": [
+    "callees",
+    "consts",
+    "order",
+    "callers"
+   ],
+   "action": "renamed",
+   "notes": "called from moveActDamage dispatch; feature/size + source order agree"
+  },
+  {
+   "dx9_ea": "0x825290",
+   "old_dx9_name": "sub_825290",
+   "new_dx9_name": "uPlayer::moveDmgAgnusAbsorb",
+   "se_ea": "0xa28f30",
+   "se_name": "uPlayer::moveDmgAgnusAbsorb(void)",
+   "confidence": "high",
+   "evidence": [
+    "callees",
+    "consts",
+    "order",
+    "callers"
+   ],
+   "action": "renamed",
+   "notes": "called from moveActDamage dispatch; feature/size + source order agree"
+  },
+  {
+   "dx9_ea": "0x825470",
+   "old_dx9_name": "sub_825470",
+   "new_dx9_name": "uPlayer::moveDmgAgnusAbsorbHigh",
+   "se_ea": "0xa29070",
+   "se_name": "uPlayer::moveDmgAgnusAbsorbHigh(void)",
+   "confidence": "high",
+   "evidence": [
+    "callees",
+    "consts",
+    "order",
+    "callers"
+   ],
+   "action": "renamed",
+   "notes": "called from moveActDamage dispatch; feature/size + source order agree"
+  },
+  {
+   "dx9_ea": "0x8255d0",
+   "old_dx9_name": "sub_8255D0",
+   "new_dx9_name": "uPlayer::moveDmgAgnusAbsorbHighAir",
+   "se_ea": "0xa291c0",
+   "se_name": "uPlayer::moveDmgAgnusAbsorbHighAir(void)",
+   "confidence": "high",
+   "evidence": [
+    "callees",
+    "consts",
+    "order",
+    "callers"
+   ],
+   "action": "renamed",
+   "notes": "called from moveActDamage dispatch; feature/size + source order agree"
+  },
+  {
+   "dx9_ea": "0x8258b0",
+   "old_dx9_name": "sub_8258B0",
+   "new_dx9_name": "uPlayer::moveDmgBaelEat",
+   "se_ea": "0xa2b190",
+   "se_name": "uPlayer::moveDmgBaelEat(void)",
+   "confidence": "high",
+   "evidence": [
+    "callees",
+    "consts",
+    "order",
+    "callers"
+   ],
+   "action": "renamed",
+   "notes": "called from moveActDamage dispatch; feature/size + source order agree"
+  },
+  {
+   "dx9_ea": "0x825e80",
+   "old_dx9_name": "sub_825E80",
+   "new_dx9_name": "uPlayer::moveDmgBaelEatRelease",
+   "se_ea": "0xa2c820",
+   "se_name": "uPlayer::moveDmgBaelEatRelease(void)",
+   "confidence": "high",
+   "evidence": [
+    "callees",
+    "consts",
+    "order",
+    "callers"
+   ],
+   "action": "renamed",
+   "notes": "called from moveActDamage dispatch; feature/size + source order agree"
+  },
+  {
+   "dx9_ea": "0x825f20",
+   "old_dx9_name": "sub_825F20",
+   "new_dx9_name": "uPlayer::moveDmgBaelEatReleaseDT",
+   "se_ea": "0xa2c890",
+   "se_name": "uPlayer::moveDmgBaelEatReleaseDT(void)",
+   "confidence": "high",
+   "evidence": [
+    "callees",
+    "consts",
+    "order",
+    "callers"
+   ],
+   "action": "renamed",
+   "notes": "called from moveActDamage dispatch; feature/size + source order agree"
+  },
+  {
+   "dx9_ea": "0x825fc0",
+   "old_dx9_name": "sub_825FC0",
+   "new_dx9_name": "uPlayer::moveDmgBaelEatDead",
+   "se_ea": "0xa2c900",
+   "se_name": "uPlayer::moveDmgBaelEatDead(void)",
+   "confidence": "high",
+   "evidence": [
+    "callees",
+    "consts",
+    "order",
+    "callers"
+   ],
+   "action": "renamed",
+   "notes": "called from moveActDamage dispatch; feature/size + source order agree"
+  },
+  {
+   "dx9_ea": "0x826060",
+   "old_dx9_name": "sub_826060",
+   "new_dx9_name": "uPlayer::moveDmgBaitIce",
+   "se_ea": "0xa294a0",
+   "se_name": "uPlayer::moveDmgBaitIce(void)",
+   "confidence": "high",
+   "evidence": [
+    "callees",
+    "consts",
+    "order",
+    "callers"
+   ],
+   "action": "renamed",
+   "notes": "called from moveActDamage dispatch; feature/size + source order agree"
+  },
+  {
+   "dx9_ea": "0x826170",
+   "old_dx9_name": "sub_826170",
+   "new_dx9_name": "uPlayer::moveDmgGrabRelease",
+   "se_ea": "0xa2b6e0",
+   "se_name": "uPlayer::moveDmgGrabRelease(void)",
+   "confidence": "high",
+   "evidence": [
+    "callees",
+    "consts",
+    "order",
+    "callers"
+   ],
+   "action": "renamed",
+   "notes": "called from moveActDamage dispatch; feature/size + source order agree"
+  },
+  {
+   "dx9_ea": "0x8262e0",
+   "old_dx9_name": "sub_8262E0",
+   "new_dx9_name": "uPlayer::moveDmgGrabReleasePose",
+   "se_ea": "0xa2b800",
+   "se_name": "uPlayer::moveDmgGrabReleasePose(void)",
+   "confidence": "high",
+   "evidence": [
+    "callees",
+    "consts",
+    "order",
+    "callers"
+   ],
+   "action": "renamed",
+   "notes": "called from moveActDamage dispatch; feature/size + source order agree"
+  },
+  {
+   "dx9_ea": "0x8263e0",
+   "old_dx9_name": "sub_8263E0",
+   "new_dx9_name": "uPlayer::moveDmgGrabDead",
+   "se_ea": "0xa2b8f0",
+   "se_name": "uPlayer::moveDmgGrabDead(void)",
+   "confidence": "high",
+   "evidence": [
+    "callees",
+    "consts",
+    "order",
+    "callers"
+   ],
+   "action": "renamed",
+   "notes": "called from moveActDamage dispatch; feature/size + source order agree"
+  },
+  {
+   "dx9_ea": "0x826560",
+   "old_dx9_name": "sub_826560",
+   "new_dx9_name": "uPlayer::moveDmgUkemi",
+   "se_ea": "0xa295a0",
+   "se_name": "uPlayer::moveDmgUkemi(void)",
+   "confidence": "high",
+   "evidence": [
+    "callees",
+    "consts",
+    "order",
+    "callers"
+   ],
+   "action": "renamed",
+   "notes": "called from moveActDamage dispatch; feature/size + source order agree"
+  },
+  {
+   "dx9_ea": "0x8265f0",
+   "old_dx9_name": "sub_8265F0",
+   "new_dx9_name": "uPlayer::moveDmgButtobiDead",
+   "se_ea": "0xa29620",
+   "se_name": "uPlayer::moveDmgButtobiDead(void)",
+   "confidence": "high",
+   "evidence": [
+    "callees",
+    "consts",
+    "order",
+    "callers"
+   ],
+   "action": "renamed",
+   "notes": "called from moveActDamage dispatch; feature/size + source order agree"
+  },
+  {
+   "dx9_ea": "0x826930",
+   "old_dx9_name": "sub_826930",
+   "new_dx9_name": "uPlayer::moveDmgFallDead",
+   "se_ea": "0xa29910",
+   "se_name": "uPlayer::moveDmgFallDead(void)",
+   "confidence": "high",
+   "evidence": [
+    "callees",
+    "consts",
+    "order",
+    "callers"
+   ],
+   "action": "renamed",
+   "notes": "called from moveActDamage dispatch; feature/size + source order agree"
+  },
+  {
+   "dx9_ea": "0x826ac0",
+   "old_dx9_name": "uPlayer::moveActDead",
+   "new_dx9_name": "uPlayer::moveActDead",
+   "se_ea": "0xa2ba30",
+   "se_name": "uPlayer::moveActDead(void)",
+   "confidence": "high",
+   "evidence": [
+    "callees",
+    "consts",
+    "order"
+   ],
+   "action": "confirmed",
+   "notes": ""
+  },
+  {
+   "dx9_ea": "0x826d90",
+   "old_dx9_name": "sub_826D90",
+   "new_dx9_name": "uPlayer::checkDeadEnd",
+   "se_ea": "0xa29a90",
+   "se_name": "uPlayer::checkDeadEnd(void)",
+   "confidence": "high",
+   "evidence": [
+    "consts",
+    "order"
+   ],
+   "action": "renamed",
+   "notes": "size 74 = 74; single external caller as in SE"
+  },
+  {
+   "dx9_ea": "0x826de0",
+   "old_dx9_name": "uPlayer::moveActRevive",
+   "new_dx9_name": "uPlayer::moveActRevive",
+   "se_ea": "0xa29ae0",
+   "se_name": "uPlayer::moveActRevive(void)",
+   "confidence": "high",
+   "evidence": [
+    "callees",
+    "consts",
+    "order"
+   ],
+   "action": "confirmed",
+   "notes": ""
+  },
+  {
+   "dx9_ea": "0x826fa0",
+   "old_dx9_name": "uPlayer::moveActProvoke",
+   "new_dx9_name": "uPlayer::moveActProvoke",
+   "se_ea": "0xa29c30",
+   "se_name": "uPlayer::moveActProvoke(void)",
+   "confidence": "high",
+   "evidence": [
+    "vtable",
+    "callees"
+   ],
+   "action": "confirmed",
+   "notes": ""
+  },
+  {
+   "dx9_ea": "0x827200",
+   "old_dx9_name": "uPlayer::moveActWallJump",
+   "new_dx9_name": "uPlayer::moveActWallJump",
+   "se_ea": "0xa2bcd0",
+   "se_name": "uPlayer::moveActWallJump(void)",
+   "confidence": "high",
+   "evidence": [
+    "callees",
+    "consts",
+    "order"
+   ],
+   "action": "confirmed",
+   "notes": ""
+  },
+  {
+   "dx9_ea": "0x827890",
+   "old_dx9_name": "uPlayer::moveActEmJump",
+   "new_dx9_name": "uPlayer::moveActEmJump",
+   "se_ea": "0xa2c460",
+   "se_name": "uPlayer::moveActEmJump(void)",
+   "confidence": "high",
+   "evidence": [
+    "callees",
+    "consts",
+    "order"
+   ],
+   "action": "confirmed",
+   "notes": ""
+  },
+  {
+   "dx9_ea": "0x827b20",
+   "old_dx9_name": "uPlayer::moveActHolyWater",
+   "new_dx9_name": "uPlayer::moveActHolyWater",
+   "se_ea": "0xa29e40",
+   "se_name": "uPlayer::moveActHolyWater(void)",
+   "confidence": "high",
+   "evidence": [
+    "callees",
+    "consts",
+    "order"
+   ],
+   "action": "confirmed",
+   "notes": ""
+  },
+  {
+   "dx9_ea": "0x827be0",
+   "old_dx9_name": "sub_827BE0",
+   "new_dx9_name": "uPlayer::setProvokeMtn",
+   "se_ea": "0xa29ef0",
+   "se_name": "uPlayer::setProvokeMtn(void)",
+   "confidence": "high",
+   "evidence": [
+    "vtable",
+    "callees"
+   ],
+   "action": "renamed",
+   "notes": ""
+  },
+  {
+   "dx9_ea": "0x827c70",
+   "old_dx9_name": "sub_827C70",
+   "new_dx9_name": "uPlayer::sendHolyWaterUseMessageToAllEnemy",
+   "se_ea": "0xa2c7a0",
+   "se_name": "uPlayer::sendHolyWaterUseMessageToAllEnemy(void)",
+   "confidence": "high",
+   "evidence": [
+    "callers",
+    "order"
+   ],
+   "action": "renamed",
+   "notes": "only caller uPlayer::main, as in SE"
+  },
+  {
+   "dx9_ea": "0x827d10",
+   "old_dx9_name": "sub_827D10",
+   "new_dx9_name": "uPlayer::useHolyWater",
+   "se_ea": "0xa29fa0",
+   "se_name": "uPlayer::useHolyWater(void)",
+   "confidence": "high",
+   "evidence": [
+    "callees",
+    "order"
+   ],
+   "action": "renamed",
+   "notes": "external item-code caller as in SE"
+  },
+  {
+   "dx9_ea": "0x827da0",
+   "old_dx9_name": "sub_827DA0",
+   "new_dx9_name": "uPlayer::setFootworkMtn",
+   "se_ea": "0xa2a000",
+   "se_name": "uPlayer::setFootworkMtn(void)",
+   "confidence": "high",
+   "evidence": [
+    "vtable",
+    "callees"
+   ],
+   "action": "renamed",
+   "notes": ""
+  },
+  {
+   "dx9_ea": "0x827dd0",
+   "old_dx9_name": "uPlNeroDevil::getDTI",
+   "new_dx9_name": "uPlNeroDevil::getDTI",
+   "se_ea": "0xa31020",
+   "se_name": "uPlNeroDevil::getDTI(void)",
+   "confidence": "high",
+   "evidence": [
+    "vtable",
+    "decompile"
+   ],
+   "action": "confirmed",
+   "notes": ""
+  },
+  {
+   "dx9_ea": "0x827de0",
+   "old_dx9_name": "uPlayer::getNoFromMotSeq",
+   "new_dx9_name": "uPlNeroDevil::getNoFromMotSeq",
+   "se_ea": "0xa2d820",
+   "se_name": "uPlNeroDevil::getNoFromMotSeq(int)",
+   "confidence": "high",
+   "evidence": [
+    "consts",
+    "callers",
+    "order"
+   ],
+   "action": "replaced_existing",
+   "notes": "size 56 = 56; only caller uPlNeroDevil::updateTransparency; sits right after uPlNeroDevil::getDTI"
+  },
+  {
+   "dx9_ea": "0x827e20",
+   "old_dx9_name": "loc_827E20",
+   "new_dx9_name": "uPlNeroDevil::MyDTI::newInstance",
+   "se_ea": "0xa2da30",
+   "se_name": "uPlNeroDevil::MyDTI::newInstance(void)",
+   "confidence": "high",
+   "evidence": [
+    "vtable",
+    "decompile"
+   ],
+   "action": "renamed",
+   "notes": "newly defined"
+  },
+  {
+   "dx9_ea": "0x827e50",
+   "old_dx9_name": "uPlNeroDevil::uPlNeroDevil",
+   "new_dx9_name": "uPlNeroDevil::uPlNeroDevil",
+   "se_ea": "0xa2cdf0",
+   "se_name": "uPlNeroDevil::uPlNeroDevil(void)",
+   "confidence": "high",
+   "evidence": [
+    "decompile",
+    "callees"
+   ],
+   "action": "confirmed",
+   "notes": ""
+  },
+  {
+   "dx9_ea": "0x8280b0",
+   "old_dx9_name": "loc_8280B0",
+   "new_dx9_name": "??_GuPlNeroDevil@@UAEPAXI@Z",
+   "se_ea": "0xa31030",
+   "se_name": "uPlNeroDevil::`scalar deleting destructor'(uint)",
+   "confidence": "high",
+   "evidence": [
+    "vtable",
+    "decompile"
+   ],
+   "action": "renamed",
+   "notes": "newly defined"
+  },
+  {
+   "dx9_ea": "0x8280e0",
+   "old_dx9_name": "sub_8280E0",
+   "new_dx9_name": "??1uPlNeroDevil@@UAE@XZ",
+   "se_ea": "0xa2cf80",
+   "se_name": "uPlNeroDevil::~uPlNeroDevil(void)",
+   "confidence": "high",
+   "evidence": [
+    "decompile",
+    "callers"
+   ],
+   "action": "renamed",
+   "notes": "writes uPlNeroDevil::vftable, releases resources; called only by ??_G"
+  },
+  {
+   "dx9_ea": "0x828160",
+   "old_dx9_name": "sub_828160",
+   "new_dx9_name": "uPlNeroDevil::createProperty",
+   "se_ea": "0xa2da70",
+   "se_name": "uPlNeroDevil::createProperty(MtPropertyList &)",
+   "confidence": "high",
+   "evidence": [
+    "vtable",
+    "strings"
+   ],
+   "action": "renamed",
+   "notes": ""
+  },
+  {
+   "dx9_ea": "0x828640",
+   "old_dx9_name": "uPlNeroDevil::setup",
+   "new_dx9_name": "uPlNeroDevil::setup",
+   "se_ea": "0xa2d000",
+   "se_name": "uPlNeroDevil::setup(void)",
+   "confidence": "high",
+   "evidence": [
+    "vtable",
+    "callees"
+   ],
+   "action": "confirmed",
+   "notes": ""
+  },
+  {
+   "dx9_ea": "0x828a90",
+   "old_dx9_name": "uPlNeroDevil::updatePtr",
+   "new_dx9_name": "uPlNeroDevil::updatePtr",
+   "se_ea": "0xa2e3f0",
+   "se_name": "uPlNeroDevil::updatePtr(void)",
+   "confidence": "high",
+   "evidence": [
+    "vtable",
+    "callees"
+   ],
+   "action": "confirmed",
+   "notes": ""
+  },
+  {
+   "dx9_ea": "0x828b20",
+   "old_dx9_name": "uPlNeroDevil::main",
+   "new_dx9_name": "uPlNeroDevil::main",
+   "se_ea": "0xa30d90",
+   "se_name": "uPlNeroDevil::main(void)",
+   "confidence": "high",
+   "evidence": [
+    "vtable",
+    "callees"
+   ],
+   "action": "confirmed",
+   "notes": ""
+  },
+  {
+   "dx9_ea": "0x828d40",
+   "old_dx9_name": "uPlNeroDevil::moveEx",
+   "new_dx9_name": "uPlNeroDevil::moveEx",
+   "se_ea": "0xa2e480",
+   "se_name": "uPlNeroDevil::moveEx(void)",
+   "confidence": "high",
+   "evidence": [
+    "vtable",
+    "callees"
+   ],
+   "action": "confirmed",
+   "notes": ""
+  },
+  {
+   "dx9_ea": "0x828f20",
+   "old_dx9_name": "uPlNeroDevil::sync",
+   "new_dx9_name": "uPlNeroDevil::sync",
+   "se_ea": "0xa2e660",
+   "se_name": "uPlNeroDevil::sync(void)",
+   "confidence": "high",
+   "evidence": [
+    "vtable",
+    "callees"
+   ],
+   "action": "confirmed",
+   "notes": ""
+  },
+  {
+   "dx9_ea": "0x829010",
+   "old_dx9_name": "sub_829010",
+   "new_dx9_name": "uPlNeroDevil::kill",
+   "se_ea": "0xa2e780",
+   "se_name": "uPlNeroDevil::kill(void)",
+   "confidence": "high",
+   "evidence": [
+    "vtable",
+    "consts"
+   ],
+   "action": "renamed",
+   "notes": "slot 12 -> SE 21; size 110 = 110"
+  },
+  {
+   "dx9_ea": "0x829080",
+   "old_dx9_name": "uPlNeroDevil::updateMaterial",
+   "new_dx9_name": "uPlNeroDevil::updateMaterial",
+   "se_ea": "0xa2d320",
+   "se_name": "uPlNeroDevil::updateMaterial(void)",
+   "confidence": "high",
+   "evidence": [
+    "vtable",
+    "callees"
+   ],
+   "action": "confirmed",
+   "notes": ""
+  },
+  {
+   "dx9_ea": "0x8290c0",
+   "old_dx9_name": "uPlNeroDevil::draw",
+   "new_dx9_name": "uPlNeroDevil::draw",
+   "se_ea": "0xa2d360",
+   "se_name": "uPlNeroDevil::draw(cDraw *)",
+   "confidence": "high",
+   "evidence": [
+    "vtable",
+    "callees"
+   ],
+   "action": "confirmed",
+   "notes": ""
+  },
+  {
+   "dx9_ea": "0x829120",
+   "old_dx9_name": "sub_829120",
+   "new_dx9_name": null,
+   "se_ea": "0xa2d3c0",
+   "se_name": "uPlNeroDevil::reset(MtVector3 &,float,bool)",
+   "confidence": "medium",
+   "evidence": [
+    "decompile",
+    "order"
+   ],
+   "action": "commented",
+   "notes": "resets devil state block; single caller sub_7E44F0 (likely uPlayerNero::reset); size 271 vs 183"
+  },
+  {
+   "dx9_ea": "0x829230",
+   "old_dx9_name": "sub_829230",
+   "new_dx9_name": "uPlNeroDevil::cancel",
+   "se_ea": "0xa2eee0",
+   "se_name": "uPlNeroDevil::cancel(void)",
+   "confidence": "high",
+   "evidence": [
+    "consts",
+    "callers",
+    "decompile"
+   ],
+   "action": "renamed",
+   "notes": "imms 20/30/40 action remap; 2 callers (SE: mvAtckSGDanteFlip/Flipped)"
+  },
+  {
+   "dx9_ea": "0x8292e0",
+   "old_dx9_name": "uPlNeroDevil::updatePosition",
+   "new_dx9_name": "uPlNeroDevil::updatePosition",
+   "se_ea": "0xa2e7f0",
+   "se_name": "uPlNeroDevil::updatePosition(void)",
+   "confidence": "high",
+   "evidence": [
+    "callees",
+    "consts"
+   ],
+   "action": "confirmed",
+   "notes": ""
+  },
+  {
+   "dx9_ea": "0x8293c0",
+   "old_dx9_name": "uPlNeroDevil::updateRotate",
+   "new_dx9_name": "uPlNeroDevil::updateRotate",
+   "se_ea": "0xa2d500",
+   "se_name": "uPlNeroDevil::updateRotate(void)",
+   "confidence": "high",
+   "evidence": [
+    "order",
+    "consts"
+   ],
+   "action": "confirmed",
+   "notes": ""
+  },
+  {
+   "dx9_ea": "0x8295c0",
+   "old_dx9_name": "sub_8295C0",
+   "new_dx9_name": "uPlNeroDevil::updateMatrix",
+   "se_ea": "0xa2d6c0",
+   "se_name": "uPlNeroDevil::updateMatrix(void)",
+   "confidence": "high",
+   "evidence": [
+    "decompile",
+    "callers"
+   ],
+   "action": "renamed",
+   "notes": "calls vslots updateLocalMatrix/updateWorldMatrix when visible; called from sync"
+  },
+  {
+   "dx9_ea": "0x8295f0",
+   "old_dx9_name": "uPlNeroDevil::updateTransparency",
+   "new_dx9_name": "uPlNeroDevil::updateTransparency",
+   "se_ea": "0xa2ef80",
+   "se_name": "uPlNeroDevil::updateTransparency(void)",
+   "confidence": "high",
+   "evidence": [
+    "callees",
+    "consts"
+   ],
+   "action": "confirmed",
+   "notes": ""
+  },
+  {
+   "dx9_ea": "0x829aa0",
+   "old_dx9_name": "uPlNeroDevil::updateDevilTriggerReserve",
+   "new_dx9_name": "uPlNeroDevil::updateDevilTriggerReserve",
+   "se_ea": "0xa2e900",
+   "se_name": "uPlNeroDevil::updateDevilTriggerReserve(void)",
+   "confidence": "high",
+   "evidence": [
+    "decompile",
+    "callers"
+   ],
+   "action": "confirmed",
+   "notes": ""
+  },
+  {
+   "dx9_ea": "0x829b30",
+   "old_dx9_name": "uPlNeroDevil::checkDevilDisappear",
+   "new_dx9_name": "uPlNeroDevil::checkDevilDisappear",
+   "se_ea": "0xa2e960",
+   "se_name": "uPlNeroDevil::checkDevilDisappear(void)",
+   "confidence": "high",
+   "evidence": [
+    "callees",
+    "decompile"
+   ],
+   "action": "confirmed",
+   "notes": ""
+  },
+  {
+   "dx9_ea": "0x829ba0",
+   "old_dx9_name": "sub_829BA0",
+   "new_dx9_name": "uPlNeroDevil::checkPlayerAction",
+   "se_ea": "0xa2d6f0",
+   "se_name": "uPlNeroDevil::checkPlayerAction(uPlNeroDevil::kActionCheckTbl *)",
+   "confidence": "high",
+   "evidence": [
+    "decompile",
+    "consts"
+   ],
+   "action": "renamed",
+   "notes": "walks {action,sub} table against player action no"
+  },
+  {
+   "dx9_ea": "0x829be0",
+   "old_dx9_name": "uPlNeroDevil::setAction",
+   "new_dx9_name": "uPlNeroDevil::setAction",
+   "se_ea": "0xa2ea20",
+   "se_name": "uPlNeroDevil::setAction(int)",
+   "confidence": "high",
+   "evidence": [
+    "callees",
+    "order"
+   ],
+   "action": "confirmed",
+   "notes": ""
+  },
+  {
+   "dx9_ea": "0x829ce0",
+   "old_dx9_name": "uPlNeroDevil::setSnatchParam",
+   "new_dx9_name": "uPlNeroDevil::setSnatchParam",
+   "se_ea": "0xa2d760",
+   "se_name": "uPlNeroDevil::setSnatchParam(cLockOnTarget *,bool)",
+   "confidence": "high",
+   "evidence": [
+    "decompile",
+    "callers"
+   ],
+   "action": "confirmed",
+   "notes": "callers uPlayerNero::moveAtckRightHandLong(Air)Grab"
+  },
+  {
+   "dx9_ea": "0x829d20",
+   "old_dx9_name": "uPlayerNero::setShortGrabTarget",
+   "new_dx9_name": "uPlNeroDevil::setBusterParam",
+   "se_ea": "0xa2d7a0",
+   "se_name": "uPlNeroDevil::setBusterParam(cLockOnTarget *,bool)",
+   "confidence": "high",
+   "evidence": [
+    "decompile",
+    "callers",
+    "order"
+   ],
+   "action": "replaced_existing",
+   "notes": "this=uPlNeroDevil; callers uPlayerNero::moveAtckRightHandShort(Air)Grab (Buster); twin of setSnatchParam"
+  },
+  {
+   "dx9_ea": "0x829d60",
+   "old_dx9_name": "uPlNeroDevil::moveAction",
+   "new_dx9_name": "uPlNeroDevil::moveAction",
+   "se_ea": "0xa30d30",
+   "se_name": "uPlNeroDevil::moveAction(void)",
+   "confidence": "high",
+   "evidence": [
+    "callees",
+    "consts",
+    "order"
+   ],
+   "action": "confirmed",
+   "notes": ""
+  },
+  {
+   "dx9_ea": "0x829df0",
+   "old_dx9_name": "uPlNeroDevil::moveActNone",
+   "new_dx9_name": "uPlNeroDevil::moveActNone",
+   "se_ea": "0xa2f400",
+   "se_name": "uPlNeroDevil::moveActNone(void)",
+   "confidence": "high",
+   "evidence": [
+    "callees",
+    "consts",
+    "order"
+   ],
+   "action": "confirmed",
+   "notes": ""
+  },
+  {
+   "dx9_ea": "0x829e70",
+   "old_dx9_name": "uPlNeroDevil::moveActAppear",
+   "new_dx9_name": "uPlNeroDevil::moveActAppear",
+   "se_ea": "0xa2f500",
+   "se_name": "uPlNeroDevil::moveActAppear(void)",
+   "confidence": "high",
+   "evidence": [
+    "callees",
+    "consts",
+    "order"
+   ],
+   "action": "confirmed",
+   "notes": ""
+  },
+  {
+   "dx9_ea": "0x829ff0",
+   "old_dx9_name": "uPlNeroDevil::moveActBuster",
+   "new_dx9_name": "uPlNeroDevil::moveActBuster",
+   "se_ea": "0xa2f730",
+   "se_name": "uPlNeroDevil::moveActBuster(void)",
+   "confidence": "high",
+   "evidence": [
+    "callees",
+    "consts",
+    "order"
+   ],
+   "action": "confirmed",
+   "notes": ""
+  },
+  {
+   "dx9_ea": "0x82a290",
+   "old_dx9_name": "uPlNeroDevil::moveActSnatch",
+   "new_dx9_name": "uPlNeroDevil::moveActSnatch",
+   "se_ea": "0xa30750",
+   "se_name": "uPlNeroDevil::moveActSnatch(void)",
+   "confidence": "high",
+   "evidence": [
+    "callees",
+    "consts",
+    "order"
+   ],
+   "action": "confirmed",
+   "notes": ""
+  },
+  {
+   "dx9_ea": "0x82a830",
+   "old_dx9_name": "uPlNeroDevil::moveActYamato",
+   "new_dx9_name": "uPlNeroDevil::moveActYamato",
+   "se_ea": "0xa2fa20",
+   "se_name": "uPlNeroDevil::moveActYamato(void)",
+   "confidence": "high",
+   "evidence": [
+    "callees",
+    "consts",
+    "order"
+   ],
+   "action": "confirmed",
+   "notes": ""
+  },
+  {
+   "dx9_ea": "0x82aa80",
+   "old_dx9_name": "uPlNeroDevil::moveActEmBlock",
+   "new_dx9_name": "uPlNeroDevil::moveActEmBlock",
+   "se_ea": "0xa2fce0",
+   "se_name": "uPlNeroDevil::moveActEmBlock(void)",
+   "confidence": "high",
+   "evidence": [
+    "callees",
+    "consts",
+    "order"
+   ],
+   "action": "confirmed",
+   "notes": ""
+  },
+  {
+   "dx9_ea": "0x82b220",
+   "old_dx9_name": "uPlNeroDevil::moveActIllusionSword",
+   "new_dx9_name": "uPlNeroDevil::moveActIllusionSword",
+   "se_ea": "0xa30480",
+   "se_name": "uPlNeroDevil::moveActIllusionSword(void)",
+   "confidence": "high",
+   "evidence": [
+    "callees",
+    "consts",
+    "order"
+   ],
+   "action": "confirmed",
+   "notes": ""
+  },
+  {
+   "dx9_ea": "0x82b3b0",
+   "old_dx9_name": "sub_82B3B0",
+   "new_dx9_name": "uPlNeroDevil::getTargetAngleXY",
+   "se_ea": "0xa2eac0",
+   "se_name": "uPlNeroDevil::getTargetAngleXY(void)",
+   "confidence": "high",
+   "evidence": [
+    "callers",
+    "callees",
+    "decompile"
+   ],
+   "action": "renamed",
+   "notes": "only caller is setMotionBlendRate (0x82B470), as in SE"
+  },
+  {
+   "dx9_ea": "0x82b470",
+   "old_dx9_name": "sub_82B470",
+   "new_dx9_name": "uPlNeroDevil::setMotionBlendRate",
+   "se_ea": "0xa2eba0",
+   "se_name": "uPlNeroDevil::setMotionBlendRate(void)",
+   "confidence": "high",
+   "evidence": [
+    "callers",
+    "callees"
+   ],
+   "action": "renamed",
+   "notes": "only caller moveActSnatch, calls getTargetAngleXY, as in SE"
+  },
+  {
+   "dx9_ea": "0x82b500",
+   "old_dx9_name": "sub_82B500",
+   "new_dx9_name": "uPlNeroDevil::setNnatchMotion",
+   "se_ea": "0xa30660",
+   "se_name": "uPlNeroDevil::setNnatchMotion(int)",
+   "confidence": "high",
+   "evidence": [
+    "callers",
+    "callees"
+   ],
+   "action": "renamed",
+   "notes": "only caller moveActSnatch; calls setMotion twice"
+  },
+  {
+   "dx9_ea": "0x82b570",
+   "old_dx9_name": "sub_82B570",
+   "new_dx9_name": "uPlNeroDevil::customMessage",
+   "se_ea": "0xa2ec40",
+   "se_name": "uPlNeroDevil::customMessage(uint,uint,MtObject *,cCollisionGroup *,cCollisionGroup *)",
+   "confidence": "high",
+   "evidence": [
+    "vtable",
+    "callees"
+   ],
+   "action": "renamed",
+   "notes": ""
+  },
+  {
+   "dx9_ea": "0x82b6a0",
+   "old_dx9_name": "uPlWpRightHand::setMotion",
+   "new_dx9_name": "uPlNeroDevil::setMotion",
+   "se_ea": "0xa2ed60",
+   "se_name": "uPlNeroDevil::setMotion(uint,uint,ushort,float,float,float)",
+   "confidence": "high",
+   "evidence": [
+    "callers",
+    "decompile"
+   ],
+   "action": "replaced_existing",
+   "notes": "this=uPlNeroDevil; callers moveActNone/Appear/Buster/EmBlock/IllusionSword/setNnatchMotion == SE caller set"
+  },
+  {
+   "dx9_ea": "0x82b850",
+   "old_dx9_name": "uPlayerNero::setKabutoCollisionDown",
+   "new_dx9_name": "uPlNeroDevil::setYamatoMotionStop",
+   "se_ea": "0xa2d900",
+   "se_name": "uPlNeroDevil::setYamatoMotionStop(void)",
+   "confidence": "high",
+   "evidence": [
+    "callers",
+    "decompile",
+    "consts"
+   ],
+   "action": "replaced_existing",
+   "notes": "adds motion attr 0x10 on devil + right hand; callers uPlayerNero::moveAtckRedQueen(Drive)Kabuto as in SE"
+  },
+  {
+   "dx9_ea": "0x82b8b0",
+   "old_dx9_name": "uPlayerNero::setKabutoCollisionUp",
+   "new_dx9_name": "uPlNeroDevil::setYamatoMotionRestart",
+   "se_ea": "0xa2d940",
+   "se_name": "uPlNeroDevil::setYamatoMotionRestart(void)",
+   "confidence": "high",
+   "evidence": [
+    "callers",
+    "decompile",
+    "consts"
+   ],
+   "action": "replaced_existing",
+   "notes": "inverse of setYamatoMotionStop (sub attr 0x10)"
+  },
+  {
+   "dx9_ea": "0x82b910",
+   "old_dx9_name": "sub_82B910",
+   "new_dx9_name": "uPlNeroDevilFlicker::getDTI",
+   "se_ea": "0xa31ba0",
+   "se_name": "uPlNeroDevilFlicker::getDTI(void)",
+   "confidence": "high",
+   "evidence": [
+    "vtable",
+    "decompile"
+   ],
+   "action": "renamed",
+   "notes": ""
+  },
+  {
+   "dx9_ea": "0x82b920",
+   "old_dx9_name": "sub_82B920",
+   "new_dx9_name": "uPlNeroDevilFlicker::MyDTI::newInstance",
+   "se_ea": "0xa313a0",
+   "se_name": "uPlNeroDevilFlicker::MyDTI::newInstance(void)",
+   "confidence": "high",
+   "evidence": [
+    "decompile",
+    "consts"
+   ],
+   "action": "renamed",
+   "notes": "alloc 4992 + inlined ctor (uActor ctor + Flicker vftable); no code callers (DTI vtable)"
+  },
+  {
+   "dx9_ea": "0x82b980",
+   "old_dx9_name": "loc_82B980",
+   "new_dx9_name": "??_EuPlNeroDevilFlicker@@UAEPAXI@Z",
+   "se_ea": "0xa31bb0",
+   "se_name": "uPlNeroDevilFlicker::`vector deleting destructor'(uint)",
+   "confidence": "high",
+   "evidence": [
+    "vtable",
+    "decompile"
+   ],
+   "action": "renamed",
+   "notes": "newly defined"
+  },
+  {
+   "dx9_ea": "0x82b9b0",
+   "old_dx9_name": "sub_82B9B0",
+   "new_dx9_name": "uPlNeroDevilFlicker::setup",
+   "se_ea": "0xa31210",
+   "se_name": "uPlNeroDevilFlicker::setup(void)",
+   "confidence": "high",
+   "evidence": [
+    "vtable",
+    "callees"
+   ],
+   "action": "renamed",
+   "notes": ""
+  },
+  {
+   "dx9_ea": "0x82bb20",
+   "old_dx9_name": "sub_82BB20",
+   "new_dx9_name": "uPlNeroDevilFlicker::main",
+   "se_ea": "0xa31410",
+   "se_name": "uPlNeroDevilFlicker::main(void)",
+   "confidence": "high",
+   "evidence": [
+    "vtable",
+    "consts"
+   ],
+   "action": "renamed",
+   "notes": ""
+  },
+  {
+   "dx9_ea": "0x82bb60",
+   "old_dx9_name": "sub_82BB60",
+   "new_dx9_name": "uPlNeroDevilFlicker::draw",
+   "se_ea": "0xa31450",
+   "se_name": "uPlNeroDevilFlicker::draw(cDraw *)",
+   "confidence": "high",
+   "evidence": [
+    "vtable",
+    "callees"
+   ],
+   "action": "renamed",
+   "notes": ""
+  },
+  {
+   "dx9_ea": "0x82bb90",
+   "old_dx9_name": "sub_82BB90",
+   "new_dx9_name": "uPlNeroDevilFlicker::createProperty",
+   "se_ea": "0xa314a0",
+   "se_name": "uPlNeroDevilFlicker::createProperty(MtPropertyList &)",
+   "confidence": "high",
+   "evidence": [
+    "vtable",
+    "strings"
+   ],
+   "action": "renamed",
+   "notes": ""
+  },
+  {
+   "dx9_ea": "0x82bcd0",
+   "old_dx9_name": "sub_82BCD0",
+   "new_dx9_name": null,
+   "se_ea": "0xa31700",
+   "se_name": "uPlNeroDevilFlicker::constParent(void)",
+   "confidence": "medium",
+   "evidence": [
+    "order"
+   ],
+   "action": "commented",
+   "notes": "only remaining Flicker method; matrix/sqrt work; DX9 called from draw (SE from sync); size 552 vs 1123"
+  },
+  {
+   "dx9_ea": "0x82bf00",
+   "old_dx9_name": "sub_82BF00",
+   "new_dx9_name": "uPlNeroShl000::getDTI",
+   "se_ea": "0xa325e0",
+   "se_name": "uPlNeroShl000::getDTI(void)",
+   "confidence": "high",
+   "evidence": [
+    "vtable",
+    "decompile"
+   ],
+   "action": "renamed",
+   "notes": ""
+  },
+  {
+   "dx9_ea": "0x82bf10",
+   "old_dx9_name": "sub_82BF10",
+   "new_dx9_name": "??1uPlNeroShl000@@UAE@XZ",
+   "se_ea": null,
+   "se_name": null,
+   "confidence": "high",
+   "evidence": [
+    "decompile",
+    "callers"
+   ],
+   "action": "renamed",
+   "notes": "dtor body (writes uPlNeroShl000::vftable, releases +0x17F8 resource); only caller ??_G; SE emits no separate ~uPlNeroShl000"
+  },
+  {
+   "dx9_ea": "0x82bf60",
+   "old_dx9_name": "loc_82BF60",
+   "new_dx9_name": "??_GuPlNeroShl000@@UAEPAXI@Z",
+   "se_ea": "0xa325f0",
+   "se_name": "uPlNeroShl000::`scalar deleting destructor'(uint)",
+   "confidence": "high",
+   "evidence": [
+    "vtable",
+    "decompile"
+   ],
+   "action": "renamed",
+   "notes": "newly defined"
+  },
+  {
+   "dx9_ea": "0x82bf90",
+   "old_dx9_name": "loc_82BF90",
+   "new_dx9_name": "uPlNeroShl000::MyDTI::newInstance",
+   "se_ea": "0xa31fd0",
+   "se_name": "uPlNeroShl000::MyDTI::newInstance(void)",
+   "confidence": "high",
+   "evidence": [
+    "vtable",
+    "decompile"
+   ],
+   "action": "renamed",
+   "notes": "newly defined; uPlShl ctor + vftable inlined"
+  },
+  {
+   "dx9_ea": "0x82bfd0",
+   "old_dx9_name": "sub_82BFD0",
+   "new_dx9_name": "uPlNeroShl000::setup",
+   "se_ea": "0xa32040",
+   "se_name": "uPlNeroShl000::setup(void)",
+   "confidence": "high",
+   "evidence": [
+    "vtable",
+    "callees"
+   ],
+   "action": "renamed",
+   "notes": ""
+  },
+  {
+   "dx9_ea": "0x82c510",
+   "old_dx9_name": "sub_82C510",
+   "new_dx9_name": "uPlNeroShl000::setEfct",
+   "se_ea": "0xa31d70",
+   "se_name": "uPlNeroShl000::setEfct(void)",
+   "confidence": "high",
+   "evidence": [
+    "vtable",
+    "callees"
+   ],
+   "action": "renamed",
+   "notes": "ICF: uPlDanteShl000::setEfct(void); uPlDanteBossShl000::setEfct(void)"
+  },
+  {
+   "dx9_ea": "0x82c590",
+   "old_dx9_name": "sub_82C590",
+   "new_dx9_name": "uPlNeroShl000::hitMessage",
+   "se_ea": "0xa31df0",
+   "se_name": "uPlNeroShl000::hitMessage(cCollisionGroup *,cCollisionGroup *)",
+   "confidence": "high",
+   "evidence": [
+    "vtable",
+    "callees"
+   ],
+   "action": "renamed",
+   "notes": ""
+  },
+  {
+   "dx9_ea": "0x82c6a0",
+   "old_dx9_name": "uPlNeroShl000::create",
+   "new_dx9_name": "uPlNeroShl000::create",
+   "se_ea": "0xa31f10",
+   "se_name": "uPlNeroShl000::create(int,uActor *)",
+   "confidence": "high",
+   "evidence": [
+    "callers",
+    "callees"
+   ],
+   "action": "confirmed",
+   "notes": "callers uPlayerNero::moveAtckBlueRoseShot(Air) as in SE"
+  },
+  {
+   "dx9_ea": "0x82c710",
+   "old_dx9_name": "sub_82C710",
+   "new_dx9_name": "uPlNeroShl001::getDTI",
+   "se_ea": "0xa33b60",
+   "se_name": "uPlNeroShl001::getDTI(void)",
+   "confidence": "high",
+   "evidence": [
+    "vtable",
+    "decompile"
+   ],
+   "action": "renamed",
+   "notes": ""
+  },
+  {
+   "dx9_ea": "0x82c720",
+   "old_dx9_name": "sub_82C720",
+   "new_dx9_name": "??1uPlNeroShl001@@UAE@XZ",
+   "se_ea": null,
+   "se_name": null,
+   "confidence": "high",
+   "evidence": [
+    "decompile",
+    "callers"
+   ],
+   "action": "renamed",
+   "notes": "dtor body (writes uPlNeroShl001::vftable); only caller ??_G; SE emits no separate ~uPlNeroShl001"
+  },
+  {
+   "dx9_ea": "0x82c770",
+   "old_dx9_name": "loc_82C770",
+   "new_dx9_name": "??_GuPlNeroShl001@@UAEPAXI@Z",
+   "se_ea": "0xa33b70",
+   "se_name": "uPlNeroShl001::`scalar deleting destructor'(uint)",
+   "confidence": "high",
+   "evidence": [
+    "vtable",
+    "decompile"
+   ],
+   "action": "renamed",
+   "notes": "newly defined"
+  },
+  {
+   "dx9_ea": "0x82c7a0",
+   "old_dx9_name": "uPlNeroShl001::newInstance",
+   "new_dx9_name": "uPlNeroShl001::MyDTI::newInstance",
+   "se_ea": "0xa329f0",
+   "se_name": "uPlNeroShl001::MyDTI::newInstance(void)",
+   "confidence": "high",
+   "evidence": [
+    "decompile",
+    "order"
+   ],
+   "action": "replaced_existing",
+   "notes": ""
+  },
+  {
+   "dx9_ea": "0x82c7d0",
+   "old_dx9_name": "uPlNeroShl001::uPlNeroShl001",
+   "new_dx9_name": "uPlNeroShl001::uPlNeroShl001",
+   "se_ea": "0xa32760",
+   "se_name": "uPlNeroShl001::uPlNeroShl001(int)",
+   "confidence": "high",
+   "evidence": [
+    "decompile",
+    "callees"
+   ],
+   "action": "confirmed",
+   "notes": ""
+  },
+  {
+   "dx9_ea": "0x82c870",
+   "old_dx9_name": "uPlNeroShl001::setup",
+   "new_dx9_name": "uPlNeroShl001::setup",
+   "se_ea": "0xa32a30",
+   "se_name": "uPlNeroShl001::setup(void)",
+   "confidence": "high",
+   "evidence": [
+    "vtable",
+    "callees"
+   ],
+   "action": "confirmed",
+   "notes": ""
+  },
+  {
+   "dx9_ea": "0x82cfe0",
+   "old_dx9_name": "sub_82CFE0",
+   "new_dx9_name": "uPlNeroShl001::setEfct",
+   "se_ea": "0xa33130",
+   "se_name": "uPlNeroShl001::setEfct(void)",
+   "confidence": "high",
+   "evidence": [
+    "vtable",
+    "callees"
+   ],
+   "action": "renamed",
+   "notes": ""
+  },
+  {
+   "dx9_ea": "0x82d7a0",
+   "old_dx9_name": "sub_82D7A0",
+   "new_dx9_name": "uPlNeroShl001::setWallHit",
+   "se_ea": "0xa33ad0",
+   "se_name": "uPlNeroShl001::setWallHit(sCollision::TriangleInfo *)",
+   "confidence": "high",
+   "evidence": [
+    "vtable",
+    "callees"
+   ],
+   "action": "renamed",
+   "notes": ""
+  },
+  {
+   "dx9_ea": "0x82d820",
+   "old_dx9_name": "uPlNeroShl001::hitMessage",
+   "new_dx9_name": "uPlNeroShl001::hitMessage",
+   "se_ea": "0xa32830",
+   "se_name": "uPlNeroShl001::hitMessage(cCollisionGroup *,cCollisionGroup *)",
+   "confidence": "high",
+   "evidence": [
+    "vtable",
+    "callees"
+   ],
+   "action": "confirmed",
+   "notes": ""
+  },
+  {
+   "dx9_ea": "0x82d960",
+   "old_dx9_name": "uPlNeroShl001::create",
+   "new_dx9_name": "uPlNeroShl001::create",
+   "se_ea": "0xa32990",
+   "se_name": "uPlNeroShl001::create(int,uActor *)",
+   "confidence": "high",
+   "evidence": [
+    "callers",
+    "callees"
+   ],
+   "action": "confirmed",
+   "notes": "4 BlueRose shot callers as in SE"
+  },
+  {
+   "dx9_ea": "0x82d9b0",
+   "old_dx9_name": "sub_82D9B0",
+   "new_dx9_name": "uPlNeroShl002::getDTI",
+   "se_ea": "0xa34860",
+   "se_name": "uPlNeroShl002::getDTI(void)",
+   "confidence": "high",
+   "evidence": [
+    "vtable",
+    "decompile"
+   ],
+   "action": "renamed",
+   "notes": ""
+  },
+  {
+   "dx9_ea": "0x82d9c0",
+   "old_dx9_name": "loc_82D9C0",
+   "new_dx9_name": "uPlNeroShl002::MyDTI::newInstance",
+   "se_ea": "0xa33f80",
+   "se_name": "uPlNeroShl002::MyDTI::newInstance(void)",
+   "confidence": "high",
+   "evidence": [
+    "vtable",
+    "decompile"
+   ],
+   "action": "renamed",
+   "notes": "newly defined"
+  },
+  {
+   "dx9_ea": "0x82da20",
+   "old_dx9_name": "sub_82DA20",
+   "new_dx9_name": "uPlNeroShl002::createProperty",
+   "se_ea": "0xa33d40",
+   "se_name": "uPlNeroShl002::createProperty(MtPropertyList &)",
+   "confidence": "high",
+   "evidence": [
+    "vtable",
+    "consts"
+   ],
+   "action": "renamed",
+   "notes": "5-byte stub | ICF: uPlNeroShl000::createProperty(MtPropertyList &); uPlNeroShl001::createProperty(MtPropertyList &); uPlDanteShl000/uPlDanteBossShl000 slot 3"
+  },
+  {
+   "dx9_ea": "0x82da30",
+   "old_dx9_name": "sub_82DA30",
+   "new_dx9_name": "uPlNeroShl002::setup",
+   "se_ea": "0xa33ff0",
+   "se_name": "uPlNeroShl002::setup(void)",
+   "confidence": "high",
+   "evidence": [
+    "vtable",
+    "callees"
+   ],
+   "action": "renamed",
+   "notes": ""
+  },
+  {
+   "dx9_ea": "0x82e0b0",
+   "old_dx9_name": "sub_82E0B0",
+   "new_dx9_name": "uPlNeroShl002::update",
+   "se_ea": "0xa34670",
+   "se_name": "uPlNeroShl002::update(void)",
+   "confidence": "high",
+   "evidence": [
+    "vtable",
+    "callees"
+   ],
+   "action": "renamed",
+   "notes": ""
+  },
+  {
+   "dx9_ea": "0x82e300",
+   "old_dx9_name": "sub_82E300",
+   "new_dx9_name": "uPlNeroShl002::setEfct",
+   "se_ea": "0xa33d50",
+   "se_name": "uPlNeroShl002::setEfct(void)",
+   "confidence": "high",
+   "evidence": [
+    "vtable",
+    "consts"
+   ],
+   "action": "renamed",
+   "notes": ""
+  },
+  {
+   "dx9_ea": "0x82e380",
+   "old_dx9_name": "sub_82E380",
+   "new_dx9_name": "uPlNeroShl002::hitMessage",
+   "se_ea": "0xa33dd0",
+   "se_name": "uPlNeroShl002::hitMessage(cCollisionGroup *,cCollisionGroup *)",
+   "confidence": "high",
+   "evidence": [
+    "vtable",
+    "order"
+   ],
+   "action": "renamed",
+   "notes": ""
+  },
+  {
+   "dx9_ea": "0x82e3e0",
+   "old_dx9_name": "uPlNeroShl002::setup",
+   "new_dx9_name": "uPlNeroShl002::setShlEffect",
+   "se_ea": "0xa33e30",
+   "se_name": "uPlNeroShl002::setShlEffect(uDevil4Effect *)",
+   "confidence": "high",
+   "evidence": [
+    "decompile",
+    "order"
+   ],
+   "action": "replaced_existing",
+   "notes": "stores effect in 4-slot shell effect table (uPlShl::setEffectCnst inlined); called by create. Real setup is vtable slot 5 = 0x82DA30"
+  },
+  {
+   "dx9_ea": "0x82e430",
+   "old_dx9_name": "uPlNeroShl002::create",
+   "new_dx9_name": "uPlNeroShl002::create",
+   "se_ea": "0xa33e60",
+   "se_name": "uPlNeroShl002::create(int,uActor *)",
+   "confidence": "high",
+   "evidence": [
+    "callers",
+    "callees"
+   ],
+   "action": "confirmed",
+   "notes": "caller uPlayerNero::moveAtckRedQueenDevilDrive as in SE"
+  },
+  {
+   "dx9_ea": "0x82e4d0",
+   "old_dx9_name": "sub_82E4D0",
+   "new_dx9_name": "uPlNeroShl003::getDTI",
+   "se_ea": "0xa35ef0",
+   "se_name": "uPlNeroShl003::getDTI(void)",
+   "confidence": "high",
+   "evidence": [
+    "vtable",
+    "decompile"
+   ],
+   "action": "renamed",
+   "notes": ""
+  },
+  {
+   "dx9_ea": "0x82e4e0",
+   "old_dx9_name": "sDevil4Sound::requestSe_w",
+   "new_dx9_name": "uPlNeroShl003::requestSe",
+   "se_ea": "0xa2d9a0",
+   "se_name": "uPlNeroDevil::requestSe(uint,MtVector3 const &)",
+   "confidence": "high",
+   "evidence": [
+    "callers",
+    "callees"
+   ],
+   "action": "replaced_existing",
+   "notes": "DX9 copy lives in uPlNeroShl003 region and reaches the devil via the player (+0xCDF8); callers NeroShl003 setEfct/hitMessage == SE caller set (SE owner: uPlNeroDevil)"
+  },
+  {
+   "dx9_ea": "0x82e510",
+   "old_dx9_name": "loc_82E510",
+   "new_dx9_name": "uPlNeroShl003::MyDTI::newInstance",
+   "se_ea": "0xa35190",
+   "se_name": "uPlNeroShl003::MyDTI::newInstance(void)",
+   "confidence": "high",
+   "evidence": [
+    "vtable",
+    "decompile"
+   ],
+   "action": "renamed",
+   "notes": "newly defined; calls ctor 0x82E540"
+  },
+  {
+   "dx9_ea": "0x82e540",
+   "old_dx9_name": "sub_82E540",
+   "new_dx9_name": "uPlNeroShl003::uPlNeroShl003",
+   "se_ea": "0xa349d0",
+   "se_name": "uPlNeroShl003::uPlNeroShl003(int,bool,int)",
+   "confidence": "high",
+   "evidence": [
+    "decompile",
+    "callees"
+   ],
+   "action": "renamed",
+   "notes": ""
+  },
+  {
+   "dx9_ea": "0x82e670",
+   "old_dx9_name": "sub_82E670",
+   "new_dx9_name": "uPlNeroShl003::createProperty",
+   "se_ea": "0xa351d0",
+   "se_name": "uPlNeroShl003::createProperty(MtPropertyList &)",
+   "confidence": "high",
+   "evidence": [
+    "vtable",
+    "strings"
+   ],
+   "action": "renamed",
+   "notes": ""
+  },
+  {
+   "dx9_ea": "0x82e7f0",
+   "old_dx9_name": "sub_82E7F0",
+   "new_dx9_name": "uPlNeroShl003::setup",
+   "se_ea": "0xa34b40",
+   "se_name": "uPlNeroShl003::setup(void)",
+   "confidence": "high",
+   "evidence": [
+    "vtable",
+    "callees"
+   ],
+   "action": "renamed",
+   "notes": ""
+  },
+  {
+   "dx9_ea": "0x82e9f0",
+   "old_dx9_name": "sub_82E9F0",
+   "new_dx9_name": "uPlNeroShl003::moveEx",
+   "se_ea": "0xa34d50",
+   "se_name": "uPlNeroShl003::moveEx(void)",
+   "confidence": "high",
+   "evidence": [
+    "vtable",
+    "decompile"
+   ],
+   "action": "renamed",
+   "notes": "uPlNeroShl003 slot 7 (slot 6 = nullsub); SE NeroShl003::moveEx is a 5-byte jmp to uShell::move, so ICF kept this one body for uShell::move too | ICF: uShell::move(void) @ 0xa655c0 (slot 6 of uShell, uPlShl, every uPlDanteShl*/uPlNeroShl000-002); uPlDanteShl013::moveEx(void)"
+  },
+  {
+   "dx9_ea": "0x82ea10",
+   "old_dx9_name": "sub_82EA10",
+   "new_dx9_name": "uPlNeroShl003::main",
+   "se_ea": "0xa35e30",
+   "se_name": "uPlNeroShl003::main(void)",
+   "confidence": "high",
+   "evidence": [
+    "vtable",
+    "callees"
+   ],
+   "action": "renamed",
+   "notes": ""
+  },
+  {
+   "dx9_ea": "0x82eb00",
+   "old_dx9_name": "sub_82EB00",
+   "new_dx9_name": "uPlNeroShl003::updateCnst",
+   "se_ea": "0xa354a0",
+   "se_name": "uPlNeroShl003::updateCnst(void)",
+   "confidence": "high",
+   "evidence": [
+    "callers",
+    "callees",
+    "consts"
+   ],
+   "action": "renamed",
+   "notes": "only caller main; calls updateMove"
+  },
+  {
+   "dx9_ea": "0x82f170",
+   "old_dx9_name": "sub_82F170",
+   "new_dx9_name": "uPlNeroShl003::updateMove",
+   "se_ea": "0xa34d60",
+   "se_name": "uPlNeroShl003::updateMove(void)",
+   "confidence": "high",
+   "evidence": [
+    "callers",
+    "callees"
+   ],
+   "action": "renamed",
+   "notes": "callers main + updateCnst as in SE"
+  },
+  {
+   "dx9_ea": "0x82f2d0",
+   "old_dx9_name": "sub_82F2D0",
+   "new_dx9_name": "uPlNeroShl003::update",
+   "se_ea": "0xa35b20",
+   "se_name": "uPlNeroShl003::update(void)",
+   "confidence": "high",
+   "evidence": [
+    "vtable"
+   ],
+   "action": "renamed",
+   "notes": ""
+  },
+  {
+   "dx9_ea": "0x82f3e0",
+   "old_dx9_name": "sub_82F3E0",
+   "new_dx9_name": "uPlNeroShl003::setEfct",
+   "se_ea": "0xa34ea0",
+   "se_name": "uPlNeroShl003::setEfct(void)",
+   "confidence": "high",
+   "evidence": [
+    "vtable",
+    "callees"
+   ],
+   "action": "renamed",
+   "notes": ""
+  },
+  {
+   "dx9_ea": "0x82f5a0",
+   "old_dx9_name": "sub_82F5A0",
+   "new_dx9_name": "uPlNeroShl003::hitMessage",
+   "se_ea": "0xa35bf0",
+   "se_name": "uPlNeroShl003::hitMessage(cCollisionGroup *,cCollisionGroup *)",
+   "confidence": "high",
+   "evidence": [
+    "vtable",
+    "callees"
+   ],
+   "action": "renamed",
+   "notes": ""
+  },
+  {
+   "dx9_ea": "0x82f780",
+   "old_dx9_name": "sub_82F780",
+   "new_dx9_name": "uPlNeroShl003::updatePtr",
+   "se_ea": "0xa35dc0",
+   "se_name": "uPlNeroShl003::updatePtr(void)",
+   "confidence": "high",
+   "evidence": [
+    "vtable",
+    "callees"
+   ],
+   "action": "renamed",
+   "notes": ""
+  },
+  {
+   "dx9_ea": "0x82f7f0",
+   "old_dx9_name": "sub_82F7F0",
+   "new_dx9_name": "uPlNeroShl003::create",
+   "se_ea": "0xa35120",
+   "se_name": "uPlNeroShl003::create(int,bool,int,uActor *)",
+   "confidence": "high",
+   "evidence": [
+    "callers",
+    "order"
+   ],
+   "action": "renamed",
+   "notes": "2 callers in uPlayerNero (SE: updateChargeShotEffect, movePlayerBefore)"
+  },
+  {
+   "dx9_ea": "0x82f840",
+   "old_dx9_name": "sub_82F840",
+   "new_dx9_name": "uPlOwnHit::getDTI",
+   "se_ea": "0xa36740",
+   "se_name": "uPlOwnHit::getDTI(void)",
+   "confidence": "high",
+   "evidence": [
+    "vtable",
+    "decompile"
+   ],
+   "action": "renamed",
+   "notes": ""
+  },
+  {
+   "dx9_ea": "0x82f850",
+   "old_dx9_name": "loc_82F850",
+   "new_dx9_name": "uPlOwnHit::MyDTI::newInstance",
+   "se_ea": "0xa36700",
+   "se_name": "uPlOwnHit::MyDTI::newInstance(void)",
+   "confidence": "high",
+   "evidence": [
+    "vtable",
+    "decompile"
+   ],
+   "action": "renamed",
+   "notes": "newly defined; calls ctor 0x82F870"
+  },
+  {
+   "dx9_ea": "0x82f870",
+   "old_dx9_name": "sub_82F870",
+   "new_dx9_name": "uPlOwnHit::uPlOwnHit",
+   "se_ea": "0xa36200",
+   "se_name": "uPlOwnHit::uPlOwnHit(void)",
+   "confidence": "high",
+   "evidence": [
+    "decompile",
+    "callees"
+   ],
+   "action": "renamed",
+   "notes": "uActor ctor + uPlOwnHit::vftable + uCollisionMgr"
+  },
+  {
+   "dx9_ea": "0x82f8c0",
+   "old_dx9_name": "loc_82F8C0",
+   "new_dx9_name": "??_GuPlOwnHit@@UAEPAXI@Z",
+   "se_ea": "0xa36750",
+   "se_name": "uPlOwnHit::`scalar deleting destructor'(uint)",
+   "confidence": "high",
+   "evidence": [
+    "vtable",
+    "decompile"
+   ],
+   "action": "renamed",
+   "notes": "newly defined; ~uPlOwnHit inlined"
+  },
+  {
+   "dx9_ea": "0x82f920",
+   "old_dx9_name": "sub_82F920",
+   "new_dx9_name": "uPlOwnHit::createProperty",
+   "se_ea": "0xa362d0",
+   "se_name": "uPlOwnHit::createProperty(MtPropertyList &)",
+   "confidence": "high",
+   "evidence": [
+    "vtable",
+    "strings"
+   ],
+   "action": "renamed",
+   "notes": ""
+  },
+  {
+   "dx9_ea": "0x82fa20",
+   "old_dx9_name": "sub_82FA20",
+   "new_dx9_name": "uPlOwnHit::create",
+   "se_ea": "0xa364a0",
+   "se_name": "uPlOwnHit::create(int,uActor *)",
+   "confidence": "high",
+   "evidence": [
+    "callers",
+    "decompile"
+   ],
+   "action": "renamed",
+   "notes": "alloc 0x1800 (DTI size); only caller moveDmgIceButtobi as in SE"
+  },
+  {
+   "dx9_ea": "0x82fb60",
+   "old_dx9_name": "sub_82FB60",
+   "new_dx9_name": "uPlOwnHit::setup",
+   "se_ea": "0xa36590",
+   "se_name": "uPlOwnHit::setup(void)",
+   "confidence": "high",
+   "evidence": [
+    "vtable",
+    "callees"
+   ],
+   "action": "renamed",
+   "notes": ""
+  },
+  {
+   "dx9_ea": "0x82fcd0",
+   "old_dx9_name": "sub_82FCD0",
+   "new_dx9_name": "uPlOwnHit::updatePtr",
+   "se_ea": "0xa366d0",
+   "se_name": "uPlOwnHit::updatePtr(void)",
+   "confidence": "high",
+   "evidence": [
+    "vtable",
+    "consts"
+   ],
+   "action": "renamed",
+   "notes": ""
+  },
+  {
+   "dx9_ea": "0x82fd00",
+   "old_dx9_name": "sub_82FD00",
+   "new_dx9_name": "uPlOwnHit::main",
+   "se_ea": "0xa360a0",
+   "se_name": "uPlOwnHit::main(void)",
+   "confidence": "high",
+   "evidence": [
+    "vtable",
+    "consts"
+   ],
+   "action": "renamed",
+   "notes": ""
+  },
+  {
+   "dx9_ea": "0x82fe10",
+   "old_dx9_name": "sub_82FE10",
+   "new_dx9_name": "uPlOwnHit::hitMessage",
+   "se_ea": "0xa361f0",
+   "se_name": "uPlOwnHit::hitMessage(cCollisionGroup *,cCollisionGroup *)",
+   "confidence": "high",
+   "evidence": [
+    "vtable",
+    "consts"
+   ],
+   "action": "renamed",
+   "notes": ""
+  },
+  {
+   "dx9_ea": "0x82fe20",
+   "old_dx9_name": "sub_82FE20",
+   "new_dx9_name": "uPlShl::getDTI",
+   "se_ea": "0xa37ec0",
+   "se_name": "uPlShl::getDTI(void)",
+   "confidence": "high",
+   "evidence": [
+    "vtable",
+    "decompile"
+   ],
+   "action": "renamed",
+   "notes": ""
+  },
+  {
+   "dx9_ea": "0x82fe30",
+   "old_dx9_name": "uPlShl::uPlShl",
+   "new_dx9_name": "uPlShl::uPlShl",
+   "se_ea": "0xa368e0",
+   "se_name": "uPlShl::uPlShl(void)",
+   "confidence": "high",
+   "evidence": [
+    "callees",
+    "callers"
+   ],
+   "action": "confirmed",
+   "notes": ""
+  },
+  {
+   "dx9_ea": "0x82ff20",
+   "old_dx9_name": "sub_82FF20",
+   "new_dx9_name": "uPlShl::createProperty",
+   "se_ea": "0xa36dc0",
+   "se_name": "uPlShl::createProperty(MtPropertyList &)",
+   "confidence": "high",
+   "evidence": [
+    "vtable",
+    "strings"
+   ],
+   "action": "renamed",
+   "notes": ""
+  }
+ ],
+ "notes": "All 14 vtable labels in range verified via getDTI stub (B8 <DTI> C3) -> own DTI and ctor/dtor vftable writes; none needed fixing. DTI sizes/parents taken from MtDTI registration (push size / mov edi parent / mov esi dti). 18 previously undefined code blocks defined as functions (MyDTI::newInstance stubs and deleting destructors), so 257 rows vs 239 originally dumped. Slot shift is piecewise per band (consistent with P7): base uActor band 30-37 k=23, 57 k=26, shell tail 77-83 k=37 with no gap; uPlayer 153-163 k=80, 170-175 k=91. Address layout: 0x81F9D0-0x820200 uPlayer effect-control block (SE uPlayer EfctCtrl), 0x8207E0-0x827DA0 uPlayer lock-on/motion/action/damage block (SE uPlayerAction source order; moveDmg* interleaved in the same order as SE). Moved code: uPlNeroDevil::requestSe(uint,MtVector3 const&) has a DX9 copy in the uPlNeroShl003 region taking the player (named uPlNeroShl003::requestSe). ICF: 0x82E9F0 is the single body for uShell::move + uPlNeroShl003/uPlDanteShl013::moveEx; 0x81F5F0 is the shared ~uPlShl deleting dtor of 9 shell vtables; 0x820700 is uPlShl::die for all shells + uPlGrabShortHit::die. Existing-name corrections: addEffectEntry->setEffect_2 (CTRL_LV overload), setMotionBlendWeight->requestSetMotionBlendRate, setActCancelFlag->requestClearMotionAttribute, run_effelement->setElementDamageEffect, uPlayer::getNoFromMotSeq->uPlNeroDevil::getNoFromMotSeq, uPlayerNero::setShortGrabTarget->uPlNeroDevil::setBusterParam, uPlWpRightHand::setMotion->uPlNeroDevil::setMotion, uPlayerNero::setKabutoCollisionDown/Up->uPlNeroDevil::setYamatoMotionStop/Restart, uPlNeroShl002::setup(0x82E3E0)->setShlEffect (real setup is 0x82DA30). SE-only/inlined, no DX9 body found: uPlayer setEffectTrans/getEfctCtrl/setEffectSync(LV)/setBossTarget/isInterTarget/setMotionCharTblParam/setMotionEx/getLeverGachaPoint/moveActPoseEnd/PoseRunEnd/isEndProvoke(shared)/isActHolyWater, several uPlNeroDevil small helpers."
+}

@@ -2,6 +2,8 @@
 
 Analysis date: 2026-07-03. All DTI globals emulated; sizes/parents are runtime-accurate.
 
+> The **Game name** column was not derived from code and is unverified (e.g. uEm031 vs uEm029 for Agnus is disputed).
+
 ## Inheritance Chain
 
 ```
@@ -16,7 +18,7 @@ Special sub-trees:
 
 ## Class Roster — DX9 DTI globals
 
-All at the same addresses as SE (DTI emulation was applied identically to both IDBs).
+DX9 DTIs are at `0xE58xxx`; SE's are at `0x1492xxx`, so the addresses differ. Per-method SE→DX9 mapping, corrected vtable addresses and ctors: see `uem_se_dx9_map.md`.
 
 | Class | DTI addr | Parent | alloc_size | Game name |
 |-------|----------|--------|------------|-----------|
@@ -87,8 +89,8 @@ All at the same addresses as SE (DTI emulation was applied identically to both I
 | `uEm025Shl00`–`Shl04` | — | *(shells)* | ~`0x18xx` | Berial projectiles |
 | `uEm026` | `0xE59378` | `uEnemy` | `0x30C0` | Bael / Dagon |
 | `uEm027` | `0xE59398` | `uEnemy` | `0x12010` | Echidna |
-| `uEm029` | `0xE593D8` | *(unknown)* | `0x18A60` | Agnus boss |
-| `uEm030` | `0xE593F8` | *(unknown)* | `0x1E150` | Gloria boss |
+| `uEm029` | `0xE593D8` | `cPopeCommon` | `0x18A60` | Agnus boss |
+| `uEm030` | `0xE593F8` | `cPopeCommon` | `0x1E150` | Gloria boss |
 | `uEm030GroundCtrl` | `0xE59438` | `uActor` | `0x1820` | Ground ctrl sub |
 | `uEm030GroundParts` | `0xE59458` | `uActor` | `0x1390` | Ground parts sub |
 | `uEm030Shl` | `0xE59478` | *(shell)* | `0x18A0` | Gloria shot |
@@ -309,7 +311,7 @@ uEm036          | OVR| -- | OVR|OV|OV|OVR|OVR|-- |-- |-- |OVR|-- |OVR|-- |OVR|OV
 - `uEm019` alloc = `0x13FA0` (~81KB)
 - `uEm029` alloc = `0x18A60` (~100KB)
 - `uEm030` alloc = `0x1E150` (~123KB) — largest overall
-- Boss parents sometimes `?` (unknown) — their DTI `mParent` fields may not be fully resolved.
+- `uEm029`/`uEm030` inherit `cPopeCommon` (DTI `0xE57350`, parent `uEnemy`, size `0x28A0`; not covered by the DTI emulation pass).
 
 ### `uEm031` (Credo boss)
 - Inherits `uEm016Ctrl` (Chimera controller), not `uEnemy` directly.

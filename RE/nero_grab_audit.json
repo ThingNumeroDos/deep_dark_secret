@@ -1,0 +1,3008 @@
+{
+ "uPlayer_size": "0x3270",
+ "nero_string_eas": [
+  "0xBCF654"
+ ],
+ "nero_strcmp_funcs": 11,
+ "functions": [
+  {
+   "fn": "0x418770",
+   "name": "cCameraPlayer::checkThrow",
+   "se": null,
+   "prototype": "int __usercall@<eax>(int this@<eax>)",
+   "nero_strcmp": false,
+   "pl_vcall_slots": [],
+   "raw_offsets": [],
+   "nero_fields": [],
+   "pl_fields": [
+    "mActionNo",
+    "mAtckId",
+    "mDamage",
+    "mPlayerID"
+   ],
+   "accessor": [],
+   "grabber_arg": false,
+   "stores_arg": [],
+   "mpPlayer_vars": [
+    "mpPlayer"
+   ],
+   "mpplayer_sites": [
+    "0x418771"
+   ]
+  },
+  {
+   "fn": "0x419110",
+   "name": "cCameraPlayer::checkBusterType",
+   "se": null,
+   "prototype": "char()",
+   "nero_strcmp": false,
+   "pl_vcall_slots": [],
+   "raw_offsets": [],
+   "nero_fields": [],
+   "pl_fields": [],
+   "accessor": [],
+   "grabber_arg": false,
+   "stores_arg": [],
+   "mpPlayer_vars": [],
+   "mpplayer_sites": [
+    "0x419110"
+   ]
+  },
+  {
+   "fn": "0x41A850",
+   "name": "cCameraPlayer::throwEm006",
+   "se": null,
+   "prototype": "void __usercall(int x_low@<ecx>, int this@<esi>, float@<xmm0>)",
+   "nero_strcmp": false,
+   "pl_vcall_slots": [],
+   "raw_offsets": [],
+   "nero_fields": [],
+   "pl_fields": [
+    "mPos"
+   ],
+   "accessor": [],
+   "grabber_arg": false,
+   "stores_arg": [],
+   "mpPlayer_vars": [
+    "mpPlayer"
+   ],
+   "mpplayer_sites": [
+    "0x41AA93"
+   ]
+  },
+  {
+   "fn": "0x41ADF0",
+   "name": "cCameraPlayer::throwEm006Ex",
+   "se": null,
+   "prototype": "double __usercall@<st0>(int x_low@<ecx>, int this@<esi>)",
+   "nero_strcmp": false,
+   "pl_vcall_slots": [],
+   "raw_offsets": [],
+   "nero_fields": [],
+   "pl_fields": [
+    "mPos"
+   ],
+   "accessor": [],
+   "grabber_arg": false,
+   "stores_arg": [],
+   "mpPlayer_vars": [
+    "mpPlayer"
+   ],
+   "mpplayer_sites": [
+    "0x41AE65"
+   ]
+  },
+  {
+   "fn": "0x41B190",
+   "name": "cCameraPlayer::throwEm012",
+   "se": null,
+   "prototype": "void __usercall(int x_low@<ecx>, cCameraPlayer *this@<esi>)",
+   "nero_strcmp": false,
+   "pl_vcall_slots": [],
+   "raw_offsets": [],
+   "nero_fields": [],
+   "pl_fields": [
+    "mPos"
+   ],
+   "accessor": [],
+   "grabber_arg": false,
+   "stores_arg": [],
+   "mpPlayer_vars": [
+    "mpPlayer"
+   ],
+   "mpplayer_sites": [
+    "0x41B211"
+   ]
+  },
+  {
+   "fn": "0x421A30",
+   "name": "cCameraPlayer::getJointPosGrabedEnemy",
+   "se": null,
+   "prototype": "bool __usercall@<al>(MtVector3 *local@<edx>)",
+   "nero_strcmp": false,
+   "pl_vcall_slots": [],
+   "raw_offsets": [],
+   "nero_fields": [],
+   "pl_fields": [
+    "mActionNo",
+    "mAtckId",
+    "mPlayerID",
+    "mpSGEnemy"
+   ],
+   "accessor": [],
+   "grabber_arg": false,
+   "stores_arg": [],
+   "mpPlayer_vars": [
+    "mpPlayer"
+   ],
+   "mpplayer_sites": [
+    "0x421A30"
+   ]
+  },
+  {
+   "fn": "0x508D70",
+   "name": "uCockpitNero::checkPtr",
+   "se": null,
+   "prototype": "char __thiscall(int this)",
+   "nero_strcmp": false,
+   "pl_vcall_slots": [],
+   "raw_offsets": [],
+   "nero_fields": [],
+   "pl_fields": [],
+   "accessor": [],
+   "grabber_arg": false,
+   "stores_arg": [],
+   "mpPlayer_vars": [
+    "mpPlayer"
+   ],
+   "mpplayer_sites": [
+    "0x508D7D"
+   ]
+  },
+  {
+   "fn": "0x552B40",
+   "name": "uEm000Base::setGrabBlown",
+   "se": "uEm000Base::setGrabBlown(void)",
+   "prototype": "void __fastcall(uEm000Base *this)",
+   "nero_strcmp": false,
+   "pl_vcall_slots": [],
+   "raw_offsets": [],
+   "nero_fields": [],
+   "pl_fields": [
+    "mPos"
+   ],
+   "accessor": [],
+   "grabber_arg": false,
+   "stores_arg": [],
+   "mpPlayer_vars": [
+    "mpPlayer",
+    "mpPlayer_1"
+   ],
+   "mpplayer_sites": [
+    "0x552B5B"
+   ]
+  },
+  {
+   "fn": "0x552F00",
+   "name": "uEm000Base::setGrabNear",
+   "se": "uEm000Base::setGrabNear(void)",
+   "prototype": "void __fastcall(uEm000Base *param_1)",
+   "nero_strcmp": false,
+   "pl_vcall_slots": [
+    4,
+    134
+   ],
+   "raw_offsets": [],
+   "nero_fields": [],
+   "pl_fields": [
+    "mActStat",
+    "mQuat"
+   ],
+   "accessor": [
+    "getPlayerMat"
+   ],
+   "grabber_arg": false,
+   "stores_arg": [],
+   "mpPlayer_vars": [
+    "mpPlayer",
+    "mpPlayer_1"
+   ],
+   "mpplayer_sites": [
+    "0x552FC7",
+    "0x5531DB"
+   ]
+  },
+  {
+   "fn": "0x5532F0",
+   "name": "uEm000Base::grabNear",
+   "se": "uEm000Base::grabNear(void)",
+   "prototype": "char __thiscall(unsigned __int16 *this)",
+   "nero_strcmp": false,
+   "pl_vcall_slots": [],
+   "raw_offsets": [],
+   "nero_fields": [],
+   "pl_fields": [
+    "mQuat"
+   ],
+   "accessor": [
+    "getPlayerMat"
+   ],
+   "grabber_arg": false,
+   "stores_arg": [],
+   "mpPlayer_vars": [
+    "mpPlayer"
+   ],
+   "mpplayer_sites": [
+    "0x553376",
+    "0x553574",
+    "0x55365A",
+    "0x553689",
+    "0x553734"
+   ]
+  },
+  {
+   "fn": "0x553A70",
+   "name": "uEm000Base::setGrabNearDevil",
+   "se": "uEm000Base::setGrabNearDevil(void)",
+   "prototype": "void __fastcall(uEm000Base *this)",
+   "nero_strcmp": false,
+   "pl_vcall_slots": [],
+   "raw_offsets": [],
+   "nero_fields": [],
+   "pl_fields": [
+    "mQuat"
+   ],
+   "accessor": [
+    "getPlayerMat"
+   ],
+   "grabber_arg": false,
+   "stores_arg": [],
+   "mpPlayer_vars": [
+    "mpPlayer"
+   ],
+   "mpplayer_sites": [
+    "0x553AC6",
+    "0x553CDA"
+   ]
+  },
+  {
+   "fn": "0x553DF0",
+   "name": "uEm000Base::grabNearDevil",
+   "se": "uEm000Base::grabNearDevil(void)",
+   "prototype": "char __thiscall(unsigned __int16 *this)",
+   "nero_strcmp": false,
+   "pl_vcall_slots": [],
+   "raw_offsets": [],
+   "nero_fields": [],
+   "pl_fields": [
+    "mQuat"
+   ],
+   "accessor": [
+    "getPlayerMat"
+   ],
+   "grabber_arg": false,
+   "stores_arg": [],
+   "mpPlayer_vars": [
+    "mpPlayer"
+   ],
+   "mpplayer_sites": [
+    "0x553E78",
+    "0x55406B",
+    "0x554264",
+    "0x554293",
+    "0x5543B0",
+    "0x5543DF",
+    "0x554492",
+    "0x5544C1"
+   ]
+  },
+  {
+   "fn": "0x554780",
+   "name": "uEm000Base::setGrabNear003",
+   "se": "uEm000Base::setGrabNear003(void)",
+   "prototype": "void __thiscall(void *this)",
+   "nero_strcmp": false,
+   "pl_vcall_slots": [],
+   "raw_offsets": [],
+   "nero_fields": [],
+   "pl_fields": [
+    "mQuat"
+   ],
+   "accessor": [
+    "getPlayerMat"
+   ],
+   "grabber_arg": false,
+   "stores_arg": [],
+   "mpPlayer_vars": [
+    "mpPlayer"
+   ],
+   "mpplayer_sites": [
+    "0x5547D6",
+    "0x5549EA"
+   ]
+  },
+  {
+   "fn": "0x554B00",
+   "name": "uEm000Base::grabNear003",
+   "se": "uEm000Base::grabNear003(void)",
+   "prototype": "char __thiscall(unsigned __int16 *this)",
+   "nero_strcmp": false,
+   "pl_vcall_slots": [],
+   "raw_offsets": [],
+   "nero_fields": [],
+   "pl_fields": [
+    "mQuat"
+   ],
+   "accessor": [
+    "getPlayerMat"
+   ],
+   "grabber_arg": false,
+   "stores_arg": [],
+   "mpPlayer_vars": [
+    "mpPlayer",
+    "mpPlayer_1"
+   ],
+   "mpplayer_sites": [
+    "0x554B8C",
+    "0x554D7F",
+    "0x554F79",
+    "0x555097",
+    "0x55520A",
+    "0x555421"
+   ]
+  },
+  {
+   "fn": "0x555630",
+   "name": "uEm000Base::setGrabNear003Air",
+   "se": "uEm000Base::setGrabNear003Air(void)",
+   "prototype": "void __thiscall(void *this)",
+   "nero_strcmp": false,
+   "pl_vcall_slots": [],
+   "raw_offsets": [],
+   "nero_fields": [],
+   "pl_fields": [
+    "mQuat"
+   ],
+   "accessor": [
+    "getPlayerMat"
+   ],
+   "grabber_arg": false,
+   "stores_arg": [],
+   "mpPlayer_vars": [
+    "mpPlayer"
+   ],
+   "mpplayer_sites": [
+    "0x555686",
+    "0x55589A"
+   ]
+  },
+  {
+   "fn": "0x5559B0",
+   "name": "uEm000Base::grabNear003Air",
+   "se": "uEm000Base::grabNear003Air(void)",
+   "prototype": "void __thiscall(uEm000Base *this)",
+   "nero_strcmp": false,
+   "pl_vcall_slots": [],
+   "raw_offsets": [],
+   "nero_fields": [],
+   "pl_fields": [
+    "mQuat",
+    "mWmat"
+   ],
+   "accessor": [
+    "getPlayerMat"
+   ],
+   "grabber_arg": false,
+   "stores_arg": [],
+   "mpPlayer_vars": [
+    "mpPlayer",
+    "mpPlayer_1",
+    "mpPlayer_2",
+    "mpPlayer_3"
+   ],
+   "mpplayer_sites": [
+    "0x555A38",
+    "0x555A90",
+    "0x555CAB",
+    "0x555EC7",
+    "0x555F81",
+    "0x55618B",
+    "0x556233",
+    "0x5562F0",
+    "0x556508",
+    "0x5568DB"
+   ]
+  },
+  {
+   "fn": "0x5584E0",
+   "name": "uEm000Base::grabShortMessage",
+   "se": "uEm000Base::grabShortMessage(uPlWpRightHand *,cCollisionGroup *,cCollisionGroup *)",
+   "prototype": "int __thiscall(_DWORD *this, int, int, int)",
+   "nero_strcmp": false,
+   "pl_vcall_slots": [
+    52,
+    134
+   ],
+   "raw_offsets": [],
+   "nero_fields": [],
+   "pl_fields": [
+    "mActStat",
+    "mSeCtrl"
+   ],
+   "accessor": [],
+   "grabber_arg": true,
+   "stores_arg": [
+    "2464"
+   ],
+   "mpPlayer_vars": [
+    "mpPlayer",
+    "mpPlayer_1"
+   ],
+   "mpplayer_sites": [
+    "0x5584E7",
+    "0x558674"
+   ]
+  },
+  {
+   "fn": "0x55E250",
+   "name": "uEm000Base::setGrabNearEffectEm000",
+   "se": "uEm000Base::setGrabNearEffectEm000(uModel *,bool)",
+   "prototype": "int __thiscall(int this, float *, char)",
+   "nero_strcmp": false,
+   "pl_vcall_slots": [],
+   "raw_offsets": [],
+   "nero_fields": [],
+   "pl_fields": [],
+   "accessor": [
+    "getPlayerMat"
+   ],
+   "grabber_arg": false,
+   "stores_arg": [],
+   "mpPlayer_vars": [],
+   "mpplayer_sites": [
+    "0x55E424",
+    "0x55E4BD",
+    "0x55E5E7"
+   ]
+  },
+  {
+   "fn": "0x5714F0",
+   "name": "uEm005::grabBuster",
+   "se": "uEm005::grabBuster(void)",
+   "prototype": "sMediator *__thiscall(int this)",
+   "nero_strcmp": false,
+   "pl_vcall_slots": [],
+   "raw_offsets": [],
+   "nero_fields": [],
+   "pl_fields": [],
+   "accessor": [],
+   "grabber_arg": false,
+   "stores_arg": [],
+   "mpPlayer_vars": [],
+   "mpplayer_sites": [
+    "0x57150C",
+    "0x571521",
+    "0x571536"
+   ]
+  },
+  {
+   "fn": "0x571800",
+   "name": "uEm005::setGrabBusterCancel",
+   "se": "uEm005::setGrabBusterCancel(void)",
+   "prototype": null,
+   "nero_strcmp": false,
+   "pl_vcall_slots": [],
+   "raw_offsets": [],
+   "nero_fields": [],
+   "pl_fields": [],
+   "accessor": [],
+   "grabber_arg": false,
+   "stores_arg": [],
+   "mpPlayer_vars": [
+    "mpPlayer"
+   ],
+   "mpplayer_sites": [
+    "0x571844"
+   ]
+  },
+  {
+   "fn": "0x573120",
+   "name": "uEm005::grabShortMessage",
+   "se": "uEm005::grabShortMessage(uPlWpRightHand *,cCollisionGroup *,cCollisionGroup *)",
+   "prototype": null,
+   "nero_strcmp": false,
+   "pl_vcall_slots": [
+    134
+   ],
+   "raw_offsets": [],
+   "nero_fields": [],
+   "pl_fields": [
+    "mActStat",
+    "mPos"
+   ],
+   "accessor": [],
+   "grabber_arg": true,
+   "stores_arg": [
+    "2141"
+   ],
+   "mpPlayer_vars": [
+    "mpPlayer",
+    "mpPlayer_1"
+   ],
+   "mpplayer_sites": [
+    "0x573180",
+    "0x573374",
+    "0x5733A9"
+   ]
+  },
+  {
+   "fn": "0x57BAA0",
+   "name": "uEm006::grabBuster",
+   "se": "uEm006::grabBuster(void)",
+   "prototype": "sMediator *__thiscall(int this)",
+   "nero_strcmp": false,
+   "pl_vcall_slots": [],
+   "raw_offsets": [],
+   "nero_fields": [],
+   "pl_fields": [],
+   "accessor": [],
+   "grabber_arg": false,
+   "stores_arg": [],
+   "mpPlayer_vars": [],
+   "mpplayer_sites": [
+    "0x57BABC",
+    "0x57BAD1",
+    "0x57BAEF",
+    "0x57BB04"
+   ]
+  },
+  {
+   "fn": "0x57BD50",
+   "name": "uEm006::setGrabBusterCancel",
+   "se": "uEm006::setGrabBusterCancel(void)",
+   "prototype": null,
+   "nero_strcmp": false,
+   "pl_vcall_slots": [],
+   "raw_offsets": [],
+   "nero_fields": [],
+   "pl_fields": [],
+   "accessor": [],
+   "grabber_arg": false,
+   "stores_arg": [],
+   "mpPlayer_vars": [
+    "mpPlayer"
+   ],
+   "mpplayer_sites": [
+    "0x57BDAF"
+   ]
+  },
+  {
+   "fn": "0x58FAA0",
+   "name": "uEm008_009Base::setGrabNear",
+   "se": "uEm008_009Base::setGrabNear(void)",
+   "prototype": "void __thiscall(void *this)",
+   "nero_strcmp": false,
+   "pl_vcall_slots": [],
+   "raw_offsets": [],
+   "nero_fields": [],
+   "pl_fields": [
+    "mActStat"
+   ],
+   "accessor": [
+    "getPlayerMat"
+   ],
+   "grabber_arg": false,
+   "stores_arg": [],
+   "mpPlayer_vars": [
+    "mpPlayer"
+   ],
+   "mpplayer_sites": [
+    "0x58FACF",
+    "0x58FCED"
+   ]
+  },
+  {
+   "fn": "0x58FE70",
+   "name": "uEm008_009Base::grabNear",
+   "se": "uEm008_009Base::grabNear(void)",
+   "prototype": "int __thiscall(int param_2)",
+   "nero_strcmp": false,
+   "pl_vcall_slots": [],
+   "raw_offsets": [],
+   "nero_fields": [],
+   "pl_fields": [
+    "m_delta_time"
+   ],
+   "accessor": [
+    "getPlayerMat"
+   ],
+   "grabber_arg": false,
+   "stores_arg": [],
+   "mpPlayer_vars": [
+    "mpPlayer"
+   ],
+   "mpplayer_sites": [
+    "0x58FE7F",
+    "0x58FF05",
+    "0x590101",
+    "0x5901DB",
+    "0x5903E6"
+   ]
+  },
+  {
+   "fn": "0x590680",
+   "name": "uEm008_009Base::grabNearDevil",
+   "se": "uEm008_009Base::grabNearDevil(void)",
+   "prototype": "int __thiscall(int param_2)",
+   "nero_strcmp": false,
+   "pl_vcall_slots": [],
+   "raw_offsets": [],
+   "nero_fields": [],
+   "pl_fields": [
+    "m_delta_time"
+   ],
+   "accessor": [
+    "getPlayerMat"
+   ],
+   "grabber_arg": false,
+   "stores_arg": [],
+   "mpPlayer_vars": [
+    "mpPlayer"
+   ],
+   "mpplayer_sites": [
+    "0x59068E",
+    "0x590716",
+    "0x59092B",
+    "0x590D54"
+   ]
+  },
+  {
+   "fn": "0x592C60",
+   "name": "uEm008_009Base::callbackGrabBlocking",
+   "se": "uEm008_009Base::callbackGrabBlocking(void)",
+   "prototype": "int __thiscall(_DWORD *this)",
+   "nero_strcmp": false,
+   "pl_vcall_slots": [],
+   "raw_offsets": [],
+   "nero_fields": [],
+   "pl_fields": [],
+   "accessor": [],
+   "grabber_arg": false,
+   "stores_arg": [],
+   "mpPlayer_vars": [],
+   "mpplayer_sites": [
+    "0x592CB4"
+   ]
+  },
+  {
+   "fn": "0x592D10",
+   "name": "uEm008_009Base::grabBlocking",
+   "se": "uEm008_009Base::grabBlocking(void)",
+   "prototype": "int __usercall@<eax>(int _ESI@<eax>)",
+   "nero_strcmp": false,
+   "pl_vcall_slots": [],
+   "raw_offsets": [
+    48,
+    52,
+    56
+   ],
+   "nero_fields": [],
+   "pl_fields": [
+    "m_delta_time"
+   ],
+   "accessor": [],
+   "grabber_arg": false,
+   "stores_arg": [],
+   "mpPlayer_vars": [
+    "mpPlayer"
+   ],
+   "mpplayer_sites": [
+    "0x592D1D",
+    "0x592ED2",
+    "0x592FA8",
+    "0x5931EF"
+   ]
+  },
+  {
+   "fn": "0x594B40",
+   "name": "uEm008_009Base::effectGrabMessage",
+   "se": "uEm008_009Base::effectGrabMessage(uDamage *,cCollisionGroup *,cCollisionGroup *)",
+   "prototype": null,
+   "nero_strcmp": false,
+   "pl_vcall_slots": [
+    33
+   ],
+   "raw_offsets": [],
+   "nero_fields": [],
+   "pl_fields": [],
+   "accessor": [],
+   "grabber_arg": false,
+   "stores_arg": [],
+   "mpPlayer_vars": [
+    "mpPlayer",
+    "mpPlayer_1"
+   ],
+   "mpplayer_sites": [
+    "0x594C44",
+    "0x594FEE",
+    "0x595013"
+   ]
+  },
+  {
+   "fn": "0x5AA280",
+   "name": "uEm010::grabBlown",
+   "se": "uEm010::grabBlown(void)",
+   "prototype": null,
+   "nero_strcmp": false,
+   "pl_vcall_slots": [],
+   "raw_offsets": [],
+   "nero_fields": [],
+   "pl_fields": [],
+   "accessor": [],
+   "grabber_arg": false,
+   "stores_arg": [],
+   "mpPlayer_vars": [],
+   "mpplayer_sites": [
+    "0x5AA2A7",
+    "0x5AA3EA"
+   ]
+  },
+  {
+   "fn": "0x5AA660",
+   "name": "uEm010::setGrabThrow",
+   "se": "uEm010::setGrabThrow(void)",
+   "prototype": "int __thiscall(uModel *this)",
+   "nero_strcmp": false,
+   "pl_vcall_slots": [],
+   "raw_offsets": [],
+   "nero_fields": [],
+   "pl_fields": [],
+   "accessor": [],
+   "grabber_arg": false,
+   "stores_arg": [],
+   "mpPlayer_vars": [],
+   "mpplayer_sites": [
+    "0x5AA660"
+   ]
+  },
+  {
+   "fn": "0x5AA700",
+   "name": "uEm010::grabThrow",
+   "se": "uEm010::grabThrow(void)",
+   "prototype": "int __thiscall(int)",
+   "nero_strcmp": false,
+   "pl_vcall_slots": [],
+   "raw_offsets": [],
+   "nero_fields": [],
+   "pl_fields": [
+    "mActStat",
+    "mPos",
+    "m_delta_time"
+   ],
+   "accessor": [],
+   "grabber_arg": false,
+   "stores_arg": [],
+   "mpPlayer_vars": [
+    "mpPlayer"
+   ],
+   "mpplayer_sites": [
+    "0x5AA709",
+    "0x5AA901",
+    "0x5AA959"
+   ]
+  },
+  {
+   "fn": "0x5AB450",
+   "name": "uEm010::callbackGrabBlocking",
+   "se": "uEm010::callbackGrabBlocking(void)",
+   "prototype": "void __thiscall(int this)",
+   "nero_strcmp": false,
+   "pl_vcall_slots": [],
+   "raw_offsets": [],
+   "nero_fields": [],
+   "pl_fields": [],
+   "accessor": [],
+   "grabber_arg": false,
+   "stores_arg": [],
+   "mpPlayer_vars": [],
+   "mpplayer_sites": [
+    "0x5AB494"
+   ]
+  },
+  {
+   "fn": "0x5AB4C0",
+   "name": "uEm010::grabBlocking",
+   "se": "uEm010::grabBlocking(void)",
+   "prototype": "int __thiscall(uModel *this)",
+   "nero_strcmp": false,
+   "pl_vcall_slots": [],
+   "raw_offsets": [],
+   "nero_fields": [],
+   "pl_fields": [],
+   "accessor": [],
+   "grabber_arg": false,
+   "stores_arg": [],
+   "mpPlayer_vars": [
+    "m_delta_time"
+   ],
+   "mpplayer_sites": [
+    "0x5AB4C6"
+   ]
+  },
+  {
+   "fn": "0x5C9720",
+   "name": "uEm011::setGrabThrow",
+   "se": "uEm011::setGrabThrow(void)",
+   "prototype": "char __usercall@<al>(int@<esi>)",
+   "nero_strcmp": false,
+   "pl_vcall_slots": [],
+   "raw_offsets": [],
+   "nero_fields": [],
+   "pl_fields": [],
+   "accessor": [],
+   "grabber_arg": false,
+   "stores_arg": [],
+   "mpPlayer_vars": [],
+   "mpplayer_sites": [
+    "0x5C9721"
+   ]
+  },
+  {
+   "fn": "0x5C97B0",
+   "name": "uEm011::grabThrow",
+   "se": "uEm011::grabThrow(void)",
+   "prototype": "char __usercall@<al>(undefined4 param@<eax>)",
+   "nero_strcmp": false,
+   "pl_vcall_slots": [],
+   "raw_offsets": [],
+   "nero_fields": [],
+   "pl_fields": [
+    "mPos",
+    "m_delta_time"
+   ],
+   "accessor": [],
+   "grabber_arg": false,
+   "stores_arg": [],
+   "mpPlayer_vars": [
+    "mpPlayer",
+    "mpPlayer_1",
+    "mpPlayer_2",
+    "mpPlayer_3"
+   ],
+   "mpplayer_sites": [
+    "0x5C97BF",
+    "0x5C99E7"
+   ]
+  },
+  {
+   "fn": "0x5C9E90",
+   "name": "uEm011::grabBlown",
+   "se": "uEm011::grabBlown(void)",
+   "prototype": "double __usercall@<st0>(int@<eax>, int@<ecx>)",
+   "nero_strcmp": false,
+   "pl_vcall_slots": [],
+   "raw_offsets": [],
+   "nero_fields": [],
+   "pl_fields": [],
+   "accessor": [],
+   "grabber_arg": false,
+   "stores_arg": [],
+   "mpPlayer_vars": [],
+   "mpplayer_sites": [
+    "0x5C9EF7"
+   ]
+  },
+  {
+   "fn": "0x5CA450",
+   "name": "uEm011::damageGrabBlownOut",
+   "se": "uEm011::damageGrabBlownOut(void)",
+   "prototype": "char __usercall@<al>(undefined4 param@<eax>)",
+   "nero_strcmp": false,
+   "pl_vcall_slots": [],
+   "raw_offsets": [],
+   "nero_fields": [],
+   "pl_fields": [
+    "mPos"
+   ],
+   "accessor": [],
+   "grabber_arg": false,
+   "stores_arg": [],
+   "mpPlayer_vars": [
+    "mpPlayer"
+   ],
+   "mpplayer_sites": [
+    "0x5CA4A4"
+   ]
+  },
+  {
+   "fn": "0x5CAAA0",
+   "name": "uEm011::grabCounter",
+   "se": "uEm011::grabCounter(void)",
+   "prototype": "char __usercall@<al>(int@<eax>)",
+   "nero_strcmp": false,
+   "pl_vcall_slots": [],
+   "raw_offsets": [],
+   "nero_fields": [],
+   "pl_fields": [
+    "mActStat",
+    "mPos",
+    "m_delta_time"
+   ],
+   "accessor": [],
+   "grabber_arg": false,
+   "stores_arg": [],
+   "mpPlayer_vars": [
+    "mpPlayer",
+    "mpPlayer_1",
+    "mpPlayer_2"
+   ],
+   "mpplayer_sites": [
+    "0x5CAAB1"
+   ]
+  },
+  {
+   "fn": "0x5CB550",
+   "name": "uEm011::grabBlocking",
+   "se": "uEm011::grabBlocking(void)",
+   "prototype": "char __usercall@<al>(int@<eax>)",
+   "nero_strcmp": false,
+   "pl_vcall_slots": [],
+   "raw_offsets": [],
+   "nero_fields": [],
+   "pl_fields": [
+    "mPos",
+    "m_delta_time"
+   ],
+   "accessor": [],
+   "grabber_arg": false,
+   "stores_arg": [],
+   "mpPlayer_vars": [
+    "mpPlayer",
+    "mpPlayer_1"
+   ],
+   "mpplayer_sites": [
+    "0x5CB5CF",
+    "0x5CB85D"
+   ]
+  },
+  {
+   "fn": "0x5D6CE0",
+   "name": "uEm012::setGrabThrow",
+   "se": "uEm012::setGrabThrow(void)",
+   "prototype": "bool __thiscall(int this)",
+   "nero_strcmp": false,
+   "pl_vcall_slots": [],
+   "raw_offsets": [],
+   "nero_fields": [],
+   "pl_fields": [],
+   "accessor": [],
+   "grabber_arg": false,
+   "stores_arg": [],
+   "mpPlayer_vars": [],
+   "mpplayer_sites": [
+    "0x5D6CE0"
+   ]
+  },
+  {
+   "fn": "0x5D6D20",
+   "name": "uEm012::grabThrow",
+   "se": "uEm012::grabThrow(void)",
+   "prototype": null,
+   "nero_strcmp": false,
+   "pl_vcall_slots": [],
+   "raw_offsets": [],
+   "nero_fields": [],
+   "pl_fields": [
+    "mPos",
+    "m_delta_time"
+   ],
+   "accessor": [],
+   "grabber_arg": false,
+   "stores_arg": [],
+   "mpPlayer_vars": [
+    "m_delta_time",
+    "mpPlayer",
+    "mpPlayer_1"
+   ],
+   "mpplayer_sites": [
+    "0x5D6D2F"
+   ]
+  },
+  {
+   "fn": "0x5E9080",
+   "name": "uEm013::setGrabLong",
+   "se": "uEm013::setGrabLong(void)",
+   "prototype": "char __stdcall(uModel *)",
+   "nero_strcmp": true,
+   "pl_vcall_slots": [],
+   "raw_offsets": [],
+   "nero_fields": [],
+   "pl_fields": [
+    "mPos"
+   ],
+   "accessor": [],
+   "grabber_arg": false,
+   "stores_arg": [],
+   "mpPlayer_vars": [
+    "mpPlayer",
+    "mpPlayer_1"
+   ],
+   "mpplayer_sites": [
+    "0x5E9086",
+    "0x5E90D7"
+   ]
+  },
+  {
+   "fn": "0x5E9510",
+   "name": "uEm013::grabShort",
+   "se": "uEm013::grabShort(void)",
+   "prototype": "char __usercall@<al>(undefined4 param@<esi>)",
+   "nero_strcmp": false,
+   "pl_vcall_slots": [],
+   "raw_offsets": [],
+   "nero_fields": [],
+   "pl_fields": [],
+   "accessor": [],
+   "grabber_arg": false,
+   "stores_arg": [],
+   "mpPlayer_vars": [
+    "mpPlayer"
+   ],
+   "mpplayer_sites": [
+    "0x5E95D6"
+   ]
+  },
+  {
+   "fn": "0x5E98F0",
+   "name": "uEm013::grabShortEnd",
+   "se": "uEm013::grabShortEnd(void)",
+   "prototype": "void __thiscall(int this)",
+   "nero_strcmp": false,
+   "pl_vcall_slots": [],
+   "raw_offsets": [],
+   "nero_fields": [],
+   "pl_fields": [],
+   "accessor": [],
+   "grabber_arg": false,
+   "stores_arg": [],
+   "mpPlayer_vars": [],
+   "mpplayer_sites": [
+    "0x5E999F"
+   ]
+  },
+  {
+   "fn": "0x5EAA00",
+   "name": "uEm013::grabShortDie",
+   "se": "uEm013::grabShortDie(void)",
+   "prototype": "int __stdcall(undefined4 param_2)",
+   "nero_strcmp": false,
+   "pl_vcall_slots": [
+    85
+   ],
+   "raw_offsets": [],
+   "nero_fields": [],
+   "pl_fields": [],
+   "accessor": [],
+   "grabber_arg": false,
+   "stores_arg": [],
+   "mpPlayer_vars": [
+    "mpPlayer"
+   ],
+   "mpplayer_sites": [
+    "0x5EAB6F"
+   ]
+  },
+  {
+   "fn": "0x5FFD20",
+   "name": "uEm015::grabNearLand",
+   "se": "uEm015::grabNearLand(void)",
+   "prototype": "int __usercall@<eax>(int@<eax>)",
+   "nero_strcmp": false,
+   "pl_vcall_slots": [],
+   "raw_offsets": [],
+   "nero_fields": [],
+   "pl_fields": [
+    "mActStat",
+    "m_delta_time"
+   ],
+   "accessor": [],
+   "grabber_arg": false,
+   "stores_arg": [],
+   "mpPlayer_vars": [
+    "m_delta_time",
+    "mpPlayer"
+   ],
+   "mpplayer_sites": [
+    "0x5FFD23"
+   ]
+  },
+  {
+   "fn": "0x5FFFE0",
+   "name": "uEm015::grabNearAir",
+   "se": "uEm015::grabNearAir(void)",
+   "prototype": "int __usercall@<eax>(int@<eax>)",
+   "nero_strcmp": false,
+   "pl_vcall_slots": [],
+   "raw_offsets": [],
+   "nero_fields": [],
+   "pl_fields": [
+    "mActStat",
+    "m_delta_time"
+   ],
+   "accessor": [],
+   "grabber_arg": false,
+   "stores_arg": [],
+   "mpPlayer_vars": [
+    "mpPlayer"
+   ],
+   "mpplayer_sites": [
+    "0x5FFFE3"
+   ]
+  },
+  {
+   "fn": "0x6001E0",
+   "name": "uEm015::settingGrabNearFinish",
+   "se": "uEm015::settingGrabNearFinish(void)",
+   "prototype": "int __usercall@<eax>(int@<esi>)",
+   "nero_strcmp": false,
+   "pl_vcall_slots": [],
+   "raw_offsets": [],
+   "nero_fields": [],
+   "pl_fields": [],
+   "accessor": [],
+   "grabber_arg": false,
+   "stores_arg": [],
+   "mpPlayer_vars": [
+    "mpPlayer"
+   ],
+   "mpplayer_sites": [
+    "0x600220"
+   ]
+  },
+  {
+   "fn": "0x6008F0",
+   "name": "uEm015::setGrabFar",
+   "se": "uEm015::setGrabFar(void)",
+   "prototype": "int __stdcall(uModel *)",
+   "nero_strcmp": false,
+   "pl_vcall_slots": [],
+   "raw_offsets": [],
+   "nero_fields": [],
+   "pl_fields": [],
+   "accessor": [],
+   "grabber_arg": false,
+   "stores_arg": [],
+   "mpPlayer_vars": [
+    "mpPlayer"
+   ],
+   "mpplayer_sites": [
+    "0x600974"
+   ]
+  },
+  {
+   "fn": "0x6013D0",
+   "name": "uEm015::grabCancel",
+   "se": "uEm015::grabCancel(void)",
+   "prototype": "void __usercall(int@<esi>)",
+   "nero_strcmp": false,
+   "pl_vcall_slots": [],
+   "raw_offsets": [],
+   "nero_fields": [],
+   "pl_fields": [],
+   "accessor": [],
+   "grabber_arg": false,
+   "stores_arg": [],
+   "mpPlayer_vars": [
+    "mpPlayer"
+   ],
+   "mpplayer_sites": [
+    "0x6014EE"
+   ]
+  },
+  {
+   "fn": "0x601B20",
+   "name": "uEm015::grabBlocking",
+   "se": "uEm015::grabBlocking(void)",
+   "prototype": "int __stdcall(undefined4 param_1)",
+   "nero_strcmp": false,
+   "pl_vcall_slots": [],
+   "raw_offsets": [],
+   "nero_fields": [],
+   "pl_fields": [],
+   "accessor": [],
+   "grabber_arg": false,
+   "stores_arg": [],
+   "mpPlayer_vars": [],
+   "mpplayer_sites": [
+    "0x601B20"
+   ]
+  },
+  {
+   "fn": "0x601D60",
+   "name": "uEm015::ckGrabBlockingDmg",
+   "se": "uEm015::ckGrabBlockingDmg(void)",
+   "prototype": "char __usercall@<al>(int param@<esi>)",
+   "nero_strcmp": false,
+   "pl_vcall_slots": [],
+   "raw_offsets": [],
+   "nero_fields": [],
+   "pl_fields": [],
+   "accessor": [],
+   "grabber_arg": false,
+   "stores_arg": [],
+   "mpPlayer_vars": [],
+   "mpplayer_sites": [
+    "0x601DB8"
+   ]
+  },
+  {
+   "fn": "0x6037D0",
+   "name": "uEm015::grabShortMessage",
+   "se": "uEm015::grabShortMessage(uPlWpRightHand *,cCollisionGroup *,cCollisionGroup *)",
+   "prototype": "int __thiscall(int this, int, int, int)",
+   "nero_strcmp": true,
+   "pl_vcall_slots": [
+    4,
+    134
+   ],
+   "raw_offsets": [],
+   "nero_fields": [],
+   "pl_fields": [
+    "mActStat"
+   ],
+   "accessor": [],
+   "grabber_arg": true,
+   "stores_arg": [
+    "35872"
+   ],
+   "mpPlayer_vars": [
+    "mpPlayer"
+   ],
+   "mpplayer_sites": [
+    "0x60382F"
+   ]
+  },
+  {
+   "fn": "0x603950",
+   "name": "uEm015::customMessage",
+   "se": "uEm015::customMessage(uint,uint,MtObject *,cCollisionGroup *,cCollisionGroup *)",
+   "prototype": "void __thiscall(int param_1, int, int, int, int, int)",
+   "nero_strcmp": true,
+   "pl_vcall_slots": [
+    4
+   ],
+   "raw_offsets": [],
+   "nero_fields": [],
+   "pl_fields": [],
+   "accessor": [],
+   "grabber_arg": false,
+   "stores_arg": [],
+   "mpPlayer_vars": [
+    "mpPlayer",
+    "mpPlayer_2"
+   ],
+   "mpplayer_sites": [
+    "0x603A42",
+    "0x603B19"
+   ]
+  },
+  {
+   "fn": "0x6124E0",
+   "name": "uEm016::grabNearLand",
+   "se": "uEm016::grabNearLand(void)",
+   "prototype": "int __usercall@<eax>(int@<eax>)",
+   "nero_strcmp": false,
+   "pl_vcall_slots": [],
+   "raw_offsets": [],
+   "nero_fields": [],
+   "pl_fields": [],
+   "accessor": [],
+   "grabber_arg": false,
+   "stores_arg": [],
+   "mpPlayer_vars": [],
+   "mpplayer_sites": [
+    "0x6124E3"
+   ]
+  },
+  {
+   "fn": "0x612700",
+   "name": "uEm016::grabNearAir",
+   "se": "uEm016::grabNearAir(void)",
+   "prototype": "int __usercall@<eax>(int@<eax>)",
+   "nero_strcmp": false,
+   "pl_vcall_slots": [],
+   "raw_offsets": [],
+   "nero_fields": [],
+   "pl_fields": [],
+   "accessor": [],
+   "grabber_arg": false,
+   "stores_arg": [],
+   "mpPlayer_vars": [],
+   "mpplayer_sites": [
+    "0x612703"
+   ]
+  },
+  {
+   "fn": "0x612800",
+   "name": "uEm016::setGrabFar",
+   "se": "uEm016::setGrabFar(void)",
+   "prototype": "double __usercall@<st0>(int@<eax>)",
+   "nero_strcmp": false,
+   "pl_vcall_slots": [],
+   "raw_offsets": [],
+   "nero_fields": [],
+   "pl_fields": [],
+   "accessor": [],
+   "grabber_arg": false,
+   "stores_arg": [],
+   "mpPlayer_vars": [
+    "mpPlayer"
+   ],
+   "mpplayer_sites": [
+    "0x612843"
+   ]
+  },
+  {
+   "fn": "0x612B40",
+   "name": "uEm016::grabAfterSword",
+   "se": "uEm016::grabAfterSword(void)",
+   "prototype": "unsigned __int8 __usercall@<al>(int@<eax>)",
+   "nero_strcmp": false,
+   "pl_vcall_slots": [
+    170
+   ],
+   "raw_offsets": [],
+   "nero_fields": [],
+   "pl_fields": [],
+   "accessor": [],
+   "grabber_arg": false,
+   "stores_arg": [],
+   "mpPlayer_vars": [
+    "mpPlayer"
+   ],
+   "mpplayer_sites": [
+    "0x612B6D"
+   ]
+  },
+  {
+   "fn": "0x6136A0",
+   "name": "uEm016::grabCancel",
+   "se": "uEm016::grabCancel(void)",
+   "prototype": "char __usercall@<al>(int Intersection@<eax>)",
+   "nero_strcmp": false,
+   "pl_vcall_slots": [],
+   "raw_offsets": [],
+   "nero_fields": [],
+   "pl_fields": [],
+   "accessor": [],
+   "grabber_arg": false,
+   "stores_arg": [],
+   "mpPlayer_vars": [
+    "mpPlayer"
+   ],
+   "mpplayer_sites": [
+    "0x6136F2"
+   ]
+  },
+  {
+   "fn": "0x613B20",
+   "name": "uEm016::grabBlocking",
+   "se": "uEm016::grabBlocking(void)",
+   "prototype": "unsigned __int8 __usercall@<al>(int@<eax>)",
+   "nero_strcmp": false,
+   "pl_vcall_slots": [],
+   "raw_offsets": [],
+   "nero_fields": [],
+   "pl_fields": [],
+   "accessor": [],
+   "grabber_arg": false,
+   "stores_arg": [],
+   "mpPlayer_vars": [],
+   "mpplayer_sites": [
+    "0x613B24"
+   ]
+  },
+  {
+   "fn": "0x613CC0",
+   "name": "uEm016::ckGrabBlockingDmg",
+   "se": "uEm016::ckGrabBlockingDmg(void)",
+   "prototype": "int __fastcall(_DWORD)",
+   "nero_strcmp": false,
+   "pl_vcall_slots": [],
+   "raw_offsets": [],
+   "nero_fields": [],
+   "pl_fields": [],
+   "accessor": [],
+   "grabber_arg": false,
+   "stores_arg": [],
+   "mpPlayer_vars": [],
+   "mpplayer_sites": [
+    "0x613CF1"
+   ]
+  },
+  {
+   "fn": "0x614DF0",
+   "name": "uEm016::grabShortMessage",
+   "se": "uEm016::grabShortMessage(uPlWpRightHand *,cCollisionGroup *,cCollisionGroup *)",
+   "prototype": "int __thiscall(_DWORD *this, int, int, int)",
+   "nero_strcmp": true,
+   "pl_vcall_slots": [
+    4,
+    134
+   ],
+   "raw_offsets": [],
+   "nero_fields": [],
+   "pl_fields": [
+    "mActStat"
+   ],
+   "accessor": [],
+   "grabber_arg": true,
+   "stores_arg": [
+    "2090"
+   ],
+   "mpPlayer_vars": [
+    "mpPlayer"
+   ],
+   "mpplayer_sites": [
+    "0x614DF8"
+   ]
+  },
+  {
+   "fn": "0x614EE0",
+   "name": "uEm016::customMessage",
+   "se": "uEm016::customMessage(uint,uint,MtObject *,cCollisionGroup *,cCollisionGroup *)",
+   "prototype": "void __thiscall(int param_1, int, int, int, int, int)",
+   "nero_strcmp": true,
+   "pl_vcall_slots": [
+    4
+   ],
+   "raw_offsets": [],
+   "nero_fields": [],
+   "pl_fields": [],
+   "accessor": [],
+   "grabber_arg": false,
+   "stores_arg": [],
+   "mpPlayer_vars": [
+    "mpPlayer",
+    "mpPlayer_2"
+   ],
+   "mpplayer_sites": [
+    "0x614FAB",
+    "0x615065"
+   ]
+  },
+  {
+   "fn": "0x617ED0",
+   "name": "uEm016::constGrabPlayer",
+   "se": "uEm016::constGrabPlayer(void)",
+   "prototype": "void __usercall(float *@<esi>)",
+   "nero_strcmp": false,
+   "pl_vcall_slots": [],
+   "raw_offsets": [],
+   "nero_fields": [],
+   "pl_fields": [
+    "mQuat"
+   ],
+   "accessor": [
+    "getPlayerMat"
+   ],
+   "grabber_arg": false,
+   "stores_arg": [],
+   "mpPlayer_vars": [
+    "mpPlayer"
+   ],
+   "mpplayer_sites": [
+    "0x617EDA",
+    "0x6180EF"
+   ]
+  },
+  {
+   "fn": "0x629080",
+   "name": "uEm017::dmgBusterDown",
+   "se": "uEm017::dmgBusterDown(void)",
+   "prototype": "int __usercall@<eax>(undefined4 param@<edi>, undefined4 param@<esi>)",
+   "nero_strcmp": false,
+   "pl_vcall_slots": [],
+   "raw_offsets": [],
+   "nero_fields": [],
+   "pl_fields": [],
+   "accessor": [],
+   "grabber_arg": false,
+   "stores_arg": [],
+   "mpPlayer_vars": [],
+   "mpplayer_sites": [
+    "0x629081"
+   ]
+  },
+  {
+   "fn": "0x629F10",
+   "name": "uEm017::setBusterShl",
+   "se": "uEm017::setBusterShl(uint)",
+   "prototype": "int __stdcall(undefined4 param, _DWORD)",
+   "nero_strcmp": false,
+   "pl_vcall_slots": [],
+   "raw_offsets": [],
+   "nero_fields": [],
+   "pl_fields": [],
+   "accessor": [],
+   "grabber_arg": false,
+   "stores_arg": [],
+   "mpPlayer_vars": [
+    "mpLockTarget"
+   ],
+   "mpplayer_sites": [
+    "0x62A041"
+   ]
+  },
+  {
+   "fn": "0x62AAE0",
+   "name": "uEm017::grabBlocking",
+   "se": "uEm017::grabBlocking(void)",
+   "prototype": "float *__usercall@<eax>(undefined4 param@<eax>)",
+   "nero_strcmp": false,
+   "pl_vcall_slots": [],
+   "raw_offsets": [
+    3,
+    4
+   ],
+   "nero_fields": [],
+   "pl_fields": [],
+   "accessor": [],
+   "grabber_arg": false,
+   "stores_arg": [],
+   "mpPlayer_vars": [
+    "mpPlayer"
+   ],
+   "mpplayer_sites": [
+    "0x62AAEA"
+   ]
+  },
+  {
+   "fn": "0x62BCD0",
+   "name": "uEm017::grabShortMessage",
+   "se": "uEm017::grabShortMessage(uPlWpRightHand *,cCollisionGroup *,cCollisionGroup *)",
+   "prototype": null,
+   "nero_strcmp": false,
+   "pl_vcall_slots": [
+    134
+   ],
+   "raw_offsets": [],
+   "nero_fields": [],
+   "pl_fields": [
+    "mActStat"
+   ],
+   "accessor": [],
+   "grabber_arg": true,
+   "stores_arg": [
+    "33112"
+   ],
+   "mpPlayer_vars": [
+    "mpPlayer"
+   ],
+   "mpplayer_sites": [
+    "0x62BD0A",
+    "0x62BD45"
+   ]
+  },
+  {
+   "fn": "0x640540",
+   "name": "uEm018::setHitThorw",
+   "se": "uEm018::setHitThorw(void)",
+   "prototype": "int __stdcall(undefined4 param_1)",
+   "nero_strcmp": true,
+   "pl_vcall_slots": [
+    4,
+    134
+   ],
+   "raw_offsets": [],
+   "nero_fields": [],
+   "pl_fields": [],
+   "accessor": [],
+   "grabber_arg": false,
+   "stores_arg": [],
+   "mpPlayer_vars": [
+    "mpPlayer"
+   ],
+   "mpplayer_sites": [
+    "0x640540"
+   ]
+  },
+  {
+   "fn": "0x6405C0",
+   "name": "uEm018::hitThorwLoop",
+   "se": "uEm018::hitThorwLoop(void)",
+   "prototype": "char __usercall@<al>(int@<eax>)",
+   "nero_strcmp": false,
+   "pl_vcall_slots": [],
+   "raw_offsets": [],
+   "nero_fields": [],
+   "pl_fields": [
+    "m_delta_time"
+   ],
+   "accessor": [],
+   "grabber_arg": false,
+   "stores_arg": [],
+   "mpPlayer_vars": [
+    "mpPlayer"
+   ],
+   "mpplayer_sites": [
+    "0x6405C3"
+   ]
+  },
+  {
+   "fn": "0x6409A0",
+   "name": "uEm018::hitThorwDevilLoop",
+   "se": "uEm018::hitThorwDevilLoop(void)",
+   "prototype": "char __usercall@<al>(int@<eax>)",
+   "nero_strcmp": false,
+   "pl_vcall_slots": [],
+   "raw_offsets": [],
+   "nero_fields": [],
+   "pl_fields": [
+    "m_delta_time"
+   ],
+   "accessor": [],
+   "grabber_arg": false,
+   "stores_arg": [],
+   "mpPlayer_vars": [
+    "mpPlayer"
+   ],
+   "mpplayer_sites": [
+    "0x6409AC"
+   ]
+  },
+  {
+   "fn": "0x640F00",
+   "name": "uEm018::setThrowOut",
+   "se": "uEm018::setThrowOut(void)",
+   "prototype": "int __stdcall(undefined4 param_1)",
+   "nero_strcmp": true,
+   "pl_vcall_slots": [
+    4,
+    134
+   ],
+   "raw_offsets": [],
+   "nero_fields": [],
+   "pl_fields": [],
+   "accessor": [],
+   "grabber_arg": false,
+   "stores_arg": [],
+   "mpPlayer_vars": [
+    "mpPlayer"
+   ],
+   "mpplayer_sites": [
+    "0x640F00"
+   ]
+  },
+  {
+   "fn": "0x640F90",
+   "name": "uEm018::throwOutLoop",
+   "se": "uEm018::throwOutLoop(void)",
+   "prototype": "char __usercall@<al>(int@<eax>)",
+   "nero_strcmp": false,
+   "pl_vcall_slots": [],
+   "raw_offsets": [],
+   "nero_fields": [],
+   "pl_fields": [
+    "m_delta_time"
+   ],
+   "accessor": [],
+   "grabber_arg": false,
+   "stores_arg": [],
+   "mpPlayer_vars": [
+    "mpPlayer"
+   ],
+   "mpplayer_sites": [
+    "0x640F93"
+   ]
+  },
+  {
+   "fn": "0x641810",
+   "name": "uEm018::throwOutDevilLoop",
+   "se": "uEm018::throwOutDevilLoop(void)",
+   "prototype": "char __usercall@<al>(int@<eax>)",
+   "nero_strcmp": false,
+   "pl_vcall_slots": [],
+   "raw_offsets": [],
+   "nero_fields": [],
+   "pl_fields": [
+    "m_delta_time"
+   ],
+   "accessor": [],
+   "grabber_arg": false,
+   "stores_arg": [],
+   "mpPlayer_vars": [
+    "mpPlayer"
+   ],
+   "mpplayer_sites": [
+    "0x64181C"
+   ]
+  },
+  {
+   "fn": "0x65CA00",
+   "name": "uEm019::grabShortMessage",
+   "se": "uEm019::grabShortMessage(uPlWpRightHand *,cCollisionGroup *,cCollisionGroup *)",
+   "prototype": null,
+   "nero_strcmp": false,
+   "pl_vcall_slots": [],
+   "raw_offsets": [],
+   "nero_fields": [],
+   "pl_fields": [],
+   "accessor": [],
+   "grabber_arg": true,
+   "stores_arg": [
+    "2156"
+   ],
+   "mpPlayer_vars": [],
+   "mpplayer_sites": [
+    "0x65CA89",
+    "0x65CC3E"
+   ]
+  },
+  {
+   "fn": "0x65D0D0",
+   "name": "uEm019::em019_grabbed",
+   "se": "uEm019::em019_grabbed(void)",
+   "prototype": "int __usercall@<eax>(undefined4 local_e4@<edi>, double@<st0>)",
+   "nero_strcmp": false,
+   "pl_vcall_slots": [],
+   "raw_offsets": [],
+   "nero_fields": [],
+   "pl_fields": [],
+   "accessor": [],
+   "grabber_arg": false,
+   "stores_arg": [],
+   "mpPlayer_vars": [],
+   "mpplayer_sites": [
+    "0x65D0D6"
+   ]
+  },
+  {
+   "fn": "0x65DC40",
+   "name": "uEm019::em019_grabbed_majin",
+   "se": "uEm019::em019_grabbed_majin(void)",
+   "prototype": "int __usercall@<eax>(undefined4 local_e4@<edi>, double@<st0>)",
+   "nero_strcmp": false,
+   "pl_vcall_slots": [],
+   "raw_offsets": [],
+   "nero_fields": [],
+   "pl_fields": [],
+   "accessor": [],
+   "grabber_arg": false,
+   "stores_arg": [],
+   "mpPlayer_vars": [],
+   "mpplayer_sites": [
+    "0x65DC46"
+   ]
+  },
+  {
+   "fn": "0x65E7E0",
+   "name": "uEm019::em019_grabbed_tang",
+   "se": "uEm019::em019_grabbed_tang(void)",
+   "prototype": "int __usercall@<eax>(int@<edi>)",
+   "nero_strcmp": false,
+   "pl_vcall_slots": [],
+   "raw_offsets": [],
+   "nero_fields": [],
+   "pl_fields": [
+    "mPlayerID",
+    "m_delta_time"
+   ],
+   "accessor": [],
+   "grabber_arg": false,
+   "stores_arg": [],
+   "mpPlayer_vars": [
+    "m_delta_time",
+    "mpPlayer"
+   ],
+   "mpplayer_sites": [
+    "0x65E7E6",
+    "0x65E931"
+   ]
+  },
+  {
+   "fn": "0x65EB90",
+   "name": "uEm019::em019_grabbed_fail_r",
+   "se": "uEm019::em019_grabbed_fail_r(void)",
+   "prototype": "void __usercall(int _EDI@<eax>)",
+   "nero_strcmp": false,
+   "pl_vcall_slots": [],
+   "raw_offsets": [],
+   "nero_fields": [],
+   "pl_fields": [
+    "mPos"
+   ],
+   "accessor": [],
+   "grabber_arg": false,
+   "stores_arg": [],
+   "mpPlayer_vars": [
+    "mpPlayer"
+   ],
+   "mpplayer_sites": [
+    "0x65EC09"
+   ]
+  },
+  {
+   "fn": "0x65F2F0",
+   "name": "uEm019::em019_grabbed_fail_l",
+   "se": "uEm019::em019_grabbed_fail_l(void)",
+   "prototype": "void __usercall(int _EDI@<eax>)",
+   "nero_strcmp": false,
+   "pl_vcall_slots": [],
+   "raw_offsets": [],
+   "nero_fields": [],
+   "pl_fields": [
+    "mPos"
+   ],
+   "accessor": [],
+   "grabber_arg": false,
+   "stores_arg": [],
+   "mpPlayer_vars": [
+    "mpPlayer"
+   ],
+   "mpplayer_sites": [
+    "0x65F374"
+   ]
+  },
+  {
+   "fn": "0x675B90",
+   "name": "uEm019_00::em019_grabbed_short",
+   "se": "uEm019_00::em019_grabbed_short(void)",
+   "prototype": "int __usercall@<eax>(int@<eax>, int@<edi>)",
+   "nero_strcmp": false,
+   "pl_vcall_slots": [],
+   "raw_offsets": [],
+   "nero_fields": [],
+   "pl_fields": [
+    "m_delta_time"
+   ],
+   "accessor": [],
+   "grabber_arg": false,
+   "stores_arg": [],
+   "mpPlayer_vars": [
+    "mpPlayer"
+   ],
+   "mpplayer_sites": [
+    "0x675BA8"
+   ]
+  },
+  {
+   "fn": "0x6762A0",
+   "name": "uEm019_00::em019_grabbed_short2",
+   "se": "uEm019_00::em019_grabbed_short2(void)",
+   "prototype": "char __usercall@<al>(undefined4 param@<eax>)",
+   "nero_strcmp": false,
+   "pl_vcall_slots": [],
+   "raw_offsets": [],
+   "nero_fields": [],
+   "pl_fields": [
+    "m_delta_time"
+   ],
+   "accessor": [
+    "getPlayerMat"
+   ],
+   "grabber_arg": false,
+   "stores_arg": [],
+   "mpPlayer_vars": [
+    "mpPlayer"
+   ],
+   "mpplayer_sites": [
+    "0x6762B1",
+    "0x67655E",
+    "0x676636",
+    "0x676717"
+   ]
+  },
+  {
+   "fn": "0x678D00",
+   "name": "uEm019_00::set_em019_grabbed_far",
+   "se": "uEm019_00::set_em019_grabbed_far(void)",
+   "prototype": "void __userpurge(double@<st0>, uModel *_EBX)",
+   "nero_strcmp": true,
+   "pl_vcall_slots": [],
+   "raw_offsets": [],
+   "nero_fields": [],
+   "pl_fields": [
+    "mPos"
+   ],
+   "accessor": [],
+   "grabber_arg": false,
+   "stores_arg": [],
+   "mpPlayer_vars": [
+    "mpPlayer",
+    "mpPlayer_1"
+   ],
+   "mpplayer_sites": [
+    "0x678D1C",
+    "0x678D68"
+   ]
+  },
+  {
+   "fn": "0x68F560",
+   "name": "uEm021::em021_dragon_grabbed",
+   "se": "uEm021::em021_dragon_grabbed(void)",
+   "prototype": "void __usercall(int _ESI@<eax>)",
+   "nero_strcmp": false,
+   "pl_vcall_slots": [],
+   "raw_offsets": [],
+   "nero_fields": [],
+   "pl_fields": [
+    "mPlayerID",
+    "m_delta_time"
+   ],
+   "accessor": [],
+   "grabber_arg": false,
+   "stores_arg": [],
+   "mpPlayer_vars": [
+    "mpPlayer"
+   ],
+   "mpplayer_sites": [
+    "0x68F57F",
+    "0x68FC22"
+   ]
+  },
+  {
+   "fn": "0x6926F0",
+   "name": "uEm021::em021_snake_grabbed",
+   "se": "uEm021::em021_snake_grabbed(void)",
+   "prototype": "int __stdcall(undefined4 param_3)",
+   "nero_strcmp": false,
+   "pl_vcall_slots": [],
+   "raw_offsets": [],
+   "nero_fields": [],
+   "pl_fields": [
+    "mPlayerID",
+    "m_delta_time"
+   ],
+   "accessor": [],
+   "grabber_arg": false,
+   "stores_arg": [],
+   "mpPlayer_vars": [
+    "mpPlayer",
+    "mpPlayer_1"
+   ],
+   "mpplayer_sites": [
+    "0x6926F6",
+    "0x692DA4"
+   ]
+  },
+  {
+   "fn": "0x695A10",
+   "name": "uEm021::em021_dome_grabbed",
+   "se": "uEm021::em021_dome_grabbed(void)",
+   "prototype": "int __usercall@<eax>(int@<eax>)",
+   "nero_strcmp": false,
+   "pl_vcall_slots": [],
+   "raw_offsets": [],
+   "nero_fields": [],
+   "pl_fields": [
+    "mPlayerID",
+    "m_delta_time"
+   ],
+   "accessor": [],
+   "grabber_arg": false,
+   "stores_arg": [],
+   "mpPlayer_vars": [
+    "mpPlayer"
+   ],
+   "mpplayer_sites": [
+    "0x695A15",
+    "0x695D5A"
+   ]
+  },
+  {
+   "fn": "0x695F00",
+   "name": "uEm021::em021_dome_grabbed_rankan",
+   "se": "uEm021::em021_dome_grabbed_rankan(void)",
+   "prototype": "char __usercall@<al>(int@<edi>)",
+   "nero_strcmp": false,
+   "pl_vcall_slots": [],
+   "raw_offsets": [],
+   "nero_fields": [],
+   "pl_fields": [
+    "mFootPrnt",
+    "mNextRno",
+    "mPlayerID",
+    "mRno",
+    "m_delta_time"
+   ],
+   "accessor": [],
+   "grabber_arg": false,
+   "stores_arg": [],
+   "mpPlayer_vars": [
+    "mpPlayer"
+   ],
+   "mpplayer_sites": [
+    "0x695F01"
+   ]
+  },
+  {
+   "fn": "0x697E80",
+   "name": "uEm021::em021_ground_grabbed",
+   "se": "uEm021::em021_ground_grabbed(void)",
+   "prototype": "int __usercall@<eax>(int@<eax>)",
+   "nero_strcmp": false,
+   "pl_vcall_slots": [],
+   "raw_offsets": [],
+   "nero_fields": [],
+   "pl_fields": [
+    "mPlayerID",
+    "m_delta_time"
+   ],
+   "accessor": [],
+   "grabber_arg": false,
+   "stores_arg": [],
+   "mpPlayer_vars": [
+    "mpPlayer"
+   ],
+   "mpplayer_sites": [
+    "0x697E85",
+    "0x6981C7"
+   ]
+  },
+  {
+   "fn": "0x699DB0",
+   "name": "uEm021::grabShortMessage",
+   "se": "uEm021::grabShortMessage(uPlWpRightHand *,cCollisionGroup *,cCollisionGroup *)",
+   "prototype": null,
+   "nero_strcmp": false,
+   "pl_vcall_slots": [],
+   "raw_offsets": [],
+   "nero_fields": [],
+   "pl_fields": [],
+   "accessor": [],
+   "grabber_arg": true,
+   "stores_arg": [
+    "9020"
+   ],
+   "mpPlayer_vars": [
+    "mpPlayer"
+   ],
+   "mpplayer_sites": [
+    "0x699EB0",
+    "0x69A184"
+   ]
+  },
+  {
+   "fn": "0x6A4840",
+   "name": "uEm021_Pipe::em021_pipe_dome_grabbed_sanran",
+   "se": "uEm021_Pipe::em021_pipe_dome_grabbed_sanran(void)",
+   "prototype": "void __usercall(int@<esi>)",
+   "nero_strcmp": false,
+   "pl_vcall_slots": [],
+   "raw_offsets": [],
+   "nero_fields": [],
+   "pl_fields": [
+    "m_delta_time"
+   ],
+   "accessor": [],
+   "grabber_arg": false,
+   "stores_arg": [],
+   "mpPlayer_vars": [
+    "mpPlayer"
+   ],
+   "mpplayer_sites": [
+    "0x6A4846",
+    "0x6A4921"
+   ]
+  },
+  {
+   "fn": "0x6B45B0",
+   "name": "uEm022::grabBuster",
+   "se": "uEm022::grabBuster(void)",
+   "prototype": "sMediator *__usercall@<eax>(int@<ecx>, int@<esi>)",
+   "nero_strcmp": false,
+   "pl_vcall_slots": [],
+   "raw_offsets": [],
+   "nero_fields": [],
+   "pl_fields": [],
+   "accessor": [],
+   "grabber_arg": false,
+   "stores_arg": [],
+   "mpPlayer_vars": [
+    "m_delta_time"
+   ],
+   "mpplayer_sites": [
+    "0x6B45F2"
+   ]
+  },
+  {
+   "fn": "0x6B4640",
+   "name": "uEm022::grabBusterGndNG",
+   "se": "uEm022::grabBusterGndNG(void)",
+   "prototype": "int __cdecl(_DWORD)",
+   "nero_strcmp": false,
+   "pl_vcall_slots": [],
+   "raw_offsets": [],
+   "nero_fields": [],
+   "pl_fields": [],
+   "accessor": [],
+   "grabber_arg": false,
+   "stores_arg": [],
+   "mpPlayer_vars": [
+    "mpPlayer"
+   ],
+   "mpplayer_sites": [
+    "0x6B47C1"
+   ]
+  },
+  {
+   "fn": "0x6B4860",
+   "name": "uEm022::grabBusterGndOK",
+   "se": "uEm022::grabBusterGndOK(void)",
+   "prototype": "int __cdecl(_DWORD)",
+   "nero_strcmp": false,
+   "pl_vcall_slots": [],
+   "raw_offsets": [],
+   "nero_fields": [],
+   "pl_fields": [],
+   "accessor": [],
+   "grabber_arg": false,
+   "stores_arg": [],
+   "mpPlayer_vars": [
+    "mpPlayer"
+   ],
+   "mpplayer_sites": [
+    "0x6B4CC3"
+   ]
+  },
+  {
+   "fn": "0x6B4D80",
+   "name": "uEm022::grabBusterAirNG",
+   "se": "uEm022::grabBusterAirNG(void)",
+   "prototype": null,
+   "nero_strcmp": false,
+   "pl_vcall_slots": [],
+   "raw_offsets": [],
+   "nero_fields": [],
+   "pl_fields": [],
+   "accessor": [],
+   "grabber_arg": false,
+   "stores_arg": [],
+   "mpPlayer_vars": [
+    "mpPlayer"
+   ],
+   "mpplayer_sites": [
+    "0x6B4FDE"
+   ]
+  },
+  {
+   "fn": "0x6B5090",
+   "name": "uEm022::grabBusterAirOK",
+   "se": "uEm022::grabBusterAirOK(void)",
+   "prototype": "int __cdecl(_DWORD)",
+   "nero_strcmp": false,
+   "pl_vcall_slots": [],
+   "raw_offsets": [],
+   "nero_fields": [],
+   "pl_fields": [],
+   "accessor": [],
+   "grabber_arg": false,
+   "stores_arg": [],
+   "mpPlayer_vars": [
+    "mpPlayer"
+   ],
+   "mpplayer_sites": [
+    "0x6B5626"
+   ]
+  },
+  {
+   "fn": "0x6B5720",
+   "name": "uEm022::setBusterCameraEnd",
+   "se": "uEm022::setBusterCameraEnd(void)",
+   "prototype": "void __usercall(int Group@<esi>)",
+   "nero_strcmp": false,
+   "pl_vcall_slots": [],
+   "raw_offsets": [],
+   "nero_fields": [],
+   "pl_fields": [
+    "mPlayerID"
+   ],
+   "accessor": [],
+   "grabber_arg": false,
+   "stores_arg": [],
+   "mpPlayer_vars": [
+    "mpPlayer"
+   ],
+   "mpplayer_sites": [
+    "0x6B5729"
+   ]
+  },
+  {
+   "fn": "0x6B6A30",
+   "name": "uEm022::grabShortMessage",
+   "se": "uEm022::grabShortMessage(uPlWpRightHand *,cCollisionGroup *,cCollisionGroup *)",
+   "prototype": null,
+   "nero_strcmp": false,
+   "pl_vcall_slots": [
+    134
+   ],
+   "raw_offsets": [],
+   "nero_fields": [],
+   "pl_fields": [
+    "mActStat"
+   ],
+   "accessor": [],
+   "grabber_arg": true,
+   "stores_arg": [
+    "2141"
+   ],
+   "mpPlayer_vars": [
+    "mpPlayer"
+   ],
+   "mpplayer_sites": [
+    "0x6B6B6C",
+    "0x6B6B89"
+   ]
+  },
+  {
+   "fn": "0x6BCF10",
+   "name": "uEm022SpearShl::grab",
+   "se": "uEm022SpearShl::grab(void)",
+   "prototype": "void __stdcall(undefined4 param_3)",
+   "nero_strcmp": false,
+   "pl_vcall_slots": [],
+   "raw_offsets": [],
+   "nero_fields": [],
+   "pl_fields": [
+    "mNowFramePos",
+    "mPos"
+   ],
+   "accessor": [],
+   "grabber_arg": false,
+   "stores_arg": [],
+   "mpPlayer_vars": [
+    "mpPlayer",
+    "mpPlayer_1",
+    "mpPlayer_2"
+   ],
+   "mpplayer_sites": [
+    "0x6BD127",
+    "0x6BD2F1",
+    "0x6BD46D"
+   ]
+  },
+  {
+   "fn": "0x6CE950",
+   "name": "uEm023::setGrabNear",
+   "se": "uEm023::setGrabNear(void)",
+   "prototype": "int __usercall@<eax>(int result@<eax>)",
+   "nero_strcmp": false,
+   "pl_vcall_slots": [],
+   "raw_offsets": [],
+   "nero_fields": [],
+   "pl_fields": [],
+   "accessor": [],
+   "grabber_arg": false,
+   "stores_arg": [],
+   "mpPlayer_vars": [],
+   "mpplayer_sites": [
+    "0x6CE950"
+   ]
+  },
+  {
+   "fn": "0x6CE9B0",
+   "name": "uEm023::grabNear",
+   "se": "uEm023::grabNear(void)",
+   "prototype": "void __stdcall(undefined4 param)",
+   "nero_strcmp": false,
+   "pl_vcall_slots": [],
+   "raw_offsets": [],
+   "nero_fields": [],
+   "pl_fields": [
+    "mPos",
+    "mQuat",
+    "m_delta_time"
+   ],
+   "accessor": [
+    "getPlayerPos"
+   ],
+   "grabber_arg": false,
+   "stores_arg": [],
+   "mpPlayer_vars": [
+    "mpPlayer",
+    "mpPlayer_1",
+    "mpPlayer_2"
+   ],
+   "mpplayer_sites": [
+    "0x6CE9B6",
+    "0x6CEDC5",
+    "0x6CEE06",
+    "0x6CF9BF"
+   ]
+  },
+  {
+   "fn": "0x6D1DF0",
+   "name": "uEm023::grabShortMessage",
+   "se": "uEm023::grabShortMessage(uPlWpRightHand *,cCollisionGroup *,cCollisionGroup *)",
+   "prototype": null,
+   "nero_strcmp": false,
+   "pl_vcall_slots": [
+    134
+   ],
+   "raw_offsets": [],
+   "nero_fields": [],
+   "pl_fields": [],
+   "accessor": [],
+   "grabber_arg": true,
+   "stores_arg": [
+    "2141"
+   ],
+   "mpPlayer_vars": [
+    "mpPlayer"
+   ],
+   "mpplayer_sites": [
+    "0x6D1F54"
+   ]
+  },
+  {
+   "fn": "0x6E2940",
+   "name": "uEm025::damageRightHandCore",
+   "se": "uEm025::damageRightHandCore(void)",
+   "prototype": "char __usercall@<al>(float param@<edi>, undefined4 param@<esi>)",
+   "nero_strcmp": false,
+   "pl_vcall_slots": [],
+   "raw_offsets": [],
+   "nero_fields": [],
+   "pl_fields": [],
+   "accessor": [],
+   "grabber_arg": false,
+   "stores_arg": [],
+   "mpPlayer_vars": [],
+   "mpplayer_sites": [
+    "0x6E2A13"
+   ]
+  },
+  {
+   "fn": "0x6E2D00",
+   "name": "uEm025::damageRightHandCoreEnd",
+   "se": "uEm025::damageRightHandCoreEnd(void)",
+   "prototype": "int __usercall@<eax>(int@<ecx>, undefined param@<sil>)",
+   "nero_strcmp": false,
+   "pl_vcall_slots": [],
+   "raw_offsets": [
+    52,
+    5387
+   ],
+   "nero_fields": [],
+   "pl_fields": [],
+   "accessor": [],
+   "grabber_arg": false,
+   "stores_arg": [],
+   "mpPlayer_vars": [
+    "mpPlayer"
+   ],
+   "mpplayer_sites": [
+    "0x6E2D3A"
+   ]
+  },
+  {
+   "fn": "0x6FE640",
+   "name": "uEm029::snatch",
+   "se": "uEm029::snatch(void)",
+   "prototype": "int __thiscall(uModel *this)",
+   "nero_strcmp": false,
+   "pl_vcall_slots": [],
+   "raw_offsets": [],
+   "nero_fields": [],
+   "pl_fields": [],
+   "accessor": [],
+   "grabber_arg": false,
+   "stores_arg": [],
+   "mpPlayer_vars": [
+    "mpPlayer"
+   ],
+   "mpplayer_sites": [
+    "0x6FE75B"
+   ]
+  },
+  {
+   "fn": "0x6FED50",
+   "name": "uEm029::buster",
+   "se": "uEm029::buster(void)",
+   "prototype": "int __thiscall(undefined4 param_3)",
+   "nero_strcmp": false,
+   "pl_vcall_slots": [],
+   "raw_offsets": [],
+   "nero_fields": [],
+   "pl_fields": [
+    "m_delta_time"
+   ],
+   "accessor": [
+    "getPlayerPos"
+   ],
+   "grabber_arg": false,
+   "stores_arg": [],
+   "mpPlayer_vars": [
+    "mpPlayer"
+   ],
+   "mpplayer_sites": [
+    "0x6FED56",
+    "0x6FEDBB"
+   ]
+  },
+  {
+   "fn": "0x7015F0",
+   "name": "uEm029::grabShortMessage",
+   "se": "uEm029::grabShortMessage(uPlWpRightHand *,cCollisionGroup *,cCollisionGroup *)",
+   "prototype": null,
+   "nero_strcmp": false,
+   "pl_vcall_slots": [],
+   "raw_offsets": [],
+   "nero_fields": [],
+   "pl_fields": [],
+   "accessor": [],
+   "grabber_arg": true,
+   "stores_arg": [],
+   "mpPlayer_vars": [],
+   "mpplayer_sites": [
+    "0x701644"
+   ]
+  },
+  {
+   "fn": "0x7096C0",
+   "name": "uEm030::snatch",
+   "se": "uEm030::snatch(void)",
+   "prototype": "int __thiscall(uModel *this)",
+   "nero_strcmp": false,
+   "pl_vcall_slots": [],
+   "raw_offsets": [],
+   "nero_fields": [],
+   "pl_fields": [],
+   "accessor": [],
+   "grabber_arg": false,
+   "stores_arg": [],
+   "mpPlayer_vars": [
+    "mpPlayer"
+   ],
+   "mpplayer_sites": [
+    "0x7097CB"
+   ]
+  },
+  {
+   "fn": "0x709E30",
+   "name": "uEm030::buster",
+   "se": "uEm030::buster(void)",
+   "prototype": "int __thiscall(undefined4 param_3)",
+   "nero_strcmp": false,
+   "pl_vcall_slots": [],
+   "raw_offsets": [],
+   "nero_fields": [],
+   "pl_fields": [
+    "m_delta_time"
+   ],
+   "accessor": [
+    "getPlayerPos"
+   ],
+   "grabber_arg": false,
+   "stores_arg": [],
+   "mpPlayer_vars": [
+    "mpPlayer"
+   ],
+   "mpplayer_sites": [
+    "0x709E36",
+    "0x709E94"
+   ]
+  },
+  {
+   "fn": "0x70C880",
+   "name": "uEm030::grabShortMessage",
+   "se": "uEm030::grabShortMessage(uPlWpRightHand *,cCollisionGroup *,cCollisionGroup *)",
+   "prototype": "int __thiscall(undefined4 param_1, int, int, int)",
+   "nero_strcmp": false,
+   "pl_vcall_slots": [],
+   "raw_offsets": [],
+   "nero_fields": [],
+   "pl_fields": [],
+   "accessor": [],
+   "grabber_arg": true,
+   "stores_arg": [],
+   "mpPlayer_vars": [],
+   "mpplayer_sites": [
+    "0x70C8DD"
+   ]
+  },
+  {
+   "fn": "0x70CA60",
+   "name": "uEm030::getFinishBusterHp",
+   "se": "uEm030::getFinishBusterHp(void)",
+   "prototype": "int __userpurge@<xmm0>(_BYTE *this@<ecx>)",
+   "nero_strcmp": false,
+   "pl_vcall_slots": [
+    134
+   ],
+   "raw_offsets": [],
+   "nero_fields": [],
+   "pl_fields": [],
+   "accessor": [],
+   "grabber_arg": false,
+   "stores_arg": [],
+   "mpPlayer_vars": [
+    "mpPlayer"
+   ],
+   "mpplayer_sites": [
+    "0x70CA67"
+   ]
+  },
+  {
+   "fn": "0x70FCB0",
+   "name": "uEm030Spada::grabShortMessage",
+   "se": "uEm030Spada::grabShortMessage(uPlWpRightHand *,cCollisionGroup *,cCollisionGroup *)",
+   "prototype": null,
+   "nero_strcmp": false,
+   "pl_vcall_slots": [],
+   "raw_offsets": [],
+   "nero_fields": [],
+   "pl_fields": [],
+   "accessor": [],
+   "grabber_arg": true,
+   "stores_arg": [],
+   "mpPlayer_vars": [],
+   "mpplayer_sites": [
+    "0x70FCD6"
+   ]
+  },
+  {
+   "fn": "0x716420",
+   "name": "uEm032::exeEasyBitCatch",
+   "se": "uEm032::exeEasyBitCatch(float,float)",
+   "prototype": "int __stdcall(undefined4 param_2, int)",
+   "nero_strcmp": false,
+   "pl_vcall_slots": [],
+   "raw_offsets": [],
+   "nero_fields": [],
+   "pl_fields": [],
+   "accessor": [],
+   "grabber_arg": false,
+   "stores_arg": [],
+   "mpPlayer_vars": [],
+   "mpplayer_sites": [
+    "0x716437"
+   ]
+  },
+  {
+   "fn": "0x71FA70",
+   "name": "uEm035::grabNear",
+   "se": "uEm035::grabNear(void)",
+   "prototype": "int __userpurge@<eax>(double@<st0>, uModel *vAngle)",
+   "nero_strcmp": false,
+   "pl_vcall_slots": [
+    134
+   ],
+   "raw_offsets": [],
+   "nero_fields": [],
+   "pl_fields": [
+    "m_delta_time"
+   ],
+   "accessor": [
+    "getPlayerPos"
+   ],
+   "grabber_arg": false,
+   "stores_arg": [],
+   "mpPlayer_vars": [
+    "m_delta_time",
+    "mpPlayer",
+    "mpPlayer_1",
+    "mpPlayer_2",
+    "mpPlayer_3",
+    "mpPlayer_4"
+   ],
+   "mpplayer_sites": [
+    "0x71FADF",
+    "0x71FC1A",
+    "0x71FD5C",
+    "0x71FFBD",
+    "0x7200F2",
+    "0x72012E"
+   ]
+  },
+  {
+   "fn": "0x7205A0",
+   "name": "uEm035::setGrabNearDevil",
+   "se": "uEm035::setGrabNearDevil(void)",
+   "prototype": "void __usercall(uModel *@<esi>)",
+   "nero_strcmp": false,
+   "pl_vcall_slots": [],
+   "raw_offsets": [],
+   "nero_fields": [],
+   "pl_fields": [],
+   "accessor": [],
+   "grabber_arg": false,
+   "stores_arg": [],
+   "mpPlayer_vars": [
+    "mpPlayer"
+   ],
+   "mpplayer_sites": [
+    "0x7205DF"
+   ]
+  },
+  {
+   "fn": "0x720640",
+   "name": "uEm035::grabNearDevil",
+   "se": "uEm035::grabNearDevil(void)",
+   "prototype": "int __userpurge@<eax>(double vAngle@<st0>, uModel *param)",
+   "nero_strcmp": false,
+   "pl_vcall_slots": [],
+   "raw_offsets": [],
+   "nero_fields": [],
+   "pl_fields": [],
+   "accessor": [
+    "getPlayerMat"
+   ],
+   "grabber_arg": false,
+   "stores_arg": [],
+   "mpPlayer_vars": [
+    "m_delta_time"
+   ],
+   "mpplayer_sites": [
+    "0x720684",
+    "0x720756",
+    "0x72077D",
+    "0x72080C",
+    "0x720897"
+   ]
+  },
+  {
+   "fn": "0x720DA0",
+   "name": "uEm035::setGrabFar",
+   "se": "uEm035::setGrabFar(void)",
+   "prototype": "void __stdcall(uModel *callback)",
+   "nero_strcmp": true,
+   "pl_vcall_slots": [],
+   "raw_offsets": [],
+   "nero_fields": [],
+   "pl_fields": [
+    "mActStat",
+    "mPos"
+   ],
+   "accessor": [],
+   "grabber_arg": false,
+   "stores_arg": [],
+   "mpPlayer_vars": [
+    "mpPlayer",
+    "mpPlayer_2",
+    "mpPlayer_3"
+   ],
+   "mpplayer_sites": [
+    "0x720DCD"
+   ]
+  },
+  {
+   "fn": "0x720FF0",
+   "name": "uEm035::grabFar",
+   "se": "uEm035::grabFar(void)",
+   "prototype": "int __stdcall(uModel *)",
+   "nero_strcmp": false,
+   "pl_vcall_slots": [],
+   "raw_offsets": [],
+   "nero_fields": [],
+   "pl_fields": [],
+   "accessor": [],
+   "grabber_arg": false,
+   "stores_arg": [],
+   "mpPlayer_vars": [
+    "mpPlayer"
+   ],
+   "mpplayer_sites": [
+    "0x721263"
+   ]
+  },
+  {
+   "fn": "0x723390",
+   "name": "uEm035::grabShortMessage",
+   "se": "uEm035::grabShortMessage(uPlWpRightHand *,cCollisionGroup *,cCollisionGroup *)",
+   "prototype": null,
+   "nero_strcmp": false,
+   "pl_vcall_slots": [
+    134
+   ],
+   "raw_offsets": [],
+   "nero_fields": [],
+   "pl_fields": [
+    "mActStat"
+   ],
+   "accessor": [],
+   "grabber_arg": true,
+   "stores_arg": [
+    "9320"
+   ],
+   "mpPlayer_vars": [
+    "mpPlayer",
+    "mpPlayer_1"
+   ],
+   "mpplayer_sites": [
+    "0x7233DA"
+   ]
+  },
+  {
+   "fn": "0x723960",
+   "name": "uEm035::setGrabNearEffectEm035",
+   "se": "uEm035::setGrabNearEffectEm035(uModel *,bool)",
+   "prototype": "undefined4 __userpurge@<eax>(float *vAngle@<eax>, float *param_2, char)",
+   "nero_strcmp": false,
+   "pl_vcall_slots": [],
+   "raw_offsets": [],
+   "nero_fields": [],
+   "pl_fields": [],
+   "accessor": [
+    "getPlayerMat"
+   ],
+   "grabber_arg": false,
+   "stores_arg": [],
+   "mpPlayer_vars": [],
+   "mpplayer_sites": [
+    "0x723B20"
+   ]
+  },
+  {
+   "fn": "0x72EA50",
+   "name": "uEmSample::setGrabFar",
+   "se": "uEmSample::setGrabFar(void)",
+   "prototype": "void __stdcall(uModel *)",
+   "nero_strcmp": true,
+   "pl_vcall_slots": [],
+   "raw_offsets": [],
+   "nero_fields": [],
+   "pl_fields": [
+    "mPos"
+   ],
+   "accessor": [],
+   "grabber_arg": false,
+   "stores_arg": [],
+   "mpPlayer_vars": [
+    "mpPlayer",
+    "mpPlayer_1",
+    "mpPlayer_2"
+   ],
+   "mpplayer_sites": [
+    "0x72EA7D"
+   ]
+  },
+  {
+   "fn": "0x7C3EE0",
+   "name": "uPlayerDanteBoss::moveActSnatch",
+   "se": "uPlayerDanteBoss::moveActSnatch(void)",
+   "prototype": "double __usercall@<st0>(int@<ecx>, double result@<st0>)",
+   "nero_strcmp": false,
+   "pl_vcall_slots": [],
+   "raw_offsets": [],
+   "nero_fields": [],
+   "pl_fields": [],
+   "accessor": [
+    "getPlayerPos"
+   ],
+   "grabber_arg": false,
+   "stores_arg": [],
+   "mpPlayer_vars": [],
+   "mpplayer_sites": [
+    "0x7C3F11"
+   ]
+  },
+  {
+   "fn": "0x7C4630",
+   "name": "uPlayerDanteBoss::moveActBuster",
+   "se": "uPlayerDanteBoss::moveActBuster(void)",
+   "prototype": "int __thiscall(undefined4 param_1)",
+   "nero_strcmp": false,
+   "pl_vcall_slots": [],
+   "raw_offsets": [],
+   "nero_fields": [],
+   "pl_fields": [
+    "mActStat",
+    "mPos",
+    "m_delta_time"
+   ],
+   "accessor": [],
+   "grabber_arg": false,
+   "stores_arg": [],
+   "mpPlayer_vars": [
+    "mpPlayer",
+    "mpPlayer_2",
+    "mpPlayer_3"
+   ],
+   "mpplayer_sites": [
+    "0x7C46E6",
+    "0x7C4A56",
+    "0x7C5076"
+   ]
+  },
+  {
+   "fn": "0x7C53B0",
+   "name": "uPlayerDanteBoss::setPlGrabShortHit",
+   "se": "uPlayerDanteBoss::setPlGrabShortHit(uint,float)",
+   "prototype": "int __stdcall(undefined4 param_2, int)",
+   "nero_strcmp": false,
+   "pl_vcall_slots": [],
+   "raw_offsets": [],
+   "nero_fields": [],
+   "pl_fields": [
+    "mPlayerID"
+   ],
+   "accessor": [],
+   "grabber_arg": false,
+   "stores_arg": [],
+   "mpPlayer_vars": [
+    "mpPlayer"
+   ],
+   "mpplayer_sites": [
+    "0x7C53B6"
+   ]
+  },
+  {
+   "fn": "0x7C6990",
+   "name": "uPlayerDanteBoss::setBusterType",
+   "se": "uPlayerDanteBoss::setBusterType(void)",
+   "prototype": "sMediator *__usercall@<eax>(int@<esi>)",
+   "nero_strcmp": false,
+   "pl_vcall_slots": [
+    134
+   ],
+   "raw_offsets": [],
+   "nero_fields": [],
+   "pl_fields": [
+    "mActStat"
+   ],
+   "accessor": [],
+   "grabber_arg": false,
+   "stores_arg": [],
+   "mpPlayer_vars": [
+    "mpPlayer",
+    "mpPlayer_1",
+    "mpPlayer_2"
+   ],
+   "mpplayer_sites": [
+    "0x7C69AE",
+    "0x7C6A32",
+    "0x7C6A5E",
+    "0x7C6AC4"
+   ]
+  },
+  {
+   "fn": "0x820770",
+   "name": "uPlGrabShortHit::hitMessage",
+   "se": "uPlGrabShortHit::hitMessage(cCollisionGroup *,cCollisionGroup *)",
+   "prototype": null,
+   "nero_strcmp": false,
+   "pl_vcall_slots": [
+    51
+   ],
+   "raw_offsets": [],
+   "nero_fields": [],
+   "pl_fields": [],
+   "accessor": [],
+   "grabber_arg": false,
+   "stores_arg": [],
+   "mpPlayer_vars": [
+    "mpPlayer"
+   ],
+   "mpplayer_sites": [
+    "0x8207AB"
+   ]
+  },
+  {
+   "fn": "0x82C870",
+   "name": "uPlNeroShl001::setup",
+   "se": "uPlNeroShl001::setup(void)",
+   "prototype": "void __thiscall(uCoord *this)",
+   "nero_strcmp": false,
+   "pl_vcall_slots": [],
+   "raw_offsets": [],
+   "nero_fields": [],
+   "pl_fields": [
+    "mNowFramePos",
+    "mPos"
+   ],
+   "accessor": [],
+   "grabber_arg": false,
+   "stores_arg": [],
+   "mpPlayer_vars": [
+    "mpPlayer",
+    "mpPlayer_1",
+    "v36"
+   ],
+   "mpplayer_sites": [
+    "0x82CDD1"
+   ]
+  },
+  {
+   "fn": "0x82F170",
+   "name": "uPlNeroShl003::updateMove",
+   "se": "uPlNeroShl003::updateMove(void)",
+   "prototype": "void __usercall(int param@<esi>)",
+   "nero_strcmp": false,
+   "pl_vcall_slots": [],
+   "raw_offsets": [],
+   "nero_fields": [],
+   "pl_fields": [
+    "mParamTbl"
+   ],
+   "accessor": [],
+   "grabber_arg": false,
+   "stores_arg": [],
+   "mpPlayer_vars": [
+    "mpPlayer"
+   ],
+   "mpplayer_sites": [
+    "0x82F199"
+   ]
+  },
+  {
+   "fn": "0x82F2D0",
+   "name": "uPlNeroShl003::update",
+   "se": "uPlNeroShl003::update(void)",
+   "prototype": "int __thiscall(float *this)",
+   "nero_strcmp": false,
+   "pl_vcall_slots": [],
+   "raw_offsets": [],
+   "nero_fields": [],
+   "pl_fields": [
+    "mParamTbl"
+   ],
+   "accessor": [],
+   "grabber_arg": false,
+   "stores_arg": [],
+   "mpPlayer_vars": [
+    "mpPlayer"
+   ],
+   "mpplayer_sites": [
+    "0x82F2D0"
+   ]
+  },
+  {
+   "fn": "0x82F3E0",
+   "name": "uPlNeroShl003::setEfct",
+   "se": "uPlNeroShl003::setEfct(void)",
+   "prototype": "int __thiscall(uModel *this)",
+   "nero_strcmp": false,
+   "pl_vcall_slots": [],
+   "raw_offsets": [],
+   "nero_fields": [],
+   "pl_fields": [],
+   "accessor": [],
+   "grabber_arg": false,
+   "stores_arg": [],
+   "mpPlayer_vars": [
+    "mpPlayer"
+   ],
+   "mpplayer_sites": [
+    "0x82F558"
+   ]
+  },
+  {
+   "fn": "0x82F5A0",
+   "name": "uPlNeroShl003::hitMessage",
+   "se": "uPlNeroShl003::hitMessage(cCollisionGroup *,cCollisionGroup *)",
+   "prototype": "int __stdcall(cCollisionGroup *dfdGroup, undefined4 centJointID)",
+   "nero_strcmp": false,
+   "pl_vcall_slots": [],
+   "raw_offsets": [],
+   "nero_fields": [],
+   "pl_fields": [],
+   "accessor": [],
+   "grabber_arg": false,
+   "stores_arg": [],
+   "mpPlayer_vars": [
+    "mpPlayer"
+   ],
+   "mpplayer_sites": [
+    "0x82F61D"
+   ]
+  },
+  {
+   "fn": "0xB75630",
+   "name": "uPlayerNero::DTI::init",
+   "se": null,
+   "prototype": "int()",
+   "nero_strcmp": true,
+   "pl_vcall_slots": [],
+   "raw_offsets": [],
+   "nero_fields": [],
+   "pl_fields": [],
+   "accessor": [],
+   "grabber_arg": false,
+   "stores_arg": [],
+   "mpPlayer_vars": [],
+   "mpplayer_sites": []
+  }
+ ]
+}

@@ -21,7 +21,7 @@ A prior session reversed this into a 484-byte DX9-specific type. There is exactl
 descriptor in the DX9 IDB, read via `mpGeneratorParam` for **every** generator — so structurally this
 484-byte record IS the general generator descriptor. It is NOT a base+appended-tail; see the SE
 divergence note below. This session did not redeclare it (doing so would rewrite the decompiles of
-`emit_request` / the timer funcs that are already typed against it); it adds the verification tiering
+`setRequest` / the timer funcs that are already typed against it); it adds the verification tiering
 below.
 
 ## Verification tiers
@@ -30,19 +30,30 @@ below.
 
 | Offset | Field | Type | Confirmed by |
 |------:|-------|------|--------------|
-| 0x3C | `ParentNo` | int | `emit_request` 0x9DDF40 — `[edi+3C]` passed to `particle_pool::spawn_with_parent` |
-| 0x76 | `WaitFrame` | MtRangeU16 | state-0 init in `uknGenBehaviorFunc1`/`sub_9DDBF0` → `mSetTimer = WaitFrame` |
+| 0x3C | `ParentNo` | int | `setRequest` 0x9DDF40 — `[edi+3C]` passed to `sVibration::req_with_parent` (joint index) |
+| 0x76 | `WaitFrame` | MtRangeU16 | state-0 init in `uknGenBehaviorFunc1`/`Generator::updateSingleGenerator` → `mSetTimer = WaitFrame` |
 | 0xB0 | `LoopNum` | MtRangeU16 | `uknGeneratorTimerFunc` 0x9DE250 — reseed `base.s + rand%(r+1)` (per-burst loop window) |
 | 0xB4 | `SetFrame` | MtRangeU16 | `uknGenLoopFunc` 0x9DE360 — reseed `base.s + rand%(r+1)` (inter-burst interval) |
 | 0xB8 | `SetInterval` | u16 | `uknGeneratorTimerFunc` — fractional-frame distribution gate |
 | 0xBC | `SetFrameDist` | float | `uknGenLoopFunc` — fractional-frame distribution gate |
-| 0xC0 | `IntervalFrameDist` | float | adjacent distribution field (read in same reseed path) |
-| 0x13C | spawn-mode byte | u8 | `emit_request` switch discriminator (disasm `[edi+13Ch]`; 1=simple,2=at_pos,3=with_parent) |
-| 0x13E/0x13F | spawn request id/flags | u16+u8 | `emit_request` — packed `[edi+13Eh]`/`[edi+13Fh]` → spawn args |
-| 0x1C0 | spawn request word | u16 | `emit_request` — `[edi+1C0h]` |
-| 0x1C4 | spawn sound/req word | u16 | `emit_request` — `[edi+1C4h]` → `sDevil4Sound::requestSe` |
+| 0x30 / 0x40 | `Pos` / `Quat` | MtFloat3 / MtVector4 | `moveUnitGenerator` 0x96FF00 — `Pos` (x,y,z) as offset + `&Quat` → `uEffectVFR::setQuatParentOfs(quat, parent, pos, unit, ParentNo, …)`: unit placement relative to a parent joint (2026-10-05) |
+| 0xC0 | `member_0xc0` | MtRangeF | `initGeneratorParam` — `addss [esi+0C0h]` / `mulss [esi+0C4h]` → Gen.mParticleScaleBase. (Was `IntervalFrameDist` float + `MtRangeF`@0xC4, a 4-byte overlay error that shifted everything up to 0x13B) |
+| 0xC8 / 0xC9 | `RangeType` / `RangeDirType` | u8 / u8 | `sub_999640` switch on byte @0xC8; `Funcx90` reads byte @0xC9 |
+| 0xCA / 0xCB | `RangeOptionFlags` / `uknRangeFlag` | u8 / u8 | `initGeneratorParam` (word @0xCA, byte cmp @0xCB) |
+| 0xCC / 0xCD / 0xCE | `RangeStripType` / `RangeStripFlag` / `RangeStripPartsNo` | u8 / u8 / s16 | dword test @0xCC (sub_9774B0, sub_99A8A0); byte @0xCD and word @0xCE (sub_99A8A0/99AFD0/99B270). The names are SE-derived; the offsets come from DX9 code |
+| 0xD0 | `RangeStripPath` | char[64] | **`createGeneratorResources`** — `cmp byte [edi+0D0h]` / `lea` → `rEffectStrip` (.efs) |
+| 0x110 | `UknRangeThing` | MtRangeF[4] | `[0]` = {base 0x110, range 0x114}: `initParticleMoveNone`, `movevel_transform` (addss/mulss) |
+| 0x130 | `RangeDivideNum` | u32 | `sub_999640` — dword, modulus divisor `n % (RangeDivideNum+1)` |
+| 0x140 / 0x180 | `ExtVibrationPath` / `SoundRequestPath` | char[64] each | **`createGeneratorResources`** → `rVibration` (.vib) / `rSoundRequest` (.srq) |
+| 0x13C | `mVibReqType` | u8 | `setRequest` switch (disasm `cmp byte ptr [edi+13Ch]`; 0=none, 1=simple, 2=at_pos, 3=with_parent). Also gates `finish_requests`. (Was typed `float` in the IDB → split into bytes 2026-10-05.) |
+| 0x13E / 0x13F | `mVibReqArg0` / `mVibReqArg1` | u8, u8 | `setRequest` — `movzx byte [edi+13Eh]` / `[edi+13Fh]`, packed `arg0 \| arg1<<16` → last `req_*` arg |
+| 0x1C0 | `VibReqNo` | u16 | `setRequest` — `movzx word [edi+1C0h]` → `req_*` arg1. Mirrors `SeReqNo`@0x1C8 |
+| 0x1C2 | `VibOptionFlag` | u16 | `finish_requests` — bit0 = stop vib on finish. Mirrors `SeOptionFlag`@0x1CA (tested as dword@0x1C8 `& 0x10000`). Was mis-named `ExtVibrationPathOffset` |
+| 0x1C4 | `VibPriority` | u32 | `setRequest` — `mov [edi+1C4h]` → `req_*` arg2 (**not** the sound request; the earlier doc row was wrong) |
+| 0x1C8 / 0x1CA | `SeReqNo` / `SeOptionFlag` | u16 bitfields | `finish_requests` (SeOptionFlag bit0 = stop SE on finish) |
+| 0x1CC | `member_0x1cc` | **int** | `updateWorldMatrix` @0x96BE38 — `mov eax,[esi+1CCh]` (dword), self-relative sub-block offset, gated on `pGen->mStatus & 0x10`. Was mis-typed `SoundPathOffset` int16 + `member_0x1ce`; merged 2026-10-05 |
 
-Also read but on the per-instance randomized-visual path (`initGeneratorParam` 0x96B691, all
+Also read but on the per-instance randomized-visual path (`initGeneratorParam` 0x96AEC0, all
 `base + range*rand`): a count byte at **+0x0B**, the `RandomNo` array at **+0x10**, and several
 scale/color/intensity range pairs in the **0x118–0x1D0** region plus keyframe-presence flag dwords
 (~0x1CC). These are confirmed *reads* but their individual field identities beyond RandomNo are not
@@ -50,9 +61,8 @@ pinned — left to the per-type work.
 
 ### Tier 2 — prior-session-named, NOT verified this session
 
-The remaining ~200 members (`GroupFlag`, `MaterialFlag`, `Pos`@0x30, `Quat`@0x40, `someJointIdx`@0x5C,
-`Scale`@0x7C, `Range`@0x94, `SetNum`@0xAC, `RangeType`@0xCC, `RangeStrip*`@0xD0, `RangeStripPath`
-char[64]@0xD4, …) carry plausible names from the prior pass but were not confirmed by a reader this
+The remaining members (`GroupFlag`, `MaterialFlag`, `someJointIdx`@0x5C,
+`Scale`@0x7C, `Range`@0x94, `SetNum`@0xAC, …; `Pos`/`Quat` and the 0xC0–0x13B block are now Tier 1, see above) carry plausible names from the prior pass but were not confirmed by a reader this
 session. Reason they could not be cheaply spot-checked: offsets +0x30 / +0x7C / +0xAC **collide** with
 unrelated fields on the *particle node* and the *runtime Generator* object (e.g. `initParticleBillboard`
 reads node+0x30; `updateWorldMatrix` reads Generator+0xAC), so an offset scan cannot attribute them to
@@ -76,7 +86,7 @@ the matrix builder. Still unproven; Tier-2 stands for those three.
 
 #### Self-relative sub-block offset at +0x1CC (sidecar mechanism)
 
-`updateWorldMatrix` does one genuine param read: `eax = mpGeneratorParam[+0x1CC]; if(eax) esi = param + eax`
+`updateWorldMatrix` does one genuine param read (re-verified 2026-10-05 from disasm: `esi = [edi+0B0h]` = `pGen->mpGeneratorParam`, gate `test byte [edi+16h],10h`): `eax = mpGeneratorParam[+0x1CC]` (dword); `if(eax) esi = param + eax`
 — a **self-relative offset** to an embedded sub-block (a keyframe/path vector source). This is DX9's inline
 analog of SE's `*PathOffset` u16 fields (`RangeStripPathOffset`@0xB8 etc.): instead of a separate file
 pointer, DX9 stores a byte offset relative to the generator block. The "extended generator / sword-trail"
@@ -123,6 +133,13 @@ they are not the same record with a tail:
 SE is a reliable source for what a field *means* (concept/naming), never for its DX9 offset. Every DX9
 offset above came from DX9 code.
 
+> **IDB member names re-synced (2026-10-05).** 139 `member_0xNNN` auto-names in `rEffectList::EFL_GENERATOR`
+> no longer matched their real offsets (e.g. `member_0x131` sat at 0x135) because the layout had shifted after
+> they were generated. All were renamed to their true offsets. Names that came from SE (`ExtVibrationPathOffset`,
+> `SoundPathOffset`) and that DX9 readers contradicted were corrected as shown in the Tier-1 table.
+> **Consequence for the sidecar question below:** DX9 has *no* confirmed `ExtVibrationPathOffset`. The 0x1C2
+> slot is a flag word. The DX9 resolver has since been found; it uses inline paths, as described below.
+
 ## "Extended generator" (sword-trail) = `rEffectStrip` sidecar — SE-CONFIRMED mechanism
 
 There is **no second/larger generator descriptor** declared in the DX9 IDB — only this one 484-byte
@@ -145,16 +162,36 @@ through the RangeStrip path offset. This confirms the user's "extended generator
 as the strip sidecar, and confirms the self-relative-offset sidecar mechanism (DX9's `+0x1CC` read in
 `updateWorldMatrix` is the same pattern).
 
-**DX9 side — runtime container found, resolver still unfound (DX9-INFERRED).** `initGenerator` (0x96ACA0)
-writes `Generator+0xD0` (`mResourceInfo`) `= *(mpEffectList+120) + 52*ListNo` — a per-list `ResourceInfo`
-array (stride **52**), the DX9 analog of SE's `ResourceInfo` that holds `mpRangeStrip`/`mpExtVibration`/
-`mpSoundRequest`. The DX9 function that resolves the strip/vib/srq sidecars *into* that ResourceInfo
-(analog of `createGeneratorResources`) is **not yet located** — `rEffectStrip::DTI` xrefs are DTI
-registration + strip-vertex builders (`sub_B256D0`/`sub_B26060`), not the generator resource resolver.
-The SE offsets 0xB8/0xBA/0xBC are **SE-only** until the DX9 resolver pins the DX9 offsets. The
-strip-vertex builders (`buildStripVertsMatrix` 0x983450) read the particle node + working matrix, NOT the
-generator-param region, so they do not confirm it. **Next narrow target:** the DX9 caller that does
-`sResource::create*(&rEffectStrip::DTI, …)` from a generator-param self-relative offset.
+**DX9 side — RESOLVED (2026-10-05).** The resolver is **`rEffectList::ResourceInfo::createGeneratorResources`
+(0xA3B110)**, with signature `(EFL_GENERATOR *pGenParam@<edi>, ResourceInfo *pInfo@<esi>)`. It was found as the only function
+that references all three DTIs (`rEffectStrip`, `rVibration`, `rSoundRequest`). It does the same job as SE, with the same
+failure bits, but **DX9 does not use self-relative offsets.** The generator block carries **inline `char[64]` paths**:
+
+| DX9 offset | Field | Resource | → `ResourceInfo` | fail bit |
+|-----------:|-------|----------|------------------|---------|
+| 0xD0  | `RangeStripPath`   | `rEffectStrip` (.efs) | `mpRangeStrip` +0x14  | `Status \|= 0x20`  |
+| 0x140 | `ExtVibrationPath` | `rVibration` (.vib)   | `mpExtVibration` +0x24 | `Status \|= 0x200` |
+| 0x180 | `SoundRequestPath` | `rSoundRequest` (.srq) | `mpSoundRequest` +0x28 | `Status \|= 0x400` |
+
+So SE's u16 `*PathOffset` fields at 0xB8/0xBA/0xBC have **no DX9 counterpart**. The earlier claim that the `+0x1CC` read
+in `updateWorldMatrix` was "the same pattern" as SE's path offsets is withdrawn: +0x1CC is a separate keyframe-style
+sub-block offset.
+
+**Load chain:** `rEffectList::load` → **`rEffectList::create_resource_infos`** (0xA3DD10). For each 16-byte `ContentPtr`
+record *i* (`(offset<<8)|type` dwords), it rebuilds `ResourceInfo[i]` (stride **0x34**; the IDB type was 0x30 and has
+been extended with `member_0x30`):
+- `ResourceInfo::release_all` (0xA3B030) releases `+0x04..+0x28`.
+- `createGeneratorResources(rec[0])` handles the strip, vib and srq sidecars above.
+- `create_particle_resources(rec[1])` (0xA3B1A0) switches on the particle type and creates `rModel` (type 5, +0x50 path,
+  fail 0x10) or `rEffectAnim` (+0x130 path, fail 0x8) into +0x10, plus sub-resources via `sub_A3B450/4E0/570/600`. It
+  also **copies** particle-param +0x68/+0x6C into ResourceInfo +0x2C/+0x30. So `mpForce` @+0x2C is not a `cResource`
+  in DX9 despite its SE-style name.
+- `create_move_resources(rec[3])` (0xA3B320) handles move type 3: an `rEffectStrip` path at move-param +0x80 → `mpPathStrip`
+  +0x18 (fail 0x40). For all move types 0–6 it then reads `sub_960650(moveParam)` and creates two `rEffectList`s →
+  `mpBounceEffect` +0x1C (fail 0x80) and `mpFinishEffect` +0x20 (fail 0x100).
+
+The child/unit generator gets one extra ResourceInfo after the per-record ones, built from the `GeneratorType` /
+`mGeneratorMoveType` records.
 
 ## Load path & the `createGenerator` (ex-`setFlags`) naming finding
 
@@ -167,12 +204,12 @@ The full EFL load chain is now mapped:
 ```
 uEffectVFR::setEffectList (0x9686E0)   store rEffectList*, addRef, copy mBaseFPS
   → sub_96AC10 (teardown of OLD EffectArr; NOT applyUnitParam — runs pre-store)
-  → uEffectVFR::createGenerator (0x96A780, ex-setFlags)   ← THE LIST LOADER / GENERATOR BUILDER
+  → uEffectVFR::createGenerator (0x96A770, ex-setFlags)   ← THE LIST LOADER / GENERATOR BUILDER
         [also invoked lazily from uEffectVFR::move on first tick if not yet built]
         walks ContentPtr (16-byte records), filters by mGroupFlag & mpParamBlock,
         memAlloc EffectArr (544 B/gen), loops:
           → uEffectVFR::initGenerator (0x96ACA0)   per-record parse → Gen+176/180/184/188 + enums
-                → uEffectVFR::initGeneratorParam (0x96B691)   visual-range reads from mpGeneratorParam
+                → uEffectVFR::initGeneratorParam (0x96AEC0)   visual-range reads from mpGeneratorParam
         sets mAxisType |= 0x100 on success
 ```
 
@@ -192,7 +229,7 @@ reads `mpEffectList->mUnitParamOffset → mpParamBuff[offset]` and sets unit-lev
 applyUnitParam-equivalent (if distinct) is elsewhere. **Next narrow check:** grep DX9 for the `0x3FF0000`
 mask or the `mUnitParamOffset` read to find a separate DX9 `applyUnitParam`.
 
-### `createGenerator` (0x96A780, formerly mis-filed `sDevil4Effect::setFlags`) deep-dive
+### `createGenerator` (0x96A770, formerly mis-filed `sDevil4Effect::setFlags`) deep-dive
 
 **Renamed this session** to `uEffectVFR::createGenerator` — it is a `uEffectVFR` vtable virtual (slot near
 `renderGenerators`), not an `sDevil4Effect` member; the old prefix was a misfiling. SE analog =
@@ -252,7 +289,13 @@ sizing only.
    a clean backing that doesn't exist. Documented via inline comments instead. `setFlags`'s true signature
    is `(this@<ecx>)`; the prototype was left unchanged.
 
-## Pos/Quat/Scale — premise now SUSPECT (not merely unconfirmed)
+## Pos/Quat/Scale — Pos/Quat CONFIRMED (2026-10-05); the "suspect" verdict below is withdrawn
+
+**Correction.** A typed field-access sweep over the 110 effect functions that load `mpGeneratorParam` found the consumer:
+**`uEffectVFR::moveUnitGenerator` (0x96FF00)** reads `Pos.x/y/z` and passes `&Quat` together with `ParentNo` to
+`uEffectVFR::setQuatParentOfs` (and `&Quat` to `sub_969990`). That is a transform: it places the child unit
+relative to a parent joint. So `Pos`@0x30 and `Quat`@0x40 are real. Only `Scale` remains unconfirmed. The four readers
+below were simply not the consumer. Historical reasoning follows.
 
 Four independent readers have now been ruled out as consumers of param `Pos@0x30` / `Quat@0x40` /
 `Scale@0x50`: the matrix builder (`updateWorldMatrix`), the list loader (`setFlags`), the record parser
@@ -287,7 +330,7 @@ and the parent chain are shared. Do **not** borrow SE `uBaseEffect` *or* `uEffec
 | DX9 | SE | Notes |
 |-----|----|----|
 | `uEffectVFR::setEffectList` (0x9686E0) | `uBaseEffect::setEffectList` (0xCBA130) | near-identical body |
-| `sDevil4Effect::setFlags` (0x96A780) | `uEffect::createGenerator` family (0xCAFA90) | the EFL loader/builder; behavior-justified regardless of mapping |
+| `uEffectVFR::createGenerator` (0x96A770, ex-`sDevil4Effect::setFlags`) | `uEffect::createGenerator` family (0xCAFA90) | the EFL loader/builder; behavior-justified regardless of mapping |
 | `sub_96AC10` (teardown) | `uEffect::releaseGenerator` | pre-store EffectArr teardown |
 | `uEffectVFR::Generator::init` (0x9DECD0) | (part of) `allocGeneratorBuff`/`createParticleManager` | per-generator ctor + free-list |
 

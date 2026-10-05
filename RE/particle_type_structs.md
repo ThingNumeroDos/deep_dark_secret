@@ -130,7 +130,7 @@ Tail: a 6-way size/UV dispatch on `mpParticleParam+80` (`sub_9803F0/980620/980C4
 
 ---
 
-## Type 1/12 — Polyline  (`initParticlePolyline` 0x9786C0, move `sub_98E3E0`)  — IDA struct `uEffectVFR::PtclPolyline` (0x100)
+## Type 1/12 — Polyline  (`initParticlePolyline` 0x9786D0, move `sub_98E3E0`)  — IDA struct `uEffectVFR::PtclPolyline` (0x100)
 
 `mParticleType == 1` or `12`. A multi-segment ribbon. Node body uses three 0x40 blocks (`base` + render + strip-state). **Size & block structure verified**; per-field naming of the dense render block deferred (heavy double-buffering — see method note).
 
@@ -354,6 +354,153 @@ Tail: a 6-way size/UV dispatch on `mpParticleParam+80` (`sub_9803F0/980620/980C4
 > **Note (size trap):** the size is set by the init write at `0x9dcbfa` (`pParticle->mKeyScalar88` = +0x88), **higher** than the move sub's max touch (+0x84). Scanning only the move sub would under-size the node to 0x88 and truncate this field.
 
 ---
+
+## PrimModel render sub-types (type 6 / Culling 0x17) — all 24 renderers mapped (2026-10-05)
+
+Selector: `mpParticleParam[+0x170] & 0xF`. The six sub-types are **three shapes, each in an untextured (even) and textured
+(odd) version**. Only the odd ones call the texture-handle lookup and get an `rEffectAnim` from
+`create_particle_resources`, which uses the same 1/3/5 test. Each shape has a dedicated mesh builder, plus a `Attenuate` twin
+for the curved shapes. Every builder is called only by its own sub-type's four renderers (verified by xrefs).
+
+| Sub-type | Shape | Renderers (plain / _interp / Culling / Culling_interp) | Builder(s) |
+|---:|---|---|---|
+| 0 | **Ring**: surface of revolution between two rings `(r0,r1,h0,h1)`, so cylinder, cone, frustum or annulus | 0x9B5D20 / 0x9B6D70 / 0x9C2A20 / 0x9C35A0 | `buildPrimModelRing` 0x9CD670, `Attenuate` 0x9CDF70 |
+| 1 | **TexRing**: same lathe with anim-frame UVs | 0x9B83C0 / 0x9B9530 / 0x9C4460 / 0x9C5140 | 0x9CEFC0, `Attenuate` 0x9CFD50 |
+| 2 | **Sphere**: lat/long UV sphere or ellipsoid `(R,–,H,offset)`; pole caps are triangles, bands are quads | 0x9BADF0 / 0x9BBE40 / 0x9C6140 / 0x9C6CC0 | 0x9D11C0, `Attenuate` 0x9D2160 (ex-`uknPrimModelFunc`) |
+| 3 | **TexSphere** | 0x9BD480 / 0x9BE5F0 / 0x9C7B80 / 0x9C8860 | 0x9D4250, `Attenuate` 0x9D5A90 |
+| 4 | **Grid** (SE name): flat N×M quad grid between two parallel edges `(w0,w1,d0,d1)`, so it can be a trapezoid | 0x9BFEB0 / 0x9C0730 / 0x9C9860 / 0x9CA370 | 0x9D83C0 |
+| 5 | **TexGrid** | 0x9C12E0 / 0x9C1CE0 / 0x9CB1A0 / 0x9CBE10 | 0x9D8C70 |
+
+Names are `uEffectVFR::renderPrimModel<Shape>[Culling][_interp]` and `uEffectVFR::buildPrimModel<Shape>[Attenuate]`.
+
+**Shared mesh parameters** (u16 unless noted):
+- `+0x180` N (segments, columns or longitude), drawn range `+0x184..+0x186`, centred via an `N/2` offset.
+- `+0x188` M (stacks, rows or latitude), drawn range `+0x18C..+0x18E`. Partial meshes, domes, arcs and slices are therefore possible.
+- Textured types tile UVs every `+0x182` (U) and `+0x18A` (V) repeats.
+- `+0x04 & 0x80000` zeroes alpha on the border vertices of the drawn range (soft edges).
+
+**`+0x170` bitfield:**
+
+| Bits | Meaning |
+|---|---|
+| 0–3 | sub-type |
+| 4–7 | up/plane axis (0 = X, 1 = Y, else Z) |
+| 8–11 | rotation order (into `calcParticleMatrix`) |
+| 12–15 | matrix mode (into `calcParticleMatrix`) |
+| 16–19 | colour-gradient mode (`calc_color_gradient`, split `+0x174`) |
+| 20–23 | gradient interpolation (not traced) |
+| 24–27 | view-basis mode (`build_view_basis`; 2/3/4 = lock X/Y/Z) |
+| 28–31 | rim fade (non-zero → `Attenuate` builder; range `+0x230/+0x234`, `MtEaseCurve::easeIn`; bit 0x20000000 = one-sided) |
+
+**Variants (verified across all 24):**
+- **`_interp` (ex-`_axis`) = sub-frame time interpolation.** These variants read `uEffectVFR.mTimeInterpolationRate` (+0xFC) and call
+  `fetch_primmodel_shape_interp` (0x962C40) instead of `fetch_primmodel_shape` (0x962BC0). They are not an orientation mode.
+- **Culling** (formerly "Lite") adds `calc_culling_fade` (0x963BD0), a distance/angle fade driven by the block at `param + u16[param+0x46]`:
+  - Block flag 4 switches between per-particle and per-generator distance.
+  - Block flag 2 gates on `sDevil4Effect+0x8A60` and pushes `(pos, block+0x2C)` to the cPrim command stream.
+  - Particles with fade ≤ 0 are culled; otherwise alpha is scaled by the fade.
+
+**Emitters:** `emit_prim_tri` 0x960690 / `emit_prim_quad` 0x960870 (untextured); `emit_prim_tri_tex` 0x960E60 /
+`sub_534800` (quad, textured). All four write command code `low5 = 3`. That value is a command type, not a vertex count;
+the 3 vs 4 vertex distinction is in which emitter is called.
+
+**Node fields used (all six sub-types agree, p = parity):**
+
+| Offset | Use |
+|---|---|
+| +0x18+4p | scale |
+| +0x20+16p | position |
+| +0x40+16p, +0x60+16p | `calcParticleMatrix` inputs |
+| +0x80+16p | scale vector |
+| +0xA0+16p | shape vec4 |
+| +0xC0/+0xC4 (+8p) | colour pair |
+| +0xD0+4p | anim time |
+| +0xD8+4p | ×256 vertex scalar |
+| +0xE0 / +0xE2 | anim flags (UV flip 0x100/0x200, rotate 0x1000) / anim sequence index |
+| +0xF0 | dword pair passed to the emitters |
+| +0x140 | `calcParticleMatrix` arg |
+
+**`uEffectVFR::PtclPrimModel` re-laid out (2026-10-05)** using the init writes and the renderer reads. The old names
+came from misreading the init:
+
+| Off | Field | Was | Evidence |
+|---|---|---|---|
+| 0x40 | `mRot[2]` (MtVector4) | `mMatRow0/1` | `calcParticleMatrix` input A |
+| 0x60 | `mDir[2]` | `_gap60` | init copies the spawn dir into both slots; matrix input B |
+| 0x80 | `mScaleVec[2]` | `_gap60` | × `base.mScale` |
+| 0xA0 | `mShape[2]` | `mAnimFlag` (wrong) | shape vec4 for all sub-types |
+| 0xC0/0xC4/0xC8/0xCC | `mColor0/mColor1/mColor0Mir/mColor1Mir` | `mTexAnimWord/mTexFrameWord/mKeyScaleZ/mKeyScalePad` | init stores the two `sub_980340` colours into both slots |
+| 0xD0 | `mAnimTime[2]` | `mKeyScale0/1` | anim frame time |
+| 0xD8 | `mIntensityBuf[2]` | `mScaleCur/Mirror` | copies of `mIntensity`, ×256 into a vertex u16 |
+| 0xE0/0xE2 | `mAnimFlag` / `mAnimSeq` | `_gapE0` | UV flip/rotate flags / anim sequence |
+| 0xE4–0xEF | `member_0xe4/e6/e8/ec` | `_gapE0` | init-written, meaning open |
+
+**Param struct chain fixed (2026-10-05): `EFL_PARTICLE_DRAW_COMMON` had a bogus SE-derived `ScaleAddCoef` float at
+0x18.** That field pushed every later field, and every derived struct, up by 4. Evidence came from all particle inits:
+- `[param+0x30]` and `[param+0x34]` are tested for zero as self-relative offsets (`Keyframe{Intensity,Scale}ParamOffset`).
+- 0x1C is the Intensity range multiplier.
+- `colors` is taken by `lea` at 0x48.
+- `AnimFlag`/`SeqNo`/`PatNo` are read at 0x50–0x5C.
+- The resource loader reads the texture paths at 0x70/0xB0/0xF0/0x130 and copies `TextureInvW/H` at 0x68/0x6C.
+- Every type's own fields start at 0x170.
+
+The fix: `DRAW_COMMON` 0x54→**0x50**, `PRIM_COMMON` 0x174→**0x170**, and Billboard/Polygon/Polyline/`EFL_DUMMY`
+members moved −4. Their auto-names now match their offsets exactly, which corroborates the shift.
+`EFL_PARTICLE_PRIM_MODEL` was rebuilt with `PrimFlags` @0x170 (the nibble map above), `HoriColorPlaceNo` @0x174,
+`PlaceColor1/2` @0x178/0x17C, the mesh counts @0x180–0x18E, 20× `MtRangeF` @0x190–0x22F, `NormAttenuateAngleStart/End` + `NormAttenuateCurve` (renamed from RimFadeAngleMin/Max after the SE cross-check)
+@0x230/0x234, and the init-read dwords @0x240–0x258. Its size is now 0x25C (max offset touched). The true record size is
+unconfirmed.
+
+**Resolved later the same day (2026-10-05):**
+- **The 20 `MtRangeF` identities are DX9-confirmed** by `initParticlePrimModel` (param local typed
+  `EFL_PARTICLE_PRIM_MODEL*`): `ModelScale`→`mScaleVec`, `Rot`→`mRot`, `Radius[0/1]`→`mShape.x/.y`,
+  `Height[0/1]`→`mShape.z/.w`. Each `*Add` range seeds a per-particle velocity in the node:
+  - `mRotVel` @0x118 (status 0x80)
+  - `mScaleVecVel` @0x124 (status 0x200)
+  - `mShapeVel[4]` @0x130 (status 0x1000/0x2000/0x4000/0x8000)
+- **Param 0x240–0x258 are seven self-relative keyframe-block offsets:** `KeyframePlaceColorParamOffset`,
+  `KeyframeRotParamOffset`, `KeyframeModelScaleParamOffset`, `KeyframeRadius0/1ParamOffset` and
+  `KeyframeHeight0/1ParamOffset`. Each one, when nonzero, replaces the random range with a keyframe curve.
+- **Node 0xE4–0xEF:** `mPatNum` (pattern count from the rEffectAnim table), `mPatNumLast` (= count−1),
+  `mAnimTimeSeed`, `mPatSpeed`. The node +0xF0 pair is the existing `mPrimMaterial`/`mPrimMaterial2`
+  (`calcPrimMaterial` output handed to the emitters).
+- **`PrimFlags` bits 12–15** are passed to `calcParticleMatrix`'s `DirAxisType` parameter.
+- **DRAW_COMMON u16 @0x46 renamed `CullingParamOffset`** (was the SE-pasted `KeyframePatNoParamOffset`). It is the
+  self-relative offset of the culling/LOD block:
+  - `uEffectVFR::init_culling_dir` (0x962F40, ex-`sub_962F40`) is called from every prim-type init when
+    `Generator.mCullingWorkOffset != 0`. It builds a direction from the block's header and vec3 and writes it into
+    the node's culling work.
+  - The culling render leaves' `calc_culling_fade` reads the block's near/far ranges.
+- **`initParticlePrimModel` prototype fixed:** arg 1 is the owner `uEffectVFR *pOwner` (it dereferences
+  `mpRandCtr` @+0xEC). It was mistyped as a Generator, which is the usual owner/Generator aliasing trap.
+
+**Still open:** where `PrimFlags` bits 20–23 are consumed. All three builders extract them next to the gradient mode
+(16–19), but the value is spilled to a reused stack slot and its consumer isn't traced. The SE-derived name
+`ColorPlaceInpType` (gradient interpolation type) is plausible but unconfirmed. The true `EFL_PARTICLE_PRIM_MODEL`
+record size is also unconfirmed (0x25C = last field read).
+
+**SE cross-check (2026-10-05, SE IDB on :13338, read-only).** SE's PDB layouts for `EFL_PARTICLE_DRAW_COMMON` (0x50),
+`EFL_PARTICLE_PRIM_COMMON` (0x170) and the `EFL_PARTICLE_PRIM_MODEL` body 0x170–0x23F **match the corrected DX9 layout
+exactly**. That independently confirms the removal of `ScaleAddCoef` and the −4 shift. SE also contributed:
+- **Shape names.** SE `cParticleGeneratorPrimModel::drawPrimModel{Ring,TexRing,Sphere,TexSphere,Grid,TexGrid}` plus
+  `…Attenuate` variants. The DX9 functions were renamed to match (Cylinder→Ring, Plane→Grid, `_rimFade`→`Attenuate`).
+  SE also has `TexSphereXZ`, which DX9 lacks (only 6 sub-types).
+- **Field names:**
+  - `PrimFlags` nibbles: `PrimModelType`, `PrimModelAxis`, `RotOrder`, `DirAxisType`, `ColorPlaceType`, `ModelBillboardType` (24–27), `NormAttenuateFlag` (28–31).
+  - 0x230–0x23F: `NormAttenuateAngleStart`/`End` + `NormAttenuateCurve` (`MtEaseCurve`); applied.
+  - `DRAW_COMMON` 0x44 = `KeyframePatNoParamOffset` (applied) and 0x41 bit0 = `KeyframePatSpeedParamFlag`.
+- **Bits 20–23 are padding in SE.** The PDB name `PPrimModel04172` follows SE's padding pattern (P + bits + offset;
+  compare `PDrawCommon0741`, `PDrawCommon1646`), and no SE PrimModel function references it. DX9's builders still
+  extract the nibble, so it's probably a DX9-era field SE later dropped. Its DX9 consumer remains untraced.
+- **0x46 is padding in SE but used in DX9.** SE marks `DRAW_COMMON`+0x46 as padding, while DX9 uses it as
+  `CullingParamOffset`. This is an engine difference, and the DX9 name stands.
+- **The tail diverges.** SE has `TexScrollParamOffset` at 0x240 and the keyframe offsets 4 bytes later, with u16
+  radius/height offsets, `RotAddCoef` and `SubPosDistCoef`, for a total size of 0x260. DX9's dword reads at
+  0x240–0x258 show no tex-scroll slot, so SE can't settle the DX9 record size. SE's Upper/Lower names are noted in
+  the DX9 member comments.
+- **Confirmed and applied:** the DX9 "Lite" render leaves are SE's culling variants (`CullingFlag` bit 0 →
+  `initCullingParam` → culling draw type). All 34 were renamed `render<Type>Culling[_interp]`; see the correction note in
+  `uEffectVFR_findings.md` (mTransType section).
 
 ## TODO (remaining)
 

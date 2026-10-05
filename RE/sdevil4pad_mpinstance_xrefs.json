@@ -1,0 +1,3197 @@
+{
+ "sub_401810": {
+  "ea": "0x401810",
+  "xrefs": [
+   "0x401813"
+  ],
+  "accesses": [
+   {
+    "ea": "0x401819",
+    "expr": "mPadInfo[0].mBtn.trg",
+    "write": false
+   },
+   {
+    "ea": "0x401875",
+    "expr": "mPadInfo[0].mDecideBtn",
+    "write": false
+   }
+  ],
+  "passes": [
+   {
+    "ea": "0x40188e",
+    "callee": "sub_860190",
+    "arg": "sDevil4Pad::mpInstance"
+   }
+  ],
+  "err": null
+ },
+ "sDevil4Pad::cPadInfo::stopVibration": {
+  "ea": "0x401ae0",
+  "xrefs": [
+   "0x401afa"
+  ],
+  "accesses": [
+   {
+    "ea": "0x401ae4",
+    "expr": "mPadInfo[padInfoIdx]",
+    "write": false
+   },
+   {
+    "ea": "0x401af2",
+    "expr": "mpPad",
+    "write": false
+   },
+   {
+    "ea": "0x401b09",
+    "expr": "mRequestVib",
+    "write": true
+   },
+   {
+    "ea": "0x401b00",
+    "expr": "mXInput",
+    "write": false
+   }
+  ],
+  "passes": [
+   {
+    "ea": "0x401aed",
+    "callee": "sDevil4Pad::cPadInfo::clear_vib_info",
+    "arg": "v2"
+   }
+  ],
+  "err": null
+ },
+ "sub_402110": {
+  "ea": "0x402110",
+  "xrefs": [
+   "0x402721",
+   "0x402788",
+   "0x402a95"
+  ],
+  "accesses": [],
+  "passes": [
+   {
+    "ea": "0x402729",
+    "callee": "sDevil4Pad::getTrigger",
+    "arg": "sDevil4Pad::mpInstance"
+   },
+   {
+    "ea": "0x40273e",
+    "callee": "sDevil4Pad::getTrigger",
+    "arg": "sDevil4Pad::mpInstance"
+   },
+   {
+    "ea": "0x402790",
+    "callee": "sDevil4Pad::cPadInfo::stopVibration",
+    "arg": "sDevil4Pad::mpInstance"
+   },
+   {
+    "ea": "0x402a9d",
+    "callee": "sDevil4Pad::cPadInfo::stopVibration",
+    "arg": "sDevil4Pad::mpInstance"
+   }
+  ],
+  "err": null
+ },
+ "aGame::game_start_init": {
+  "ea": "0x4041e0",
+  "xrefs": [
+   "0x4041e0"
+  ],
+  "accesses": [
+   {
+    "ea": "0x4041fa",
+    "expr": "mIsFixUserPadId",
+    "write": true
+   },
+   {
+    "ea": "0x404200",
+    "expr": "mUserPadId",
+    "write": true
+   },
+   {
+    "ea": "0x40420d",
+    "expr": "mPadInfo[0].mpPad",
+    "write": true
+   },
+   {
+    "ea": "0x40420a",
+    "expr": "mPad",
+    "write": false
+   },
+   {
+    "ea": "0x404213",
+    "expr": "mPadInfo[0].mIsEnable",
+    "write": true
+   },
+   {
+    "ea": "0x4041e8",
+    "expr": "mIsFixUserPadId",
+    "write": false
+   }
+  ],
+  "passes": [],
+  "err": null
+ },
+ "sub_405550": {
+  "ea": "0x405550",
+  "xrefs": [
+   "0x405553"
+  ],
+  "accesses": [
+   {
+    "ea": "0x405558",
+    "expr": "mPadInfo[0].mBtn.trg",
+    "write": false
+   }
+  ],
+  "passes": [],
+  "err": null
+ },
+ "sub_4069A0": {
+  "ea": "0x4069a0",
+  "xrefs": [
+   "0x406e0c",
+   "0x406e1e"
+  ],
+  "accesses": [],
+  "passes": [
+   {
+    "ea": "0x406e2d",
+    "callee": "sDevil4Pad::cPadInfo::stopVibration",
+    "arg": "sDevil4Pad::mpInstance"
+   },
+   {
+    "ea": "0x406e11",
+    "callee": "sDevil4Pad::getTrigger",
+    "arg": "sDevil4Pad::mpInstance"
+   }
+  ],
+  "err": null
+ },
+ "sub_407A20": {
+  "ea": "0x407a20",
+  "xrefs": [
+   "0x407e88",
+   "0x407e9a"
+  ],
+  "accesses": [],
+  "passes": [
+   {
+    "ea": "0x407ea9",
+    "callee": "sDevil4Pad::cPadInfo::stopVibration",
+    "arg": "sDevil4Pad::mpInstance"
+   },
+   {
+    "ea": "0x407e8d",
+    "callee": "sDevil4Pad::getTrigger",
+    "arg": "sDevil4Pad::mpInstance"
+   }
+  ],
+  "err": null
+ },
+ "sub_40A590": {
+  "ea": "0x40a590",
+  "xrefs": [
+   "0x40a6f1"
+  ],
+  "accesses": [],
+  "passes": [
+   {
+    "ea": "0x40a6f9",
+    "callee": "sDevil4Pad::cPadInfo::stopVibration",
+    "arg": "sDevil4Pad::mpInstance"
+   }
+  ],
+  "err": null
+ },
+ "aRoom::init": {
+  "ea": "0x40a820",
+  "xrefs": [
+   "0x40a82b"
+  ],
+  "accesses": [],
+  "passes": [
+   {
+    "ea": "0x40a846",
+    "callee": "sDevil4Pad::get_user_pad_id",
+    "arg": "sDevil4Pad::mpInstance"
+   }
+  ],
+  "err": null
+ },
+ "sub_40B210": {
+  "ea": "0x40b210",
+  "xrefs": [
+   "0x40b28d",
+   "0x40b2b0"
+  ],
+  "accesses": [
+   {
+    "ea": "0x40b29b",
+    "expr": "mPadInfo",
+    "write": false
+   }
+  ],
+  "passes": [
+   {
+    "ea": "0x40b29c",
+    "callee": "sub_486240",
+    "arg": "sDevil4Pad::mpInstance->mPadInfo"
+   },
+   {
+    "ea": "0x40b2bf",
+    "callee": "sub_486200",
+    "arg": "sDevil4Pad::mpInstance->mPadInfo"
+   }
+  ],
+  "err": null
+ },
+ "sub_40B9A0": {
+  "ea": "0x40b9a0",
+  "xrefs": [
+   "0x40ba72",
+   "0x40ba9f"
+  ],
+  "accesses": [
+   {
+    "ea": "0x40ba8a",
+    "expr": "mPadInfo",
+    "write": false
+   }
+  ],
+  "passes": [
+   {
+    "ea": "0x40ba8b",
+    "callee": "sub_486240",
+    "arg": "sDevil4Pad::mpInstance->mPadInfo"
+   },
+   {
+    "ea": "0x40baae",
+    "callee": "sub_486200",
+    "arg": "sDevil4Pad::mpInstance->mPadInfo"
+   }
+  ],
+  "err": null
+ },
+ "aRoom::demo": {
+  "ea": "0x40bed0",
+  "xrefs": [
+   "0x40c3d9",
+   "0x40c42a",
+   "0x40c442",
+   "0x40c828"
+  ],
+  "accesses": [],
+  "passes": [
+   {
+    "ea": "0x40c451",
+    "callee": "sDevil4Pad::cPadInfo::stopVibration",
+    "arg": "sDevil4Pad::mpInstance"
+   },
+   {
+    "ea": "0x40c42f",
+    "callee": "sDevil4Pad::getTrigger",
+    "arg": "sDevil4Pad::mpInstance"
+   },
+   {
+    "ea": "0x40c3de",
+    "callee": "sDevil4Pad::getTrigger",
+    "arg": "sDevil4Pad::mpInstance"
+   },
+   {
+    "ea": "0x40c83f",
+    "callee": "sDevil4Pad::cPadInfo::stopVibration",
+    "arg": "sDevil4Pad::mpInstance_1"
+   }
+  ],
+  "err": null
+ },
+ "sub_40CCC0": {
+  "ea": "0x40ccc0",
+  "xrefs": [
+   "0x40d00a"
+  ],
+  "accesses": [],
+  "passes": [
+   {
+    "ea": "0x40d025",
+    "callee": "sDevil4Pad::cPadInfo::stopVibration",
+    "arg": "sDevil4Pad::mpInstance"
+   }
+  ],
+  "err": null
+ },
+ "aRoom::pauseInChk": {
+  "ea": "0x40de10",
+  "xrefs": [
+   "0x40de6e"
+  ],
+  "accesses": [
+   {
+    "ea": "0x40de7e",
+    "expr": "mPadInfo[sDevil4Pad::get_user_pad_id(sDevil4Pad::mpInstance)].mIsEnable",
+    "write": false
+   }
+  ],
+  "passes": [
+   {
+    "ea": "0x40de76",
+    "callee": "sDevil4Pad::get_user_pad_id",
+    "arg": "sDevil4Pad::mpInstance"
+   },
+   {
+    "ea": "0x40de9d",
+    "callee": "sDevil4Pad::get_user_pad_id",
+    "arg": "sDevil4Pad::mpInstance"
+   },
+   {
+    "ea": "0x40deb4",
+    "callee": "sDevil4Pad::getTrigger",
+    "arg": "sDevil4Pad::mpInstance"
+   }
+  ],
+  "err": null
+ },
+ "sub_413DF0": {
+  "ea": "0x413df0",
+  "xrefs": [
+   "0x413e31"
+  ],
+  "accesses": [],
+  "passes": [
+   {
+    "ea": "0x413e39",
+    "callee": "sDevil4Pad::cPadInfo::stopVibration",
+    "arg": "sDevil4Pad::mpInstance"
+   }
+  ],
+  "err": null
+ },
+ "cCameraPlayer::moveRightStickAxisX": {
+  "ea": "0x421dd0",
+  "xrefs": [
+   "0x421e14"
+  ],
+  "accesses": [
+   {
+    "ea": "0x421e2a",
+    "expr": "mPadInfo[0].mAnlg[1].y",
+    "write": false
+   },
+   {
+    "ea": "0x421e24",
+    "expr": "mPadInfo[0].mAnlg[1].x",
+    "write": false
+   }
+  ],
+  "passes": [],
+  "err": null
+ },
+ "cCameraPlayer::moveRightStickAxisY": {
+  "ea": "0x4223b0",
+  "xrefs": [
+   "0x422449",
+   "0x42254d"
+  ],
+  "accesses": [
+   {
+    "ea": "0x42244f",
+    "expr": "mPadInfo[0].mAnlg[1].x",
+    "write": false
+   },
+   {
+    "ea": "0x422455",
+    "expr": "mPadInfo[0].mAnlg[1].y",
+    "write": false
+   },
+   {
+    "ea": "0x4225ce",
+    "expr": "mPadInfo[0].mBtn.trg",
+    "write": false
+   }
+  ],
+  "passes": [],
+  "err": null
+ },
+ "cCameraPlayer::moveRightStickAxisY_SixAxis": {
+  "ea": "0x422ac0",
+  "xrefs": [
+   "0x422b0a"
+  ],
+  "accesses": [
+   {
+    "ea": "0x422b26",
+    "expr": "mPadInfo[0].mSensor.z",
+    "write": false
+   },
+   {
+    "ea": "0x422c12",
+    "expr": "mPadInfo[0].mAnlg[1].x",
+    "write": false
+   },
+   {
+    "ea": "0x422c2a",
+    "expr": "mPadInfo[0].mAnlg[1].y",
+    "write": false
+   },
+   {
+    "ea": "0x422d34",
+    "expr": "mPadInfo[0].mBtn.trg",
+    "write": false
+   }
+  ],
+  "passes": [],
+  "err": null
+ },
+ "sub_449610": {
+  "ea": "0x449610",
+  "xrefs": [
+   "0x4496ed"
+  ],
+  "accesses": [
+   {
+    "ea": "0x4496f2",
+    "expr": "mPadInfo[0].mBtn.trg",
+    "write": false
+   },
+   {
+    "ea": "0x449710",
+    "expr": "mPadInfo[0].mBtn.on",
+    "write": false
+   }
+  ],
+  "passes": [],
+  "err": null
+ },
+ "sDevil4Pad::move": {
+  "ea": "0x485050",
+  "xrefs": [
+   "0x4850e6"
+  ],
+  "accesses": [
+   {
+    "ea": "0x485079",
+    "expr": "mPrevTimer",
+    "write": false
+   },
+   {
+    "ea": "0x485098",
+    "expr": "mDeltaTime",
+    "write": true
+   },
+   {
+    "ea": "0x485115",
+    "expr": "mPad[0].Info.Input_attr",
+    "write": false
+   },
+   {
+    "ea": "0x4850fd",
+    "expr": "mOldActive",
+    "write": false
+   },
+   {
+    "ea": "0x4850d7",
+    "expr": "mPadInfo",
+    "write": false
+   },
+   {
+    "ea": "0x4850de",
+    "expr": "mPadInfo[0].mpPad",
+    "write": false
+   },
+   {
+    "ea": "0x4850f4",
+    "expr": "mRequestVib",
+    "write": true
+   },
+   {
+    "ea": "0x4850eb",
+    "expr": "mXInput",
+    "write": false
+   },
+   {
+    "ea": "0x48514e",
+    "expr": "mOldActive",
+    "write": true
+   },
+   {
+    "ea": "0x4851bb",
+    "expr": "mPadInfo[0].mBtn.on",
+    "write": true
+   },
+   {
+    "ea": "0x4851c1",
+    "expr": "mPadInfo[0].mBtn.trg",
+    "write": true
+   },
+   {
+    "ea": "0x4851c7",
+    "expr": "mPadInfo[0].mBtn.rel",
+    "write": true
+   },
+   {
+    "ea": "0x4851cd",
+    "expr": "mPadInfo[0].mBtn.rep",
+    "write": true
+   },
+   {
+    "ea": "0x4851d3",
+    "expr": "mPadInfo[0].mAnlg[0].x",
+    "write": true
+   },
+   {
+    "ea": "0x4851db",
+    "expr": "mPadInfo[0].mAnlg[0].y",
+    "write": true
+   },
+   {
+    "ea": "0x4851e3",
+    "expr": "mPadInfo[0].mAnlg[1].x",
+    "write": true
+   },
+   {
+    "ea": "0x4851eb",
+    "expr": "mPadInfo[0].mAnlg[1].y",
+    "write": true
+   },
+   {
+    "ea": "0x4851f3",
+    "expr": "mPadInfo[0].mPress.Lup",
+    "write": true
+   },
+   {
+    "ea": "0x4851fb",
+    "expr": "mPadInfo[0].mPress.Lright",
+    "write": true
+   },
+   {
+    "ea": "0x485203",
+    "expr": "mPadInfo[0].mPress.Ldown",
+    "write": true
+   },
+   {
+    "ea": "0x48520b",
+    "expr": "mPadInfo[0].mPress.Lleft",
+    "write": true
+   },
+   {
+    "ea": "0x485213",
+    "expr": "mPadInfo[0].mPress.Rup",
+    "write": true
+   },
+   {
+    "ea": "0x48521b",
+    "expr": "mPadInfo[0].mPress.Rright",
+    "write": true
+   },
+   {
+    "ea": "0x485223",
+    "expr": "mPadInfo[0].mPress.Rdown",
+    "write": true
+   },
+   {
+    "ea": "0x48522b",
+    "expr": "mPadInfo[0].mPress.Rleft",
+    "write": true
+   },
+   {
+    "ea": "0x485233",
+    "expr": "mPadInfo[0].mPress.L1",
+    "write": true
+   },
+   {
+    "ea": "0x48523b",
+    "expr": "mPadInfo[0].mPress.L2",
+    "write": true
+   },
+   {
+    "ea": "0x485243",
+    "expr": "mPadInfo[0].mPress.R1",
+    "write": true
+   },
+   {
+    "ea": "0x48524b",
+    "expr": "mPadInfo[0].mPress.R2",
+    "write": true
+   },
+   {
+    "ea": "0x485253",
+    "expr": "mPadInfo[0].mPress.Select",
+    "write": true
+   },
+   {
+    "ea": "0x48525b",
+    "expr": "mPadInfo[0].mPress.L3",
+    "write": true
+   },
+   {
+    "ea": "0x485263",
+    "expr": "mPadInfo[0].mPress.R3",
+    "write": true
+   },
+   {
+    "ea": "0x48526b",
+    "expr": "mPadInfo[0].mSensor.x",
+    "write": true
+   },
+   {
+    "ea": "0x485273",
+    "expr": "mPadInfo[0].mSensor.y",
+    "write": true
+   },
+   {
+    "ea": "0x48527b",
+    "expr": "mPadInfo[0].mSensor.z",
+    "write": true
+   },
+   {
+    "ea": "0x485283",
+    "expr": "mPadInfo[0].mSensor.g",
+    "write": true
+   },
+   {
+    "ea": "0x485170",
+    "expr": "mUserPadId",
+    "write": false
+   },
+   {
+    "ea": "0x48519a",
+    "expr": "mDeltaTime",
+    "write": false
+   },
+   {
+    "ea": "0x4851af",
+    "expr": "mPadInfo[0].mIsEnable",
+    "write": true
+   },
+   {
+    "ea": "0x485163",
+    "expr": "mIsFixUserPadId",
+    "write": false
+   },
+   {
+    "ea": "0x48529d",
+    "expr": "mPad[0].Info.Kind",
+    "write": false
+   },
+   {
+    "ea": "0x4852d5",
+    "expr": "mPadInfo[0].mIsEnable",
+    "write": false
+   },
+   {
+    "ea": "0x485303",
+    "expr": "mPadInfo[0].mIsFake",
+    "write": true
+   }
+  ],
+  "passes": [
+   {
+    "ea": "0x4850d9",
+    "callee": "sDevil4Pad::cPadInfo::clear_vib_info",
+    "arg": "this->mPadInfo"
+   },
+   {
+    "ea": "0x48512f",
+    "callee": "sPad::move",
+    "arg": "this"
+   },
+   {
+    "ea": "0x485195",
+    "callee": "sDevil4Pad::cPadInfo::update",
+    "arg": "this->mPadInfo"
+   },
+   {
+    "ea": "0x4851a2",
+    "callee": "sDevil4Pad::cPadInfo::tick_vib_info",
+    "arg": "this->mPadInfo"
+   },
+   {
+    "ea": "0x4852ee",
+    "callee": "sDevil4Pad::cPadInfo::clear_vib_info",
+    "arg": "this->mPadInfo"
+   }
+  ],
+  "err": null
+ },
+ "sDevil4Pad::set_vib_enable_all": {
+  "ea": "0x485570",
+  "xrefs": [
+   "0x48559d"
+  ],
+  "accesses": [
+   {
+    "ea": "0x485578",
+    "expr": "mPadInfo[0].mpPad",
+    "write": false
+   },
+   {
+    "ea": "0x4855ab",
+    "expr": "mRequestVib",
+    "write": true
+   },
+   {
+    "ea": "0x4855a2",
+    "expr": "mXInput",
+    "write": false
+   },
+   {
+    "ea": "0x4855dd",
+    "expr": "mPad[0].Info.Input_attr",
+    "write": true
+   },
+   {
+    "ea": "0x4855e0",
+    "expr": "mPad[1].Info.Input_attr",
+    "write": true
+   }
+  ],
+  "passes": [
+   {
+    "ea": "0x485591",
+    "callee": "sDevil4Pad::cPadInfo::clear_vib_info",
+    "arg": "(p_mpPad - 1)"
+   }
+  ],
+  "err": null
+ },
+ "sub_486200": {
+  "ea": "0x486200",
+  "xrefs": [
+   "0x486229"
+  ],
+  "accesses": [
+   {
+    "ea": "0x486200",
+    "expr": "mVibInfo",
+    "write": false
+   },
+   {
+    "ea": "0x486221",
+    "expr": "mpPad",
+    "write": false
+   },
+   {
+    "ea": "0x486237",
+    "expr": "mRequestVib",
+    "write": true
+   },
+   {
+    "ea": "0x48622e",
+    "expr": "mXInput",
+    "write": false
+   }
+  ],
+  "passes": [],
+  "err": null
+ },
+ "sDevil4Pad::play_vib_preset": {
+  "ea": "0x494ee0",
+  "xrefs": [
+   "0x494f06"
+  ],
+  "accesses": [
+   {
+    "ea": "0x494f3a",
+    "expr": "mPadInfo[dword_DEC188[6 * n0x37]]",
+    "write": false
+   }
+  ],
+  "passes": [],
+  "err": null
+ },
+ "sub_494F90": {
+  "ea": "0x494f90",
+  "xrefs": [
+   "0x494fb2"
+  ],
+  "accesses": [
+   {
+    "ea": "0x494fbb",
+    "expr": "mPadInfo[a1]",
+    "write": false
+   },
+   {
+    "ea": "0x494fc9",
+    "expr": "mpPad",
+    "write": false
+   },
+   {
+    "ea": "0x494fdb",
+    "expr": "mRequestVib",
+    "write": true
+   },
+   {
+    "ea": "0x494fd1",
+    "expr": "mXInput",
+    "write": false
+   }
+  ],
+  "passes": [
+   {
+    "ea": "0x494fc4",
+    "callee": "sDevil4Pad::cPadInfo::clear_vib_info",
+    "arg": "v4"
+   }
+  ],
+  "err": null
+ },
+ "sub_4983D0": {
+  "ea": "0x4983d0",
+  "xrefs": [
+   "0x4986b2",
+   "0x498800",
+   "0x498851",
+   "0x498886",
+   "0x4988bc"
+  ],
+  "accesses": [],
+  "passes": [
+   {
+    "ea": "0x4986b7",
+    "callee": "sDevil4Pad::getTrigger",
+    "arg": "sDevil4Pad::mpInstance"
+   },
+   {
+    "ea": "0x4988c1",
+    "callee": "sDevil4Pad::getTrigger",
+    "arg": "sDevil4Pad::mpInstance"
+   },
+   {
+    "ea": "0x49888b",
+    "callee": "sDevil4Pad::getTrigger",
+    "arg": "sDevil4Pad::mpInstance"
+   },
+   {
+    "ea": "0x498856",
+    "callee": "sDevil4Pad::getTrigger",
+    "arg": "sDevil4Pad::mpInstance"
+   },
+   {
+    "ea": "0x498805",
+    "callee": "sDevil4Pad::getTrigger",
+    "arg": "sDevil4Pad::mpInstance"
+   }
+  ],
+  "err": null
+ },
+ "sub_49A820": {
+  "ea": "0x49a820",
+  "xrefs": [
+   "0x49a845",
+   "0x49a907"
+  ],
+  "accesses": [
+   {
+    "ea": "0x49a84b",
+    "expr": "mPadInfo[0].mBtn.trg",
+    "write": false
+   }
+  ],
+  "passes": [],
+  "err": null
+ },
+ "sub_49A970": {
+  "ea": "0x49a970",
+  "xrefs": [
+   "0x49a970"
+  ],
+  "accesses": [],
+  "passes": [
+   {
+    "ea": "0x49a978",
+    "callee": "sDevil4Pad::get_user_pad_id",
+    "arg": "sDevil4Pad::mpInstance"
+   }
+  ],
+  "err": null
+ },
+ "sub_4A0DE0": {
+  "ea": "0x4a0de0",
+  "xrefs": [
+   "0x4a0ec5"
+  ],
+  "accesses": [],
+  "passes": [
+   {
+    "ea": "0x4a0ecd",
+    "callee": "sDevil4Pad::set_vib_enable_all",
+    "arg": "sDevil4Pad::mpInstance"
+   }
+  ],
+  "err": null
+ },
+ "sub_4A56F0": {
+  "ea": "0x4a56f0",
+  "xrefs": [
+   "0x4a5783"
+  ],
+  "accesses": [],
+  "passes": [
+   {
+    "ea": "0x4a5795",
+    "callee": "sDevil4Pad::set_vib_enable_all",
+    "arg": "sDevil4Pad::mpInstance"
+   }
+  ],
+  "err": null
+ },
+ "sub_4BBD80": {
+  "ea": "0x4bbd80",
+  "xrefs": [
+   "0x4bbd93"
+  ],
+  "accesses": [
+   {
+    "ea": "0x4bbdac",
+    "expr": "mPadInfo[0].mBtn.rel",
+    "write": false
+   }
+  ],
+  "passes": [],
+  "err": null
+ },
+ "sub_4BF250": {
+  "ea": "0x4bf250",
+  "xrefs": [
+   "0x4bf308"
+  ],
+  "accesses": [
+   {
+    "ea": "0x4bf30e",
+    "expr": "mDecideButton",
+    "write": false
+   }
+  ],
+  "passes": [],
+  "err": null
+ },
+ "sub_4BF590": {
+  "ea": "0x4bf590",
+  "xrefs": [
+   "0x4bf5ca"
+  ],
+  "accesses": [
+   {
+    "ea": "0x4bf5cf",
+    "expr": "mDecideButton",
+    "write": false
+   }
+  ],
+  "passes": [],
+  "err": null
+ },
+ "sub_4C1BB0": {
+  "ea": "0x4c1bb0",
+  "xrefs": [
+   "0x4c1bc3"
+  ],
+  "accesses": [
+   {
+    "ea": "0x4c1bdc",
+    "expr": "mPadInfo[0].mBtn.rel",
+    "write": false
+   }
+  ],
+  "passes": [],
+  "err": null
+ },
+ "sub_4C9350": {
+  "ea": "0x4c9350",
+  "xrefs": [
+   "0x4c93bf",
+   "0x4c9483"
+  ],
+  "accesses": [
+   {
+    "ea": "0x4c950c",
+    "expr": "mPadInfo[0].mBtn.trg",
+    "write": false
+   }
+  ],
+  "passes": [],
+  "err": null
+ },
+ "sub_4C9A40": {
+  "ea": "0x4c9a40",
+  "xrefs": [
+   "0x4c9a7f"
+  ],
+  "accesses": [
+   {
+    "ea": "0x4c9a9b",
+    "expr": "mPadInfo[0].mSensor.z",
+    "write": false
+   },
+   {
+    "ea": "0x4c9b85",
+    "expr": "mPadInfo[0].mAnlg[1].x",
+    "write": false
+   },
+   {
+    "ea": "0x4c9b9d",
+    "expr": "mPadInfo[0].mAnlg[1].y",
+    "write": false
+   },
+   {
+    "ea": "0x4c9ca8",
+    "expr": "mPadInfo[0].mBtn.trg",
+    "write": false
+   }
+  ],
+  "passes": [],
+  "err": null
+ },
+ "sub_4FA180": {
+  "ea": "0x4fa180",
+  "xrefs": [
+   "0x4fa1a9"
+  ],
+  "accesses": [
+   {
+    "ea": "0x4fa1c4",
+    "expr": "mPadInfo[0].mBtn.rel",
+    "write": false
+   },
+   {
+    "ea": "0x4fa1ae",
+    "expr": "mPadInfo[0].mBtn.trg",
+    "write": false
+   }
+  ],
+  "passes": [],
+  "err": null
+ },
+ "sub_51D130": {
+  "ea": "0x51d130",
+  "xrefs": [
+   "0x51d14b"
+  ],
+  "accesses": [
+   {
+    "ea": "0x51d166",
+    "expr": "mPadInfo[0].mBtn.on",
+    "write": false
+   }
+  ],
+  "passes": [],
+  "err": null
+ },
+ "sub_51D670": {
+  "ea": "0x51d670",
+  "xrefs": [
+   "0x51d679"
+  ],
+  "accesses": [
+   {
+    "ea": "0x51d67e",
+    "expr": "mPadInfo[0].mBtn.on",
+    "write": false
+   }
+  ],
+  "passes": [],
+  "err": null
+ },
+ "sub_51DB90": {
+  "ea": "0x51db90",
+  "xrefs": [
+   "0x51dbdf"
+  ],
+  "accesses": [
+   {
+    "ea": "0x51dbe5",
+    "expr": "mDecideButton",
+    "write": false
+   }
+  ],
+  "passes": [],
+  "err": null
+ },
+ "sub_51EC70": {
+  "ea": "0x51ec70",
+  "xrefs": [
+   "0x51ec9f"
+  ],
+  "accesses": [
+   {
+    "ea": "0x51ecb2",
+    "expr": "mPadInfo[0].mBtn.rel",
+    "write": false
+   }
+  ],
+  "passes": [],
+  "err": null
+ },
+ "sub_51FB20": {
+  "ea": "0x51fb20",
+  "xrefs": [
+   "0x51fb2f"
+  ],
+  "accesses": [],
+  "passes": [],
+  "err": null
+ },
+ "sub_520D80": {
+  "ea": "0x520d80",
+  "xrefs": [
+   "0x520d90"
+  ],
+  "accesses": [
+   {
+    "ea": "0x520d97",
+    "expr": "mPadInfo[0].mPress",
+    "write": false
+   }
+  ],
+  "passes": [],
+  "err": null
+ },
+ "sub_621E50": {
+  "ea": "0x621e50",
+  "xrefs": [
+   "0x621e83"
+  ],
+  "accesses": [
+   {
+    "ea": "0x621e8e",
+    "expr": "mPadInfo[0].mAnlg[0].y",
+    "write": false
+   },
+   {
+    "ea": "0x621e88",
+    "expr": "mPadInfo[0].mAnlg[0].x",
+    "write": false
+   }
+  ],
+  "passes": [],
+  "err": null
+ },
+ "sub_6D01C0": {
+  "ea": "0x6d01c0",
+  "xrefs": [
+   "0x6d02b3"
+  ],
+  "accesses": [],
+  "passes": [
+   {
+    "ea": "0x6d02bb",
+    "callee": "sDevil4Pad::cPadInfo::stopVibration",
+    "arg": "sDevil4Pad::mpInstance"
+   }
+  ],
+  "err": null
+ },
+ "uEm023::damageMessage": {
+  "ea": "0x6d1090",
+  "xrefs": [
+   "0x6d121a",
+   "0x6d13ab"
+  ],
+  "accesses": [],
+  "passes": [
+   {
+    "ea": "0x6d1222",
+    "callee": "sDevil4Pad::cPadInfo::stopVibration",
+    "arg": "sDevil4Pad::mpInstance"
+   },
+   {
+    "ea": "0x6d13b3",
+    "callee": "sDevil4Pad::cPadInfo::stopVibration",
+    "arg": "sDevil4Pad::mpInstance"
+   }
+  ],
+  "err": null
+ },
+ "sub_6D1630": {
+  "ea": "0x6d1630",
+  "xrefs": [
+   "0x6d165f"
+  ],
+  "accesses": [
+   {
+    "ea": "0x6d1665",
+    "expr": "mPadInfo",
+    "write": false
+   },
+   {
+    "ea": "0x6d1672",
+    "expr": "mpPad",
+    "write": false
+   },
+   {
+    "ea": "0x6d1682",
+    "expr": "mRequestVib",
+    "write": true
+   },
+   {
+    "ea": "0x6d167a",
+    "expr": "mXInput",
+    "write": false
+   }
+  ],
+  "passes": [
+   {
+    "ea": "0x6d166d",
+    "callee": "sDevil4Pad::cPadInfo::clear_vib_info",
+    "arg": "sDevil4Pad::mpInstance->mPadInfo"
+   }
+  ],
+  "err": null
+ },
+ "sub_6D1900": {
+  "ea": "0x6d1900",
+  "xrefs": [
+   "0x6d1933"
+  ],
+  "accesses": [
+   {
+    "ea": "0x6d1939",
+    "expr": "mPadInfo",
+    "write": false
+   },
+   {
+    "ea": "0x6d1946",
+    "expr": "mpPad",
+    "write": false
+   },
+   {
+    "ea": "0x6d1957",
+    "expr": "mRequestVib",
+    "write": true
+   },
+   {
+    "ea": "0x6d194e",
+    "expr": "mXInput",
+    "write": false
+   }
+  ],
+  "passes": [
+   {
+    "ea": "0x6d1941",
+    "callee": "sDevil4Pad::cPadInfo::clear_vib_info",
+    "arg": "sDevil4Pad::mpInstance->mPadInfo"
+   }
+  ],
+  "err": null
+ },
+ "sub_6D1D70": {
+  "ea": "0x6d1d70",
+  "xrefs": [
+   "0x6d1d95"
+  ],
+  "accesses": [
+   {
+    "ea": "0x6d1d9b",
+    "expr": "mPadInfo",
+    "write": false
+   },
+   {
+    "ea": "0x6d1da8",
+    "expr": "mpPad",
+    "write": false
+   },
+   {
+    "ea": "0x6d1dba",
+    "expr": "mRequestVib",
+    "write": true
+   },
+   {
+    "ea": "0x6d1db0",
+    "expr": "mXInput",
+    "write": false
+   }
+  ],
+  "passes": [
+   {
+    "ea": "0x6d1da3",
+    "callee": "sDevil4Pad::cPadInfo::clear_vib_info",
+    "arg": "sDevil4Pad::mpInstance->mPadInfo"
+   }
+  ],
+  "err": null
+ },
+ "sub_73A8F0": {
+  "ea": "0x73a8f0",
+  "xrefs": [
+   "0x73a921"
+  ],
+  "accesses": [
+   {
+    "ea": "0x73a938",
+    "expr": "mPadInfo[0].mBtn.rep",
+    "write": false
+   }
+  ],
+  "passes": [],
+  "err": null
+ },
+ "sub_73B5C0": {
+  "ea": "0x73b5c0",
+  "xrefs": [
+   "0x73b5c3"
+  ],
+  "accesses": [
+   {
+    "ea": "0x73b5c8",
+    "expr": "mPadInfo[0].mBtn.trg",
+    "write": false
+   },
+   {
+    "ea": "0x73b5e5",
+    "expr": "mDecideButton",
+    "write": false
+   }
+  ],
+  "passes": [],
+  "err": null
+ },
+ "sub_73C490": {
+  "ea": "0x73c490",
+  "xrefs": [
+   "0x73c5a5"
+  ],
+  "accesses": [
+   {
+    "ea": "0x73c5aa",
+    "expr": "mPadInfo[0].mBtn.on",
+    "write": false
+   },
+   {
+    "ea": "0x73c5bd",
+    "expr": "mPadInfo[0].mBtn.rel",
+    "write": false
+   }
+  ],
+  "passes": [],
+  "err": null
+ },
+ "sub_73CE30": {
+  "ea": "0x73ce30",
+  "xrefs": [
+   "0x73cf6d"
+  ],
+  "accesses": [
+   {
+    "ea": "0x73cf72",
+    "expr": "mPadInfo[0].mBtn.on",
+    "write": false
+   }
+  ],
+  "passes": [],
+  "err": null
+ },
+ "sub_73EF60": {
+  "ea": "0x73ef60",
+  "xrefs": [
+   "0x73f085"
+  ],
+  "accesses": [
+   {
+    "ea": "0x73f098",
+    "expr": "mPadInfo[0].mBtn.rel",
+    "write": false
+   },
+   {
+    "ea": "0x73f098",
+    "expr": "mPadInfo[0].mBtn.rep",
+    "write": false
+   }
+  ],
+  "passes": [],
+  "err": null
+ },
+ "sub_745E10": {
+  "ea": "0x745e10",
+  "xrefs": [
+   "0x745f53"
+  ],
+  "accesses": [
+   {
+    "ea": "0x745f58",
+    "expr": "mPadInfo[0].mBtn.trg",
+    "write": false
+   },
+   {
+    "ea": "0x745f5e",
+    "expr": "mPadInfo[0].mDecideBtn",
+    "write": false
+   },
+   {
+    "ea": "0x745f68",
+    "expr": "mPadInfo[0].mCancelBtn",
+    "write": false
+   }
+  ],
+  "passes": [
+   {
+    "ea": "0x745f70",
+    "callee": "sDevil4Pad::getTrigger",
+    "arg": "sDevil4Pad::mpInstance"
+   }
+  ],
+  "err": null
+ },
+ "sub_7544A0": {
+  "ea": "0x7544a0",
+  "xrefs": [
+   "0x7544b8"
+  ],
+  "accesses": [
+   {
+    "ea": "0x7544ce",
+    "expr": "mPadInfo[0].mBtn.rel",
+    "write": false
+   }
+  ],
+  "passes": [],
+  "err": null
+ },
+ "sub_76C980": {
+  "ea": "0x76c980",
+  "xrefs": [
+   "0x76c983"
+  ],
+  "accesses": [
+   {
+    "ea": "0x76c997",
+    "expr": "mPadInfo[0].mBtn.rel",
+    "write": false
+   },
+   {
+    "ea": "0x76c988",
+    "expr": "mPadInfo[0].mBtn.trg",
+    "write": false
+   }
+  ],
+  "passes": [],
+  "err": null
+ },
+ "uTitle::isEnd": {
+  "ea": "0x76d340",
+  "xrefs": [
+   "0x76d343"
+  ],
+  "accesses": [
+   {
+    "ea": "0x76d348",
+    "expr": "mPadInfo[0].mBtn.trg",
+    "write": false
+   },
+   {
+    "ea": "0x76d365",
+    "expr": "mDecideButton",
+    "write": false
+   }
+  ],
+  "passes": [],
+  "err": null
+ },
+ "uTitle::placeholder_slot33": {
+  "ea": "0x76d3d0",
+  "xrefs": [
+   "0x76d3df"
+  ],
+  "accesses": [
+   {
+    "ea": "0x76d3e4",
+    "expr": "mPadInfo[0].mBtn.trg",
+    "write": false
+   },
+   {
+    "ea": "0x76d3ea",
+    "expr": "mPadInfo[0].mCancelBtn",
+    "write": false
+   }
+  ],
+  "passes": [],
+  "err": null
+ },
+ "uTitle::placeholder_slot35": {
+  "ea": "0x76d420",
+  "xrefs": [
+   "0x76d423"
+  ],
+  "accesses": [
+   {
+    "ea": "0x76d428",
+    "expr": "mPadInfo[0].mBtn.on",
+    "write": false
+   }
+  ],
+  "passes": [],
+  "err": null
+ },
+ "uTitle::placeholder_slot36": {
+  "ea": "0x76d470",
+  "xrefs": [
+   "0x76d473"
+  ],
+  "accesses": [
+   {
+    "ea": "0x76d485",
+    "expr": "mPadInfo[0].mBtn.rep",
+    "write": false
+   }
+  ],
+  "passes": [],
+  "err": null
+ },
+ "uTitle::placeholder_slot37": {
+  "ea": "0x76d4c0",
+  "xrefs": [
+   "0x76d4c3"
+  ],
+  "accesses": [
+   {
+    "ea": "0x76d4d5",
+    "expr": "mPadInfo[0].mBtn.rep",
+    "write": false
+   }
+  ],
+  "passes": [],
+  "err": null
+ },
+ "uTitle::placeholder_slot38": {
+  "ea": "0x76d750",
+  "xrefs": [
+   "0x76d753"
+  ],
+  "accesses": [
+   {
+    "ea": "0x76d758",
+    "expr": "mPadInfo[0].mBtn.trg",
+    "write": false
+   }
+  ],
+  "passes": [],
+  "err": null
+ },
+ "sub_76FF40": {
+  "ea": "0x76ff40",
+  "xrefs": [
+   "0x76ff4d"
+  ],
+  "accesses": [
+   {
+    "ea": "0x76ffa6",
+    "expr": "mPadInfo[0].mAnlg[0].x",
+    "write": false
+   },
+   {
+    "ea": "0x76ffb4",
+    "expr": "mPadInfo[0].mAnlg[0].y",
+    "write": false
+   },
+   {
+    "ea": "0x76ff53",
+    "expr": "mPadInfo[0].mBtn.trg",
+    "write": false
+   }
+  ],
+  "passes": [],
+  "err": null
+ },
+ "sub_772490": {
+  "ea": "0x772490",
+  "xrefs": [
+   "0x772542"
+  ],
+  "accesses": [],
+  "passes": [
+   {
+    "ea": "0x772547",
+    "callee": "sDevil4Pad::getTrigger",
+    "arg": "sDevil4Pad::mpInstance"
+   }
+  ],
+  "err": null
+ },
+ "sub_7728C0": {
+  "ea": "0x7728c0",
+  "xrefs": [
+   "0x7728c9"
+  ],
+  "accesses": [
+   {
+    "ea": "0x7728e5",
+    "expr": "mPadInfo[0].mBtn.rel",
+    "write": false
+   },
+   {
+    "ea": "0x7728e5",
+    "expr": "mPadInfo[0].mBtn.rep",
+    "write": false
+   }
+  ],
+  "passes": [],
+  "err": null
+ },
+ "sub_7884F0": {
+  "ea": "0x7884f0",
+  "xrefs": [
+   "0x7885c1"
+  ],
+  "accesses": [
+   {
+    "ea": "0x7885c6",
+    "expr": "mPadInfo[0].mBtn.trg",
+    "write": false
+   },
+   {
+    "ea": "0x7885cc",
+    "expr": "mPadInfo[0].mDecideBtn",
+    "write": false
+   }
+  ],
+  "passes": [],
+  "err": null
+ },
+ "sub_78B130": {
+  "ea": "0x78b130",
+  "xrefs": [
+   "0x78b13d"
+  ],
+  "accesses": [
+   {
+    "ea": "0x78b153",
+    "expr": "mPadInfo[0].mBtn.rel",
+    "write": false
+   }
+  ],
+  "passes": [],
+  "err": null
+ },
+ "sub_78D8F0": {
+  "ea": "0x78d8f0",
+  "xrefs": [
+   "0x78dad1"
+  ],
+  "accesses": [
+   {
+    "ea": "0x78dad7",
+    "expr": "mDecideButton",
+    "write": false
+   }
+  ],
+  "passes": [],
+  "err": null
+ },
+ "sub_78EC70": {
+  "ea": "0x78ec70",
+  "xrefs": [
+   "0x78eefd"
+  ],
+  "accesses": [
+   {
+    "ea": "0x78ef15",
+    "expr": "mPadInfo[0].mBtn.rel",
+    "write": false
+   },
+   {
+    "ea": "0x78ef15",
+    "expr": "mPadInfo[0].mBtn.rep",
+    "write": false
+   }
+  ],
+  "passes": [],
+  "err": null
+ },
+ "sub_7902F0": {
+  "ea": "0x7902f0",
+  "xrefs": [
+   "0x790387"
+  ],
+  "accesses": [
+   {
+    "ea": "0x79039c",
+    "expr": "mPadInfo[0].mBtn.rel",
+    "write": false
+   }
+  ],
+  "passes": [],
+  "err": null
+ },
+ "sub_790BD0": {
+  "ea": "0x790bd0",
+  "xrefs": [
+   "0x790e0a",
+   "0x790e7b",
+   "0x7910c8"
+  ],
+  "accesses": [
+   {
+    "ea": "0x7910db",
+    "expr": "mPadInfo[0].mBtn.rep",
+    "write": false
+   }
+  ],
+  "passes": [
+   {
+    "ea": "0x790e80",
+    "callee": "sDevil4Pad::getTrigger",
+    "arg": "sDevil4Pad::mpInstance"
+   }
+  ],
+  "err": null
+ },
+ "sub_7924A0": {
+  "ea": "0x7924a0",
+  "xrefs": [
+   "0x7924a9"
+  ],
+  "accesses": [
+   {
+    "ea": "0x7924ae",
+    "expr": "mPadInfo[0].mBtn.on",
+    "write": false
+   },
+   {
+    "ea": "0x7924c4",
+    "expr": "mPadInfo[0].mBtn.rel",
+    "write": false
+   }
+  ],
+  "passes": [],
+  "err": null
+ },
+ "sub_792950": {
+  "ea": "0x792950",
+  "xrefs": [
+   "0x792b56"
+  ],
+  "accesses": [],
+  "passes": [],
+  "err": null
+ },
+ "sub_794F20": {
+  "ea": "0x794f20",
+  "xrefs": [
+   "0x794f29"
+  ],
+  "accesses": [
+   {
+    "ea": "0x794f2e",
+    "expr": "mPadInfo[0].mBtn.on",
+    "write": false
+   },
+   {
+    "ea": "0x794f44",
+    "expr": "mPadInfo[0].mBtn.rel",
+    "write": false
+   }
+  ],
+  "passes": [],
+  "err": null
+ },
+ "sub_7953E0": {
+  "ea": "0x7953e0",
+  "xrefs": [
+   "0x7955f7"
+  ],
+  "accesses": [],
+  "passes": [],
+  "err": null
+ },
+ "sub_795D30": {
+  "ea": "0x795d30",
+  "xrefs": [
+   "0x795d33"
+  ],
+  "accesses": [
+   {
+    "ea": "0x795d39",
+    "expr": "mPadInfo[0].mBtn.on",
+    "write": false
+   },
+   {
+    "ea": "0x795d39",
+    "expr": "mPadInfo[0].mBtn.trg",
+    "write": false
+   }
+  ],
+  "passes": [],
+  "err": null
+ },
+ "sub_796F00": {
+  "ea": "0x796f00",
+  "xrefs": [
+   "0x797125",
+   "0x79719c"
+  ],
+  "accesses": [
+   {
+    "ea": "0x79713d",
+    "expr": "mPadInfo[0].mIsVibEnable",
+    "write": false
+   },
+   {
+    "ea": "0x797170",
+    "expr": "mPad[0].Info.Input_attr",
+    "write": false
+   }
+  ],
+  "passes": [
+   {
+    "ea": "0x7971ac",
+    "callee": "sDevil4Pad::set_vib_enable_all",
+    "arg": "sDevil4Pad::mpInstance_1"
+   },
+   {
+    "ea": "0x7971b5",
+    "callee": "sDevil4Pad::cPadInfo::stopVibration",
+    "arg": "sDevil4Pad::mpInstance"
+   }
+  ],
+  "err": null
+ },
+ "sub_797610": {
+  "ea": "0x797610",
+  "xrefs": [
+   "0x79778d"
+  ],
+  "accesses": [],
+  "passes": [
+   {
+    "ea": "0x797804",
+    "callee": "sDevil4Pad::getTrigger",
+    "arg": "sDevil4Pad::mpInstance"
+   }
+  ],
+  "err": null
+ },
+ "sub_797B70": {
+  "ea": "0x797b70",
+  "xrefs": [
+   "0x797b73"
+  ],
+  "accesses": [
+   {
+    "ea": "0x797b91",
+    "expr": "mPadInfo[0].mBtn.rel",
+    "write": false
+   }
+  ],
+  "passes": [],
+  "err": null
+ },
+ "sub_798250": {
+  "ea": "0x798250",
+  "xrefs": [
+   "0x79844a",
+   "0x7984bc"
+  ],
+  "accesses": [
+   {
+    "ea": "0x798462",
+    "expr": "mPadInfo[0].mIsVibEnable",
+    "write": false
+   },
+   {
+    "ea": "0x798490",
+    "expr": "mPad[0].Info.Input_attr",
+    "write": false
+   }
+  ],
+  "passes": [
+   {
+    "ea": "0x7984cc",
+    "callee": "sDevil4Pad::set_vib_enable_all",
+    "arg": "sDevil4Pad::mpInstance_1"
+   },
+   {
+    "ea": "0x7984d5",
+    "callee": "sDevil4Pad::cPadInfo::stopVibration",
+    "arg": "sDevil4Pad::mpInstance"
+   }
+  ],
+  "err": null
+ },
+ "sub_798830": {
+  "ea": "0x798830",
+  "xrefs": [
+   "0x798aac"
+  ],
+  "accesses": [],
+  "passes": [],
+  "err": null
+ },
+ "sub_798B70": {
+  "ea": "0x798b70",
+  "xrefs": [
+   "0x798bb2"
+  ],
+  "accesses": [
+   {
+    "ea": "0x798bc5",
+    "expr": "mPadInfo",
+    "write": false
+   },
+   {
+    "ea": "0x798bcc",
+    "expr": "mPadInfo[0].mpPad",
+    "write": false
+   },
+   {
+    "ea": "0x798bde",
+    "expr": "mRequestVib",
+    "write": true
+   },
+   {
+    "ea": "0x798bd4",
+    "expr": "mXInput",
+    "write": false
+   }
+  ],
+  "passes": [
+   {
+    "ea": "0x798bba",
+    "callee": "sDevil4Pad::set_vib_enable_all",
+    "arg": "sDevil4Pad::mpInstance"
+   },
+   {
+    "ea": "0x798bc7",
+    "callee": "sDevil4Pad::cPadInfo::clear_vib_info",
+    "arg": "sDevil4Pad::mpInstance->mPadInfo"
+   }
+  ],
+  "err": null
+ },
+ "sub_799080": {
+  "ea": "0x799080",
+  "xrefs": [
+   "0x79908d"
+  ],
+  "accesses": [
+   {
+    "ea": "0x7990a0",
+    "expr": "mPadInfo[0].mBtn.rel",
+    "write": false
+   }
+  ],
+  "passes": [],
+  "err": null
+ },
+ "sub_7996A0": {
+  "ea": "0x7996a0",
+  "xrefs": [
+   "0x79988e"
+  ],
+  "accesses": [
+   {
+    "ea": "0x7998a1",
+    "expr": "mPadInfo[0].mBtn.rel",
+    "write": false
+   },
+   {
+    "ea": "0x7998a1",
+    "expr": "mPadInfo[0].mBtn.rep",
+    "write": false
+   }
+  ],
+  "passes": [],
+  "err": null
+ },
+ "sub_79E8E0": {
+  "ea": "0x79e8e0",
+  "xrefs": [
+   "0x79e901"
+  ],
+  "accesses": [
+   {
+    "ea": "0x79e906",
+    "expr": "mPadInfo[0].mBtn.trg",
+    "write": false
+   },
+   {
+    "ea": "0x79e90c",
+    "expr": "mPadInfo[0].mCancelBtn",
+    "write": false
+   }
+  ],
+  "passes": [],
+  "err": null
+ },
+ "sub_7A2B80": {
+  "ea": "0x7a2b80",
+  "xrefs": [
+   "0x7a2e5a"
+  ],
+  "accesses": [],
+  "passes": [],
+  "err": null
+ },
+ "sub_7A4490": {
+  "ea": "0x7a4490",
+  "xrefs": [
+   "0x7a44b2"
+  ],
+  "accesses": [
+   {
+    "ea": "0x7a44c9",
+    "expr": "mPadInfo[0].mBtn.rel",
+    "write": false
+   }
+  ],
+  "passes": [],
+  "err": null
+ },
+ "uPlayer::updateContactInfoSub": {
+  "ea": "0x7ab770",
+  "xrefs": [
+   "0x7ab817"
+  ],
+  "accesses": [],
+  "passes": [
+   {
+    "ea": "0x7ab81f",
+    "callee": "sDevil4Pad::cPadInfo::stopVibration",
+    "arg": "sDevil4Pad::mpInstance"
+   }
+  ],
+  "err": null
+ },
+ "uPlayer::setPadVibration": {
+  "ea": "0x7ac130",
+  "xrefs": [
+   "0x7ac18c"
+  ],
+  "accesses": [
+   {
+    "ea": "0x7ac1a0",
+    "expr": "mPadInfo",
+    "write": false
+   }
+  ],
+  "passes": [],
+  "err": null
+ },
+ "cPeripheral::update": {
+  "ea": "0x7afd10",
+  "xrefs": [
+   "0x7afd19",
+   "0x7b005e"
+  ],
+  "accesses": [
+   {
+    "ea": "0x7afd1e",
+    "expr": "mPadInfo[0].mBtn.on",
+    "write": false
+   },
+   {
+    "ea": "0x7afd45",
+    "expr": "mPadInfo[0].mBtn.trg",
+    "write": false
+   },
+   {
+    "ea": "0x7afd76",
+    "expr": "mPadInfo[0].mBtn.rel",
+    "write": false
+   },
+   {
+    "ea": "0x7afd8d",
+    "expr": "mPadInfo[0].mPress",
+    "write": false
+   },
+   {
+    "ea": "0x7afe53",
+    "expr": "mPadInfo[0].mAnlg[0].x",
+    "write": false
+   },
+   {
+    "ea": "0x7afe59",
+    "expr": "mPadInfo[0].mAnlg[0].y",
+    "write": false
+   },
+   {
+    "ea": "0x7b0063",
+    "expr": "mPadInfo[0].mAnlg[1].x",
+    "write": false
+   },
+   {
+    "ea": "0x7b0069",
+    "expr": "mPadInfo[0].mAnlg[1].y",
+    "write": false
+   }
+  ],
+  "passes": [],
+  "err": null
+ },
+ "sub_842340": {
+  "ea": "0x842340",
+  "xrefs": [
+   "0x8424de"
+  ],
+  "accesses": [
+   {
+    "ea": "0x8424e3",
+    "expr": "mPadInfo[0].mBtn.trg",
+    "write": false
+   },
+   {
+    "ea": "0x8424e9",
+    "expr": "mPadInfo[0].mCancelBtn",
+    "write": false
+   }
+  ],
+  "passes": [],
+  "err": null
+ },
+ "sub_845360": {
+  "ea": "0x845360",
+  "xrefs": [
+   "0x8453e8"
+  ],
+  "accesses": [
+   {
+    "ea": "0x8453ed",
+    "expr": "mPadInfo[0].mBtn.trg",
+    "write": false
+   },
+   {
+    "ea": "0x8453f3",
+    "expr": "mPadInfo[0].mCancelBtn",
+    "write": false
+   }
+  ],
+  "passes": [],
+  "err": null
+ },
+ "sub_847270": {
+  "ea": "0x847270",
+  "xrefs": [
+   "0x84736f"
+  ],
+  "accesses": [
+   {
+    "ea": "0x847382",
+    "expr": "mPadInfo[0].mBtn.rel",
+    "write": false
+   }
+  ],
+  "passes": [],
+  "err": null
+ },
+ "sub_84B410": {
+  "ea": "0x84b410",
+  "xrefs": [
+   "0x84b480"
+  ],
+  "accesses": [
+   {
+    "ea": "0x84b485",
+    "expr": "mPadInfo[0].mBtn.trg",
+    "write": false
+   },
+   {
+    "ea": "0x84b48b",
+    "expr": "mPadInfo[0].mCancelBtn",
+    "write": false
+   }
+  ],
+  "passes": [],
+  "err": null
+ },
+ "sub_84E550": {
+  "ea": "0x84e550",
+  "xrefs": [
+   "0x84e64f"
+  ],
+  "accesses": [
+   {
+    "ea": "0x84e662",
+    "expr": "mPadInfo[0].mBtn.rel",
+    "write": false
+   }
+  ],
+  "passes": [],
+  "err": null
+ },
+ "sub_84F480": {
+  "ea": "0x84f480",
+  "xrefs": [
+   "0x84f483"
+  ],
+  "accesses": [
+   {
+    "ea": "0x84f488",
+    "expr": "mPadInfo[0].mBtn.trg",
+    "write": false
+   }
+  ],
+  "passes": [],
+  "err": null
+ },
+ "sub_84F650": {
+  "ea": "0x84f650",
+  "xrefs": [
+   "0x84f656"
+  ],
+  "accesses": [
+   {
+    "ea": "0x84f65b",
+    "expr": "mPadInfo[0].mBtn.trg",
+    "write": false
+   },
+   {
+    "ea": "0x84f661",
+    "expr": "mPadInfo[0].mDecideBtn",
+    "write": false
+   }
+  ],
+  "passes": [],
+  "err": null
+ },
+ "sub_859C10": {
+  "ea": "0x859c10",
+  "xrefs": [
+   "0x859d14"
+  ],
+  "accesses": [
+   {
+    "ea": "0x859d27",
+    "expr": "mPadInfo[0].mBtn.rel",
+    "write": false
+   }
+  ],
+  "passes": [],
+  "err": null
+ },
+ "sub_85CBB0": {
+  "ea": "0x85cbb0",
+  "xrefs": [
+   "0x85ccb4"
+  ],
+  "accesses": [
+   {
+    "ea": "0x85ccc7",
+    "expr": "mPadInfo[0].mBtn.rel",
+    "write": false
+   }
+  ],
+  "passes": [],
+  "err": null
+ },
+ "sub_88B8D0": {
+  "ea": "0x88b8d0",
+  "xrefs": [
+   "0x88bad9"
+  ],
+  "accesses": [],
+  "passes": [
+   {
+    "ea": "0x88bade",
+    "callee": "sDevil4Pad::getTrigger",
+    "arg": "sDevil4Pad::mpInstance"
+   }
+  ],
+  "err": null
+ },
+ "uTitle::waitStart": {
+  "ea": "0x89a310",
+  "xrefs": [
+   "0x89a5c0",
+   "0x89a611"
+  ],
+  "accesses": [
+   {
+    "ea": "0x89a616",
+    "expr": "mPadInfo[0].mBtn.on",
+    "write": false
+   },
+   {
+    "ea": "0x89a629",
+    "expr": "mPadInfo[0].mBtn.rel",
+    "write": false
+   }
+  ],
+  "passes": [],
+  "err": null
+ },
+ "uTitle::selectMenuPc": {
+  "ea": "0x89aaf0",
+  "xrefs": [
+   "0x89ad8a"
+  ],
+  "accesses": [],
+  "passes": [],
+  "err": null
+ },
+ "uTitle::selectMenu": {
+  "ea": "0x89b1b0",
+  "xrefs": [
+   "0x89b355"
+  ],
+  "accesses": [],
+  "passes": [],
+  "err": null
+ },
+ "uTitle::toGame": {
+  "ea": "0x89b690",
+  "xrefs": [
+   "0x89b7d3"
+  ],
+  "accesses": [
+   {
+    "ea": "0x89b7e8",
+    "expr": "mPadInfo",
+    "write": false
+   }
+  ],
+  "passes": [],
+  "err": null
+ },
+ "sub_89D4F0": {
+  "ea": "0x89d4f0",
+  "xrefs": [
+   "0x89d4f9"
+  ],
+  "accesses": [
+   {
+    "ea": "0x89d4fe",
+    "expr": "mPadInfo[0].mBtn.trg",
+    "write": false
+   },
+   {
+    "ea": "0x89d50f",
+    "expr": "mDecideButton",
+    "write": false
+   }
+  ],
+  "passes": [],
+  "err": null
+ },
+ "sub_89DCD0": {
+  "ea": "0x89dcd0",
+  "xrefs": [
+   "0x89dcd3"
+  ],
+  "accesses": [
+   {
+    "ea": "0x89dce9",
+    "expr": "mPadInfo[0].mBtn.rel",
+    "write": false
+   }
+  ],
+  "passes": [],
+  "err": null
+ },
+ "sub_89F320": {
+  "ea": "0x89f320",
+  "xrefs": [
+   "0x89f329"
+  ],
+  "accesses": [
+   {
+    "ea": "0x89f32e",
+    "expr": "mPadInfo[0].mBtn.trg",
+    "write": false
+   },
+   {
+    "ea": "0x89f34b",
+    "expr": "mDecideButton",
+    "write": false
+   }
+  ],
+  "passes": [],
+  "err": null
+ },
+ "sub_8A2850": {
+  "ea": "0x8a2850",
+  "xrefs": [
+   "0x8a29af",
+   "0x8a2a6e"
+  ],
+  "accesses": [
+   {
+    "ea": "0x8a29b4",
+    "expr": "mPadInfo[0].mBtn.trg",
+    "write": false
+   },
+   {
+    "ea": "0x8a29ba",
+    "expr": "mPadInfo[0].mDecideBtn",
+    "write": false
+   },
+   {
+    "ea": "0x8a29c4",
+    "expr": "mPadInfo[0].mCancelBtn",
+    "write": false
+   }
+  ],
+  "passes": [
+   {
+    "ea": "0x8a29cc",
+    "callee": "sDevil4Pad::getTrigger",
+    "arg": "sDevil4Pad::mpInstance"
+   },
+   {
+    "ea": "0x8a2a8b",
+    "callee": "sDevil4Pad::getTrigger",
+    "arg": "sDevil4Pad::mpInstance"
+   }
+  ],
+  "err": null
+ },
+ "sub_8A5DA0": {
+  "ea": "0x8a5da0",
+  "xrefs": [
+   "0x8a5dd9"
+  ],
+  "accesses": [
+   {
+    "ea": "0x8a5dde",
+    "expr": "mPadInfo[0].mBtn.trg",
+    "write": false
+   }
+  ],
+  "passes": [],
+  "err": null
+ },
+ "sub_8A6620": {
+  "ea": "0x8a6620",
+  "xrefs": [
+   "0x8a6620"
+  ],
+  "accesses": [
+   {
+    "ea": "0x8a6628",
+    "expr": "mPadInfo[0].mBtn.trg",
+    "write": false
+   },
+   {
+    "ea": "0x8a662e",
+    "expr": "mPadInfo[0].mDecideBtn",
+    "write": false
+   }
+  ],
+  "passes": [],
+  "err": null
+ },
+ "sub_8A74A0": {
+  "ea": "0x8a74a0",
+  "xrefs": [
+   "0x8a7520"
+  ],
+  "accesses": [
+   {
+    "ea": "0x8a7525",
+    "expr": "mPadInfo[0].mBtn.trg",
+    "write": false
+   }
+  ],
+  "passes": [],
+  "err": null
+ },
+ "sub_8A8C90": {
+  "ea": "0x8a8c90",
+  "xrefs": [
+   "0x8a8e7b"
+  ],
+  "accesses": [],
+  "passes": [
+   {
+    "ea": "0x8a8e80",
+    "callee": "sDevil4Pad::getTrigger",
+    "arg": "sDevil4Pad::mpInstance"
+   }
+  ],
+  "err": null
+ },
+ "sub_8AA7D0": {
+  "ea": "0x8aa7d0",
+  "xrefs": [
+   "0x8aa7d3"
+  ],
+  "accesses": [
+   {
+    "ea": "0x8aa7e7",
+    "expr": "mPadInfo[0].mBtn.rel",
+    "write": false
+   },
+   {
+    "ea": "0x8aa7d8",
+    "expr": "mPadInfo[0].mBtn.trg",
+    "write": false
+   }
+  ],
+  "passes": [],
+  "err": null
+ },
+ "sub_8AAC40": {
+  "ea": "0x8aac40",
+  "xrefs": [
+   "0x8aac43"
+  ],
+  "accesses": [
+   {
+    "ea": "0x8aac49",
+    "expr": "mPadInfo[0].mBtn.on",
+    "write": false
+   }
+  ],
+  "passes": [],
+  "err": null
+ },
+ "sub_8AB020": {
+  "ea": "0x8ab020",
+  "xrefs": [
+   "0x8ab473"
+  ],
+  "accesses": [
+   {
+    "ea": "0x8ab48b",
+    "expr": "mPadInfo[0].mVibInfo",
+    "write": false
+   },
+   {
+    "ea": "0x8ab517",
+    "expr": "mXInput",
+    "write": false
+   },
+   {
+    "ea": "0x8ab535",
+    "expr": "mPad[0].Info.Input_attr",
+    "write": false
+   },
+   {
+    "ea": "0x8ab553",
+    "expr": "mPadInfo[1]",
+    "write": false
+   },
+   {
+    "ea": "0x8ab57f",
+    "expr": "mPadInfo[0].mpPad",
+    "write": false
+   },
+   {
+    "ea": "0x8ab585",
+    "expr": "Vib.List_low",
+    "write": false
+   },
+   {
+    "ea": "0x8ab5a7",
+    "expr": "Vib.List_high",
+    "write": false
+   },
+   {
+    "ea": "0x8ab5cf",
+    "expr": "mRequestVib",
+    "write": true
+   }
+  ],
+  "passes": [],
+  "err": null
+ },
+ "sub_8AB5E0": {
+  "ea": "0x8ab5e0",
+  "xrefs": [
+   "0x8ab5e0"
+  ],
+  "accesses": [],
+  "passes": [
+   {
+    "ea": "0x8ab5f8",
+    "callee": "sDevil4Pad::set_vib_enable_all",
+    "arg": "sDevil4Pad::mpInstance"
+   }
+  ],
+  "err": null
+ },
+ "sub_8ADBC0": {
+  "ea": "0x8adbc0",
+  "xrefs": [
+   "0x8adc30"
+  ],
+  "accesses": [
+   {
+    "ea": "0x8adc35",
+    "expr": "mPadInfo[0].mBtn.trg",
+    "write": false
+   }
+  ],
+  "passes": [],
+  "err": null
+ },
+ "sub_8ADEC0": {
+  "ea": "0x8adec0",
+  "xrefs": [
+   "0x8adec3"
+  ],
+  "accesses": [
+   {
+    "ea": "0x8adec8",
+    "expr": "mPadInfo[0].mBtn.on",
+    "write": false
+   }
+  ],
+  "passes": [],
+  "err": null
+ },
+ "sDevil4Main::checkRestrainSleepWindowsOS": {
+  "ea": "0x8afd60",
+  "xrefs": [
+   "0x8afd69"
+  ],
+  "accesses": [],
+  "passes": [
+   {
+    "ea": "0x8afd71",
+    "callee": "sDevil4Pad::get_user_pad_id",
+    "arg": "sDevil4Pad::mpInstance"
+   }
+  ],
+  "err": null
+ },
+ "sub_8B0AD0": {
+  "ea": "0x8b0ad0",
+  "xrefs": [
+   "0x8b10be"
+  ],
+  "accesses": [
+   {
+    "ea": "0x8b1125",
+    "expr": "mPadInfo[0].mBtn.on",
+    "write": false
+   }
+  ],
+  "passes": [],
+  "err": null
+ },
+ "sub_8B21B0": {
+  "ea": "0x8b21b0",
+  "xrefs": [
+   "0x8b227c",
+   "0x8b256f"
+  ],
+  "accesses": [
+   {
+    "ea": "0x8b2281",
+    "expr": "mPadInfo[0].mAnlg[0].x",
+    "write": false
+   },
+   {
+    "ea": "0x8b2287",
+    "expr": "mPadInfo[0].mAnlg[0].y",
+    "write": false
+   },
+   {
+    "ea": "0x8b257c",
+    "expr": "mPadInfo[0].mBtn",
+    "write": false
+   }
+  ],
+  "passes": [],
+  "err": null
+ },
+ "sub_8D9380": {
+  "ea": "0x8d9380",
+  "xrefs": [
+   "0x8d94c1"
+  ],
+  "accesses": [],
+  "passes": [],
+  "err": null
+ },
+ "sub_8E2EF0": {
+  "ea": "0x8e2ef0",
+  "xrefs": [
+   "0x8e2ef8"
+  ],
+  "accesses": [
+   {
+    "ea": "0x8e2efd",
+    "expr": "mXInput",
+    "write": false
+   }
+  ],
+  "passes": [],
+  "err": null
+ },
+ "sub_8E2F10": {
+  "ea": "0x8e2f10",
+  "xrefs": [
+   "0x8e2f11"
+  ],
+  "accesses": [
+   {
+    "ea": "0x8e2f35",
+    "expr": "sPad::mDeltaTime",
+    "write": false
+   }
+  ],
+  "passes": [],
+  "err": null
+ },
+ "sub_8E2F90": {
+  "ea": "0x8e2f90",
+  "xrefs": [
+   "0x8e2fc5",
+   "0x8e2fee"
+  ],
+  "accesses": [
+   {
+    "ea": "0x8e2fd8",
+    "expr": "mpJoystick[*(pad + 16)]",
+    "write": false
+   },
+   {
+    "ea": "0x8e2ff4",
+    "expr": "mpJoystick[*(pad + 16)]",
+    "write": true
+   }
+  ],
+  "passes": [],
+  "err": null
+ },
+ "sub_8E3030": {
+  "ea": "0x8e3030",
+  "xrefs": [
+   "0x8e3034"
+  ],
+  "accesses": [],
+  "passes": [
+   {
+    "ea": "0x8e303e",
+    "callee": "sPad::open",
+    "arg": "sDevil4Pad::mpInstance"
+   }
+  ],
+  "err": null
+ },
+ "sPad::sPad": {
+  "ea": "0x8e3d60",
+  "xrefs": [
+   "0x8e3dae"
+  ],
+  "accesses": [
+   {
+    "ea": "0xffffffffffffffff",
+    "expr": "vftable",
+    "write": true
+   },
+   {
+    "ea": "0x8e3d75",
+    "expr": "mCS.mCSection",
+    "write": false
+   },
+   {
+    "ea": "0x8e3d82",
+    "expr": "mThreadSafe",
+    "write": true
+   },
+   {
+    "ea": "0x8e3d8c",
+    "expr": "mPad",
+    "write": false
+   },
+   {
+    "ea": "0x8e3db4",
+    "expr": "mActive",
+    "write": true
+   },
+   {
+    "ea": "0x8e3db8",
+    "expr": "mXInput",
+    "write": true
+   },
+   {
+    "ea": "0x8e3dbf",
+    "expr": "mResetJoyPad",
+    "write": true
+   },
+   {
+    "ea": "0x8e3e0c",
+    "expr": "mPad[0].Info.Pad_no",
+    "write": false
+   },
+   {
+    "ea": "0x8e3e3d",
+    "expr": "mpJoystick",
+    "write": false
+   },
+   {
+    "ea": "0x8e3e27",
+    "expr": "mpDInput",
+    "write": true
+   },
+   {
+    "ea": "0x8e3e2d",
+    "expr": "mpDInput",
+    "write": false
+   },
+   {
+    "ea": "0x8e3e55",
+    "expr": "mPrevTimer",
+    "write": true
+   },
+   {
+    "ea": "0x8e3e5b",
+    "expr": "mDeltaTime",
+    "write": true
+   },
+   {
+    "ea": "0x8e3e5e",
+    "expr": "mDecideButton",
+    "write": true
+   },
+   {
+    "ea": "0x8e3e68",
+    "expr": "mTickTimer[0]",
+    "write": true
+   },
+   {
+    "ea": "0x8e3e6e",
+    "expr": "mTickTimer[1]",
+    "write": true
+   }
+  ],
+  "passes": [
+   {
+    "ea": "0x8e3d96",
+    "callee": "sPad::Pad::Pad",
+    "arg": "mPad++"
+   },
+   {
+    "ea": "0x8e3e7a",
+    "callee": "sPad::open",
+    "arg": "this"
+   }
+  ],
+  "err": null
+ },
+ "sPad::release_devices": {
+  "ea": "0x8e4120",
+  "xrefs": [
+   "0x8e4121",
+   "0x8e4181"
+  ],
+  "accesses": [
+   {
+    "ea": "0x8e4134",
+    "expr": "mXInput",
+    "write": false
+   }
+  ],
+  "passes": [],
+  "err": null
+ },
+ "sPad::Pad::readPad": {
+  "ea": "0x8e44d0",
+  "xrefs": [
+   "0x8e44ff",
+   "0x8e4524",
+   "0x8e45a2",
+   "0x8e45da"
+  ],
+  "accesses": [
+   {
+    "ea": "0x8e44d7",
+    "expr": "Info.Kind",
+    "write": false
+   },
+   {
+    "ea": "0x8e4505",
+    "expr": "mActive",
+    "write": false
+   },
+   {
+    "ea": "0x8e45c6",
+    "expr": "Data",
+    "write": false
+   },
+   {
+    "ea": "0x8e44e9",
+    "expr": "Info.Socket_no",
+    "write": false
+   },
+   {
+    "ea": "0x8e452a",
+    "expr": "mpJoystick[pad->Info.Socket_no]",
+    "write": false
+   },
+   {
+    "ea": "0x8e4595",
+    "expr": "mMap.mJS",
+    "write": false
+   },
+   {
+    "ea": "0x8e4535",
+    "expr": "Info.Rno",
+    "write": true
+   },
+   {
+    "ea": "0x8e4539",
+    "expr": "Info.Kind",
+    "write": true
+   },
+   {
+    "ea": "0x8e45d7",
+    "expr": "Info.Pad_no",
+    "write": false
+   },
+   {
+    "ea": "0x8e4607",
+    "expr": "Info.Input_attr",
+    "write": false
+   },
+   {
+    "ea": "0x8e45f9",
+    "expr": "mPad[v7].Info.Kind",
+    "write": false
+   }
+  ],
+  "passes": [
+   {
+    "ea": "0x8e4610",
+    "callee": "sPad::open",
+    "arg": "sDevil4Pad::mpInstance"
+   }
+  ],
+  "err": null
+ },
+ "sPad::moveVib": {
+  "ea": "0x8e4650",
+  "xrefs": [
+   "0x8e4650"
+  ],
+  "accesses": [
+   {
+    "ea": "0x8e4655",
+    "expr": "mXInput",
+    "write": false
+   },
+   {
+    "ea": "0x8e4667",
+    "expr": "Info.Kind",
+    "write": false
+   },
+   {
+    "ea": "0x8e4671",
+    "expr": "mRequestVib",
+    "write": false
+   },
+   {
+    "ea": "0x8e4682",
+    "expr": "Info.Input_attr",
+    "write": false
+   },
+   {
+    "ea": "0x8e468d",
+    "expr": "Vib.List_high",
+    "write": false
+   },
+   {
+    "ea": "0x8e4697",
+    "expr": "Vib.List_low",
+    "write": false
+   },
+   {
+    "ea": "0x8e46db",
+    "expr": "Vib.Vib_set_timer",
+    "write": false
+   },
+   {
+    "ea": "0x8e46e6",
+    "expr": "Vib.Vib_set_timer",
+    "write": true
+   },
+   {
+    "ea": "0x8e46ef",
+    "expr": "Vib.Vib_result",
+    "write": false
+   },
+   {
+    "ea": "0x8e471a",
+    "expr": "Vib.Vib_result",
+    "write": true
+   },
+   {
+    "ea": "0x8e4704",
+    "expr": "Vib.Vib_zero_count",
+    "write": true
+   },
+   {
+    "ea": "0x8e472b",
+    "expr": "Vib.Vib_retry_flag",
+    "write": true
+   },
+   {
+    "ea": "0x8e4725",
+    "expr": "Vib.Vib_retry_flag",
+    "write": false
+   },
+   {
+    "ea": "0x8e4735",
+    "expr": "Vib.Vib_data[0]",
+    "write": true
+   },
+   {
+    "ea": "0x8e4738",
+    "expr": "Vib.Vib_data[1]",
+    "write": true
+   },
+   {
+    "ea": "0x8e4749",
+    "expr": "Info.Socket_no",
+    "write": false
+   }
+  ],
+  "passes": [],
+  "err": null
+ },
+ "sub_8E4770": {
+  "ea": "0x8e4770",
+  "xrefs": [
+   "0x8e4771"
+  ],
+  "accesses": [
+   {
+    "ea": "0x8e4788",
+    "expr": "mXInput",
+    "write": false
+   }
+  ],
+  "passes": [],
+  "err": null
+ },
+ "sPad::Pad::open_xinput": {
+  "ea": "0x8e48e0",
+  "xrefs": [
+   "0x8e48e0"
+  ],
+  "accesses": [
+   {
+    "ea": "0x8e48e8",
+    "expr": "mXInput",
+    "write": false
+   },
+   {
+    "ea": "0x8e48f1",
+    "expr": "Info.Socket_no",
+    "write": false
+   },
+   {
+    "ea": "0x8e490b",
+    "expr": "Info.Ability",
+    "write": true
+   },
+   {
+    "ea": "0x8e493d",
+    "expr": "Info.Kind",
+    "write": true
+   }
+  ],
+  "passes": [],
+  "err": null
+ },
+ "sub_8E5640": {
+  "ea": "0x8e5640",
+  "xrefs": [
+   "0x8e5640",
+   "0x8e567b",
+   "0x8e56be"
+  ],
+  "accesses": [
+   {
+    "ea": "0x8e564b",
+    "expr": "mXInput",
+    "write": false
+   },
+   {
+    "ea": "0x8e569a",
+    "expr": "vftable",
+    "write": false
+   },
+   {
+    "ea": "0x8e56de",
+    "expr": "mpJoystick[v5]",
+    "write": false
+   },
+   {
+    "ea": "0x8e56f9",
+    "expr": "mpDInput->lpVtbl->CreateDevice",
+    "write": false
+   },
+   {
+    "ea": "0x8e56e8",
+    "expr": "mpDInput",
+    "write": false
+   }
+  ],
+  "passes": [],
+  "err": null
+ },
+ "sub_8E5740": {
+  "ea": "0x8e5740",
+  "xrefs": [
+   "0x8e574e"
+  ],
+  "accesses": [
+   {
+    "ea": "0x8e575c",
+    "expr": "mpJoystick[a2]",
+    "write": false
+   }
+  ],
+  "passes": [],
+  "err": null
+ },
+ "sub_8F0FC0": {
+  "ea": "0x8f0fc0",
+  "xrefs": [
+   "0x8f1531",
+   "0x8f1598"
+  ],
+  "accesses": [
+   {
+    "ea": "0x8f153b",
+    "expr": "mPad[0].Vib",
+    "write": false
+   },
+   {
+    "ea": "0x8f159d",
+    "expr": "mXInput",
+    "write": false
+   }
+  ],
+  "passes": [],
+  "err": null
+ },
+ "sub_8FDDE0": {
+  "ea": "0x8fdde0",
+  "xrefs": [
+   "0x8fde2d"
+  ],
+  "accesses": [],
+  "passes": [],
+  "err": null
+ },
+ "uFreeCamera::move": {
+  "ea": "0x919e50",
+  "xrefs": [
+   "0x919eb1",
+   "0x919ee0",
+   "0x919f05"
+  ],
+  "accesses": [
+   {
+    "ea": "0x919ebc",
+    "expr": "mPad[mControlPad_1].Data.On",
+    "write": false
+   },
+   {
+    "ea": "0x919ee8",
+    "expr": "mPad[mControlPad_1].Data.Ly",
+    "write": false
+   },
+   {
+    "ea": "0x919f0d",
+    "expr": "mPad[mControlPad_1].Data.Lx",
+    "write": false
+   }
+  ],
+  "passes": [],
+  "err": null
+ }
+}

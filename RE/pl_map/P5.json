@@ -1,0 +1,3787 @@
+{
+ "group": "P5",
+ "range": [
+  "0x800000",
+  "0x81c000"
+ ],
+ "classes": {
+  "uPlayerNeroTutorial": {
+   "dx9": {
+    "dti": "0xe5a4e0",
+    "vtable": "0xbe6260",
+    "ctor": "0x8022c0",
+    "size": "0xd690",
+    "parent": "uPlayerNero"
+   },
+   "se": {
+    "vtable": "0x118f498"
+   },
+   "slot_shift": "overrides only: DX9 0/4/77/160/182/183 = SE 0/4/114/240/288/289 (uPlayer-family: DX9 142..148 = SE 216..225 with SE-inserted virtuals checkPoseEnd 217 and checkWeaponChange 219; DX9 151 = SE 228)",
+   "vtable_label_fixed": false
+  },
+  "uPlWpCaliburn": {
+   "dx9": {
+    "dti": "0xe5acb0",
+    "vtable": "0xbe6548",
+    "ctor": "0x802920 (cWeaponCtrl::setup<uPlWpCaliburn>, inlined)",
+    "size": "0x13b0",
+    "parent": "uPlWpRedQueen"
+   },
+   "se": {
+    "vtable": "0x118f2a0"
+   },
+   "slot_shift": "only getDTI (slot 4) in range",
+   "vtable_label_fixed": false
+  },
+  "uPlayer::cBenchmarkCtrl": {
+   "dx9": {
+    "dti": "0xe5a500",
+    "vtable": "0xbe66bc",
+    "ctor": "inlined in MyDTI::newInstance 0x8029c0",
+    "size": "0x4c",
+    "parent": "MtObject"
+   },
+   "se": {
+    "vtable": "0x118fb00"
+   },
+   "slot_shift": "identity (5-slot MtObject vtable)",
+   "vtable_label_fixed": false
+  },
+  "uPlayer::cMotCancel": {
+   "dx9": {
+    "dti": "0xe5a2c0",
+    "vtable": "0xbe66ec",
+    "ctor": "inlined",
+    "size": "0x2c",
+    "parent": "MtObject"
+   },
+   "se": {
+    "vtable": "0x118fb38"
+   },
+   "slot_shift": "identity",
+   "vtable_label_fixed": true,
+   "notes": "0xBE66EC was labelled uPlayer::cSECtrl::vftable; its getDTI (0x8032A0) returns uPlayer::cMotCancel::DTI and slot 3 is cMotCancel::createProperty (mIsReserve/mStat). Relabelled. The real uPlayer::cSECtrl (DTI 0xE5A2A0, size 0x17C) vtable is not in this range and is now unlabelled."
+  },
+  "uPlCmnShl000": {
+   "dx9": {
+    "dti": "0xe5a520",
+    "vtable": "0xbe6720",
+    "ctor": "inlined in create 0x805860 / newInstance 0x805340",
+    "size": "0x17d0",
+    "parent": "uPlShl"
+   },
+   "se": {
+    "vtable": "0x118fbb0"
+   },
+   "slot_shift": "SE n -> DX9 n for 0..5; 8->6, 9->7 (moveEx), 12->9 (draw), 21->12 (kill), 50->29 (updateMaterial), 53->30 (main), 54->31 (updatePtr), 59->36 (damageMessage), 60->37 (hitMessage); n>=114 -> n-37 (update 77, setEfct 78, die 79, setWallHit 80, updatePos 81, updateMatrix 82, isEnd 83, Shl013 extras 121..134 -> 84..97)",
+   "vtable_label_fixed": false,
+   "notes": "slot 0 is the inherited uPlShl deleting dtor (ICF, no own members to destroy)"
+  },
+  "uPlDanteShl000": {
+   "dx9": {
+    "dti": "0xe5a560",
+    "vtable": "0xbe6890",
+    "ctor": "0x806390",
+    "size": "0x1800",
+    "parent": "uPlShl"
+   },
+   "se": {
+    "vtable": "0x118fe00"
+   },
+   "slot_shift": "SE n -> DX9 n for 0..5; 8->6, 9->7 (moveEx), 12->9 (draw), 21->12 (kill), 50->29 (updateMaterial), 53->30 (main), 54->31 (updatePtr), 59->36 (damageMessage), 60->37 (hitMessage); n>=114 -> n-37 (update 77, setEfct 78, die 79, setWallHit 80, updatePos 81, updateMatrix 82, isEnd 83, Shl013 extras 121..134 -> 84..97)",
+   "vtable_label_fixed": false
+  },
+  "uPlDanteBossShl000": {
+   "dx9": {
+    "dti": "0xe5a540",
+    "vtable": "0xbe69e0",
+    "ctor": "inlined (create 0x806300 calls uPlDanteShl000 ctor then writes own vftable)",
+    "size": "0x1810",
+    "parent": "uPlDanteShl000"
+   },
+   "se": {
+    "vtable": "0x118fff0"
+   },
+   "slot_shift": "SE n -> DX9 n for 0..5; 8->6, 9->7 (moveEx), 12->9 (draw), 21->12 (kill), 50->29 (updateMaterial), 53->30 (main), 54->31 (updatePtr), 59->36 (damageMessage), 60->37 (hitMessage); n>=114 -> n-37 (update 77, setEfct 78, die 79, setWallHit 80, updatePos 81, updateMatrix 82, isEnd 83, Shl013 extras 121..134 -> 84..97)",
+   "vtable_label_fixed": false
+  },
+  "uPlDanteShl001": {
+   "dx9": {
+    "dti": "0xe5a590",
+    "vtable": "0xbe6b60",
+    "ctor": "inlined (create 0x808ad0, newInstance 0x806ad0)",
+    "size": "0x1800",
+    "parent": "uPlShl"
+   },
+   "se": {
+    "vtable": "0x1190288"
+   },
+   "slot_shift": "SE n -> DX9 n for 0..5; 8->6, 9->7 (moveEx), 12->9 (draw), 21->12 (kill), 50->29 (updateMaterial), 53->30 (main), 54->31 (updatePtr), 59->36 (damageMessage), 60->37 (hitMessage); n>=114 -> n-37 (update 77, setEfct 78, die 79, setWallHit 80, updatePos 81, updateMatrix 82, isEnd 83, Shl013 extras 121..134 -> 84..97)",
+   "vtable_label_fixed": false,
+   "notes": "slot 0 = inherited uPlShl deleting dtor"
+  },
+  "uPlDanteShl002": {
+   "dx9": {
+    "dti": "0xe5a5b0",
+    "vtable": "0xbe6cc8",
+    "ctor": "0x808c30",
+    "size": "0x17f0",
+    "parent": "uPlShl"
+   },
+   "se": {
+    "vtable": "0x11904d8"
+   },
+   "slot_shift": "SE n -> DX9 n for 0..5; 8->6, 9->7 (moveEx), 12->9 (draw), 21->12 (kill), 50->29 (updateMaterial), 53->30 (main), 54->31 (updatePtr), 59->36 (damageMessage), 60->37 (hitMessage); n>=114 -> n-37 (update 77, setEfct 78, die 79, setWallHit 80, updatePos 81, updateMatrix 82, isEnd 83, Shl013 extras 121..134 -> 84..97)",
+   "vtable_label_fixed": false
+  },
+  "uPlDanteShl003": {
+   "dx9": {
+    "dti": "0xe5a5d0",
+    "vtable": "0xbe6e30",
+    "ctor": "0x809510",
+    "size": "0x17f0",
+    "parent": "uPlShl"
+   },
+   "se": {
+    "vtable": "0x1190728"
+   },
+   "slot_shift": "SE n -> DX9 n for 0..5; 8->6, 9->7 (moveEx), 12->9 (draw), 21->12 (kill), 50->29 (updateMaterial), 53->30 (main), 54->31 (updatePtr), 59->36 (damageMessage), 60->37 (hitMessage); n>=114 -> n-37 (update 77, setEfct 78, die 79, setWallHit 80, updatePos 81, updateMatrix 82, isEnd 83, Shl013 extras 121..134 -> 84..97)",
+   "vtable_label_fixed": false
+  },
+  "uPlDanteShl004": {
+   "dx9": {
+    "dti": "0xe5a5f0",
+    "vtable": "0xbe6f98",
+    "ctor": "0x80a1d0",
+    "size": "0x17f0",
+    "parent": "uPlShl"
+   },
+   "se": {
+    "vtable": "0x1190948"
+   },
+   "slot_shift": "SE n -> DX9 n for 0..5; 8->6, 9->7 (moveEx), 12->9 (draw), 21->12 (kill), 50->29 (updateMaterial), 53->30 (main), 54->31 (updatePtr), 59->36 (damageMessage), 60->37 (hitMessage); n>=114 -> n-37 (update 77, setEfct 78, die 79, setWallHit 80, updatePos 81, updateMatrix 82, isEnd 83, Shl013 extras 121..134 -> 84..97)",
+   "vtable_label_fixed": false,
+   "notes": "create(uActor*) not in range (inlined into caller 0x7BC2C0)"
+  },
+  "uPlDanteShl005": {
+   "dx9": {
+    "dti": "0xe5a610",
+    "vtable": "0xbe7100",
+    "ctor": "inlined in create 0x80bb10",
+    "size": "0x1800",
+    "parent": "uPlShl"
+   },
+   "se": {
+    "vtable": "0x1190b68"
+   },
+   "slot_shift": "SE n -> DX9 n for 0..5; 8->6, 9->7 (moveEx), 12->9 (draw), 21->12 (kill), 50->29 (updateMaterial), 53->30 (main), 54->31 (updatePtr), 59->36 (damageMessage), 60->37 (hitMessage); n>=114 -> n-37 (update 77, setEfct 78, die 79, setWallHit 80, updatePos 81, updateMatrix 82, isEnd 83, Shl013 extras 121..134 -> 84..97)",
+   "vtable_label_fixed": false
+  },
+  "uPlDanteShl006": {
+   "dx9": {
+    "dti": "0xe5a630",
+    "vtable": "0xbe7268",
+    "ctor": "inlined in create 0x80cee0",
+    "size": "0x1800",
+    "parent": "uPlShl"
+   },
+   "se": {
+    "vtable": "0x1190d88"
+   },
+   "slot_shift": "SE n -> DX9 n for 0..5; 8->6, 9->7 (moveEx), 12->9 (draw), 21->12 (kill), 50->29 (updateMaterial), 53->30 (main), 54->31 (updatePtr), 59->36 (damageMessage), 60->37 (hitMessage); n>=114 -> n-37 (update 77, setEfct 78, die 79, setWallHit 80, updatePos 81, updateMatrix 82, isEnd 83, Shl013 extras 121..134 -> 84..97)",
+   "vtable_label_fixed": false
+  },
+  "uPlDanteShl007": {
+   "dx9": {
+    "dti": "0xe5a650",
+    "vtable": "0xbe73d0",
+    "ctor": "inlined in create 0x80e050",
+    "size": "0x1800",
+    "parent": "uPlShl"
+   },
+   "se": {
+    "vtable": "0x1190fa8"
+   },
+   "slot_shift": "SE n -> DX9 n for 0..5; 8->6, 9->7 (moveEx), 12->9 (draw), 21->12 (kill), 50->29 (updateMaterial), 53->30 (main), 54->31 (updatePtr), 59->36 (damageMessage), 60->37 (hitMessage); n>=114 -> n-37 (update 77, setEfct 78, die 79, setWallHit 80, updatePos 81, updateMatrix 82, isEnd 83, Shl013 extras 121..134 -> 84..97)",
+   "vtable_label_fixed": false
+  },
+  "uPlDanteShl008": {
+   "dx9": {
+    "dti": "0xe5a670",
+    "vtable": "0xbe7538",
+    "ctor": "inlined in create 0x80ee80",
+    "size": "0x1800",
+    "parent": "uPlShl"
+   },
+   "se": {
+    "vtable": "0x11911c8"
+   },
+   "slot_shift": "SE n -> DX9 n for 0..5; 8->6, 9->7 (moveEx), 12->9 (draw), 21->12 (kill), 50->29 (updateMaterial), 53->30 (main), 54->31 (updatePtr), 59->36 (damageMessage), 60->37 (hitMessage); n>=114 -> n-37 (update 77, setEfct 78, die 79, setWallHit 80, updatePos 81, updateMatrix 82, isEnd 83, Shl013 extras 121..134 -> 84..97)",
+   "vtable_label_fixed": false
+  },
+  "uPlDanteShl009": {
+   "dx9": {
+    "dti": "0xe5a690",
+    "vtable": "0xbe76a0",
+    "ctor": "inlined in create 0x80fa90",
+    "size": "0x1800",
+    "parent": "uPlShl"
+   },
+   "se": {
+    "vtable": "0x11913e8"
+   },
+   "slot_shift": "SE n -> DX9 n for 0..5; 8->6, 9->7 (moveEx), 12->9 (draw), 21->12 (kill), 50->29 (updateMaterial), 53->30 (main), 54->31 (updatePtr), 59->36 (damageMessage), 60->37 (hitMessage); n>=114 -> n-37 (update 77, setEfct 78, die 79, setWallHit 80, updatePos 81, updateMatrix 82, isEnd 83, Shl013 extras 121..134 -> 84..97)",
+   "vtable_label_fixed": false
+  },
+  "uPlDanteShl010": {
+   "dx9": {
+    "dti": "0xe5a6b0",
+    "vtable": "0xbe7808",
+    "ctor": "0x80fc80",
+    "size": "0x17f0",
+    "parent": "uPlShl"
+   },
+   "se": {
+    "vtable": "0x1191608"
+   },
+   "slot_shift": "SE n -> DX9 n for 0..5; 8->6, 9->7 (moveEx), 12->9 (draw), 21->12 (kill), 50->29 (updateMaterial), 53->30 (main), 54->31 (updatePtr), 59->36 (damageMessage), 60->37 (hitMessage); n>=114 -> n-37 (update 77, setEfct 78, die 79, setWallHit 80, updatePos 81, updateMatrix 82, isEnd 83, Shl013 extras 121..134 -> 84..97)",
+   "vtable_label_fixed": false,
+   "notes": "setEfct (slot 78) is 0x81C0B0, outside range (shared with Shl015)"
+  },
+  "uPlDanteShl011": {
+   "dx9": {
+    "dti": "0xe5a6d0",
+    "vtable": "0xbe79a0",
+    "ctor": "0x8106b0",
+    "size": "0x2690",
+    "parent": "uPlShl"
+   },
+   "se": {
+    "vtable": "0x1191828"
+   },
+   "slot_shift": "SE n -> DX9 n for 0..5; 8->6, 9->7 (moveEx), 12->9 (draw), 21->12 (kill), 50->29 (updateMaterial), 53->30 (main), 54->31 (updatePtr), 59->36 (damageMessage), 60->37 (hitMessage); n>=114 -> n-37 (update 77, setEfct 78, die 79, setWallHit 80, updatePos 81, updateMatrix 82, isEnd 83, Shl013 extras 121..134 -> 84..97)",
+   "vtable_label_fixed": false,
+   "notes": "updatePtr (slot 31) = 0x81EC70 outside range (shared with Shl014); setWallHit = 0x81B550 (Shl014 region)"
+  },
+  "uPlDanteShl012": {
+   "dx9": {
+    "dti": "0xe5a6f0",
+    "vtable": "0xbe7b08",
+    "ctor": "inlined (create 0x811f00, newInstance 0x811960)",
+    "size": "0x17d0",
+    "parent": "uPlShl"
+   },
+   "se": {
+    "vtable": "0x1191a50"
+   },
+   "slot_shift": "SE n -> DX9 n for 0..5; 8->6, 9->7 (moveEx), 12->9 (draw), 21->12 (kill), 50->29 (updateMaterial), 53->30 (main), 54->31 (updatePtr), 59->36 (damageMessage), 60->37 (hitMessage); n>=114 -> n-37 (update 77, setEfct 78, die 79, setWallHit 80, updatePos 81, updateMatrix 82, isEnd 83, Shl013 extras 121..134 -> 84..97)",
+   "vtable_label_fixed": false,
+   "notes": "slot 0 = inherited uPlShl deleting dtor"
+  },
+  "uPlDanteShl013": {
+   "dx9": {
+    "dti": "0xe5a990",
+    "vtable": "0xbe7df8",
+    "ctor": "0x811fe0",
+    "size": "0x1880",
+    "parent": "uPlShl"
+   },
+   "se": {
+    "vtable": "0x1191c80"
+   },
+   "slot_shift": "SE n -> DX9 n for 0..5; 8->6, 9->7 (moveEx), 12->9 (draw), 21->12 (kill), 50->29 (updateMaterial), 53->30 (main), 54->31 (updatePtr), 59->36 (damageMessage), 60->37 (hitMessage); n>=114 -> n-37 (update 77, setEfct 78, die 79, setWallHit 80, updatePos 81, updateMatrix 82, isEnd 83, Shl013 extras 121..134 -> 84..97)",
+   "vtable_label_fixed": false,
+   "notes": "98-slot vtable; DX9 slots 84..97 = SE 121..134 (setBurst..setMoveInit). SE non-virtuals setDisp/checkRequest/create are inlined in DX9; move/moveEx/draw slots point to shared base bodies outside range."
+  },
+  "uPlDanteShl014": {
+   "dx9": {
+    "dti": "0xe5a9b0",
+    "vtable": "0xbe7f98",
+    "ctor": "0x819bb0",
+    "size": "0x3530",
+    "parent": "uPlShl"
+   },
+   "se": {
+    "vtable": "0x1192150"
+   },
+   "slot_shift": "SE n -> DX9 n for 0..5; 8->6, 9->7 (moveEx), 12->9 (draw), 21->12 (kill), 50->29 (updateMaterial), 53->30 (main), 54->31 (updatePtr), 59->36 (damageMessage), 60->37 (hitMessage); n>=114 -> n-37 (update 77, setEfct 78, die 79, setWallHit 80, updatePos 81, updateMatrix 82, isEnd 83, Shl013 extras 121..134 -> 84..97)",
+   "vtable_label_fixed": false
+  },
+  "uPlDanteShl015": {
+   "dx9": {
+    "dti": "0xe5a9d0",
+    "vtable": "0xbe8100",
+    "ctor": "0x81b6f0",
+    "size": "0x17f0",
+    "parent": "uPlShl"
+   },
+   "se": {
+    "vtable": "0x1192370"
+   },
+   "slot_shift": "SE n -> DX9 n for 0..5; 8->6, 9->7 (moveEx), 12->9 (draw), 21->12 (kill), 50->29 (updateMaterial), 53->30 (main), 54->31 (updatePtr), 59->36 (damageMessage), 60->37 (hitMessage); n>=114 -> n-37 (update 77, setEfct 78, die 79, setWallHit 80, updatePos 81, updateMatrix 82, isEnd 83, Shl013 extras 121..134 -> 84..97)",
+   "vtable_label_fixed": false,
+   "notes": "partially in range: main/hitMessage/setEfct/updateMatrix live past 0x81C000"
+  }
+ },
+ "functions": [
+  {
+   "dx9_ea": "0x800300",
+   "old_dx9_name": "uPlayerNero::moveAtckRedQueenDriveAirStinger",
+   "new_dx9_name": "uPlayerNero::moveAtckRedQueenDriveAirStinger",
+   "se_ea": "0x9fd470",
+   "se_name": "uPlayerNero::moveAtckRedQueenDriveAirStinger(void)",
+   "confidence": "high",
+   "evidence": [
+    "order",
+    "consts",
+    "callees"
+   ],
+   "action": "confirmed",
+   "notes": "motion-ID immediates identical to SE"
+  },
+  {
+   "dx9_ea": "0x800810",
+   "old_dx9_name": "uPlayerNero::moveAtckRedQueenDriveKabuto",
+   "new_dx9_name": "uPlayerNero::moveAtckRedQueenDriveKabuto",
+   "se_ea": "0x9fd9c0",
+   "se_name": "uPlayerNero::moveAtckRedQueenDriveKabuto(void)",
+   "confidence": "high",
+   "evidence": [
+    "order",
+    "consts",
+    "callees"
+   ],
+   "action": "confirmed",
+   "notes": "motion-ID immediates identical to SE"
+  },
+  {
+   "dx9_ea": "0x800b00",
+   "old_dx9_name": "uPlayerNero::moveAtckRedQueenDropKick",
+   "new_dx9_name": "uPlayerNero::moveAtckRedQueenDropKick",
+   "se_ea": "0x9fdcf0",
+   "se_name": "uPlayerNero::moveAtckRedQueenDropKick(void)",
+   "confidence": "high",
+   "evidence": [
+    "order",
+    "consts",
+    "callees"
+   ],
+   "action": "confirmed",
+   "notes": "motion-ID immediates identical to SE"
+  },
+  {
+   "dx9_ea": "0x800db0",
+   "old_dx9_name": "uPlayerNero::moveAtckBlueRoseShot",
+   "new_dx9_name": "uPlayerNero::moveAtckBlueRoseShot",
+   "se_ea": "0x9fdf70",
+   "se_name": "uPlayerNero::moveAtckBlueRoseShot(void)",
+   "confidence": "high",
+   "evidence": [
+    "order",
+    "consts",
+    "callees"
+   ],
+   "action": "confirmed",
+   "notes": "motion-ID immediates identical to SE"
+  },
+  {
+   "dx9_ea": "0x8010f0",
+   "old_dx9_name": "uPlayerNero::moveAtckBlueRoseShotAir",
+   "new_dx9_name": "uPlayerNero::moveAtckBlueRoseShotAir",
+   "se_ea": "0x9fe220",
+   "se_name": "uPlayerNero::moveAtckBlueRoseShotAir(void)",
+   "confidence": "high",
+   "evidence": [
+    "order",
+    "consts",
+    "callees"
+   ],
+   "action": "confirmed",
+   "notes": "motion-ID immediates identical to SE"
+  },
+  {
+   "dx9_ea": "0x801750",
+   "old_dx9_name": "uPlayerNero::moveAtckBlueRoseChargeShot",
+   "new_dx9_name": "uPlayerNero::moveAtckBlueRoseChargeShot",
+   "se_ea": "0x9fe800",
+   "se_name": "uPlayerNero::moveAtckBlueRoseChargeShot(void)",
+   "confidence": "high",
+   "evidence": [
+    "order",
+    "consts",
+    "callees"
+   ],
+   "action": "confirmed",
+   "notes": "motion-ID immediates identical to SE"
+  },
+  {
+   "dx9_ea": "0x801bf0",
+   "old_dx9_name": "uPlayerNero::moveAtckBlueRoseChargeShotAir",
+   "new_dx9_name": "uPlayerNero::moveAtckBlueRoseChargeShotAir",
+   "se_ea": "0x9fec00",
+   "se_name": "uPlayerNero::moveAtckBlueRoseChargeShotAir(void)",
+   "confidence": "high",
+   "evidence": [
+    "order",
+    "consts",
+    "callees"
+   ],
+   "action": "confirmed",
+   "notes": "motion-ID immediates identical to SE"
+  },
+  {
+   "dx9_ea": "0x802250",
+   "old_dx9_name": "sub_802250",
+   "new_dx9_name": "uPlayerNeroTutorial::getDTI",
+   "se_ea": "0xa030f0",
+   "se_name": "uPlayerNeroTutorial::getDTI(void)",
+   "confidence": "high",
+   "evidence": [
+    "vtable",
+    "structural"
+   ],
+   "action": "renamed",
+   "notes": ""
+  },
+  {
+   "dx9_ea": "0x802260",
+   "old_dx9_name": "sub_802260",
+   "new_dx9_name": "uPlWpCaliburn::getDTI",
+   "se_ea": "0xa030b0",
+   "se_name": "uPlWpCaliburn::getDTI(void)",
+   "confidence": "high",
+   "evidence": [
+    "vtable",
+    "structural"
+   ],
+   "action": "renamed",
+   "notes": ""
+  },
+  {
+   "dx9_ea": "0x802270",
+   "old_dx9_name": "loc_802270",
+   "new_dx9_name": "uPlayerNeroTutorial::MyDTI::newInstance",
+   "se_ea": "0xa020c0",
+   "se_name": "uPlayerNeroTutorial::MyDTI::newInstance(void)",
+   "confidence": "high",
+   "evidence": [
+    "structural",
+    "decompile"
+   ],
+   "action": "renamed",
+   "notes": "was undefined code; allocs 0xD690 (=DTI size), inlined ctor; referenced from DTI vtable"
+  },
+  {
+   "dx9_ea": "0x8022c0",
+   "old_dx9_name": "uPlayerNeroTutorial::uPlayerNeroTutorial",
+   "new_dx9_name": "uPlayerNeroTutorial::uPlayerNeroTutorial",
+   "se_ea": "0xa02010",
+   "se_name": "uPlayerNeroTutorial::uPlayerNeroTutorial(void)",
+   "confidence": "high",
+   "evidence": [
+    "callees",
+    "structural"
+   ],
+   "action": "confirmed",
+   "notes": ""
+  },
+  {
+   "dx9_ea": "0x8022f0",
+   "old_dx9_name": "loc_8022F0",
+   "new_dx9_name": "uPlayerNeroTutorial::scalar_deleting_dtor",
+   "se_ea": "0xa03170",
+   "se_name": "uPlayerNeroTutorial::`scalar deleting destructor'(uint)",
+   "confidence": "high",
+   "evidence": [
+    "vtable",
+    "structural"
+   ],
+   "action": "renamed",
+   "notes": "was undefined code (vtable slot 0)"
+  },
+  {
+   "dx9_ea": "0x802320",
+   "old_dx9_name": "sub_802320",
+   "new_dx9_name": "uPlayerNeroTutorial::initWeapon",
+   "se_ea": "0xa02120",
+   "se_name": "uPlayerNeroTutorial::initWeapon(void)",
+   "confidence": "high",
+   "evidence": [
+    "vtable",
+    "callees"
+   ],
+   "action": "renamed",
+   "notes": "DX9 slot 182 = SE 288; setPoseMotionTbl/AngleLimit inlined"
+  },
+  {
+   "dx9_ea": "0x802390",
+   "old_dx9_name": "sub_802390",
+   "new_dx9_name": "uPlayerNeroTutorial::initModel",
+   "se_ea": "0xa03030",
+   "se_name": "uPlayerNeroTutorial::initModel(void)",
+   "confidence": "high",
+   "evidence": [
+    "vtable",
+    "strings"
+   ],
+   "action": "renamed",
+   "notes": "DX9 slot 183 = SE 289; DX9 has no costume switch: body is SE initModel_Normal inlined (pl024 strings); SE initModel_Ex1/Ex2 have no DX9 counterpart"
+  },
+  {
+   "dx9_ea": "0x8028c0",
+   "old_dx9_name": "sub_8028C0",
+   "new_dx9_name": "uPlayerNeroTutorial::reset",
+   "se_ea": "0xa02050",
+   "se_name": "uPlayerNeroTutorial::reset(MtVector3 &,float,bool)",
+   "confidence": "high",
+   "evidence": [
+    "vtable",
+    "callees"
+   ],
+   "action": "renamed",
+   "notes": "DX9 slot 77 = SE 114; tail-calls uPlayerNero::reset"
+  },
+  {
+   "dx9_ea": "0x8028f0",
+   "old_dx9_name": "sub_8028F0",
+   "new_dx9_name": "uPlayerNeroTutorial::setProvokeMtn",
+   "se_ea": "0xa02080",
+   "se_name": "uPlayerNeroTutorial::setProvokeMtn(void)",
+   "confidence": "high",
+   "evidence": [
+    "vtable",
+    "consts"
+   ],
+   "action": "renamed",
+   "notes": "DX9 slot 160 = SE 240; motion 152"
+  },
+  {
+   "dx9_ea": "0x802920",
+   "old_dx9_name": "sub_802920",
+   "new_dx9_name": "uPlayer::cWeaponCtrl::setup_uPlWpCaliburn_",
+   "se_ea": "0xa03100",
+   "se_name": "uPlayer::cWeaponCtrl::setup<uPlWpCaliburn>(void)",
+   "confidence": "high",
+   "evidence": [
+    "callees",
+    "structural"
+   ],
+   "action": "renamed",
+   "notes": "called from initWeapon; allocs 0x13B0 (uPlWpCaliburn DTI size), writes uPlWpCaliburn::vftable; RedQueen ctor inlined; IDA sanitized <> to _ in the name"
+  },
+  {
+   "dx9_ea": "0x8029b0",
+   "old_dx9_name": "sub_8029B0",
+   "new_dx9_name": "uPlayer::cBenchmarkCtrl::getDTI",
+   "se_ea": "0xa03e80",
+   "se_name": "uPlayer::cBenchmarkCtrl::getDTI(void)",
+   "confidence": "high",
+   "evidence": [
+    "vtable",
+    "structural"
+   ],
+   "action": "renamed",
+   "notes": ""
+  },
+  {
+   "dx9_ea": "0x8029c0",
+   "old_dx9_name": "loc_8029C0",
+   "new_dx9_name": "uPlayer::cBenchmarkCtrl::MyDTI::newInstance",
+   "se_ea": "0xa03600",
+   "se_name": "uPlayer::cBenchmarkCtrl::MyDTI::newInstance(void)",
+   "confidence": "high",
+   "evidence": [
+    "structural",
+    "consts"
+   ],
+   "action": "renamed",
+   "notes": "was undefined code; allocs 0x4C (=DTI size), inlined ctor"
+  },
+  {
+   "dx9_ea": "0x802a10",
+   "old_dx9_name": "sub_802A10",
+   "new_dx9_name": "uPlayer::cBenchmarkCtrl::update",
+   "se_ea": "0xa03cb0",
+   "se_name": "uPlayer::cBenchmarkCtrl::update(void)",
+   "confidence": "high",
+   "evidence": [
+    "callees",
+    "consts",
+    "order"
+   ],
+   "action": "renamed",
+   "notes": "calls getActType/getTarget/getNearestEnemyDistance/updateAction/updateDevilTrigger/updateStyleChange/updateWeaponChange"
+  },
+  {
+   "dx9_ea": "0x802b60",
+   "old_dx9_name": "sub_802B60",
+   "new_dx9_name": "uPlayer::cBenchmarkCtrl::getActType",
+   "se_ea": "0xa03340",
+   "se_name": "uPlayer::cBenchmarkCtrl::getActType(int)",
+   "confidence": "high",
+   "evidence": [
+    "consts",
+    "decompile"
+   ],
+   "action": "renamed",
+   "notes": "byte-indexed switch; caller does the >22 range check"
+  },
+  {
+   "dx9_ea": "0x802b6e",
+   "old_dx9_name": "sub_802B6E",
+   "new_dx9_name": "uPlayer::cBenchmarkCtrl::getActType_chunk_802B6E",
+   "se_ea": "0xa03340",
+   "se_name": "uPlayer::cBenchmarkCtrl::getActType(int)",
+   "confidence": "high",
+   "evidence": [
+    "decompile"
+   ],
+   "action": "renamed",
+   "notes": "switch-case return fragment of getActType (0x802B60) that IDA split into its own function"
+  },
+  {
+   "dx9_ea": "0x802b74",
+   "old_dx9_name": "sub_802B74",
+   "new_dx9_name": "uPlayer::cBenchmarkCtrl::getActType_chunk_802B74",
+   "se_ea": "0xa03340",
+   "se_name": "uPlayer::cBenchmarkCtrl::getActType(int)",
+   "confidence": "high",
+   "evidence": [
+    "decompile"
+   ],
+   "action": "renamed",
+   "notes": "switch-case return fragment of getActType (0x802B60) that IDA split into its own function"
+  },
+  {
+   "dx9_ea": "0x802b7a",
+   "old_dx9_name": "sub_802B7A",
+   "new_dx9_name": "uPlayer::cBenchmarkCtrl::getActType_chunk_802B7A",
+   "se_ea": "0xa03340",
+   "se_name": "uPlayer::cBenchmarkCtrl::getActType(int)",
+   "confidence": "high",
+   "evidence": [
+    "decompile"
+   ],
+   "action": "renamed",
+   "notes": "switch-case return fragment of getActType (0x802B60) that IDA split into its own function"
+  },
+  {
+   "dx9_ea": "0x802b80",
+   "old_dx9_name": "sub_802B80",
+   "new_dx9_name": "uPlayer::cBenchmarkCtrl::getActType_chunk_802B80",
+   "se_ea": "0xa03340",
+   "se_name": "uPlayer::cBenchmarkCtrl::getActType(int)",
+   "confidence": "high",
+   "evidence": [
+    "decompile"
+   ],
+   "action": "renamed",
+   "notes": "switch-case return fragment of getActType (0x802B60) that IDA split into its own function"
+  },
+  {
+   "dx9_ea": "0x802bb0",
+   "old_dx9_name": "sub_802BB0",
+   "new_dx9_name": "uPlayer::cBenchmarkCtrl::getTarget",
+   "se_ea": "0xa03690",
+   "se_name": "uPlayer::cBenchmarkCtrl::getTarget(void)",
+   "confidence": "high",
+   "evidence": [
+    "callees",
+    "consts"
+   ],
+   "action": "renamed",
+   "notes": "sLockOnTargetMgr walk; called from update"
+  },
+  {
+   "dx9_ea": "0x802c60",
+   "old_dx9_name": "sub_802C60",
+   "new_dx9_name": "uPlayer::cBenchmarkCtrl::getAngleToTarget",
+   "se_ea": "0xa037c0",
+   "se_name": "uPlayer::cBenchmarkCtrl::getAngleToTarget(void)",
+   "confidence": "high",
+   "evidence": [
+    "decompile",
+    "callees"
+   ],
+   "action": "renamed",
+   "notes": "atan2 to target at +0x2C, RadianClamp inlined; SE overload getAngleToTarget(void)"
+  },
+  {
+   "dx9_ea": "0x802cf0",
+   "old_dx9_name": "sub_802CF0",
+   "new_dx9_name": "uPlayer::cBenchmarkCtrl::updateAction",
+   "se_ea": "0xa03b30",
+   "se_name": "uPlayer::cBenchmarkCtrl::updateAction(void)",
+   "confidence": "high",
+   "evidence": [
+    "callees",
+    "consts"
+   ],
+   "action": "renamed",
+   "notes": "imm 1536, calls checkRayToTarget/choiceAtck"
+  },
+  {
+   "dx9_ea": "0x802e20",
+   "old_dx9_name": "sub_802E20",
+   "new_dx9_name": "uPlayer::cBenchmarkCtrl::choiceAtck",
+   "se_ea": "0xa03810",
+   "se_name": "uPlayer::cBenchmarkCtrl::choiceAtck(void)",
+   "confidence": "high",
+   "evidence": [
+    "callees",
+    "order"
+   ],
+   "action": "renamed",
+   "notes": ""
+  },
+  {
+   "dx9_ea": "0x802ed0",
+   "old_dx9_name": "sub_802ED0",
+   "new_dx9_name": "uPlayer::cBenchmarkCtrl::checkRayToTarget",
+   "se_ea": "0xa038e0",
+   "se_name": "uPlayer::cBenchmarkCtrl::checkRayToTarget(void)",
+   "confidence": "high",
+   "evidence": [
+    "callees",
+    "consts"
+   ],
+   "action": "renamed",
+   "notes": ""
+  },
+  {
+   "dx9_ea": "0x803020",
+   "old_dx9_name": "sub_803020",
+   "new_dx9_name": "uPlayer::cBenchmarkCtrl::updateDevilTrigger",
+   "se_ea": "0xa034c0",
+   "se_name": "uPlayer::cBenchmarkCtrl::updateDevilTrigger(void)",
+   "confidence": "high",
+   "evidence": [
+    "consts",
+    "callees"
+   ],
+   "action": "renamed",
+   "notes": "imms 31/64 + MtRandom"
+  },
+  {
+   "dx9_ea": "0x803070",
+   "old_dx9_name": "sub_803070",
+   "new_dx9_name": "uPlayer::cBenchmarkCtrl::updateStyleChange",
+   "se_ea": "0xa03510",
+   "se_name": "uPlayer::cBenchmarkCtrl::updateStyleChange(void)",
+   "confidence": "high",
+   "evidence": [
+    "consts",
+    "callees"
+   ],
+   "action": "renamed",
+   "notes": "imms 0x1000..0x8000"
+  },
+  {
+   "dx9_ea": "0x803100",
+   "old_dx9_name": "sub_803100",
+   "new_dx9_name": "uPlayer::cBenchmarkCtrl::updateWeaponChange",
+   "se_ea": "0xa035a0",
+   "se_name": "uPlayer::cBenchmarkCtrl::updateWeaponChange(void)",
+   "confidence": "high",
+   "evidence": [
+    "consts",
+    "callees"
+   ],
+   "action": "renamed",
+   "notes": "imms 128/256"
+  },
+  {
+   "dx9_ea": "0x803160",
+   "old_dx9_name": "sub_803160",
+   "new_dx9_name": "uPlayer::cBenchmarkCtrl::getNearestEnemyDistance",
+   "se_ea": "0xa03a00",
+   "se_name": "uPlayer::cBenchmarkCtrl::getNearestEnemyDistance(void)",
+   "confidence": "high",
+   "evidence": [
+    "consts",
+    "callees"
+   ],
+   "action": "renamed",
+   "notes": "sUnit move-line walk"
+  },
+  {
+   "dx9_ea": "0x8032a0",
+   "old_dx9_name": "sub_8032A0",
+   "new_dx9_name": "uPlayer::cMotCancel::getDTI",
+   "se_ea": "0xa04290",
+   "se_name": "uPlayer::cMotCancel::getDTI(void)",
+   "confidence": "high",
+   "evidence": [
+    "vtable",
+    "structural"
+   ],
+   "action": "renamed",
+   "notes": "returns uPlayer::cMotCancel::DTI; vtable 0xBE66EC was mislabelled uPlayer::cSECtrl::vftable"
+  },
+  {
+   "dx9_ea": "0x8032b0",
+   "old_dx9_name": "uPlayer::initMotCancel",
+   "new_dx9_name": "uPlayer::initMotCancel",
+   "se_ea": "0xa04060",
+   "se_name": "uPlayer::initMotCancel(void)",
+   "confidence": "high",
+   "evidence": [
+    "order",
+    "consts"
+   ],
+   "action": "confirmed",
+   "notes": ""
+  },
+  {
+   "dx9_ea": "0x803320",
+   "old_dx9_name": "uPlayer::updateMotCancel",
+   "new_dx9_name": "uPlayer::updateMotCancel",
+   "se_ea": "0xa040d0",
+   "se_name": "uPlayer::updateMotCancel(void)",
+   "confidence": "high",
+   "evidence": [
+    "order",
+    "consts"
+   ],
+   "action": "confirmed",
+   "notes": ""
+  },
+  {
+   "dx9_ea": "0x803390",
+   "old_dx9_name": "uPlayer::checkMotCnclJump",
+   "new_dx9_name": "uPlayer::checkMotCnclJump",
+   "se_ea": "0xa03ef0",
+   "se_name": "uPlayer::checkMotCnclJump(void)",
+   "confidence": "high",
+   "evidence": [
+    "order",
+    "callees"
+   ],
+   "action": "confirmed",
+   "notes": ""
+  },
+  {
+   "dx9_ea": "0x803420",
+   "old_dx9_name": "uPlayer::checkMotCnclChouhatsu",
+   "new_dx9_name": "uPlayer::checkMotCnclChouhatsu",
+   "se_ea": "0xa03f60",
+   "se_name": "uPlayer::checkMotCnclChouhatsu(void)",
+   "confidence": "high",
+   "evidence": [
+    "order",
+    "consts"
+   ],
+   "action": "confirmed",
+   "notes": ""
+  },
+  {
+   "dx9_ea": "0x803430",
+   "old_dx9_name": "sub_803430",
+   "new_dx9_name": "uPlayer::cMotCancel::createProperty",
+   "se_ea": "0xa04160",
+   "se_name": "uPlayer::cMotCancel::createProperty(MtPropertyList &)",
+   "confidence": "high",
+   "evidence": [
+    "vtable",
+    "strings"
+   ],
+   "action": "renamed",
+   "notes": "mIsReserve/mStat"
+  },
+  {
+   "dx9_ea": "0x8034e0",
+   "old_dx9_name": "sub_8034E0",
+   "new_dx9_name": "sub_8034E0",
+   "se_ea": "0xa061d0",
+   "se_name": "uPlayer::isEnableAtckForceCancel(void)",
+   "confidence": "medium",
+   "evidence": [
+    "callees"
+   ],
+   "action": "commented",
+   "notes": "only caller is uPlayer::checkAtck (SE checkAtck->isEnableAtckForceCancel); alt candidate uPlayer::checkMotCnclEnable(void) @ 0xa03f70 (same size 28, neighbour of cMotCancel code); reads flag bytes this+0x3234..0x3236"
+  },
+  {
+   "dx9_ea": "0x803500",
+   "old_dx9_name": "uPlayer::checkBeforeAction",
+   "new_dx9_name": "uPlayer::checkBeforeAction",
+   "se_ea": "0xa05f00",
+   "se_name": "uPlayer::checkBeforeAction(void)",
+   "confidence": "high",
+   "evidence": [
+    "vtable",
+    "callees"
+   ],
+   "action": "confirmed",
+   "notes": "DX9 slot 147 = SE 224"
+  },
+  {
+   "dx9_ea": "0x8035a0",
+   "old_dx9_name": "uPlayer::checkAction",
+   "new_dx9_name": "uPlayer::checkAction",
+   "se_ea": "0xa06000",
+   "se_name": "uPlayer::checkAction(void)",
+   "confidence": "high",
+   "evidence": [
+    "vtable",
+    "callees"
+   ],
+   "action": "confirmed",
+   "notes": "DX9 slot 148 = SE 225"
+  },
+  {
+   "dx9_ea": "0x803780",
+   "old_dx9_name": "sub_803780",
+   "new_dx9_name": "uPlayer::checkFootwork",
+   "se_ea": "0xa042f0",
+   "se_name": "uPlayer::checkFootwork(void)",
+   "confidence": "high",
+   "evidence": [
+    "callees",
+    "order"
+   ],
+   "action": "renamed",
+   "notes": "2nd callee of checkAction; calls setActionFootwork"
+  },
+  {
+   "dx9_ea": "0x8037c0",
+   "old_dx9_name": "uPlayerDante::checkRunBegin",
+   "new_dx9_name": "uPlayer::checkRunBegin",
+   "se_ea": "0xa04330",
+   "se_name": "uPlayer::checkRunBegin(void)",
+   "confidence": "high",
+   "evidence": [
+    "callees",
+    "order",
+    "decompile"
+   ],
+   "action": "replaced_existing",
+   "notes": "1st callee of uPlayer::checkAction (not Dante-specific)"
+  },
+  {
+   "dx9_ea": "0x803840",
+   "old_dx9_name": "sub_803840",
+   "new_dx9_name": "uPlayer::checkRunEnd",
+   "se_ea": "0xa043a0",
+   "se_name": "uPlayer::checkRunEnd(void)",
+   "confidence": "high",
+   "evidence": [
+    "callees",
+    "consts"
+   ],
+   "action": "renamed",
+   "notes": "imm 17"
+  },
+  {
+   "dx9_ea": "0x803880",
+   "old_dx9_name": "sub_803880",
+   "new_dx9_name": "uPlayer::checkWJumpBegin",
+   "se_ea": "0xa043f0",
+   "se_name": "uPlayer::checkWJumpBegin(void)",
+   "confidence": "high",
+   "evidence": [
+    "vtable",
+    "consts"
+   ],
+   "action": "renamed",
+   "notes": "DX9 slot 142 = SE 216; cUtil::checkGround (SE checkHeight) + 131584 filter"
+  },
+  {
+   "dx9_ea": "0x803990",
+   "old_dx9_name": "uPlayer::checkPoseBegin",
+   "new_dx9_name": "uPlayer::checkPoseBegin",
+   "se_ea": "0xa04500",
+   "se_name": "uPlayer::checkPoseBegin(void)",
+   "confidence": "high",
+   "evidence": [
+    "callees",
+    "order"
+   ],
+   "action": "confirmed",
+   "notes": ""
+  },
+  {
+   "dx9_ea": "0x8039f0",
+   "old_dx9_name": "sub_8039F0",
+   "new_dx9_name": "uPlayer::checkPoseEnd",
+   "se_ea": "0xa04560",
+   "se_name": "uPlayer::checkPoseEnd(void)",
+   "confidence": "high",
+   "evidence": [
+    "callees",
+    "consts",
+    "order"
+   ],
+   "action": "renamed",
+   "notes": "imms 16/32; virtual (slot 217) in SE, direct call in DX9 checkAction"
+  },
+  {
+   "dx9_ea": "0x803a40",
+   "old_dx9_name": "sub_803A40",
+   "new_dx9_name": "uPlayer::checkPoseRunBegin",
+   "se_ea": "0xa045b0",
+   "se_name": "uPlayer::checkPoseRunBegin(void)",
+   "confidence": "high",
+   "evidence": [
+    "callees",
+    "consts"
+   ],
+   "action": "renamed",
+   "notes": "imms 16/17/64/256"
+  },
+  {
+   "dx9_ea": "0x803b10",
+   "old_dx9_name": "sub_803B10",
+   "new_dx9_name": "uPlayer::checkPoseRunEnd",
+   "se_ea": "0xa04660",
+   "se_name": "uPlayer::checkPoseRunEnd(void)",
+   "confidence": "high",
+   "evidence": [
+    "callees",
+    "consts"
+   ],
+   "action": "renamed",
+   "notes": "imm 512"
+  },
+  {
+   "dx9_ea": "0x803b70",
+   "old_dx9_name": "uPlayer::checkAtck",
+   "new_dx9_name": "uPlayer::checkAtck",
+   "se_ea": "0xa04720",
+   "se_name": "uPlayer::checkAtck(void)",
+   "confidence": "high",
+   "evidence": [
+    "callees",
+    "consts"
+   ],
+   "action": "confirmed",
+   "notes": ""
+  },
+  {
+   "dx9_ea": "0x803d60",
+   "old_dx9_name": "uPlayer::checkFloor",
+   "new_dx9_name": "uPlayer::checkFloor",
+   "se_ea": "0xa058b0",
+   "se_name": "uPlayer::checkFloor(void)",
+   "confidence": "high",
+   "evidence": [
+    "callees"
+   ],
+   "action": "confirmed",
+   "notes": ""
+  },
+  {
+   "dx9_ea": "0x803e40",
+   "old_dx9_name": "uPlayer::checkProvoke",
+   "new_dx9_name": "uPlayer::checkProvoke",
+   "se_ea": "0xa04900",
+   "se_name": "uPlayer::checkProvoke(void)",
+   "confidence": "high",
+   "evidence": [
+    "callees"
+   ],
+   "action": "confirmed",
+   "notes": ""
+  },
+  {
+   "dx9_ea": "0x803e80",
+   "old_dx9_name": "uPlayerDante::tickLuciferTimer",
+   "new_dx9_name": "uPlayer::checkAtckRenda",
+   "se_ea": "0xa049d0",
+   "se_name": "uPlayer::checkAtckRenda(void)",
+   "confidence": "high",
+   "evidence": [
+    "consts",
+    "order",
+    "decompile"
+   ],
+   "action": "replaced_existing",
+   "notes": "renda table {69,45,57} + sStylishCount rank; old name was wrong (not Lucifer)"
+  },
+  {
+   "dx9_ea": "0x804020",
+   "old_dx9_name": "uPlayer::checkStingerJump",
+   "new_dx9_name": "uPlayer::checkStingerJump",
+   "se_ea": "0xa04b40",
+   "se_name": "uPlayer::checkStingerJump(float,uchar)",
+   "confidence": "high",
+   "evidence": [
+    "callers",
+    "consts"
+   ],
+   "action": "confirmed",
+   "notes": "callers = Stinger move actions as in SE"
+  },
+  {
+   "dx9_ea": "0x8042c0",
+   "old_dx9_name": "uPlayer::checkNearEnemy",
+   "new_dx9_name": "uPlayer::checkNearEnemy",
+   "se_ea": "0xa04d30",
+   "se_name": "uPlayer::checkNearEnemy(bool,bool)",
+   "confidence": "high",
+   "evidence": [
+    "callees",
+    "consts"
+   ],
+   "action": "confirmed",
+   "notes": ""
+  },
+  {
+   "dx9_ea": "0x804350",
+   "old_dx9_name": "uPlayer::checkDash",
+   "new_dx9_name": "uPlayer::checkDash",
+   "se_ea": "0xa04df0",
+   "se_name": "uPlayer::checkDash(void)",
+   "confidence": "high",
+   "evidence": [
+    "consts",
+    "order"
+   ],
+   "action": "confirmed",
+   "notes": ""
+  },
+  {
+   "dx9_ea": "0x8045b0",
+   "old_dx9_name": "uPlayer::checkWeaponChange",
+   "new_dx9_name": "uPlayer::checkWeaponChange",
+   "se_ea": "0xa05020",
+   "se_name": "uPlayer::checkWeaponChange(void)",
+   "confidence": "high",
+   "evidence": [
+    "callees",
+    "consts"
+   ],
+   "action": "confirmed",
+   "notes": "virtual (slot 219) in SE, direct call in DX9"
+  },
+  {
+   "dx9_ea": "0x804650",
+   "old_dx9_name": "uPlayer::checkWallJumpBegin",
+   "new_dx9_name": "uPlayer::checkWallJumpBegin",
+   "se_ea": "0xa059d0",
+   "se_name": "uPlayer::checkWallJumpBegin(void)",
+   "confidence": "high",
+   "evidence": [
+    "callees",
+    "consts"
+   ],
+   "action": "confirmed",
+   "notes": ""
+  },
+  {
+   "dx9_ea": "0x804970",
+   "old_dx9_name": "uPlayer::checkEmJumpBegin",
+   "new_dx9_name": "uPlayer::checkEmJumpBegin",
+   "se_ea": "0xa05ce0",
+   "se_name": "uPlayer::checkEmJumpBegin(void)",
+   "confidence": "high",
+   "evidence": [
+    "callees",
+    "consts"
+   ],
+   "action": "confirmed",
+   "notes": ""
+  },
+  {
+   "dx9_ea": "0x804ad0",
+   "old_dx9_name": "sub_804AD0",
+   "new_dx9_name": "uPlayer::checkDevilTrigger",
+   "se_ea": "0xa050e0",
+   "se_name": "uPlayer::checkDevilTrigger(void)",
+   "confidence": "high",
+   "evidence": [
+    "vtable",
+    "decompile",
+    "consts"
+   ],
+   "action": "renamed",
+   "notes": "DX9 slot 144 = SE 220; mDevilTrgTimer=60, auto-DT at HP<=2000"
+  },
+  {
+   "dx9_ea": "0x804bc0",
+   "old_dx9_name": "sub_804BC0",
+   "new_dx9_name": "uPlayer::checkFlipCancel",
+   "se_ea": "0xa051f0",
+   "se_name": "uPlayer::checkFlipCancel(cCollisionGroup *)",
+   "confidence": "high",
+   "evidence": [
+    "vtable",
+    "consts"
+   ],
+   "action": "renamed",
+   "notes": "DX9 slot 145 = SE 222; size 34 = 34; retn 4"
+  },
+  {
+   "dx9_ea": "0x804bf0",
+   "old_dx9_name": "sub_804BF0",
+   "new_dx9_name": "uPlayer::checkEnemyGrabDamageCancel",
+   "se_ea": "0xa05220",
+   "se_name": "uPlayer::checkEnemyGrabDamageCancel(int)",
+   "confidence": "high",
+   "evidence": [
+    "callees",
+    "consts"
+   ],
+   "action": "renamed",
+   "notes": "setActionDamage, imms 21/22"
+  },
+  {
+   "dx9_ea": "0x804c90",
+   "old_dx9_name": "uPlayer::checkStingerWall",
+   "new_dx9_name": "uPlayer::checkStingerWall",
+   "se_ea": "0xa052c0",
+   "se_name": "uPlayer::checkStingerWall(void)",
+   "confidence": "high",
+   "evidence": [
+    "callees",
+    "consts"
+   ],
+   "action": "confirmed",
+   "notes": ""
+  },
+  {
+   "dx9_ea": "0x804fd0",
+   "old_dx9_name": "uPlayer::checkStingerWall_0",
+   "new_dx9_name": "uPlayer::isWallFoot",
+   "se_ea": "0xa05590",
+   "se_name": "uPlayer::isWallFoot(void)",
+   "confidence": "high",
+   "evidence": [
+    "callees",
+    "consts",
+    "callers"
+   ],
+   "action": "replaced_existing",
+   "notes": "getNormalToTri + 30.0; called by getMoveVelPreventFromKeepFall as in SE"
+  },
+  {
+   "dx9_ea": "0x805120",
+   "old_dx9_name": "uPlayer::getMoveVelPreventFromKeepFall",
+   "new_dx9_name": "uPlayer::getMoveVelPreventFromKeepFall",
+   "se_ea": "0xa056a0",
+   "se_name": "uPlayer::getMoveVelPreventFromKeepFall(float,float)",
+   "confidence": "high",
+   "evidence": [
+    "callees",
+    "consts"
+   ],
+   "action": "confirmed",
+   "notes": ""
+  },
+  {
+   "dx9_ea": "0x8052c0",
+   "old_dx9_name": "uPlayer::checkHolyAction",
+   "new_dx9_name": "uPlayer::checkUseHolyWater",
+   "se_ea": "0xa057f0",
+   "se_name": "uPlayer::checkUseHolyWater(void)",
+   "confidence": "high",
+   "evidence": [
+    "consts",
+    "order"
+   ],
+   "action": "replaced_existing",
+   "notes": "imm 27; 63 vs 66 bytes; the real checkHolyAction is the vtable slot at 0x805300"
+  },
+  {
+   "dx9_ea": "0x805300",
+   "old_dx9_name": "sub_805300",
+   "new_dx9_name": "uPlayer::checkHolyAction",
+   "se_ea": "0xa05840",
+   "se_name": "uPlayer::checkHolyAction(void)",
+   "confidence": "high",
+   "evidence": [
+    "vtable",
+    "consts"
+   ],
+   "action": "renamed",
+   "notes": "DX9 slot 151 = SE 228; size 33 = 33"
+  },
+  {
+   "dx9_ea": "0x805330",
+   "old_dx9_name": "sub_805330",
+   "new_dx9_name": "uPlCmnShl000::getDTI",
+   "se_ea": "0xa06820",
+   "se_name": "uPlCmnShl000::getDTI(void)",
+   "confidence": "high",
+   "evidence": [
+    "vtable",
+    "structural"
+   ],
+   "action": "renamed",
+   "notes": ""
+  },
+  {
+   "dx9_ea": "0x805340",
+   "old_dx9_name": "loc_805340",
+   "new_dx9_name": "uPlCmnShl000::MyDTI::newInstance",
+   "se_ea": "0xa06740",
+   "se_name": "uPlCmnShl000::MyDTI::newInstance(void)",
+   "confidence": "high",
+   "evidence": [
+    "structural"
+   ],
+   "action": "renamed",
+   "notes": "was undefined code; allocs 0x17D0 (=DTI size)"
+  },
+  {
+   "dx9_ea": "0x8053a0",
+   "old_dx9_name": "sub_8053A0",
+   "new_dx9_name": "uPlCmnShl000::setup",
+   "se_ea": "0xa06350",
+   "se_name": "uPlCmnShl000::setup(void)",
+   "confidence": "high",
+   "evidence": [
+    "vtable",
+    "strings"
+   ],
+   "action": "renamed",
+   "notes": ""
+  },
+  {
+   "dx9_ea": "0x8055a0",
+   "old_dx9_name": "sub_8055A0",
+   "new_dx9_name": "uPlCmnShl000::update",
+   "se_ea": "0xa06540",
+   "se_name": "uPlCmnShl000::update(void)",
+   "confidence": "high",
+   "evidence": [
+    "vtable"
+   ],
+   "action": "renamed",
+   "notes": ""
+  },
+  {
+   "dx9_ea": "0x8057f0",
+   "old_dx9_name": "sub_8057F0",
+   "new_dx9_name": "uPlCmnShl000::damageMessage",
+   "se_ea": "0xa067b0",
+   "se_name": "uPlCmnShl000::damageMessage(cCollisionGroup *,cCollisionGroup *)",
+   "confidence": "high",
+   "evidence": [
+    "vtable",
+    "consts"
+   ],
+   "action": "renamed",
+   "notes": "DX9 slot 36 = SE 59; 97 = 97 bytes"
+  },
+  {
+   "dx9_ea": "0x805860",
+   "old_dx9_name": "uPlCmnShl000::ctor",
+   "new_dx9_name": "uPlCmnShl000::create",
+   "se_ea": "0xa066b0",
+   "se_name": "uPlCmnShl000::create(uActor *)",
+   "confidence": "high",
+   "evidence": [
+    "structural",
+    "consts"
+   ],
+   "action": "replaced_existing",
+   "notes": "alloc + inlined ctor + sUnit::addBottom(line 18): SE create(uActor*), not the bare ctor"
+  },
+  {
+   "dx9_ea": "0x8058e0",
+   "old_dx9_name": "uPlayer::afterPowerUp",
+   "new_dx9_name": "uPlayer::initCommandCheck",
+   "se_ea": "0xa07110",
+   "se_name": "uPlayer::initCommandCheck(void)",
+   "confidence": "high",
+   "evidence": [
+    "decompile",
+    "consts",
+    "callers"
+   ],
+   "action": "replaced_existing",
+   "notes": "clears 85 (SE: 102) 0x14-byte command slots at +0x2190; SE afterPowerUp is a 16-byte wrapper around this"
+  },
+  {
+   "dx9_ea": "0x805920",
+   "old_dx9_name": "uPlayer::executeCommandCheck",
+   "new_dx9_name": "uPlayer::executeCommandCheck",
+   "se_ea": "0xa073b0",
+   "se_name": "uPlayer::executeCommandCheck(void)",
+   "confidence": "high",
+   "evidence": [
+    "callees",
+    "consts"
+   ],
+   "action": "confirmed",
+   "notes": ""
+  },
+  {
+   "dx9_ea": "0x805a10",
+   "old_dx9_name": "uPlayer::commandCheckSub",
+   "new_dx9_name": "uPlayer::commandCheckSub",
+   "se_ea": "0xa071f0",
+   "se_name": "uPlayer::commandCheckSub(uPlayer::kSPlCmd *,uPlayer::kCmdHead *,uPlayer::kCmdData *)",
+   "confidence": "high",
+   "evidence": [
+    "callees"
+   ],
+   "action": "confirmed",
+   "notes": ""
+  },
+  {
+   "dx9_ea": "0x805c20",
+   "old_dx9_name": "sub_805C20",
+   "new_dx9_name": "uPlayer::checkCmdBtn",
+   "se_ea": "0xa069d0",
+   "se_name": "uPlayer::checkCmdBtn(uPlayer::kCmdData *)",
+   "confidence": "high",
+   "evidence": [
+    "callees",
+    "order"
+   ],
+   "action": "renamed",
+   "notes": "1st callee of commandCheckSub"
+  },
+  {
+   "dx9_ea": "0x805c80",
+   "old_dx9_name": "sub_805C80",
+   "new_dx9_name": "uPlayer::checkCmdLever",
+   "se_ea": "0xa06a40",
+   "se_name": "uPlayer::checkCmdLever(uPlayer::kCmdData *)",
+   "confidence": "high",
+   "evidence": [
+    "callees",
+    "consts"
+   ],
+   "action": "renamed",
+   "notes": "getTargetAngle/RadianClamp, imms 16384/25486"
+  },
+  {
+   "dx9_ea": "0x805f60",
+   "old_dx9_name": "sub_805F60",
+   "new_dx9_name": "uPlayer::checkCmdTame",
+   "se_ea": "0xa06d60",
+   "se_name": "uPlayer::checkCmdTame(uPlayer::kSPlCmd *,uPlayer::kCmdData *)",
+   "confidence": "high",
+   "evidence": [
+    "callees",
+    "order"
+   ],
+   "action": "renamed",
+   "notes": ""
+  },
+  {
+   "dx9_ea": "0x806000",
+   "old_dx9_name": "sub_806000",
+   "new_dx9_name": "uPlayer::checkCmdRenda",
+   "se_ea": "0xa06e10",
+   "se_name": "uPlayer::checkCmdRenda(uPlayer::kSPlCmd *,uPlayer::kCmdData *)",
+   "confidence": "high",
+   "evidence": [
+    "callees",
+    "order"
+   ],
+   "action": "renamed",
+   "notes": ""
+  },
+  {
+   "dx9_ea": "0x8060a0",
+   "old_dx9_name": "sub_8060A0",
+   "new_dx9_name": "uPlayer::checkCmdBit",
+   "se_ea": "0xa06ed0",
+   "se_name": "uPlayer::checkCmdBit(uPlayer::CMD_ID)",
+   "confidence": "high",
+   "evidence": [
+    "consts",
+    "callers"
+   ],
+   "action": "renamed",
+   "notes": "bit test (31/0x8000001F); caller uPlayerDante::checkStyle as in SE"
+  },
+  {
+   "dx9_ea": "0x8060e0",
+   "old_dx9_name": "sub_8060E0",
+   "new_dx9_name": "uPlDanteShl000::getDTI",
+   "se_ea": "0xa07820",
+   "se_name": "uPlDanteShl000::getDTI(void)",
+   "confidence": "high",
+   "evidence": [
+    "vtable",
+    "structural"
+   ],
+   "action": "renamed",
+   "notes": ""
+  },
+  {
+   "dx9_ea": "0x8060f0",
+   "old_dx9_name": "sub_8060F0",
+   "new_dx9_name": "??1uPlDanteShl000@@UAE@XZ",
+   "se_ea": null,
+   "se_name": "uPlDanteShl000::~uPlDanteShl000(void)",
+   "confidence": "high",
+   "evidence": [
+    "structural"
+   ],
+   "action": "renamed",
+   "notes": "destructor (vftable->uPlShl->uShell chain); SE inlines it into the deleting dtor"
+  },
+  {
+   "dx9_ea": "0x806140",
+   "old_dx9_name": "loc_806140",
+   "new_dx9_name": "uPlDanteShl000::scalar_deleting_dtor",
+   "se_ea": "0xa07830",
+   "se_name": "uPlDanteShl000::`scalar deleting destructor'(uint)",
+   "confidence": "high",
+   "evidence": [
+    "vtable",
+    "structural"
+   ],
+   "action": "renamed",
+   "notes": "was undefined code (slot 0)"
+  },
+  {
+   "dx9_ea": "0x806360",
+   "old_dx9_name": "loc_806360",
+   "new_dx9_name": "uPlDanteShl000::MyDTI::newInstance",
+   "se_ea": "0xa07ca0",
+   "se_name": "uPlDanteShl000::MyDTI::newInstance(void)",
+   "confidence": "high",
+   "evidence": [
+    "structural"
+   ],
+   "action": "renamed",
+   "notes": "was undefined code; allocs 0x1800, ctor(true)"
+  },
+  {
+   "dx9_ea": "0x806390",
+   "old_dx9_name": "sub_806390",
+   "new_dx9_name": "uPlDanteShl000::uPlDanteShl000",
+   "se_ea": "0xa079f0",
+   "se_name": "uPlDanteShl000::uPlDanteShl000(bool)",
+   "confidence": "high",
+   "evidence": [
+    "structural",
+    "callers"
+   ],
+   "action": "renamed",
+   "notes": "ctor(bool); also called by uPlDanteBossShl000 create/newInstance"
+  },
+  {
+   "dx9_ea": "0x806420",
+   "old_dx9_name": "sub_806420",
+   "new_dx9_name": "uPlDanteShl000::setup",
+   "se_ea": "0xa07ce0",
+   "se_name": "uPlDanteShl000::setup(void)",
+   "confidence": "high",
+   "evidence": [
+    "vtable",
+    "order"
+   ],
+   "action": "renamed",
+   "notes": "shared (inherited) by uPlDanteBossShl000 as in SE"
+  },
+  {
+   "dx9_ea": "0x806900",
+   "old_dx9_name": "sub_806900",
+   "new_dx9_name": "uPlDanteShl000::setWallHit",
+   "se_ea": "0xa08160",
+   "se_name": "uPlDanteShl000::setWallHit(sCollision::TriangleInfo *)",
+   "confidence": "high",
+   "evidence": [
+    "vtable"
+   ],
+   "action": "renamed",
+   "notes": "ICF-folded: one DX9 body for 2 SE methods: uPlDanteShl000::setWallHit @ 0xa08160, uPlNeroShl000::setWallHit @ 0xa32550 (BossShl000 inherits)"
+  },
+  {
+   "dx9_ea": "0x806980",
+   "old_dx9_name": "sub_806980",
+   "new_dx9_name": "uPlDanteShl000::hitMessage",
+   "se_ea": "0xa07b30",
+   "se_name": "uPlDanteShl000::hitMessage(cCollisionGroup *,cCollisionGroup *)",
+   "confidence": "high",
+   "evidence": [
+    "vtable",
+    "callers"
+   ],
+   "action": "renamed",
+   "notes": "DX9 slot 37 = SE 60; called from uPlDanteBossShl000::hitMessage"
+  },
+  {
+   "dx9_ea": "0x806a60",
+   "old_dx9_name": "sub_806A60",
+   "new_dx9_name": "uPlDanteShl000::create",
+   "se_ea": "0xa07c30",
+   "se_name": "uPlDanteShl000::create(int,uActor *)",
+   "confidence": "high",
+   "evidence": [
+    "structural",
+    "order"
+   ],
+   "action": "renamed",
+   "notes": "alloc 0x1800 + ctor + addBottom"
+  },
+  {
+   "dx9_ea": "0x806170",
+   "old_dx9_name": "sub_806170",
+   "new_dx9_name": "uPlDanteBossShl000::getDTI",
+   "se_ea": "0xa07870",
+   "se_name": "uPlDanteBossShl000::getDTI(void)",
+   "confidence": "high",
+   "evidence": [
+    "vtable",
+    "structural"
+   ],
+   "action": "renamed",
+   "notes": ""
+  },
+  {
+   "dx9_ea": "0x806180",
+   "old_dx9_name": "loc_806180",
+   "new_dx9_name": "uPlDanteBossShl000::vector_deleting_dtor",
+   "se_ea": "0xa07880",
+   "se_name": "uPlDanteBossShl000::`vector deleting destructor'(uint)",
+   "confidence": "high",
+   "evidence": [
+    "vtable",
+    "structural"
+   ],
+   "action": "renamed",
+   "notes": "was undefined code (slot 0)"
+  },
+  {
+   "dx9_ea": "0x8061b0",
+   "old_dx9_name": "loc_8061B0",
+   "new_dx9_name": "uPlDanteBossShl000::MyDTI::newInstance",
+   "se_ea": "0xa076b0",
+   "se_name": "uPlDanteBossShl000::MyDTI::newInstance(void)",
+   "confidence": "high",
+   "evidence": [
+    "structural"
+   ],
+   "action": "renamed",
+   "notes": "was undefined code; allocs 0x1810"
+  },
+  {
+   "dx9_ea": "0x8061e0",
+   "old_dx9_name": "sub_8061E0",
+   "new_dx9_name": "uPlDanteBossShl000::hitMessage",
+   "se_ea": "0xa07700",
+   "se_name": "uPlDanteBossShl000::hitMessage(cCollisionGroup *,cCollisionGroup *)",
+   "confidence": "high",
+   "evidence": [
+    "vtable"
+   ],
+   "action": "renamed",
+   "notes": ""
+  },
+  {
+   "dx9_ea": "0x806300",
+   "old_dx9_name": "sub_806300",
+   "new_dx9_name": "uPlDanteBossShl000::create",
+   "se_ea": "0xa07640",
+   "se_name": "uPlDanteBossShl000::create(int,uActor *,uint)",
+   "confidence": "high",
+   "evidence": [
+    "structural",
+    "consts"
+   ],
+   "action": "renamed",
+   "notes": "alloc 0x1810 + uPlDanteShl000 ctor + vftable + addBottom"
+  },
+  {
+   "dx9_ea": "0x806ac0",
+   "old_dx9_name": "sub_806AC0",
+   "new_dx9_name": "uPlDanteShl001::getDTI",
+   "se_ea": "0xa0a340",
+   "se_name": "uPlDanteShl001::getDTI(void)",
+   "confidence": "high",
+   "evidence": [
+    "vtable",
+    "structural"
+   ],
+   "action": "renamed",
+   "notes": ""
+  },
+  {
+   "dx9_ea": "0x806ad0",
+   "old_dx9_name": "loc_806AD0",
+   "new_dx9_name": "uPlDanteShl001::MyDTI::newInstance",
+   "se_ea": "0xa08640",
+   "se_name": "uPlDanteShl001::MyDTI::newInstance(void)",
+   "confidence": "high",
+   "evidence": [
+    "structural"
+   ],
+   "action": "renamed",
+   "notes": "was undefined code; allocs 0x1800 with inlined ctor"
+  },
+  {
+   "dx9_ea": "0x806b30",
+   "old_dx9_name": "sub_806B30",
+   "new_dx9_name": "uPlDanteShl001::setup",
+   "se_ea": "0xa09240",
+   "se_name": "uPlDanteShl001::setup(void)",
+   "confidence": "high",
+   "evidence": [
+    "vtable",
+    "order"
+   ],
+   "action": "renamed",
+   "notes": ""
+  },
+  {
+   "dx9_ea": "0x807cd0",
+   "old_dx9_name": "sub_807CD0",
+   "new_dx9_name": "uPlDanteShl001::update",
+   "se_ea": "0xa086c0",
+   "se_name": "uPlDanteShl001::update(void)",
+   "confidence": "high",
+   "evidence": [
+    "vtable"
+   ],
+   "action": "renamed",
+   "notes": "DX9 slot 77 = SE 114"
+  },
+  {
+   "dx9_ea": "0x8082a0",
+   "old_dx9_name": "sub_8082A0",
+   "new_dx9_name": "uPlDanteShl001::getGroundTri",
+   "se_ea": "0xa08360",
+   "se_name": "uPlDanteShl001::getGroundTri(sCollision::TriangleInfo *,MtVector3 *)",
+   "confidence": "high",
+   "evidence": [
+    "callers",
+    "callees"
+   ],
+   "action": "renamed",
+   "notes": "sole caller update; LineSeg collision"
+  },
+  {
+   "dx9_ea": "0x808410",
+   "old_dx9_name": "sub_808410",
+   "new_dx9_name": "uPlDanteShl001::setEfct",
+   "se_ea": "0xa08470",
+   "se_name": "uPlDanteShl001::setEfct(void)",
+   "confidence": "high",
+   "evidence": [
+    "vtable"
+   ],
+   "action": "renamed",
+   "notes": "DX9 slot 78 = SE 115"
+  },
+  {
+   "dx9_ea": "0x8084c0",
+   "old_dx9_name": "sub_8084C0",
+   "new_dx9_name": "uPlDanteShl001::setWallHit",
+   "se_ea": "0xa084f0",
+   "se_name": "uPlDanteShl001::setWallHit(sCollision::TriangleInfo *)",
+   "confidence": "high",
+   "evidence": [
+    "vtable"
+   ],
+   "action": "renamed",
+   "notes": "ICF-folded: one DX9 body for 2 SE methods: uPlDanteShl001::setWallHit @ 0xa084f0, uPlNeroShl003::setWallHit @ 0xa35080"
+  },
+  {
+   "dx9_ea": "0x808530",
+   "old_dx9_name": "sub_808530",
+   "new_dx9_name": "uPlDanteShl001::getInnerTargetDrive",
+   "se_ea": "0xa091a0",
+   "se_name": "uPlDanteShl001::getInnerTargetDrive(void)",
+   "confidence": "high",
+   "evidence": [
+    "callers",
+    "callees"
+   ],
+   "action": "renamed",
+   "notes": "sLockOnTargetMgr + calls isTarget; called from setup"
+  },
+  {
+   "dx9_ea": "0x808600",
+   "old_dx9_name": "sub_808600",
+   "new_dx9_name": "uPlDanteShl001::isTarget",
+   "se_ea": "0xa08d60",
+   "se_name": "uPlDanteShl001::isTarget(cLockOnTarget *,int)",
+   "confidence": "high",
+   "evidence": [
+    "callers",
+    "order"
+   ],
+   "action": "renamed",
+   "notes": "callers setup + getInnerTargetDrive, as in SE"
+  },
+  {
+   "dx9_ea": "0x808ad0",
+   "old_dx9_name": "sub_808AD0",
+   "new_dx9_name": "uPlDanteShl001::create",
+   "se_ea": "0xa08570",
+   "se_name": "uPlDanteShl001::create(int,int,uActor *)",
+   "confidence": "high",
+   "evidence": [
+    "structural",
+    "consts"
+   ],
+   "action": "renamed",
+   "notes": "alloc + inlined ctor + addBottom + setEffectConst"
+  },
+  {
+   "dx9_ea": "0x808b70",
+   "old_dx9_name": "sub_808B70",
+   "new_dx9_name": "uPlDanteShl002::getDTI",
+   "se_ea": "0xa0aea0",
+   "se_name": "uPlDanteShl002::getDTI(void)",
+   "confidence": "high",
+   "evidence": [
+    "vtable",
+    "structural"
+   ],
+   "action": "renamed",
+   "notes": ""
+  },
+  {
+   "dx9_ea": "0x808b80",
+   "old_dx9_name": "sub_808B80",
+   "new_dx9_name": "??1uPlDanteShl002@@UAE@XZ",
+   "se_ea": null,
+   "se_name": "uPlDanteShl002::~uPlDanteShl002(void)",
+   "confidence": "high",
+   "evidence": [
+    "structural"
+   ],
+   "action": "renamed",
+   "notes": "destructor (vftable->uPlShl->uShell chain); SE inlines it into the deleting dtor"
+  },
+  {
+   "dx9_ea": "0x808bd0",
+   "old_dx9_name": "loc_808BD0",
+   "new_dx9_name": "uPlDanteShl002::vector_deleting_dtor",
+   "se_ea": "0xa0aeb0",
+   "se_name": "uPlDanteShl002::`vector deleting destructor'(uint)",
+   "confidence": "high",
+   "evidence": [
+    "vtable",
+    "structural"
+   ],
+   "action": "renamed",
+   "notes": "was undefined code (slot 0)"
+  },
+  {
+   "dx9_ea": "0x808c00",
+   "old_dx9_name": "loc_808C00",
+   "new_dx9_name": "uPlDanteShl002::MyDTI::newInstance",
+   "se_ea": "0xa0a750",
+   "se_name": "uPlDanteShl002::MyDTI::newInstance(void)",
+   "confidence": "high",
+   "evidence": [
+    "structural"
+   ],
+   "action": "renamed",
+   "notes": "was undefined code; DTI-size alloc + ctor"
+  },
+  {
+   "dx9_ea": "0x808c30",
+   "old_dx9_name": "sub_808C30",
+   "new_dx9_name": "uPlDanteShl002::uPlDanteShl002",
+   "se_ea": "0xa0a4b0",
+   "se_name": "uPlDanteShl002::uPlDanteShl002(int)",
+   "confidence": "high",
+   "evidence": [
+    "structural",
+    "callers"
+   ],
+   "action": "renamed",
+   "notes": "ctor (uPlShl ctor + own vftable)"
+  },
+  {
+   "dx9_ea": "0x808cc0",
+   "old_dx9_name": "sub_808CC0",
+   "new_dx9_name": "uPlDanteShl002::setup",
+   "se_ea": "0xa0a790",
+   "se_name": "uPlDanteShl002::setup(void)",
+   "confidence": "high",
+   "evidence": [
+    "vtable"
+   ],
+   "action": "renamed",
+   "notes": ""
+  },
+  {
+   "dx9_ea": "0x809270",
+   "old_dx9_name": "sub_809270",
+   "new_dx9_name": "uPlDanteShl002::setWallHit",
+   "se_ea": "0xa0ae10",
+   "se_name": "uPlDanteShl002::setWallHit(sCollision::TriangleInfo *)",
+   "confidence": "high",
+   "evidence": [
+    "vtable"
+   ],
+   "action": "renamed",
+   "notes": "ICF-folded: one DX9 body for 2 SE methods: uPlDanteShl002::setWallHit @ 0xa0ae10, uPlDanteShl003::setWallHit @ 0xa0b540"
+  },
+  {
+   "dx9_ea": "0x8092f0",
+   "old_dx9_name": "sub_8092F0",
+   "new_dx9_name": "uPlDanteShl002::hitMessage",
+   "se_ea": "0xa0a5e0",
+   "se_name": "uPlDanteShl002::hitMessage(cCollisionGroup *,cCollisionGroup *)",
+   "confidence": "high",
+   "evidence": [
+    "vtable"
+   ],
+   "action": "renamed",
+   "notes": ""
+  },
+  {
+   "dx9_ea": "0x809400",
+   "old_dx9_name": "sub_809400",
+   "new_dx9_name": "uPlDanteShl002::create",
+   "se_ea": "0xa0a6f0",
+   "se_name": "uPlDanteShl002::create(int,uActor *)",
+   "confidence": "high",
+   "evidence": [
+    "structural",
+    "callers"
+   ],
+   "action": "renamed",
+   "notes": "alloc 0x17F0 + ctor + addBottom"
+  },
+  {
+   "dx9_ea": "0x809450",
+   "old_dx9_name": "sub_809450",
+   "new_dx9_name": "uPlDanteShl003::getDTI",
+   "se_ea": "0xa0bd20",
+   "se_name": "uPlDanteShl003::getDTI(void)",
+   "confidence": "high",
+   "evidence": [
+    "vtable",
+    "structural"
+   ],
+   "action": "renamed",
+   "notes": ""
+  },
+  {
+   "dx9_ea": "0x809460",
+   "old_dx9_name": "sub_809460",
+   "new_dx9_name": "??1uPlDanteShl003@@UAE@XZ",
+   "se_ea": null,
+   "se_name": "uPlDanteShl003::~uPlDanteShl003(void)",
+   "confidence": "high",
+   "evidence": [
+    "structural"
+   ],
+   "action": "renamed",
+   "notes": "destructor (vftable->uPlShl->uShell chain); SE inlines it into the deleting dtor"
+  },
+  {
+   "dx9_ea": "0x8094b0",
+   "old_dx9_name": "loc_8094B0",
+   "new_dx9_name": "uPlDanteShl003::vector_deleting_dtor",
+   "se_ea": "0xa0bd30",
+   "se_name": "uPlDanteShl003::`vector deleting destructor'(uint)",
+   "confidence": "high",
+   "evidence": [
+    "vtable",
+    "structural"
+   ],
+   "action": "renamed",
+   "notes": "was undefined code (slot 0)"
+  },
+  {
+   "dx9_ea": "0x8094e0",
+   "old_dx9_name": "loc_8094E0",
+   "new_dx9_name": "uPlDanteShl003::MyDTI::newInstance",
+   "se_ea": "0xa0b2c0",
+   "se_name": "uPlDanteShl003::MyDTI::newInstance(void)",
+   "confidence": "high",
+   "evidence": [
+    "structural"
+   ],
+   "action": "renamed",
+   "notes": "was undefined code; DTI-size alloc + ctor"
+  },
+  {
+   "dx9_ea": "0x809510",
+   "old_dx9_name": "sub_809510",
+   "new_dx9_name": "uPlDanteShl003::uPlDanteShl003",
+   "se_ea": "0xa0b020",
+   "se_name": "uPlDanteShl003::uPlDanteShl003(int)",
+   "confidence": "high",
+   "evidence": [
+    "structural",
+    "callers"
+   ],
+   "action": "renamed",
+   "notes": "ctor (uPlShl ctor + own vftable)"
+  },
+  {
+   "dx9_ea": "0x8095a0",
+   "old_dx9_name": "sub_8095A0",
+   "new_dx9_name": "uPlDanteShl003::setup",
+   "se_ea": "0xa0b850",
+   "se_name": "uPlDanteShl003::setup(void)",
+   "confidence": "high",
+   "evidence": [
+    "vtable"
+   ],
+   "action": "renamed",
+   "notes": ""
+  },
+  {
+   "dx9_ea": "0x809ac0",
+   "old_dx9_name": "sub_809AC0",
+   "new_dx9_name": "uPlDanteShl003::getTarget",
+   "se_ea": "0xa0b5d0",
+   "se_name": "uPlDanteShl003::getTarget(int)",
+   "confidence": "high",
+   "evidence": [
+    "callers",
+    "callees"
+   ],
+   "action": "renamed",
+   "notes": "called from setup, calls getTargetVec"
+  },
+  {
+   "dx9_ea": "0x809d00",
+   "old_dx9_name": "sub_809D00",
+   "new_dx9_name": "uPlDanteShl003::getTargetVec",
+   "se_ea": "0xa0b300",
+   "se_name": "uPlDanteShl003::getTargetVec(uPlayerDante::STYL_DIR)",
+   "confidence": "high",
+   "evidence": [
+    "callers",
+    "consts"
+   ],
+   "action": "renamed",
+   "notes": "callers setup + getTarget; jump table on STYL_DIR"
+  },
+  {
+   "dx9_ea": "0x809f30",
+   "old_dx9_name": "sub_809F30",
+   "new_dx9_name": "uPlDanteShl003::setEfct",
+   "se_ea": "0xa0b0d0",
+   "se_name": "uPlDanteShl003::setEfct(void)",
+   "confidence": "high",
+   "evidence": [
+    "vtable"
+   ],
+   "action": "renamed",
+   "notes": "ICF-folded: one DX9 body for 2 SE methods: uPlDanteShl003::setEfct @ 0xa0b0d0, uPlDanteShl002::setEfct @ 0xa0a560"
+  },
+  {
+   "dx9_ea": "0x809fb0",
+   "old_dx9_name": "sub_809FB0",
+   "new_dx9_name": "uPlDanteShl003::hitMessage",
+   "se_ea": "0xa0b150",
+   "se_name": "uPlDanteShl003::hitMessage(cCollisionGroup *,cCollisionGroup *)",
+   "confidence": "high",
+   "evidence": [
+    "vtable"
+   ],
+   "action": "renamed",
+   "notes": ""
+  },
+  {
+   "dx9_ea": "0x80a0c0",
+   "old_dx9_name": "sub_80A0C0",
+   "new_dx9_name": "uPlDanteShl003::create",
+   "se_ea": "0xa0b260",
+   "se_name": "uPlDanteShl003::create(int,uActor *)",
+   "confidence": "high",
+   "evidence": [
+    "structural",
+    "callers"
+   ],
+   "action": "renamed",
+   "notes": "alloc 0x17F0 + ctor + addBottom"
+  },
+  {
+   "dx9_ea": "0x80a110",
+   "old_dx9_name": "sub_80A110",
+   "new_dx9_name": "uPlDanteShl004::getDTI",
+   "se_ea": "0xa0c6a0",
+   "se_name": "uPlDanteShl004::getDTI(void)",
+   "confidence": "high",
+   "evidence": [
+    "vtable",
+    "structural"
+   ],
+   "action": "renamed",
+   "notes": ""
+  },
+  {
+   "dx9_ea": "0x80a120",
+   "old_dx9_name": "sub_80A120",
+   "new_dx9_name": "??1uPlDanteShl004@@UAE@XZ",
+   "se_ea": null,
+   "se_name": "uPlDanteShl004::~uPlDanteShl004(void)",
+   "confidence": "high",
+   "evidence": [
+    "structural"
+   ],
+   "action": "renamed",
+   "notes": "destructor (vftable->uPlShl->uShell chain); SE inlines it into the deleting dtor"
+  },
+  {
+   "dx9_ea": "0x80a170",
+   "old_dx9_name": "loc_80A170",
+   "new_dx9_name": "uPlDanteShl004::scalar_deleting_dtor",
+   "se_ea": "0xa0c6b0",
+   "se_name": "uPlDanteShl004::`scalar deleting destructor'(uint)",
+   "confidence": "high",
+   "evidence": [
+    "vtable",
+    "structural"
+   ],
+   "action": "renamed",
+   "notes": "was undefined code (slot 0)"
+  },
+  {
+   "dx9_ea": "0x80a1a0",
+   "old_dx9_name": "loc_80A1A0",
+   "new_dx9_name": "uPlDanteShl004::MyDTI::newInstance",
+   "se_ea": "0xa0c120",
+   "se_name": "uPlDanteShl004::MyDTI::newInstance(void)",
+   "confidence": "high",
+   "evidence": [
+    "structural"
+   ],
+   "action": "renamed",
+   "notes": "was undefined code; DTI-size alloc + ctor"
+  },
+  {
+   "dx9_ea": "0x80a1d0",
+   "old_dx9_name": "sub_80A1D0",
+   "new_dx9_name": "uPlDanteShl004::uPlDanteShl004",
+   "se_ea": "0xa0bea0",
+   "se_name": "uPlDanteShl004::uPlDanteShl004(void)",
+   "confidence": "high",
+   "evidence": [
+    "structural",
+    "callers"
+   ],
+   "action": "renamed",
+   "notes": "ctor (uPlShl ctor + own vftable)"
+  },
+  {
+   "dx9_ea": "0x80a250",
+   "old_dx9_name": "sub_80A250",
+   "new_dx9_name": "uPlDanteShl004::setup",
+   "se_ea": "0xa0c160",
+   "se_name": "uPlDanteShl004::setup(void)",
+   "confidence": "high",
+   "evidence": [
+    "vtable"
+   ],
+   "action": "renamed",
+   "notes": ""
+  },
+  {
+   "dx9_ea": "0x80a7b0",
+   "old_dx9_name": "sub_80A7B0",
+   "new_dx9_name": "uPlDanteShl004::hitMessage",
+   "se_ea": "0xa0bf40",
+   "se_name": "uPlDanteShl004::hitMessage(cCollisionGroup *,cCollisionGroup *)",
+   "confidence": "high",
+   "evidence": [
+    "vtable"
+   ],
+   "action": "renamed",
+   "notes": ""
+  },
+  {
+   "dx9_ea": "0x80a890",
+   "old_dx9_name": "sub_80A890",
+   "new_dx9_name": "uPlDanteShl004::setEfct",
+   "se_ea": "0xa0c040",
+   "se_name": "uPlDanteShl004::setEfct(void)",
+   "confidence": "high",
+   "evidence": [
+    "vtable"
+   ],
+   "action": "renamed",
+   "notes": ""
+  },
+  {
+   "dx9_ea": "0x80a910",
+   "old_dx9_name": "sub_80A910",
+   "new_dx9_name": "uPlDanteShl005::getDTI",
+   "se_ea": "0xa0dd70",
+   "se_name": "uPlDanteShl005::getDTI(void)",
+   "confidence": "high",
+   "evidence": [
+    "vtable",
+    "structural"
+   ],
+   "action": "renamed",
+   "notes": ""
+  },
+  {
+   "dx9_ea": "0x80a920",
+   "old_dx9_name": "sub_80A920",
+   "new_dx9_name": "??1uPlDanteShl005@@UAE@XZ",
+   "se_ea": null,
+   "se_name": "uPlDanteShl005::~uPlDanteShl005(void)",
+   "confidence": "high",
+   "evidence": [
+    "structural"
+   ],
+   "action": "renamed",
+   "notes": "destructor (vftable->uPlShl->uShell chain); SE inlines it into the deleting dtor"
+  },
+  {
+   "dx9_ea": "0x80a970",
+   "old_dx9_name": "loc_80A970",
+   "new_dx9_name": "uPlDanteShl005::scalar_deleting_dtor",
+   "se_ea": "0xa0dd80",
+   "se_name": "uPlDanteShl005::`scalar deleting destructor'(uint)",
+   "confidence": "high",
+   "evidence": [
+    "vtable",
+    "structural"
+   ],
+   "action": "renamed",
+   "notes": "was undefined code (slot 0)"
+  },
+  {
+   "dx9_ea": "0x80a9a0",
+   "old_dx9_name": "loc_80A9A0",
+   "new_dx9_name": "uPlDanteShl005::MyDTI::newInstance",
+   "se_ea": "0xa0ca00",
+   "se_name": "uPlDanteShl005::MyDTI::newInstance(void)",
+   "confidence": "high",
+   "evidence": [
+    "structural"
+   ],
+   "action": "renamed",
+   "notes": "was undefined code; DTI-size alloc + ctor"
+  },
+  {
+   "dx9_ea": "0x80a9f0",
+   "old_dx9_name": "sub_80A9F0",
+   "new_dx9_name": "uPlDanteShl005::setup",
+   "se_ea": "0xa0ca70",
+   "se_name": "uPlDanteShl005::setup(void)",
+   "confidence": "high",
+   "evidence": [
+    "vtable"
+   ],
+   "action": "renamed",
+   "notes": ""
+  },
+  {
+   "dx9_ea": "0x80ba10",
+   "old_dx9_name": "sub_80BA10",
+   "new_dx9_name": "uPlDanteShl005::hitMessage",
+   "se_ea": "0xa0c870",
+   "se_name": "uPlDanteShl005::hitMessage(cCollisionGroup *,cCollisionGroup *)",
+   "confidence": "high",
+   "evidence": [
+    "vtable"
+   ],
+   "action": "renamed",
+   "notes": ""
+  },
+  {
+   "dx9_ea": "0x80bb10",
+   "old_dx9_name": "sub_80BB10",
+   "new_dx9_name": "uPlDanteShl005::create",
+   "se_ea": "0xa0dbe0",
+   "se_name": "uPlDanteShl005::create(int,uActor *)",
+   "confidence": "high",
+   "evidence": [
+    "structural",
+    "callers"
+   ],
+   "action": "renamed",
+   "notes": "alloc 0x1800 + inlined ctor + addBottom (MtRandom angle)"
+  },
+  {
+   "dx9_ea": "0x80bc40",
+   "old_dx9_name": "sub_80BC40",
+   "new_dx9_name": "uPlDanteShl006::getDTI",
+   "se_ea": "0xa0f440",
+   "se_name": "uPlDanteShl006::getDTI(void)",
+   "confidence": "high",
+   "evidence": [
+    "vtable",
+    "structural"
+   ],
+   "action": "renamed",
+   "notes": ""
+  },
+  {
+   "dx9_ea": "0x80bc50",
+   "old_dx9_name": "sub_80BC50",
+   "new_dx9_name": "??1uPlDanteShl006@@UAE@XZ",
+   "se_ea": null,
+   "se_name": "uPlDanteShl006::~uPlDanteShl006(void)",
+   "confidence": "high",
+   "evidence": [
+    "structural"
+   ],
+   "action": "renamed",
+   "notes": "destructor (vftable->uPlShl->uShell chain); SE inlines it into the deleting dtor"
+  },
+  {
+   "dx9_ea": "0x80bca0",
+   "old_dx9_name": "loc_80BCA0",
+   "new_dx9_name": "uPlDanteShl006::vector_deleting_dtor",
+   "se_ea": "0xa0f450",
+   "se_name": "uPlDanteShl006::`vector deleting destructor'(uint)",
+   "confidence": "high",
+   "evidence": [
+    "vtable",
+    "structural"
+   ],
+   "action": "renamed",
+   "notes": "was undefined code (slot 0)"
+  },
+  {
+   "dx9_ea": "0x80bcd0",
+   "old_dx9_name": "loc_80BCD0",
+   "new_dx9_name": "uPlDanteShl006::MyDTI::newInstance",
+   "se_ea": "0xa0e0d0",
+   "se_name": "uPlDanteShl006::MyDTI::newInstance(void)",
+   "confidence": "high",
+   "evidence": [
+    "structural"
+   ],
+   "action": "renamed",
+   "notes": "was undefined code; DTI-size alloc + ctor"
+  },
+  {
+   "dx9_ea": "0x80bd20",
+   "old_dx9_name": "sub_80BD20",
+   "new_dx9_name": "uPlDanteShl006::setup",
+   "se_ea": "0xa0e140",
+   "se_name": "uPlDanteShl006::setup(void)",
+   "confidence": "high",
+   "evidence": [
+    "vtable"
+   ],
+   "action": "renamed",
+   "notes": ""
+  },
+  {
+   "dx9_ea": "0x80cd40",
+   "old_dx9_name": "sub_80CD40",
+   "new_dx9_name": "uPlDanteShl006::hitMessage",
+   "se_ea": "0xa0df40",
+   "se_name": "uPlDanteShl006::hitMessage(cCollisionGroup *,cCollisionGroup *)",
+   "confidence": "high",
+   "evidence": [
+    "vtable"
+   ],
+   "action": "renamed",
+   "notes": ""
+  },
+  {
+   "dx9_ea": "0x80ce50",
+   "old_dx9_name": "sub_80CE50",
+   "new_dx9_name": "uPlDanteShl006::setEfct",
+   "se_ea": "0xa0e040",
+   "se_name": "uPlDanteShl006::setEfct(void)",
+   "confidence": "high",
+   "evidence": [
+    "vtable"
+   ],
+   "action": "renamed",
+   "notes": ""
+  },
+  {
+   "dx9_ea": "0x80cee0",
+   "old_dx9_name": "sub_80CEE0",
+   "new_dx9_name": "uPlDanteShl006::create",
+   "se_ea": "0xa0f2b0",
+   "se_name": "uPlDanteShl006::create(int,uActor *)",
+   "confidence": "high",
+   "evidence": [
+    "structural",
+    "callers"
+   ],
+   "action": "renamed",
+   "notes": "alloc 0x1800 + inlined ctor + addBottom (MtRandom angle)"
+  },
+  {
+   "dx9_ea": "0x80d010",
+   "old_dx9_name": "sub_80D010",
+   "new_dx9_name": "uPlDanteShl007::getDTI",
+   "se_ea": "0xa10850",
+   "se_name": "uPlDanteShl007::getDTI(void)",
+   "confidence": "high",
+   "evidence": [
+    "vtable",
+    "structural"
+   ],
+   "action": "renamed",
+   "notes": ""
+  },
+  {
+   "dx9_ea": "0x80d020",
+   "old_dx9_name": "sub_80D020",
+   "new_dx9_name": "??1uPlDanteShl007@@UAE@XZ",
+   "se_ea": null,
+   "se_name": "uPlDanteShl007::~uPlDanteShl007(void)",
+   "confidence": "high",
+   "evidence": [
+    "structural"
+   ],
+   "action": "renamed",
+   "notes": "destructor (vftable->uPlShl->uShell chain); SE inlines it into the deleting dtor"
+  },
+  {
+   "dx9_ea": "0x80d070",
+   "old_dx9_name": "loc_80D070",
+   "new_dx9_name": "uPlDanteShl007::vector_deleting_dtor",
+   "se_ea": "0xa10860",
+   "se_name": "uPlDanteShl007::`vector deleting destructor'(uint)",
+   "confidence": "high",
+   "evidence": [
+    "vtable",
+    "structural"
+   ],
+   "action": "renamed",
+   "notes": "was undefined code (slot 0)"
+  },
+  {
+   "dx9_ea": "0x80d0a0",
+   "old_dx9_name": "loc_80D0A0",
+   "new_dx9_name": "uPlDanteShl007::MyDTI::newInstance",
+   "se_ea": "0xa0f7f0",
+   "se_name": "uPlDanteShl007::MyDTI::newInstance(void)",
+   "confidence": "high",
+   "evidence": [
+    "structural"
+   ],
+   "action": "renamed",
+   "notes": "was undefined code; DTI-size alloc + ctor"
+  },
+  {
+   "dx9_ea": "0x80d100",
+   "old_dx9_name": "sub_80D100",
+   "new_dx9_name": "uPlDanteShl007::setup",
+   "se_ea": "0xa0f870",
+   "se_name": "uPlDanteShl007::setup(void)",
+   "confidence": "high",
+   "evidence": [
+    "vtable"
+   ],
+   "action": "renamed",
+   "notes": ""
+  },
+  {
+   "dx9_ea": "0x80de80",
+   "old_dx9_name": "sub_80DE80",
+   "new_dx9_name": "uPlDanteShl007::hitMessage",
+   "se_ea": "0xa0f620",
+   "se_name": "uPlDanteShl007::hitMessage(cCollisionGroup *,cCollisionGroup *)",
+   "confidence": "high",
+   "evidence": [
+    "vtable"
+   ],
+   "action": "renamed",
+   "notes": ""
+  },
+  {
+   "dx9_ea": "0x80dfc0",
+   "old_dx9_name": "sub_80DFC0",
+   "new_dx9_name": "uPlDanteShl007::setEfct",
+   "se_ea": "0xa0f760",
+   "se_name": "uPlDanteShl007::setEfct(void)",
+   "confidence": "high",
+   "evidence": [
+    "vtable"
+   ],
+   "action": "renamed",
+   "notes": ""
+  },
+  {
+   "dx9_ea": "0x80e050",
+   "old_dx9_name": "sub_80E050",
+   "new_dx9_name": "uPlDanteShl007::create",
+   "se_ea": "0xa106a0",
+   "se_name": "uPlDanteShl007::create(int,int,uActor *)",
+   "confidence": "high",
+   "evidence": [
+    "structural",
+    "callers"
+   ],
+   "action": "renamed",
+   "notes": "alloc 0x1800 + inlined ctor + addBottom (MtRandom angle)"
+  },
+  {
+   "dx9_ea": "0x80e1b0",
+   "old_dx9_name": "sub_80E1B0",
+   "new_dx9_name": "uPlDanteShl008::getDTI",
+   "se_ea": "0xa11900",
+   "se_name": "uPlDanteShl008::getDTI(void)",
+   "confidence": "high",
+   "evidence": [
+    "vtable",
+    "structural"
+   ],
+   "action": "renamed",
+   "notes": ""
+  },
+  {
+   "dx9_ea": "0x80e1c0",
+   "old_dx9_name": "sub_80E1C0",
+   "new_dx9_name": "??1uPlDanteShl008@@UAE@XZ",
+   "se_ea": null,
+   "se_name": "uPlDanteShl008::~uPlDanteShl008(void)",
+   "confidence": "high",
+   "evidence": [
+    "structural"
+   ],
+   "action": "renamed",
+   "notes": "destructor (vftable->uPlShl->uShell chain); SE inlines it into the deleting dtor"
+  },
+  {
+   "dx9_ea": "0x80e210",
+   "old_dx9_name": "loc_80E210",
+   "new_dx9_name": "uPlDanteShl008::scalar_deleting_dtor",
+   "se_ea": "0xa11910",
+   "se_name": "uPlDanteShl008::`scalar deleting destructor'(uint)",
+   "confidence": "high",
+   "evidence": [
+    "vtable",
+    "structural"
+   ],
+   "action": "renamed",
+   "notes": "was undefined code (slot 0)"
+  },
+  {
+   "dx9_ea": "0x80e240",
+   "old_dx9_name": "loc_80E240",
+   "new_dx9_name": "uPlDanteShl008::MyDTI::newInstance",
+   "se_ea": "0xa10be0",
+   "se_name": "uPlDanteShl008::MyDTI::newInstance(void)",
+   "confidence": "high",
+   "evidence": [
+    "structural"
+   ],
+   "action": "renamed",
+   "notes": "was undefined code; DTI-size alloc + ctor"
+  },
+  {
+   "dx9_ea": "0x80e290",
+   "old_dx9_name": "sub_80E290",
+   "new_dx9_name": "uPlDanteShl008::setup",
+   "se_ea": "0xa10c50",
+   "se_name": "uPlDanteShl008::setup(void)",
+   "confidence": "high",
+   "evidence": [
+    "vtable"
+   ],
+   "action": "renamed",
+   "notes": ""
+  },
+  {
+   "dx9_ea": "0x80ed40",
+   "old_dx9_name": "sub_80ED40",
+   "new_dx9_name": "uPlDanteShl008::hitMessage",
+   "se_ea": "0xa10a20",
+   "se_name": "uPlDanteShl008::hitMessage(cCollisionGroup *,cCollisionGroup *)",
+   "confidence": "high",
+   "evidence": [
+    "vtable"
+   ],
+   "action": "renamed",
+   "notes": ""
+  },
+  {
+   "dx9_ea": "0x80ee80",
+   "old_dx9_name": "sub_80EE80",
+   "new_dx9_name": "uPlDanteShl008::create",
+   "se_ea": "0xa11770",
+   "se_name": "uPlDanteShl008::create(int,uActor *)",
+   "confidence": "high",
+   "evidence": [
+    "structural",
+    "callers"
+   ],
+   "action": "renamed",
+   "notes": "alloc 0x1800 + inlined ctor + addBottom (MtRandom angle)"
+  },
+  {
+   "dx9_ea": "0x80efb0",
+   "old_dx9_name": "sub_80EFB0",
+   "new_dx9_name": "uPlDanteShl009::getDTI",
+   "se_ea": "0xa12740",
+   "se_name": "uPlDanteShl009::getDTI(void)",
+   "confidence": "high",
+   "evidence": [
+    "vtable",
+    "structural"
+   ],
+   "action": "renamed",
+   "notes": ""
+  },
+  {
+   "dx9_ea": "0x80efc0",
+   "old_dx9_name": "sub_80EFC0",
+   "new_dx9_name": "??1uPlDanteShl009@@UAE@XZ",
+   "se_ea": null,
+   "se_name": "uPlDanteShl009::~uPlDanteShl009(void)",
+   "confidence": "high",
+   "evidence": [
+    "structural"
+   ],
+   "action": "renamed",
+   "notes": "destructor (vftable->uPlShl->uShell chain); SE inlines it into the deleting dtor"
+  },
+  {
+   "dx9_ea": "0x80f010",
+   "old_dx9_name": "loc_80F010",
+   "new_dx9_name": "uPlDanteShl009::scalar_deleting_dtor",
+   "se_ea": "0xa12750",
+   "se_name": "uPlDanteShl009::`scalar deleting destructor'(uint)",
+   "confidence": "high",
+   "evidence": [
+    "vtable",
+    "structural"
+   ],
+   "action": "renamed",
+   "notes": "was undefined code (slot 0)"
+  },
+  {
+   "dx9_ea": "0x80f040",
+   "old_dx9_name": "loc_80F040",
+   "new_dx9_name": "uPlDanteShl009::MyDTI::newInstance",
+   "se_ea": "0xa11c90",
+   "se_name": "uPlDanteShl009::MyDTI::newInstance(void)",
+   "confidence": "high",
+   "evidence": [
+    "structural"
+   ],
+   "action": "renamed",
+   "notes": "was undefined code; DTI-size alloc + ctor"
+  },
+  {
+   "dx9_ea": "0x80f090",
+   "old_dx9_name": "sub_80F090",
+   "new_dx9_name": "uPlDanteShl009::setup",
+   "se_ea": "0xa11d00",
+   "se_name": "uPlDanteShl009::setup(void)",
+   "confidence": "high",
+   "evidence": [
+    "vtable"
+   ],
+   "action": "renamed",
+   "notes": ""
+  },
+  {
+   "dx9_ea": "0x80f8c0",
+   "old_dx9_name": "sub_80F8C0",
+   "new_dx9_name": "uPlDanteShl009::hitMessage",
+   "se_ea": "0xa11ad0",
+   "se_name": "uPlDanteShl009::hitMessage(cCollisionGroup *,cCollisionGroup *)",
+   "confidence": "high",
+   "evidence": [
+    "vtable"
+   ],
+   "action": "renamed",
+   "notes": ""
+  },
+  {
+   "dx9_ea": "0x80fa00",
+   "old_dx9_name": "sub_80FA00",
+   "new_dx9_name": "uPlDanteShl009::setEfct",
+   "se_ea": "0xa11c00",
+   "se_name": "uPlDanteShl009::setEfct(void)",
+   "confidence": "high",
+   "evidence": [
+    "vtable"
+   ],
+   "action": "renamed",
+   "notes": "ICF-folded: one DX9 body for 3 SE methods: uPlDanteShl009::setEfct @ 0xa11c00, uPlDanteShl005::setEfct @ 0xa0c970, uPlDanteShl008::setEfct @ 0xa10b50"
+  },
+  {
+   "dx9_ea": "0x80fa90",
+   "old_dx9_name": "sub_80FA90",
+   "new_dx9_name": "uPlDanteShl009::create",
+   "se_ea": "0xa125b0",
+   "se_name": "uPlDanteShl009::create(int,uActor *)",
+   "confidence": "high",
+   "evidence": [
+    "structural",
+    "callers"
+   ],
+   "action": "renamed",
+   "notes": "alloc 0x1800 + inlined ctor + addBottom (MtRandom angle)"
+  },
+  {
+   "dx9_ea": "0x80fbc0",
+   "old_dx9_name": "sub_80FBC0",
+   "new_dx9_name": "uPlDanteShl010::getDTI",
+   "se_ea": "0xa13380",
+   "se_name": "uPlDanteShl010::getDTI(void)",
+   "confidence": "high",
+   "evidence": [
+    "vtable",
+    "structural"
+   ],
+   "action": "renamed",
+   "notes": ""
+  },
+  {
+   "dx9_ea": "0x80fbd0",
+   "old_dx9_name": "sub_80FBD0",
+   "new_dx9_name": "??1uPlDanteShl010@@UAE@XZ",
+   "se_ea": null,
+   "se_name": "uPlDanteShl010::~uPlDanteShl010(void)",
+   "confidence": "high",
+   "evidence": [
+    "structural"
+   ],
+   "action": "renamed",
+   "notes": "destructor (vftable->uPlShl->uShell chain); SE inlines it into the deleting dtor"
+  },
+  {
+   "dx9_ea": "0x80fc20",
+   "old_dx9_name": "loc_80FC20",
+   "new_dx9_name": "uPlDanteShl010::scalar_deleting_dtor",
+   "se_ea": "0xa13390",
+   "se_name": "uPlDanteShl010::`scalar deleting destructor'(uint)",
+   "confidence": "high",
+   "evidence": [
+    "vtable",
+    "structural"
+   ],
+   "action": "renamed",
+   "notes": "was undefined code (slot 0)"
+  },
+  {
+   "dx9_ea": "0x80fc50",
+   "old_dx9_name": "loc_80FC50",
+   "new_dx9_name": "uPlDanteShl010::MyDTI::newInstance",
+   "se_ea": "0xa12b60",
+   "se_name": "uPlDanteShl010::MyDTI::newInstance(void)",
+   "confidence": "high",
+   "evidence": [
+    "structural"
+   ],
+   "action": "renamed",
+   "notes": "was undefined code; DTI-size alloc + ctor"
+  },
+  {
+   "dx9_ea": "0x80fc80",
+   "old_dx9_name": "sub_80FC80",
+   "new_dx9_name": "uPlDanteShl010::uPlDanteShl010",
+   "se_ea": "0xa128c0",
+   "se_name": "uPlDanteShl010::uPlDanteShl010(int)",
+   "confidence": "high",
+   "evidence": [
+    "structural",
+    "callers"
+   ],
+   "action": "renamed",
+   "notes": "ctor (uPlShl ctor + own vftable)"
+  },
+  {
+   "dx9_ea": "0x80fd00",
+   "old_dx9_name": "sub_80FD00",
+   "new_dx9_name": "uPlDanteShl010::setup",
+   "se_ea": "0xa12ba0",
+   "se_name": "uPlDanteShl010::setup(void)",
+   "confidence": "high",
+   "evidence": [
+    "vtable"
+   ],
+   "action": "renamed",
+   "notes": ""
+  },
+  {
+   "dx9_ea": "0x8104e0",
+   "old_dx9_name": "sub_8104E0",
+   "new_dx9_name": "uPlDanteShl010::setWallHit",
+   "se_ea": "0xa132f0",
+   "se_name": "uPlDanteShl010::setWallHit(sCollision::TriangleInfo *)",
+   "confidence": "high",
+   "evidence": [
+    "vtable"
+   ],
+   "action": "renamed",
+   "notes": "ICF-folded: one DX9 body for 8 SE methods: uPlDanteShl010::setWallHit @ 0xa132f0, uPlDanteShl004 @ 0xa0c610, 005 @ 0xa0db50, 006 @ 0xa0f220, 007 @ 0xa10610, 008 @ 0xa116e0, 009 @ 0xa12520, 015 @ 0xa202f0"
+  },
+  {
+   "dx9_ea": "0x810560",
+   "old_dx9_name": "sub_810560",
+   "new_dx9_name": "uPlDanteShl010::hitMessage",
+   "se_ea": "0xa129f0",
+   "se_name": "uPlDanteShl010::hitMessage(cCollisionGroup *,cCollisionGroup *)",
+   "confidence": "high",
+   "evidence": [
+    "vtable"
+   ],
+   "action": "renamed",
+   "notes": ""
+  },
+  {
+   "dx9_ea": "0x810670",
+   "old_dx9_name": "sub_810670",
+   "new_dx9_name": "uPlDanteShl011::getDTI",
+   "se_ea": "0xa149c0",
+   "se_name": "uPlDanteShl011::getDTI(void)",
+   "confidence": "high",
+   "evidence": [
+    "vtable",
+    "structural"
+   ],
+   "action": "renamed",
+   "notes": ""
+  },
+  {
+   "dx9_ea": "0x810740",
+   "old_dx9_name": "sub_810740",
+   "new_dx9_name": "uPlDanteShl011::scalar_deleting_dtor",
+   "se_ea": "0xa149d0",
+   "se_name": "uPlDanteShl011::`scalar deleting destructor'(uint)",
+   "confidence": "high",
+   "evidence": [
+    "vtable",
+    "structural"
+   ],
+   "action": "renamed",
+   "notes": "slot 0; dtor inlined"
+  },
+  {
+   "dx9_ea": "0x810680",
+   "old_dx9_name": "loc_810680",
+   "new_dx9_name": "uPlDanteShl011::MyDTI::newInstance",
+   "se_ea": "0xa138c0",
+   "se_name": "uPlDanteShl011::MyDTI::newInstance(void)",
+   "confidence": "high",
+   "evidence": [
+    "structural"
+   ],
+   "action": "renamed",
+   "notes": "was undefined code; DTI-size alloc + ctor"
+  },
+  {
+   "dx9_ea": "0x8106b0",
+   "old_dx9_name": "sub_8106B0",
+   "new_dx9_name": "uPlDanteShl011::uPlDanteShl011",
+   "se_ea": "0xa13500",
+   "se_name": "uPlDanteShl011::uPlDanteShl011(void)",
+   "confidence": "high",
+   "evidence": [
+    "structural",
+    "callers"
+   ],
+   "action": "renamed",
+   "notes": "ctor (uPlShl ctor + own vftable)"
+  },
+  {
+   "dx9_ea": "0x8107a0",
+   "old_dx9_name": "sub_8107A0",
+   "new_dx9_name": "uPlDanteShl011::createProperty",
+   "se_ea": "0xa13900",
+   "se_name": "uPlDanteShl011::createProperty(MtPropertyList &)",
+   "confidence": "high",
+   "evidence": [
+    "vtable",
+    "strings"
+   ],
+   "action": "renamed",
+   "notes": ""
+  },
+  {
+   "dx9_ea": "0x8108d0",
+   "old_dx9_name": "sub_8108D0",
+   "new_dx9_name": "uPlDanteShl011::setup",
+   "se_ea": "0xa13b40",
+   "se_name": "uPlDanteShl011::setup(void)",
+   "confidence": "high",
+   "evidence": [
+    "vtable",
+    "strings"
+   ],
+   "action": "renamed",
+   "notes": ""
+  },
+  {
+   "dx9_ea": "0x810c10",
+   "old_dx9_name": "sub_810C10",
+   "new_dx9_name": "uPlDanteShl011::moveEx",
+   "se_ea": "0xa13e70",
+   "se_name": "uPlDanteShl011::moveEx(void)",
+   "confidence": "high",
+   "evidence": [
+    "vtable"
+   ],
+   "action": "renamed",
+   "notes": "DX9 slot 7 = SE 9"
+  },
+  {
+   "dx9_ea": "0x811590",
+   "old_dx9_name": "sub_811590",
+   "new_dx9_name": "uPlDanteShl011::main",
+   "se_ea": "0xa147f0",
+   "se_name": "uPlDanteShl011::main(void)",
+   "confidence": "high",
+   "evidence": [
+    "vtable"
+   ],
+   "action": "renamed",
+   "notes": "DX9 slot 30 = SE 53"
+  },
+  {
+   "dx9_ea": "0x811660",
+   "old_dx9_name": "sub_811660",
+   "new_dx9_name": "uPlDanteShl011::updateMatrix",
+   "se_ea": "0xa135e0",
+   "se_name": "uPlDanteShl011::updateMatrix(void)",
+   "confidence": "high",
+   "evidence": [
+    "vtable"
+   ],
+   "action": "renamed",
+   "notes": "DX9 slot 82 = SE 119"
+  },
+  {
+   "dx9_ea": "0x811690",
+   "old_dx9_name": "sub_811690",
+   "new_dx9_name": "uPlDanteShl011::updateMaterial",
+   "se_ea": "0xa13620",
+   "se_name": "uPlDanteShl011::updateMaterial(void)",
+   "confidence": "high",
+   "evidence": [
+    "vtable"
+   ],
+   "action": "renamed",
+   "notes": "DX9 slot 29 = SE 50"
+  },
+  {
+   "dx9_ea": "0x8116b0",
+   "old_dx9_name": "sub_8116B0",
+   "new_dx9_name": "uPlDanteShl011::draw",
+   "se_ea": "0xa13640",
+   "se_name": "uPlDanteShl011::draw(cDraw *)",
+   "confidence": "high",
+   "evidence": [
+    "vtable"
+   ],
+   "action": "renamed",
+   "notes": "DX9 slot 9 = SE 12"
+  },
+  {
+   "dx9_ea": "0x8116e0",
+   "old_dx9_name": "sub_8116E0",
+   "new_dx9_name": "uPlDanteShl011::setEfct",
+   "se_ea": "0xa13680",
+   "se_name": "uPlDanteShl011::setEfct(void)",
+   "confidence": "high",
+   "evidence": [
+    "vtable"
+   ],
+   "action": "renamed",
+   "notes": ""
+  },
+  {
+   "dx9_ea": "0x811870",
+   "old_dx9_name": "sub_811870",
+   "new_dx9_name": "uPlDanteShl011::hitMessage",
+   "se_ea": "0xa14910",
+   "se_name": "uPlDanteShl011::hitMessage(cCollisionGroup *,cCollisionGroup *)",
+   "confidence": "high",
+   "evidence": [
+    "vtable"
+   ],
+   "action": "renamed",
+   "notes": ""
+  },
+  {
+   "dx9_ea": "0x811900",
+   "old_dx9_name": "sub_811900",
+   "new_dx9_name": "uPlDanteShl011::kill",
+   "se_ea": "0xa13840",
+   "se_name": "uPlDanteShl011::kill(void)",
+   "confidence": "high",
+   "evidence": [
+    "vtable"
+   ],
+   "action": "renamed",
+   "notes": "DX9 slot 12 = SE 21"
+  },
+  {
+   "dx9_ea": "0x811950",
+   "old_dx9_name": "sub_811950",
+   "new_dx9_name": "uPlDanteShl012::getDTI",
+   "se_ea": "0xa151e0",
+   "se_name": "uPlDanteShl012::getDTI(void)",
+   "confidence": "high",
+   "evidence": [
+    "vtable",
+    "structural"
+   ],
+   "action": "renamed",
+   "notes": ""
+  },
+  {
+   "dx9_ea": "0x811960",
+   "old_dx9_name": "loc_811960",
+   "new_dx9_name": "uPlDanteShl012::MyDTI::newInstance",
+   "se_ea": "0xa14d20",
+   "se_name": "uPlDanteShl012::MyDTI::newInstance(void)",
+   "confidence": "high",
+   "evidence": [
+    "structural"
+   ],
+   "action": "renamed",
+   "notes": "was undefined code; DTI-size alloc + ctor"
+  },
+  {
+   "dx9_ea": "0x8119c0",
+   "old_dx9_name": "sub_8119C0",
+   "new_dx9_name": "uPlDanteShl012::setup",
+   "se_ea": "0xa14d90",
+   "se_name": "uPlDanteShl012::setup(void)",
+   "confidence": "high",
+   "evidence": [
+    "vtable"
+   ],
+   "action": "renamed",
+   "notes": ""
+  },
+  {
+   "dx9_ea": "0x811c60",
+   "old_dx9_name": "sub_811C60",
+   "new_dx9_name": "uPlDanteShl012::update",
+   "se_ea": "0xa15010",
+   "se_name": "uPlDanteShl012::update(void)",
+   "confidence": "high",
+   "evidence": [
+    "vtable"
+   ],
+   "action": "renamed",
+   "notes": "DX9 slot 77 = SE 114"
+  },
+  {
+   "dx9_ea": "0x811e40",
+   "old_dx9_name": "sub_811E40",
+   "new_dx9_name": "uPlDanteShl012::hitMessage",
+   "se_ea": "0xa14b80",
+   "se_name": "uPlDanteShl012::hitMessage(cCollisionGroup *,cCollisionGroup *)",
+   "confidence": "high",
+   "evidence": [
+    "vtable"
+   ],
+   "action": "renamed",
+   "notes": ""
+  },
+  {
+   "dx9_ea": "0x811f00",
+   "old_dx9_name": "sub_811F00",
+   "new_dx9_name": "uPlDanteShl012::create",
+   "se_ea": "0xa14c70",
+   "se_name": "uPlDanteShl012::create(uActor *,int,float,int)",
+   "confidence": "high",
+   "evidence": [
+    "structural",
+    "consts"
+   ],
+   "action": "renamed",
+   "notes": "alloc + inlined ctor + addBottom"
+  },
+  {
+   "dx9_ea": "0x811f90",
+   "old_dx9_name": "sub_811F90",
+   "new_dx9_name": "uPlDanteShl013::getDTI",
+   "se_ea": "0xa1d910",
+   "se_name": "uPlDanteShl013::getDTI(void)",
+   "confidence": "high",
+   "evidence": [
+    "vtable",
+    "structural"
+   ],
+   "action": "renamed",
+   "notes": ""
+  },
+  {
+   "dx9_ea": "0x8121e0",
+   "old_dx9_name": "sub_8121E0",
+   "new_dx9_name": "uPlDanteShl013::vector_deleting_dtor",
+   "se_ea": "0xa1d930",
+   "se_name": "uPlDanteShl013::`vector deleting destructor'(uint)",
+   "confidence": "high",
+   "evidence": [
+    "vtable",
+    "structural"
+   ],
+   "action": "renamed",
+   "notes": "slot 0; dtor inlined"
+  },
+  {
+   "dx9_ea": "0x811fb0",
+   "old_dx9_name": "sub_811FB0",
+   "new_dx9_name": "uPlDanteShl013::MyDTI::newInstance",
+   "se_ea": "0xa15fa0",
+   "se_name": "uPlDanteShl013::MyDTI::newInstance(void)",
+   "confidence": "high",
+   "evidence": [
+    "structural"
+   ],
+   "action": "renamed",
+   "notes": "DTI-size alloc (0x1880) + ctor"
+  },
+  {
+   "dx9_ea": "0x811fe0",
+   "old_dx9_name": "sub_811FE0",
+   "new_dx9_name": "uPlDanteShl013::uPlDanteShl013",
+   "se_ea": "0xa154f0",
+   "se_name": "uPlDanteShl013::uPlDanteShl013(int,float)",
+   "confidence": "high",
+   "evidence": [
+    "structural",
+    "callers"
+   ],
+   "action": "renamed",
+   "notes": "ctor (uPlShl ctor + own vftable)"
+  },
+  {
+   "dx9_ea": "0x811fa0",
+   "old_dx9_name": "sub_811FA0",
+   "new_dx9_name": "uPlDanteShl013::isEnd",
+   "se_ea": "0xa1d920",
+   "se_name": "uPlDanteShl013::isEnd(void)",
+   "confidence": "high",
+   "evidence": [
+    "vtable",
+    "consts"
+   ],
+   "action": "renamed",
+   "notes": "DX9 slot 83 = SE 120"
+  },
+  {
+   "dx9_ea": "0x812230",
+   "old_dx9_name": "sub_812230",
+   "new_dx9_name": "uPlDanteShl013::createProperty",
+   "se_ea": "0xa15fe0",
+   "se_name": "uPlDanteShl013::createProperty(MtPropertyList &)",
+   "confidence": "high",
+   "evidence": [
+    "vtable",
+    "strings"
+   ],
+   "action": "renamed",
+   "notes": ""
+  },
+  {
+   "dx9_ea": "0x812d60",
+   "old_dx9_name": "sub_812D60",
+   "new_dx9_name": "uPlDanteShl013::setup",
+   "se_ea": "0xa17620",
+   "se_name": "uPlDanteShl013::setup(void)",
+   "confidence": "high",
+   "evidence": [
+    "vtable",
+    "strings"
+   ],
+   "action": "renamed",
+   "notes": ""
+  },
+  {
+   "dx9_ea": "0x812f40",
+   "old_dx9_name": "sub_812F40",
+   "new_dx9_name": "uPlDanteShl013::main",
+   "se_ea": "0xa156c0",
+   "se_name": "uPlDanteShl013::main(void)",
+   "confidence": "high",
+   "evidence": [
+    "vtable"
+   ],
+   "action": "renamed",
+   "notes": "DX9 slot 30 = SE 53"
+  },
+  {
+   "dx9_ea": "0x814430",
+   "old_dx9_name": "sub_814430",
+   "new_dx9_name": "uPlDanteShl013::die",
+   "se_ea": "0xa18410",
+   "se_name": "uPlDanteShl013::die(void)",
+   "confidence": "high",
+   "evidence": [
+    "vtable"
+   ],
+   "action": "renamed",
+   "notes": "DX9 slot 79 = SE 116; 27 = 27 bytes"
+  },
+  {
+   "dx9_ea": "0x814450",
+   "old_dx9_name": "uPlDanteShl013::hitMessage",
+   "new_dx9_name": "uPlDanteShl013::hitMessage",
+   "se_ea": "0xa15ad0",
+   "se_name": "uPlDanteShl013::hitMessage(cCollisionGroup *,cCollisionGroup *)",
+   "confidence": "high",
+   "evidence": [
+    "vtable"
+   ],
+   "action": "confirmed",
+   "notes": ""
+  },
+  {
+   "dx9_ea": "0x815800",
+   "old_dx9_name": "sub_815800",
+   "new_dx9_name": "uPlDanteShl013::setParentConst",
+   "se_ea": "0xa18430",
+   "se_name": "uPlDanteShl013::setParentConst(void)",
+   "confidence": "high",
+   "evidence": [
+    "callers"
+   ],
+   "action": "renamed",
+   "notes": "callers updateMove + updateWait exactly as in SE"
+  },
+  {
+   "dx9_ea": "0x819360",
+   "old_dx9_name": "sub_819360",
+   "new_dx9_name": "uPlDanteShl013::updatePtr",
+   "se_ea": "0xa18500",
+   "se_name": "uPlDanteShl013::updatePtr(void)",
+   "confidence": "high",
+   "evidence": [
+    "vtable"
+   ],
+   "action": "renamed",
+   "notes": "DX9 slot 31 = SE 54"
+  },
+  {
+   "dx9_ea": "0x819680",
+   "old_dx9_name": "sub_819680",
+   "new_dx9_name": "uPlDanteShl013::setDelEfc",
+   "se_ea": "0xa15ca0",
+   "se_name": "uPlDanteShl013::setDelEfc(void)",
+   "confidence": "high",
+   "evidence": [
+    "callers"
+   ],
+   "action": "renamed",
+   "notes": "callers updatePlCnst/die/setPlCnst/setEmCnst/setBom exactly as in SE"
+  },
+  {
+   "dx9_ea": "0x8198e0",
+   "old_dx9_name": "sub_8198E0",
+   "new_dx9_name": "uPlDanteShl013::setJntRot",
+   "se_ea": "0xa18830",
+   "se_name": "uPlDanteShl013::setJntRot(void)",
+   "confidence": "high",
+   "evidence": [
+    "callers"
+   ],
+   "action": "renamed",
+   "notes": "callers setMoveInit/setPlCnst/setEmCnst/setBom exactly as in SE"
+  },
+  {
+   "dx9_ea": "0x8158c0",
+   "old_dx9_name": "sub_8158C0",
+   "new_dx9_name": "uPlDanteShl013::setBurst",
+   "se_ea": "0xa15bf0",
+   "se_name": "uPlDanteShl013::setBurst(float,int)",
+   "confidence": "high",
+   "evidence": [
+    "vtable",
+    "order"
+   ],
+   "action": "renamed",
+   "notes": "DX9 slot 84 = SE 121"
+  },
+  {
+   "dx9_ea": "0x815980",
+   "old_dx9_name": "sub_815980",
+   "new_dx9_name": "uPlDanteShl013::setPlCnst",
+   "se_ea": "0xa1a0a0",
+   "se_name": "uPlDanteShl013::setPlCnst(int,bool)",
+   "confidence": "high",
+   "evidence": [
+    "vtable",
+    "order"
+   ],
+   "action": "renamed",
+   "notes": "DX9 slot 85 = SE 122"
+  },
+  {
+   "dx9_ea": "0x816be0",
+   "old_dx9_name": "sub_816BE0",
+   "new_dx9_name": "uPlDanteShl013::setEmCnst",
+   "se_ea": "0xa1b2f0",
+   "se_name": "uPlDanteShl013::setEmCnst(int,cLockOnTarget *,bool)",
+   "confidence": "high",
+   "evidence": [
+    "vtable",
+    "order"
+   ],
+   "action": "renamed",
+   "notes": "DX9 slot 86 = SE 123"
+  },
+  {
+   "dx9_ea": "0x818120",
+   "old_dx9_name": "sub_818120",
+   "new_dx9_name": "uPlDanteShl013::setBom",
+   "se_ea": "0xa1c750",
+   "se_name": "uPlDanteShl013::setBom(int,bool)",
+   "confidence": "high",
+   "evidence": [
+    "vtable",
+    "order"
+   ],
+   "action": "renamed",
+   "notes": "DX9 slot 87 = SE 124"
+  },
+  {
+   "dx9_ea": "0x813100",
+   "old_dx9_name": "sub_813100",
+   "new_dx9_name": "uPlDanteShl013::updatePlCnst",
+   "se_ea": "0xa177f0",
+   "se_name": "uPlDanteShl013::updatePlCnst(void)",
+   "confidence": "high",
+   "evidence": [
+    "vtable",
+    "order"
+   ],
+   "action": "renamed",
+   "notes": "DX9 slot 88 = SE 125"
+  },
+  {
+   "dx9_ea": "0x8131a0",
+   "old_dx9_name": "sub_8131A0",
+   "new_dx9_name": "uPlDanteShl013::updateMove",
+   "se_ea": "0xa18a90",
+   "se_name": "uPlDanteShl013::updateMove(void)",
+   "confidence": "high",
+   "evidence": [
+    "vtable",
+    "order"
+   ],
+   "action": "renamed",
+   "notes": "DX9 slot 89 = SE 126"
+  },
+  {
+   "dx9_ea": "0x813580",
+   "old_dx9_name": "sub_813580",
+   "new_dx9_name": "uPlDanteShl013::updateWait",
+   "se_ea": "0xa18e80",
+   "se_name": "uPlDanteShl013::updateWait(void)",
+   "confidence": "high",
+   "evidence": [
+    "vtable",
+    "order"
+   ],
+   "action": "renamed",
+   "notes": "DX9 slot 90 = SE 127"
+  },
+  {
+   "dx9_ea": "0x813610",
+   "old_dx9_name": "sub_813610",
+   "new_dx9_name": "uPlDanteShl013::updateCnst",
+   "se_ea": "0xa15890",
+   "se_name": "uPlDanteShl013::updateCnst(void)",
+   "confidence": "high",
+   "evidence": [
+    "vtable",
+    "order"
+   ],
+   "action": "renamed",
+   "notes": "DX9 slot 91 = SE 128"
+  },
+  {
+   "dx9_ea": "0x813650",
+   "old_dx9_name": "sub_813650",
+   "new_dx9_name": "uPlDanteShl013::updateBurst",
+   "se_ea": "0xa158d0",
+   "se_name": "uPlDanteShl013::updateBurst(void)",
+   "confidence": "high",
+   "evidence": [
+    "vtable",
+    "order"
+   ],
+   "action": "renamed",
+   "notes": "DX9 slot 92 = SE 129"
+  },
+  {
+   "dx9_ea": "0x813810",
+   "old_dx9_name": "sub_813810",
+   "new_dx9_name": "uPlDanteShl013::updateLaunch",
+   "se_ea": "0xa17890",
+   "se_name": "uPlDanteShl013::updateLaunch(void)",
+   "confidence": "high",
+   "evidence": [
+    "vtable",
+    "order"
+   ],
+   "action": "renamed",
+   "notes": "DX9 slot 93 = SE 130"
+  },
+  {
+   "dx9_ea": "0x813d10",
+   "old_dx9_name": "sub_813D10",
+   "new_dx9_name": "uPlDanteShl013::updateWait2",
+   "se_ea": "0xa17d50",
+   "se_name": "uPlDanteShl013::updateWait2(void)",
+   "confidence": "high",
+   "evidence": [
+    "vtable",
+    "order"
+   ],
+   "action": "renamed",
+   "notes": "DX9 slot 94 = SE 131"
+  },
+  {
+   "dx9_ea": "0x814230",
+   "old_dx9_name": "sub_814230",
+   "new_dx9_name": "uPlDanteShl013::updateBomWait",
+   "se_ea": "0xa18240",
+   "se_name": "uPlDanteShl013::updateBomWait(void)",
+   "confidence": "high",
+   "evidence": [
+    "vtable",
+    "order"
+   ],
+   "action": "renamed",
+   "notes": "DX9 slot 95 = SE 132"
+  },
+  {
+   "dx9_ea": "0x814390",
+   "old_dx9_name": "sub_814390",
+   "new_dx9_name": "uPlDanteShl013::setWait",
+   "se_ea": "0xa18370",
+   "se_name": "uPlDanteShl013::setWait(void)",
+   "confidence": "high",
+   "evidence": [
+    "vtable",
+    "order"
+   ],
+   "action": "renamed",
+   "notes": "DX9 slot 96 = SE 133"
+  },
+  {
+   "dx9_ea": "0x8145b0",
+   "old_dx9_name": "sub_8145B0",
+   "new_dx9_name": "uPlDanteShl013::setMoveInit",
+   "se_ea": "0xa18f30",
+   "se_name": "uPlDanteShl013::setMoveInit(void)",
+   "confidence": "high",
+   "evidence": [
+    "vtable",
+    "order"
+   ],
+   "action": "renamed",
+   "notes": "DX9 slot 97 = SE 134"
+  },
+  {
+   "dx9_ea": "0x819b70",
+   "old_dx9_name": "sub_819B70",
+   "new_dx9_name": "uPlDanteShl014::getDTI",
+   "se_ea": "0xa1f680",
+   "se_name": "uPlDanteShl014::getDTI(void)",
+   "confidence": "high",
+   "evidence": [
+    "vtable",
+    "structural"
+   ],
+   "action": "renamed",
+   "notes": ""
+  },
+  {
+   "dx9_ea": "0x819c90",
+   "old_dx9_name": "sub_819C90",
+   "new_dx9_name": "??1uPlDanteShl014@@UAE@XZ",
+   "se_ea": "0xa1db50",
+   "se_name": "uPlDanteShl014::~uPlDanteShl014(void)",
+   "confidence": "high",
+   "evidence": [
+    "structural"
+   ],
+   "action": "renamed",
+   "notes": "destructor (vftable->uPlShl->uShell chain)"
+  },
+  {
+   "dx9_ea": "0x819c60",
+   "old_dx9_name": "loc_819C60",
+   "new_dx9_name": "uPlDanteShl014::scalar_deleting_dtor",
+   "se_ea": "0xa1f690",
+   "se_name": "uPlDanteShl014::`scalar deleting destructor'(uint)",
+   "confidence": "high",
+   "evidence": [
+    "vtable",
+    "structural"
+   ],
+   "action": "renamed",
+   "notes": "was undefined code (slot 0)"
+  },
+  {
+   "dx9_ea": "0x819b80",
+   "old_dx9_name": "loc_819B80",
+   "new_dx9_name": "uPlDanteShl014::MyDTI::newInstance",
+   "se_ea": "0xa1dec0",
+   "se_name": "uPlDanteShl014::MyDTI::newInstance(void)",
+   "confidence": "high",
+   "evidence": [
+    "structural"
+   ],
+   "action": "renamed",
+   "notes": "was undefined code; DTI-size alloc + ctor"
+  },
+  {
+   "dx9_ea": "0x819bb0",
+   "old_dx9_name": "sub_819BB0",
+   "new_dx9_name": "uPlDanteShl014::uPlDanteShl014",
+   "se_ea": "0xa1da90",
+   "se_name": "uPlDanteShl014::uPlDanteShl014(void)",
+   "confidence": "high",
+   "evidence": [
+    "structural",
+    "callers"
+   ],
+   "action": "renamed",
+   "notes": "ctor (uPlShl ctor + own vftable)"
+  },
+  {
+   "dx9_ea": "0x819ce0",
+   "old_dx9_name": "sub_819CE0",
+   "new_dx9_name": "uPlDanteShl014::createProperty",
+   "se_ea": "0xa1df00",
+   "se_name": "uPlDanteShl014::createProperty(MtPropertyList &)",
+   "confidence": "high",
+   "evidence": [
+    "vtable",
+    "strings"
+   ],
+   "action": "renamed",
+   "notes": ""
+  },
+  {
+   "dx9_ea": "0x819d80",
+   "old_dx9_name": "sub_819D80",
+   "new_dx9_name": "uPlDanteShl014::setup",
+   "se_ea": "0xa1e030",
+   "se_name": "uPlDanteShl014::setup(void)",
+   "confidence": "high",
+   "evidence": [
+    "vtable",
+    "strings"
+   ],
+   "action": "renamed",
+   "notes": ""
+  },
+  {
+   "dx9_ea": "0x81a5e0",
+   "old_dx9_name": "sub_81A5E0",
+   "new_dx9_name": "uPlDanteShl014::moveEx",
+   "se_ea": "0xa1e840",
+   "se_name": "uPlDanteShl014::moveEx(void)",
+   "confidence": "high",
+   "evidence": [
+    "vtable"
+   ],
+   "action": "renamed",
+   "notes": "DX9 slot 7 = SE 9"
+  },
+  {
+   "dx9_ea": "0x81b1c0",
+   "old_dx9_name": "sub_81B1C0",
+   "new_dx9_name": "uPlDanteShl014::main",
+   "se_ea": "0xa1f410",
+   "se_name": "uPlDanteShl014::main(void)",
+   "confidence": "high",
+   "evidence": [
+    "vtable"
+   ],
+   "action": "renamed",
+   "notes": "DX9 slot 30 = SE 53"
+  },
+  {
+   "dx9_ea": "0x81b300",
+   "old_dx9_name": "sub_81B300",
+   "new_dx9_name": "uPlDanteShl014::updateMatrix",
+   "se_ea": "0xa1db80",
+   "se_name": "uPlDanteShl014::updateMatrix(void)",
+   "confidence": "high",
+   "evidence": [
+    "vtable"
+   ],
+   "action": "renamed",
+   "notes": "DX9 slot 82 = SE 119"
+  },
+  {
+   "dx9_ea": "0x81b350",
+   "old_dx9_name": "sub_81B350",
+   "new_dx9_name": "uPlDanteShl014::updateMaterial",
+   "se_ea": "0xa1dbe0",
+   "se_name": "uPlDanteShl014::updateMaterial(void)",
+   "confidence": "high",
+   "evidence": [
+    "vtable"
+   ],
+   "action": "renamed",
+   "notes": "DX9 slot 29 = SE 50"
+  },
+  {
+   "dx9_ea": "0x81b380",
+   "old_dx9_name": "sub_81B380",
+   "new_dx9_name": "uPlDanteShl014::draw",
+   "se_ea": "0xa1dc20",
+   "se_name": "uPlDanteShl014::draw(cDraw *)",
+   "confidence": "high",
+   "evidence": [
+    "vtable"
+   ],
+   "action": "renamed",
+   "notes": "DX9 slot 9 = SE 12"
+  },
+  {
+   "dx9_ea": "0x81b3c0",
+   "old_dx9_name": "sub_81B3C0",
+   "new_dx9_name": "uPlDanteShl014::setEfct",
+   "se_ea": "0xa1dc70",
+   "se_name": "uPlDanteShl014::setEfct(void)",
+   "confidence": "high",
+   "evidence": [
+    "vtable"
+   ],
+   "action": "renamed",
+   "notes": ""
+  },
+  {
+   "dx9_ea": "0x81b550",
+   "old_dx9_name": "sub_81B550",
+   "new_dx9_name": "uPlDanteShl014::setWallHit",
+   "se_ea": "0xa1dda0",
+   "se_name": "uPlDanteShl014::setWallHit(sCollision::TriangleInfo *)",
+   "confidence": "high",
+   "evidence": [
+    "vtable"
+   ],
+   "action": "renamed",
+   "notes": "ICF-folded: one DX9 body for 3 SE methods: uPlDanteShl014::setWallHit @ 0xa1dda0, uPlDanteShl011::setWallHit @ 0xa137b0, uPlDanteShl017::setWallHit @ 0xa22e90"
+  },
+  {
+   "dx9_ea": "0x81b5c0",
+   "old_dx9_name": "sub_81B5C0",
+   "new_dx9_name": "uPlDanteShl014::hitMessage",
+   "se_ea": "0xa1f5d0",
+   "se_name": "uPlDanteShl014::hitMessage(cCollisionGroup *,cCollisionGroup *)",
+   "confidence": "high",
+   "evidence": [
+    "vtable"
+   ],
+   "action": "renamed",
+   "notes": ""
+  },
+  {
+   "dx9_ea": "0x81b650",
+   "old_dx9_name": "sub_81B650",
+   "new_dx9_name": "uPlDanteShl014::kill",
+   "se_ea": "0xa1de30",
+   "se_name": "uPlDanteShl014::kill(void)",
+   "confidence": "high",
+   "evidence": [
+    "vtable"
+   ],
+   "action": "renamed",
+   "notes": "DX9 slot 12 = SE 21"
+  },
+  {
+   "dx9_ea": "0x81b6b0",
+   "old_dx9_name": "sub_81B6B0",
+   "new_dx9_name": "uPlDanteShl015::getDTI",
+   "se_ea": "0xa20520",
+   "se_name": "uPlDanteShl015::getDTI(void)",
+   "confidence": "high",
+   "evidence": [
+    "vtable",
+    "structural"
+   ],
+   "action": "renamed",
+   "notes": ""
+  },
+  {
+   "dx9_ea": "0x81b7b0",
+   "old_dx9_name": "sub_81B7B0",
+   "new_dx9_name": "??1uPlDanteShl015@@UAE@XZ",
+   "se_ea": "0xa1f8b0",
+   "se_name": "uPlDanteShl015::~uPlDanteShl015(void)",
+   "confidence": "high",
+   "evidence": [
+    "structural"
+   ],
+   "action": "renamed",
+   "notes": "destructor (vftable->uPlShl->uShell chain)"
+  },
+  {
+   "dx9_ea": "0x81b780",
+   "old_dx9_name": "loc_81B780",
+   "new_dx9_name": "uPlDanteShl015::scalar_deleting_dtor",
+   "se_ea": "0xa20530",
+   "se_name": "uPlDanteShl015::`scalar deleting destructor'(uint)",
+   "confidence": "high",
+   "evidence": [
+    "vtable",
+    "structural"
+   ],
+   "action": "renamed",
+   "notes": "was undefined code (slot 0)"
+  },
+  {
+   "dx9_ea": "0x81b6c0",
+   "old_dx9_name": "loc_81B6C0",
+   "new_dx9_name": "uPlDanteShl015::MyDTI::newInstance",
+   "se_ea": "0xa1fa20",
+   "se_name": "uPlDanteShl015::MyDTI::newInstance(void)",
+   "confidence": "high",
+   "evidence": [
+    "structural"
+   ],
+   "action": "renamed",
+   "notes": "was undefined code; DTI-size alloc + ctor"
+  },
+  {
+   "dx9_ea": "0x81b6f0",
+   "old_dx9_name": "sub_81B6F0",
+   "new_dx9_name": "uPlDanteShl015::uPlDanteShl015",
+   "se_ea": "0xa1f800",
+   "se_name": "uPlDanteShl015::uPlDanteShl015(void)",
+   "confidence": "high",
+   "evidence": [
+    "structural",
+    "callers"
+   ],
+   "action": "renamed",
+   "notes": "ctor (uPlShl ctor + own vftable)"
+  },
+  {
+   "dx9_ea": "0x81b800",
+   "old_dx9_name": "sub_81B800",
+   "new_dx9_name": "uPlDanteShl015::createProperty",
+   "se_ea": "0xa1fa60",
+   "se_name": "uPlDanteShl015::createProperty(MtPropertyList &)",
+   "confidence": "high",
+   "evidence": [
+    "vtable",
+    "strings"
+   ],
+   "action": "renamed",
+   "notes": ""
+  },
+  {
+   "dx9_ea": "0x81b8a0",
+   "old_dx9_name": "sub_81B8A0",
+   "new_dx9_name": "uPlDanteShl015::setup",
+   "se_ea": "0xa1fb90",
+   "se_name": "uPlDanteShl015::setup(void)",
+   "confidence": "high",
+   "evidence": [
+    "vtable"
+   ],
+   "action": "renamed",
+   "notes": ""
+  },
+  {
+   "dx9_ea": "0x81b980",
+   "old_dx9_name": "sub_81B980",
+   "new_dx9_name": "uPlDanteShl015::moveEx",
+   "se_ea": "0xa1fc80",
+   "se_name": "uPlDanteShl015::moveEx(void)",
+   "confidence": "high",
+   "evidence": [
+    "vtable"
+   ],
+   "action": "renamed",
+   "notes": "DX9 slot 7 = SE 9"
+  }
+ ],
+ "notes": "Range 0x800000-0x81C000: 220 dumped functions + 33 previously undefined code blocks (deleting dtors and MyDTI::newInstance stubs) defined as functions = 253 rows. Shell slot map: identical to the uEm map (SE 9->7, 12->9, 21->12, 50->29, 53->30, 54->31, 59->36, 60->37) plus SE n>=114 -> DX9 n-37 for the uShell tail. uPlayer base slots: DX9 142,144,145,147,148,151 = SE 216,220,222,224,225,228 (SE virtualised checkPoseEnd 217/checkWeaponChange 219, which are direct calls in DX9). Wrong prior names fixed: uPlayerDante::checkRunBegin -> uPlayer::checkRunBegin; uPlayerDante::tickLuciferTimer -> uPlayer::checkAtckRenda; uPlayer::checkStingerWall_0 -> uPlayer::isWallFoot; uPlayer::checkHolyAction(0x8052C0) -> uPlayer::checkUseHolyWater (real checkHolyAction is vtable slot 151 at 0x805300); uPlCmnShl000::ctor -> uPlCmnShl000::create; uPlayer::afterPowerUp(0x8058E0) -> uPlayer::initCommandCheck(void) (SE afterPowerUp is only a wrapper). Vtable fix: 0xBE66EC uPlayer::cSECtrl::vftable -> uPlayer::cMotCancel::vftable. ICF: setWallHit bodies 0x806900 (Dante000/NeroShl000), 0x8084C0 (Dante001/NeroShl003), 0x809270 (002/003), 0x8104E0 (004-010,015), 0x81B550 (011/014/017); setEfct 0x809F30 (002/003), 0x80FA00 (005/008/009). Shl001/Shl012/CmnShl000 have no own deleting dtor (fold to uPlShl's). DX9-only structure: most shells have a standalone ~dtor (79 B) that SE inlines into its deleting dtor; named ??1Class@@UAE@XZ with se_ea null. Most SE create()/ctor pairs are merged in DX9 (create inlines the ctor). DX9 command table has 85 entries (SE 102). Tutorial initModel = SE initModel_Normal inlined (no Ex1/Ex2 costumes in DX9). 0x802B6E/74/7A/80 are switch-case return fragments of cBenchmarkCtrl::getActType split off by IDA. Medium: 0x8034E0 (isEnableAtckForceCancel vs checkMotCnclEnable)."
+}

@@ -1,0 +1,849 @@
+{
+ "functions": [
+  {
+   "fn": "0x4219D0",
+   "name": "sub_4219D0",
+   "nero_strcmp": false,
+   "chains": [
+    "mpSGEnemy",
+    "mpSGEnemy -> +0x30",
+    "mpSGEnemy -> +0x34",
+    "mpSGEnemy -> +0x38"
+   ],
+   "hits": [
+    {
+     "ea": "0x421A06",
+     "chain": [
+      "mpSGEnemy"
+     ],
+     "insn": "mov     eax, [eax+0D664h]"
+    },
+    {
+     "ea": "0x421A10",
+     "chain": [
+      "mpSGEnemy",
+      "+0x30"
+     ],
+     "insn": "fld     dword ptr [eax+30h]"
+    },
+    {
+     "ea": "0x421A15",
+     "chain": [
+      "mpSGEnemy",
+      "+0x34"
+     ],
+     "insn": "fld     dword ptr [eax+34h]"
+    },
+    {
+     "ea": "0x421A1B",
+     "chain": [
+      "mpSGEnemy",
+      "+0x38"
+     ],
+     "insn": "fld     dword ptr [eax+38h]"
+    }
+   ]
+  },
+  {
+   "fn": "0x421A30",
+   "name": "cCameraPlayer::getJointPosGrabedEnemy",
+   "nero_strcmp": false,
+   "chains": [
+    "mpSGEnemy",
+    "mpSGEnemy -> +0x2E4",
+    "mpSGEnemy -> +0x2E4 -> +0x80",
+    "mpSGEnemy -> +0x2E4 -> +0x84",
+    "mpSGEnemy -> +0x2E4 -> +0x88"
+   ],
+   "hits": [
+    {
+     "ea": "0x421A66",
+     "chain": [
+      "mpSGEnemy"
+     ],
+     "insn": "mov     eax, [eax+0D664h]"
+    },
+    {
+     "ea": "0x421A70",
+     "chain": [
+      "mpSGEnemy",
+      "+0x2E4"
+     ],
+     "insn": "mov     eax, [eax+2E4h]"
+    },
+    {
+     "ea": "0x421A76",
+     "chain": [
+      "mpSGEnemy",
+      "+0x2E4",
+      "+0x80"
+     ],
+     "insn": "movss   xmm0, dword ptr [eax+80h]"
+    },
+    {
+     "ea": "0x421A7E",
+     "chain": [
+      "mpSGEnemy",
+      "+0x2E4",
+      "+0x84"
+     ],
+     "insn": "movss   xmm1, dword ptr [eax+84h]"
+    },
+    {
+     "ea": "0x421A86",
+     "chain": [
+      "mpSGEnemy",
+      "+0x2E4",
+      "+0x88"
+     ],
+     "insn": "movss   xmm2, dword ptr [eax+88h]"
+    }
+   ]
+  },
+  {
+   "fn": "0x4947E0",
+   "name": "sMediator::savePlayerParam",
+   "nero_strcmp": false,
+   "chains": [
+    "mOdGaugeCtrl+0x4"
+   ],
+   "hits": [
+    {
+     "ea": "0x49482D",
+     "chain": [
+      "mOdGaugeCtrl+0x4"
+     ],
+     "insn": "mov     ecx, [esi+0CCE8h]"
+    }
+   ]
+  },
+  {
+   "fn": "0x4AB060",
+   "name": "sub_4AB060",
+   "nero_strcmp": false,
+   "chains": [
+    "mpDevilStand",
+    "mpDevilStand -> mpRightHand"
+   ],
+   "hits": [
+    {
+     "ea": "0x4AB0C0",
+     "chain": [
+      "mpDevilStand"
+     ],
+     "insn": "mov     ecx, [esi+0CDF8h]"
+    },
+    {
+     "ea": "0x4AB0C6",
+     "chain": [
+      "mpDevilStand",
+      "mpRightHand"
+     ],
+     "insn": "mov     edx, [ecx+1374h]"
+    }
+   ]
+  },
+  {
+   "fn": "0x504FE0",
+   "name": "sub_504FE0",
+   "nero_strcmp": false,
+   "chains": [
+    "+0x151F4"
+   ],
+   "hits": [
+    {
+     "ea": "0x5050DB",
+     "chain": [
+      "+0x151F4"
+     ],
+     "insn": "movss   xmm0, dword ptr [edx+151F4h]"
+    }
+   ]
+  },
+  {
+   "fn": "0x505120",
+   "name": "sub_505120",
+   "nero_strcmp": false,
+   "chains": [
+    "+0x14DAC"
+   ],
+   "hits": [
+    {
+     "ea": "0x505140",
+     "chain": [
+      "+0x14DAC"
+     ],
+     "insn": "movss   xmm0, dword ptr [esi+14DACh]"
+    }
+   ]
+  },
+  {
+   "fn": "0x508010",
+   "name": "sub_508010",
+   "nero_strcmp": false,
+   "chains": [
+    "mOdGaugeCtrl+0x4"
+   ],
+   "hits": [
+    {
+     "ea": "0x508084",
+     "chain": [
+      "mOdGaugeCtrl+0x4"
+     ],
+     "insn": "mov     edx, [ecx+0CCE8h]"
+    }
+   ]
+  },
+  {
+   "fn": "0x508D70",
+   "name": "uCockpitNero::checkPtr",
+   "nero_strcmp": false,
+   "chains": [
+    "mOdGaugeCtrl+0x10",
+    "mOdGaugeCtrl+0x1C",
+    "mOdGaugeCtrl+0x4",
+    "mOdGaugeCtrl+0x44"
+   ],
+   "hits": [
+    {
+     "ea": "0x508D89",
+     "chain": [
+      "mOdGaugeCtrl+0x44"
+     ],
+     "insn": "movss   xmm0, dword ptr [eax+0CD28h]"
+    },
+    {
+     "ea": "0x508D96",
+     "chain": [
+      "mOdGaugeCtrl+0x10"
+     ],
+     "insn": "movss   xmm2, dword ptr [eax+0CCF4h]"
+    },
+    {
+     "ea": "0x508DBC",
+     "chain": [
+      "mOdGaugeCtrl+0x1C"
+     ],
+     "insn": "movss   xmm0, dword ptr [eax+0CD00h]"
+    },
+    {
+     "ea": "0x508DD4",
+     "chain": [
+      "mOdGaugeCtrl+0x4"
+     ],
+     "insn": "mov     eax, [eax+0CCE8h]"
+    }
+   ]
+  },
+  {
+   "fn": "0x552B40",
+   "name": "uEm000Base::setGrabBlown",
+   "nero_strcmp": false,
+   "chains": [
+    "mpDevilStand",
+    "mpDevilStand -> mpRightHand"
+   ],
+   "hits": [
+    {
+     "ea": "0x552B7A",
+     "chain": [
+      "mpDevilStand"
+     ],
+     "insn": "mov     ecx, [eax+0CDF8h]"
+    },
+    {
+     "ea": "0x552B80",
+     "chain": [
+      "mpDevilStand",
+      "mpRightHand"
+     ],
+     "insn": "mov     eax, [ecx+1374h]"
+    }
+   ]
+  },
+  {
+   "fn": "0x5AA280",
+   "name": "uEm010::grabBlown",
+   "nero_strcmp": false,
+   "chains": [
+    "mpDevilStand",
+    "mpDevilStand -> mpRightHand",
+    "mpDevilStand -> mpRightHand -> mRetPos",
+    "mpDevilStand -> mpRightHand -> mRetPos+0x4",
+    "mpDevilStand -> mpRightHand -> mRetPos+0x8"
+   ],
+   "hits": [
+    {
+     "ea": "0x5AA2C3",
+     "chain": [
+      "mpDevilStand"
+     ],
+     "insn": "mov     edx, [ecx+0CDF8h]"
+    },
+    {
+     "ea": "0x5AA2C9",
+     "chain": [
+      "mpDevilStand",
+      "mpRightHand"
+     ],
+     "insn": "mov     eax, [edx+1374h]"
+    },
+    {
+     "ea": "0x5AA2CF",
+     "chain": [
+      "mpDevilStand",
+      "mpRightHand",
+      "mRetPos"
+     ],
+     "insn": "movss   xmm0, dword ptr [eax+33E0h]"
+    },
+    {
+     "ea": "0x5AA2D7",
+     "chain": [
+      "mpDevilStand",
+      "mpRightHand",
+      "mRetPos+0x4"
+     ],
+     "insn": "movss   xmm1, dword ptr [eax+33E4h]"
+    },
+    {
+     "ea": "0x5AA2DF",
+     "chain": [
+      "mpDevilStand",
+      "mpRightHand",
+      "mRetPos+0x8"
+     ],
+     "insn": "movss   xmm2, dword ptr [eax+33E8h]"
+    },
+    {
+     "ea": "0x5AA3F3",
+     "chain": [
+      "mpDevilStand"
+     ],
+     "insn": "mov     ecx, [eax+0CDF8h]"
+    },
+    {
+     "ea": "0x5AA3F9",
+     "chain": [
+      "mpDevilStand",
+      "mpRightHand"
+     ],
+     "insn": "mov     eax, [ecx+1374h]"
+    },
+    {
+     "ea": "0x5AA3FF",
+     "chain": [
+      "mpDevilStand",
+      "mpRightHand",
+      "mRetPos+0x8"
+     ],
+     "insn": "movss   xmm2, dword ptr [eax+33E8h]"
+    },
+    {
+     "ea": "0x5AA40C",
+     "chain": [
+      "mpDevilStand",
+      "mpRightHand",
+      "mRetPos+0x4"
+     ],
+     "insn": "movss   xmm1, dword ptr [eax+33E4h]"
+    },
+    {
+     "ea": "0x5AA419",
+     "chain": [
+      "mpDevilStand",
+      "mpRightHand",
+      "mRetPos"
+     ],
+     "insn": "movss   xmm0, dword ptr [eax+33E0h]"
+    }
+   ]
+  },
+  {
+   "fn": "0x5C9E90",
+   "name": "uEm011::grabBlown",
+   "nero_strcmp": false,
+   "chains": [
+    "mpDevilStand",
+    "mpDevilStand -> mpRightHand",
+    "mpDevilStand -> mpRightHand -> mRetPos+0x4",
+    "mpDevilStand -> mpRightHand -> mRetPos+0x8"
+   ],
+   "hits": [
+    {
+     "ea": "0x5C9EFF",
+     "chain": [
+      "mpDevilStand"
+     ],
+     "insn": "mov     edx, [ecx+0CDF8h]"
+    },
+    {
+     "ea": "0x5C9F05",
+     "chain": [
+      "mpDevilStand",
+      "mpRightHand"
+     ],
+     "insn": "mov     eax, [edx+1374h]"
+    },
+    {
+     "ea": "0x5C9F0B",
+     "chain": [
+      "mpDevilStand",
+      "mpRightHand",
+      "mRetPos+0x8"
+     ],
+     "insn": "movss   xmm2, dword ptr [eax+33E8h]"
+    },
+    {
+     "ea": "0x5C9F20",
+     "chain": [
+      "mpDevilStand",
+      "mpRightHand",
+      "mRetPos+0x4"
+     ],
+     "insn": "movss   xmm1, dword ptr [eax+33E4h]"
+    }
+   ]
+  },
+  {
+   "fn": "0x5E9080",
+   "name": "uEm013::setGrabLong",
+   "nero_strcmp": true,
+   "chains": [
+    "mpDevilStand",
+    "mpDevilStand -> mpRightHand",
+    "mpDevilStand -> mpRightHand -> mRetPos",
+    "mpDevilStand -> mpRightHand -> mRetPos+0x4",
+    "mpDevilStand -> mpRightHand -> mRetPos+0x8"
+   ],
+   "hits": [
+    {
+     "ea": "0x5E90E2",
+     "chain": [
+      "mpDevilStand"
+     ],
+     "insn": "mov     ecx, [eax+0CDF8h]"
+    },
+    {
+     "ea": "0x5E90E8",
+     "chain": [
+      "mpDevilStand",
+      "mpRightHand"
+     ],
+     "insn": "mov     eax, [ecx+1374h]"
+    },
+    {
+     "ea": "0x5E90EE",
+     "chain": [
+      "mpDevilStand",
+      "mpRightHand",
+      "mRetPos"
+     ],
+     "insn": "movss   xmm0, dword ptr [eax+33E0h]"
+    },
+    {
+     "ea": "0x5E90F6",
+     "chain": [
+      "mpDevilStand",
+      "mpRightHand",
+      "mRetPos+0x4"
+     ],
+     "insn": "movss   xmm1, dword ptr [eax+33E4h]"
+    },
+    {
+     "ea": "0x5E90FE",
+     "chain": [
+      "mpDevilStand",
+      "mpRightHand",
+      "mRetPos+0x8"
+     ],
+     "insn": "movss   xmm2, dword ptr [eax+33E8h]"
+    }
+   ]
+  },
+  {
+   "fn": "0x5F9340",
+   "name": "uEm015::moveEx",
+   "nero_strcmp": false,
+   "chains": [
+    "mIsEnemyBuster"
+   ],
+   "hits": [
+    {
+     "ea": "0x5F9369",
+     "chain": [
+      "mIsEnemyBuster"
+     ],
+     "insn": "mov     cl, [eax+0CE11h]"
+    }
+   ]
+  },
+  {
+   "fn": "0x6008F0",
+   "name": "uEm015::setGrabFar",
+   "nero_strcmp": false,
+   "chains": [
+    "mpDevilStand",
+    "mpDevilStand -> mpRightHand"
+   ],
+   "hits": [
+    {
+     "ea": "0x60099A",
+     "chain": [
+      "mpDevilStand"
+     ],
+     "insn": "mov     eax, [edx+0CDF8h]"
+    },
+    {
+     "ea": "0x6009A0",
+     "chain": [
+      "mpDevilStand",
+      "mpRightHand"
+     ],
+     "insn": "mov     eax, [eax+1374h]"
+    }
+   ]
+  },
+  {
+   "fn": "0x6037D0",
+   "name": "uEm015::grabShortMessage",
+   "nero_strcmp": true,
+   "chains": [],
+   "hits": []
+  },
+  {
+   "fn": "0x603950",
+   "name": "uEm015::customMessage",
+   "nero_strcmp": true,
+   "chains": [],
+   "hits": []
+  },
+  {
+   "fn": "0x60E640",
+   "name": "uEm016::sync",
+   "nero_strcmp": false,
+   "chains": [
+    "mIsEnemyBuster"
+   ],
+   "hits": [
+    {
+     "ea": "0x60E6DD",
+     "chain": [
+      "mIsEnemyBuster"
+     ],
+     "insn": "mov     cl, [eax+0CE11h]"
+    }
+   ]
+  },
+  {
+   "fn": "0x612800",
+   "name": "uEm016::setGrabFar",
+   "nero_strcmp": false,
+   "chains": [
+    "mpDevilStand",
+    "mpDevilStand -> mpRightHand"
+   ],
+   "hits": [
+    {
+     "ea": "0x612861",
+     "chain": [
+      "mpDevilStand"
+     ],
+     "insn": "mov     edx, [ecx+0CDF8h]"
+    },
+    {
+     "ea": "0x612867",
+     "chain": [
+      "mpDevilStand",
+      "mpRightHand"
+     ],
+     "insn": "mov     eax, [edx+1374h]"
+    }
+   ]
+  },
+  {
+   "fn": "0x614DF0",
+   "name": "uEm016::grabShortMessage",
+   "nero_strcmp": true,
+   "chains": [],
+   "hits": []
+  },
+  {
+   "fn": "0x614EE0",
+   "name": "uEm016::customMessage",
+   "nero_strcmp": true,
+   "chains": [],
+   "hits": []
+  },
+  {
+   "fn": "0x629850",
+   "name": "sub_629850",
+   "nero_strcmp": false,
+   "chains": [
+    "mpDevilStand",
+    "mpDevilStand -> mpRightHand",
+    "mpDevilStand -> mpRightHand -> mRetPos",
+    "mpDevilStand -> mpRightHand -> mRetPos+0x4",
+    "mpDevilStand -> mpRightHand -> mRetPos+0x8"
+   ],
+   "hits": [
+    {
+     "ea": "0x6298EC",
+     "chain": [
+      "mpDevilStand"
+     ],
+     "insn": "mov     edx, [ecx+0CDF8h]"
+    },
+    {
+     "ea": "0x6298F2",
+     "chain": [
+      "mpDevilStand",
+      "mpRightHand"
+     ],
+     "insn": "mov     eax, [edx+1374h]"
+    },
+    {
+     "ea": "0x6298F8",
+     "chain": [
+      "mpDevilStand",
+      "mpRightHand",
+      "mRetPos+0x8"
+     ],
+     "insn": "movss   xmm2, dword ptr [eax+33E8h]"
+    },
+    {
+     "ea": "0x629905",
+     "chain": [
+      "mpDevilStand",
+      "mpRightHand",
+      "mRetPos+0x4"
+     ],
+     "insn": "movss   xmm1, dword ptr [eax+33E4h]"
+    },
+    {
+     "ea": "0x629912",
+     "chain": [
+      "mpDevilStand",
+      "mpRightHand",
+      "mRetPos"
+     ],
+     "insn": "movss   xmm0, dword ptr [eax+33E0h]"
+    }
+   ]
+  },
+  {
+   "fn": "0x640540",
+   "name": "uEm018::setHitThorw",
+   "nero_strcmp": true,
+   "chains": [],
+   "hits": []
+  },
+  {
+   "fn": "0x640F00",
+   "name": "uEm018::setThrowOut",
+   "nero_strcmp": true,
+   "chains": [],
+   "hits": []
+  },
+  {
+   "fn": "0x678D00",
+   "name": "uEm019_00::set_em019_grabbed_far",
+   "nero_strcmp": true,
+   "chains": [
+    "mpDevilStand",
+    "mpDevilStand -> mpRightHand"
+   ],
+   "hits": [
+    {
+     "ea": "0x678DDC",
+     "chain": [
+      "mpDevilStand"
+     ],
+     "insn": "mov     ecx, [eax+0CDF8h]"
+    },
+    {
+     "ea": "0x678DE2",
+     "chain": [
+      "mpDevilStand",
+      "mpRightHand"
+     ],
+     "insn": "mov     eax, [ecx+1374h]"
+    },
+    {
+     "ea": "0x678DEE",
+     "chain": [
+      "mpDevilStand"
+     ],
+     "insn": "mov     eax, [edx+0CDF8h]"
+    },
+    {
+     "ea": "0x678DF4",
+     "chain": [
+      "mpDevilStand",
+      "mpRightHand"
+     ],
+     "insn": "mov     eax, [eax+1374h]"
+    }
+   ]
+  },
+  {
+   "fn": "0x6BD6B0",
+   "name": "uEm022SpearShl::moveEx",
+   "nero_strcmp": false,
+   "chains": [
+    "mpDevilStand",
+    "mpDevilStand -> mpRightHand",
+    "mpDevilStand -> mpRightHand -> ",
+    "mpDevilStand -> mpRightHand ->  -> +0x3C"
+   ],
+   "hits": [
+    {
+     "ea": "0x6BD6D3",
+     "chain": [
+      "mpDevilStand"
+     ],
+     "insn": "mov     ecx, [eax+0CDF8h]"
+    },
+    {
+     "ea": "0x6BD6D9",
+     "chain": [
+      "mpDevilStand",
+      "mpRightHand"
+     ],
+     "insn": "mov     ecx, [ecx+1374h]"
+    },
+    {
+     "ea": "0x6BD6DF",
+     "chain": [
+      "mpDevilStand",
+      "mpRightHand",
+      ""
+     ],
+     "insn": "mov     edx, [ecx]"
+    },
+    {
+     "ea": "0x6BD6E1",
+     "chain": [
+      "mpDevilStand",
+      "mpRightHand",
+      "",
+      "+0x3C"
+     ],
+     "insn": "mov     eax, [edx+3Ch]"
+    }
+   ]
+  },
+  {
+   "fn": "0x720DA0",
+   "name": "uEm035::setGrabFar",
+   "nero_strcmp": true,
+   "chains": [
+    "mpDevilStand",
+    "mpDevilStand -> mpRightHand",
+    "mpDevilStand -> mpRightHand -> mRetPos",
+    "mpDevilStand -> mpRightHand -> mRetPos+0x4",
+    "mpDevilStand -> mpRightHand -> mRetPos+0x8"
+   ],
+   "hits": [
+    {
+     "ea": "0x720E36",
+     "chain": [
+      "mpDevilStand"
+     ],
+     "insn": "mov     ecx, [eax+0CDF8h]"
+    },
+    {
+     "ea": "0x720E3C",
+     "chain": [
+      "mpDevilStand",
+      "mpRightHand"
+     ],
+     "insn": "mov     eax, [ecx+1374h]"
+    },
+    {
+     "ea": "0x720E42",
+     "chain": [
+      "mpDevilStand",
+      "mpRightHand",
+      "mRetPos"
+     ],
+     "insn": "movss   xmm0, dword ptr [eax+33E0h]"
+    },
+    {
+     "ea": "0x720E4A",
+     "chain": [
+      "mpDevilStand",
+      "mpRightHand",
+      "mRetPos+0x4"
+     ],
+     "insn": "movss   xmm1, dword ptr [eax+33E4h]"
+    },
+    {
+     "ea": "0x720E52",
+     "chain": [
+      "mpDevilStand",
+      "mpRightHand",
+      "mRetPos+0x8"
+     ],
+     "insn": "movss   xmm2, dword ptr [eax+33E8h]"
+    }
+   ]
+  },
+  {
+   "fn": "0x72EA50",
+   "name": "uEmSample::setGrabFar",
+   "nero_strcmp": true,
+   "chains": [
+    "mpDevilStand",
+    "mpDevilStand -> mpRightHand",
+    "mpDevilStand -> mpRightHand -> mRetPos",
+    "mpDevilStand -> mpRightHand -> mRetPos+0x4",
+    "mpDevilStand -> mpRightHand -> mRetPos+0x8"
+   ],
+   "hits": [
+    {
+     "ea": "0x72EAD5",
+     "chain": [
+      "mpDevilStand"
+     ],
+     "insn": "mov     ecx, [eax+0CDF8h]"
+    },
+    {
+     "ea": "0x72EADB",
+     "chain": [
+      "mpDevilStand",
+      "mpRightHand"
+     ],
+     "insn": "mov     eax, [ecx+1374h]"
+    },
+    {
+     "ea": "0x72EAE1",
+     "chain": [
+      "mpDevilStand",
+      "mpRightHand",
+      "mRetPos"
+     ],
+     "insn": "movss   xmm0, dword ptr [eax+33E0h]"
+    },
+    {
+     "ea": "0x72EAE9",
+     "chain": [
+      "mpDevilStand",
+      "mpRightHand",
+      "mRetPos+0x4"
+     ],
+     "insn": "movss   xmm1, dword ptr [eax+33E4h]"
+    },
+    {
+     "ea": "0x72EAF1",
+     "chain": [
+      "mpDevilStand",
+      "mpRightHand",
+      "mRetPos+0x8"
+     ],
+     "insn": "movss   xmm2, dword ptr [eax+33E8h]"
+    }
+   ]
+  }
+ ]
+}
